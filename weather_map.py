@@ -30,8 +30,8 @@ if os.path.exists(county_file):
 marine_list = [
     "ANZ633", "ANZ658","ANZ678",
     "AMZ230", "AMZ131","AMZ231","AMZ150","AMZ170",
-    "AMZ135","AMZ152","AMZ172","AMZ136","AMZ137"
-    "AMZ156","AMZ154","AMZ174""AMZ176","AMZ158","AMZ178"
+    "AMZ135","AMZ152","AMZ172","AMZ136","AMZ137",
+    "AMZ156","AMZ154","AMZ174""AMZ176","AMZ158","AMZ178",
     "AMZ250","AMZ270"
 ]
 marine_zones = ",".join(marine_list)
