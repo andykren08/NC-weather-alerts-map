@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_04f5b0f81d8819c801b0ffeee8c8c899 {
+                #map_ef4b0a2d734718c2f81fdee6ed9cc3e7 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,14 +56,22 @@
 <body>
     
     
-            <div class="folium-map" id="map_04f5b0f81d8819c801b0ffeee8c8c899" ></div>
+            <div class="folium-map" id="map_ef4b0a2d734718c2f81fdee6ed9cc3e7" ></div>
         
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; font-family:Arial; text-align:center;">
+    <b>North Carolina Weather & Marine Alerts</b><br>
+    <small>Updated: 01:44 PM EST</small>
+</div>
+<div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-family:Arial; font-size:12px;">
+    <b>Legend</b><ul style="list-style:none; padding:0; margin:0;"><li><i>No active alerts</i></li></ul>
+</div>
 </body>
 <script>
     
     
-            var map_04f5b0f81d8819c801b0ffeee8c8c899 = L.map(
-                "map_04f5b0f81d8819c801b0ffeee8c8c899",
+            var map_ef4b0a2d734718c2f81fdee6ed9cc3e7 = L.map(
+                "map_ef4b0a2d734718c2f81fdee6ed9cc3e7",
                 {
                     center: [35.2, -79.0],
                     crs: L.CRS.EPSG3857,
@@ -80,15 +88,15 @@
 
         
     
-            var tile_layer_1100d85a230bbcf67b4a715ba1dec1a7 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            var tile_layer_26d0f8558e484113549222d70138b92c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -97,32 +105,12 @@
             );
         
     
-            tile_layer_1100d85a230bbcf67b4a715ba1dec1a7.addTo(map_04f5b0f81d8819c801b0ffeee8c8c899);
+            tile_layer_26d0f8558e484113549222d70138b92c.addTo(map_ef4b0a2d734718c2f81fdee6ed9cc3e7);
         
     
-            var tile_layer_0843849a6ec47179eb749f9d54593286 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_0843849a6ec47179eb749f9d54593286.addTo(map_04f5b0f81d8819c801b0ffeee8c8c899);
-        
-    
-            var locate_control_c64b6e5d11ec73147981670d8a5d4be7 = L.control.locate(
+            var locate_control_c5334addf55f01dcf1bc1b456e5ff363 = L.control.locate(
                 {}
-            ).addTo(map_04f5b0f81d8819c801b0ffeee8c8c899);
+            ).addTo(map_ef4b0a2d734718c2f81fdee6ed9cc3e7);
             
         
 </script>
