@@ -76,7 +76,7 @@ legend_items = "".join([f'<li><span style="background:{c}; border:1px solid blac
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
 <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; text-align:center; font-family:Arial; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>Coastal Weather Monitor</b><br><small>Updated: {local_time}</small>
+    <b>Regional Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
 <div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:1px solid grey; border-radius:5px; font-family:Arial; font-size:12px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
     <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_items or "<li>No active alerts</li>"}</ul>
