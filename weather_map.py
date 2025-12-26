@@ -13,7 +13,7 @@ utc_now = datetime.now(timezone.utc)
 local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p %Z')
 
 # 2. Map Setup
-m = folium.Map(location=[35.2, -76.2], zoom_start=7, tiles=None)
+m = folium.Map(location=[35.5, -76.0], zoom_start=7, tiles=None)
 folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
                 attr='Google', name='Satellite Hybrid').add_to(m)
 folium.TileLayer('CartoDB positron', name='Light Mode').add_to(m)
@@ -26,23 +26,23 @@ if os.path.exists(county_file):
         folium.GeoJson(json.load(f), name="County Lines",
                        style_function=lambda x: {'color': '#666666', 'weight': 1.2, 'fillOpacity': 0}).add_to(m)
 
-# 4. Fetch Land & Sea Data (NC, VA, SC)
-marine_zones = "ANZ633,ANZ634,ANZ656,ANZ658,AMZ130,AMZ131,AMZ135,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ250,AMZ252,AMZ254,AMZ256"
+# 4. FETCH DATA (Added ANZ658 for Carova/Corolla and ANZ633 for Currituck Sound)
+# ANZ658 = NC/VA Border to Currituck Light | ANZ633 = Currituck Sound
+marine_zones = "ANZ658,ANZ633,ANZ634,ANZ656,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ130,AMZ131,AMZ135,AMZ250,AMZ252,AMZ254,AMZ256"
 urls = ["https://api.weather.gov/alerts/active?area=NC,VA,SC", f"https://api.weather.gov/alerts/active?zone={marine_zones}"]
 
 all_features = []
 active_events = {}
-headers = {'User-Agent': 'NCWeatherMap/9.0'}
+headers = {'User-Agent': 'NCWeatherMap/11.0'}
 
 def get_color(event_name):
-    event_name = event_name.lower()
-    if 'small craft' in event_name: return '#3498db'  # Blue
-    if 'winter' in event_name or 'snow' in event_name or 'blizzard' in event_name: return '#9b59b6'  # Purple
-    if 'wind' in event_name: return '#95a5a6' # Grey
-    if 'heat' in event_name: return '#e74c3c' # Red
-    if 'freeze' in event_name or 'frost' in event_name or 'cold' in event_name: return '#1abc9c' # Cyan
-    if 'flood' in event_name: return '#2ecc71' # Green
-    return '#e67e22' # Orange (Default/Severe)
+    e = event_name.lower()
+    if 'small craft' in e: return '#2980b9'
+    if 'gale' in e: return '#8e44ad'
+    if 'flood' in e: return '#27ae60'
+    if 'winter' in e or 'snow' in e: return '#9b59b6'
+    if 'wind' in e: return '#7f8c8d'
+    return '#e67e22'
 
 for url in urls:
     try:
@@ -53,25 +53,28 @@ for url in urls:
                 active_events[ename] = get_color(ename)
                 
                 if not f.get('geometry'):
-                    z_url = f['properties'].get('affectedZones', [None])[0]
-                    if z_url:
-                        f['geometry'] = requests.get(z_url, headers=headers).json().get('geometry')
+                    z_links = f['properties'].get('affectedZones', [])
+                    if z_links:
+                        # Try the first zone link to get the shape
+                        z_res = requests.get(z_links[0], headers=headers, timeout=5)
+                        if z_res.status_code == 200:
+                            f['geometry'] = z_res.json().get('geometry')
                 
                 if f.get('geometry'):
                     all_features.append(f)
     except: continue
 
-# 5. Add Weather Layer
+# 5. Add Alerts
 if all_features:
     folium.GeoJson(gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326),
-                   name="Active Weather Alerts",
+                   name="Live Weather Alerts",
                    style_function=lambda x: {
                        'fillColor': get_color(x['properties']['event']),
                        'color': 'black', 'weight': 1, 'fillOpacity': 0.5
                    },
                    tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'])).add_to(m)
 
-# 6. UI: Custom Legend
+# 6. UI: Fixed Legend
 legend_items = "".join([f'<li><span style="background:{c}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{n}</li>' for n, c in sorted(active_events.items())])
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
@@ -79,7 +82,7 @@ macro_html = f'''
     <b>Regional Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
 <div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:1px solid grey; border-radius:5px; font-family:Arial; font-size:12px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_items or "<li>No active alerts</li>"}</ul>
+    <b>Active Hazards</b><ul style="list-style:none; padding:0; margin:0;">{legend_items or "<li>No active alerts</li>"}</ul>
 </div>
 {{% endmacro %}}
 '''
