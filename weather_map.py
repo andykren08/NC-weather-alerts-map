@@ -28,7 +28,7 @@ if os.path.exists(county_file):
 
 # 4. FETCH DATA (Exhaustive list to close Carova & Hatteras gaps)
 marine_list = [
-    "ANZ633", "ANZ658","ANZ678", # Carova, Currituck Sound, VA Border
+    "ANZ633", "ANZ658","ANZ678",
     "AMZ230", "AMZ131","AMZ231","AMZ150","AMZ170",
     "AMZ135","AMZ152","AMZ172","AMZ136","AMZ137"
     "AMZ156","AMZ154","AMZ174""AMZ176","AMZ158","AMZ178"
