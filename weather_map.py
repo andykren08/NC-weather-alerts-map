@@ -24,7 +24,7 @@ m = folium.Map(location=[35.2, -76.2], zoom_start=7, tiles=None)
 
 # Basemaps
 folium.TileLayer('CartoDB positron', name='Light Mode').add_to(m)
-folium.TileLayer('OpenStreetMap', name='Detailed Street Map').add_to(m)
+folium.TileLayer('OpenStreetMap', name='Street Map').add_to(m)
 folium.TileLayer(
     tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
     attr='Google',
@@ -33,24 +33,26 @@ folium.TileLayer(
 
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
-# 3. Add Permanent County Boundaries
-# Using a lightweight GeoJSON for NC Counties
-county_url = "https://raw.githubusercontent.com/codeforamerica/click_container/master/NC_counties.geojson"
+# 3. Add NC County Borders (New Reliable Source)
+# This uses a reliable GitHub raw link for NC Counties
+county_data_url = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/NC.json"
+
 try:
-    folium.GeoJson(
-        county_url,
+    counties = folium.GeoJson(
+        county_data_url,
         name="NC County Borders",
         style_function=lambda x: {
-            'color': '#555555',
-            'weight': 1,
-            'fillOpacity': 0
+            'color': '#333333', # Dark grey lines
+            'weight': 1.5,
+            'fillOpacity': 0,
+            'pointerEvents': 'none' # Don't block clicks to alerts below
         },
-        control=True
+        z_index=1000 # Keep them on top
     ).add_to(m)
-except:
-    print("Could not load county lines")
+except Exception as e:
+    print(f"County load error: {e}")
 
-# 4. Fetch Weather Data (Massive Marine Search)
+# 4. Fetch Weather Data (Comprehensive Search)
 marine_zones = "AMZ130,AMZ131,AMZ135,AMZ136,AMZ137,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ170,AMZ172,AMZ174,ANZ083,ANZ084,ANZ089,ANZ430,ANZ431"
 urls = [
     "https://api.weather.gov/alerts/active?area=NC",
@@ -81,8 +83,9 @@ for url in urls:
 
 # 5. Add Weather Alerts Layer
 if all_features:
-    gdf = gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326)
-    folium.GeoJson(gdf, name="Active Weather Alerts",
+    weather_layer = folium.GeoJson(
+        gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326),
+        name="Active Weather Alerts",
         style_function=lambda x: {
             'fillColor': get_color(x['properties']['event']),
             'color': 'black', 'weight': 1, 'fillOpacity': 0.6
@@ -90,14 +93,14 @@ if all_features:
         tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'], aliases=['Alert:', 'Details:'])
     ).add_to(m)
 
-# 6. UI Elements
+# 6. UI: Title, Legend, and Control
 legend_items = "".join([f'<li><span style="background:{color}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{name}</li>' for name, color in sorted(active_event_types.items())])
 if not legend_items: legend_items = "<li><i>No active alerts</i></li>"
 
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
 <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; font-family:Arial; text-align:center;">
-    <b>North Carolina Weather Alerts</b><br><small>Updated: {local_time}</small>
+    <b>North Caroilna Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
 <div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-family:Arial; font-size:12px;">
     <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_items}</ul>
