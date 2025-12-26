@@ -16,7 +16,7 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 m = folium.Map(location=[35.5, -76.0], zoom_start=7, tiles=None)
 folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
                 attr='Google', name='Satellite Hybrid').add_to(m)
-folium.TileLayer('CartoDB positron', name='Light Mode').add_to(m)
+folium.TileLayer('CartoDB positron', name='Light Street Map').add_to(m)
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
 # 3. Load County Borders
@@ -26,23 +26,34 @@ if os.path.exists(county_file):
         folium.GeoJson(json.load(f), name="County Lines",
                        style_function=lambda x: {'color': '#666666', 'weight': 1.2, 'fillOpacity': 0}).add_to(m)
 
-# 4. FETCH DATA (Added ANZ658 for Carova/Corolla and ANZ633 for Currituck Sound)
-# ANZ658 = NC/VA Border to Currituck Light | ANZ633 = Currituck Sound
-marine_zones = "ANZ658,ANZ633,ANZ634,ANZ656,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ130,AMZ131,AMZ135,AMZ250,AMZ252,AMZ254,AMZ256"
-urls = ["https://api.weather.gov/alerts/active?area=NC,VA,SC", f"https://api.weather.gov/alerts/active?zone={marine_zones}"]
+# 4. FETCH DATA (Exhaustive list to close Carova & Hatteras gaps)
+marine_list = [
+    "ANZ658", "ANZ633", "ANZ634", "ANZ656", # Carova, Currituck Sound, VA Border
+    "AMZ150", "AMZ152", "AMZ154", "AMZ156", "AMZ158", # The "Gaps" at Hatteras & Ocracoke
+    "AMZ130", "AMZ131", "AMZ135", # Albemarle, Roanoke, Pamlico Sounds
+    "AMZ250", "AMZ252", "AMZ254", "AMZ256" # Wilmington down to SC
+]
+marine_zones = ",".join(marine_list)
+
+urls = [
+    "https://api.weather.gov/alerts/active?area=NC,VA,SC", 
+    f"https://api.weather.gov/alerts/active?zone={marine_zones}"
+]
 
 all_features = []
 active_events = {}
-headers = {'User-Agent': 'NCWeatherMap/11.0'}
+headers = {'User-Agent': 'NCWeatherMap/13.0'}
 
 def get_color(event_name):
     e = event_name.lower()
-    if 'small craft' in e: return '#2980b9'
-    if 'gale' in e: return '#8e44ad'
-    if 'flood' in e: return '#27ae60'
-    if 'winter' in e or 'snow' in e: return '#9b59b6'
-    if 'wind' in e: return '#7f8c8d'
-    return '#e67e22'
+    if 'small craft' in e: return '#2980b9'  # Marine Blue
+    if 'gale' in e: return '#8e44ad'         # Purple
+    if 'winter' in e or 'snow' in e or 'blizzard' in e: return '#9b59b6' # Winter Purple
+    if 'ice' in e or 'freeze' in e or 'frost' in e: return '#1abc9c' # Cold Teal
+    if 'heat' in e: return '#e74c3c'         # Heat Red
+    if 'wind' in e: return '#7f8c8d'         # Wind Grey
+    if 'flood' in e: return '#27ae60'        # Flood Green
+    return '#e67e22' # Severe Orange
 
 for url in urls:
     try:
@@ -52,10 +63,10 @@ for url in urls:
                 ename = f['properties']['event']
                 active_events[ename] = get_color(ename)
                 
+                # CRITICAL: If geometry is missing, fetch the actual zone shape
                 if not f.get('geometry'):
                     z_links = f['properties'].get('affectedZones', [])
                     if z_links:
-                        # Try the first zone link to get the shape
                         z_res = requests.get(z_links[0], headers=headers, timeout=5)
                         if z_res.status_code == 200:
                             f['geometry'] = z_res.json().get('geometry')
@@ -67,14 +78,14 @@ for url in urls:
 # 5. Add Alerts
 if all_features:
     folium.GeoJson(gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326),
-                   name="Live Weather Alerts",
+                   name="Active Hazards",
                    style_function=lambda x: {
                        'fillColor': get_color(x['properties']['event']),
                        'color': 'black', 'weight': 1, 'fillOpacity': 0.5
                    },
                    tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'])).add_to(m)
 
-# 6. UI: Fixed Legend
+# 6. UI: Clean Legend
 legend_items = "".join([f'<li><span style="background:{c}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{n}</li>' for n, c in sorted(active_events.items())])
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
