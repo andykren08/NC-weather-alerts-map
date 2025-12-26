@@ -71,7 +71,7 @@ table_rows = "".join([f"<tr><td style='border-bottom:1px solid #ddd; padding:2px
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
 <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; text-align:center; font-family:Arial; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>Coastal Weather Monitor</b><br><small>Updated: {local_time}</small>
+    <b>North Carolina Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
 <div style="position: fixed; bottom: 30px; left: 20px; z-index:9999; background:white; padding:10px; border:1px solid grey; border-radius:5px; font-family:Arial; font-size:10px; max-width: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
     <b>North Carolina Weather Alerts</b>
