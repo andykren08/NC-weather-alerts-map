@@ -22,14 +22,9 @@ def get_color(event):
 # 2. Initialize Map
 m = folium.Map(location=[35.2, -76.2], zoom_start=7, tiles=None)
 
-# Add Better Basemaps (Including Hybrid Satellite with Labels)
-folium.TileLayer('CartoDB positron', name='Light Mode (Labels Only)').add_to(m)
+# Basemaps
+folium.TileLayer('CartoDB positron', name='Light Mode').add_to(m)
 folium.TileLayer('OpenStreetMap', name='Detailed Street Map').add_to(m)
-folium.TileLayer(
-    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    attr='Esri',
-    name='Satellite (No Labels)'
-).add_to(m)
 folium.TileLayer(
     tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
     attr='Google',
@@ -38,8 +33,24 @@ folium.TileLayer(
 
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
-# 3. Fetch Data - Massive Marine Zone List
-# Added even more coastal and offshore codes to prevent missing alerts
+# 3. Add Permanent County Boundaries
+# Using a lightweight GeoJSON for NC Counties
+county_url = "https://raw.githubusercontent.com/codeforamerica/click_container/master/NC_counties.geojson"
+try:
+    folium.GeoJson(
+        county_url,
+        name="NC County Borders",
+        style_function=lambda x: {
+            'color': '#555555',
+            'weight': 1,
+            'fillOpacity': 0
+        },
+        control=True
+    ).add_to(m)
+except:
+    print("Could not load county lines")
+
+# 4. Fetch Weather Data (Massive Marine Search)
 marine_zones = "AMZ130,AMZ131,AMZ135,AMZ136,AMZ137,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ170,AMZ172,AMZ174,ANZ083,ANZ084,ANZ089,ANZ430,ANZ431"
 urls = [
     "https://api.weather.gov/alerts/active?area=NC",
@@ -55,7 +66,6 @@ for url in urls:
         res = requests.get(url, headers=headers, timeout=20)
         if res.status_code == 200:
             for f in res.json().get('features', []):
-                # Deep geometry check for marine polygons
                 if not f.get('geometry'):
                     zones = f['properties'].get('affectedZones', [])
                     if zones:
@@ -69,29 +79,33 @@ for url in urls:
                     active_event_types[etype] = get_color(etype)
     except: continue
 
-# 4. Add Layers
+# 5. Add Weather Alerts Layer
 if all_features:
     gdf = gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326)
-    folium.GeoJson(gdf, name="Active Alerts",
-        style_function=lambda x: {'fillColor': get_color(x['properties']['event']), 'color': 'black', 'weight': 1, 'fillOpacity': 0.6},
+    folium.GeoJson(gdf, name="Active Weather Alerts",
+        style_function=lambda x: {
+            'fillColor': get_color(x['properties']['event']),
+            'color': 'black', 'weight': 1, 'fillOpacity': 0.6
+        },
         tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'], aliases=['Alert:', 'Details:'])
     ).add_to(m)
 
-# 5. Legend & Title
+# 6. UI Elements
 legend_items = "".join([f'<li><span style="background:{color}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{name}</li>' for name, color in sorted(active_event_types.items())])
 if not legend_items: legend_items = "<li><i>No active alerts</i></li>"
 
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
-<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; font-family:Arial; text-align:center; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>North Carolina Weather Alerts</b><br><small>Updated: {local_time}</small>
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; font-family:Arial; text-align:center;">
+    <b>NC Weather & Marine Alerts</b><br><small>Updated: {local_time}</small>
 </div>
-<div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-family:Arial; font-size:12px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
+<div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-family:Arial; font-size:12px;">
     <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_items}</ul>
 </div>
 {{% endmacro %}}
 '''
 macro = MacroElement(); macro._template = Template(macro_html); m.get_root().add_child(macro)
+
 folium.LayerControl(position='topright', collapsed=False).add_to(m)
 
 m.save("index.html")
