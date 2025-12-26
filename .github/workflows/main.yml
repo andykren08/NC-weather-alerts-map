@@ -8,21 +8,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # This is the "Key" the script needs to save the file
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      
       - name: Set up Python
-        uses: actions/python-setup@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          
       - name: Install dependencies
-        run: pip install requests geopandas folium pandas shapely
+        run: pip install requests geopandas folium pandas shapely pytz
+        
       - name: Run script
         run: python weather_map.py
+        
       - name: Commit and push if changed
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add index.html
-          git commit -m "Update map" || exit 0
+          git commit -m "Update map" || echo "No changes to commit"
           git push
