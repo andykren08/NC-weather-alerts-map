@@ -2,6 +2,8 @@ import requests
 import geopandas as gpd
 import folium
 from folium.plugins import LocateControl
+import os
+import json
 from datetime import datetime, timezone
 import pytz
 from branca.element import Template, MacroElement
@@ -13,50 +15,56 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 # 2. Map Setup
 m = folium.Map(location=[35.2, -76.2], zoom_start=7, tiles=None)
 
-# Using Google Hybrid: It is the most robust way to see borders/cities on satellite
+# High-reliability Hybrid Satellite (Labels + Borders baked in)
 folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
-                attr='Google', name='Satellite (Borders & Cities)').add_to(m)
-folium.TileLayer('CartoDB positron', name='Light Mode').add_to(m)
+                attr='Google', name='Satellite Hybrid').add_to(m)
+folium.TileLayer('CartoDB positron', name='Light Street Map').add_to(m)
 
-# 3. FIX: Add NC County Outlines via a reliable, permanent URL
-# This source is part of a highly-stable project and rarely fails.
-counties_url = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/NC.json"
-folium.GeoJson(counties_url, name="County Lines", 
-               style_function=lambda x: {'color': '#444444', 'weight': 1, 'fillOpacity': 0}).add_to(m)
+# 3. Load Local County File (Your Self-Hosted Version)
+if os.path.exists("nc_counties.json"):
+    folium.GeoJson("nc_counties.json", name="County Borders",
+                   style_function=lambda x: {'color': '#444444', 'weight': 1.2, 'fillOpacity': 0}).add_to(m)
 
-# 4. FETCH DATA - Updated 2025 Marine Codes
-# Includes the new 60NM offshore extension zones
-marine_zones = "AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ130,AMZ131,AMZ135,ANZ680,ANZ682,ANZ684,ANZ686"
+# 4. Fetch Weather Data (With JSON Error Guard)
+marine_zones = "AMZ130,AMZ131,AMZ135,AMZ136,AMZ137,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,ANZ600,ANZ680,ANZ684"
 urls = ["https://api.weather.gov/alerts/active?area=NC", f"https://api.weather.gov/alerts/active?zone={marine_zones}"]
 
 all_features = []
 active_events = {}
-headers = {'User-Agent': 'NCWeatherMap/2.0'}
+headers = {'User-Agent': 'NCWeatherMap/3.0 (your-email@example.com)'}
 
 for url in urls:
     try:
-        res = requests.get(url, headers=headers, timeout=10)
-        if res.status_code == 200:
-            for f in res.json().get('features', []):
-                # Ensure we have a shape to draw
+        res = requests.get(url, headers=headers, timeout=15)
+        # Verify we actually got JSON and a "200 OK"
+        if res.status_code == 200 and 'application/geo+json' in res.headers.get('Content-Type', ''):
+            data = res.json()
+            for f in data.get('features', []):
+                # Fetch shape if missing
                 if not f.get('geometry'):
-                    zones = f['properties'].get('affectedZones', [])
-                    if zones:
-                        z_res = requests.get(zones[0], headers=headers, timeout=5)
-                        f['geometry'] = z_res.json().get('geometry')
+                    try:
+                        z_url = f['properties'].get('affectedZones', [None])[0]
+                        if z_url:
+                            z_res = requests.get(z_url, headers=headers, timeout=5)
+                            f['geometry'] = z_res.json().get('geometry')
+                    except: continue
                 
                 if f.get('geometry'):
                     all_features.append(f)
                     active_events[f['properties']['event']] = "#3498db" if 'Small Craft' in f['properties']['event'] else "#e67e22"
-    except: continue
+    except Exception as e:
+        print(f"Skipping a bad response: {e}")
 
+# 5. Build the Alerts Layer
 if all_features:
     folium.GeoJson(gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326),
-                   style_function=lambda x: {'fillColor': '#3498db' if 'Small Craft' in x['properties']['event'] else '#e67e22', 
-                                             'color': 'black', 'weight': 1, 'fillOpacity': 0.5},
+                   style_function=lambda x: {
+                       'fillColor': '#3498db' if 'Small Craft' in x['properties']['event'] else '#e67e22',
+                       'color': 'black', 'weight': 1, 'fillOpacity': 0.5
+                   },
                    tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'])).add_to(m)
 
-# 5. UI: Title & Legend
+# 6. Legend & Layer Control
 legend_html = "".join([f'<li><span style="background:{c}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{n}</li>' for n, c in active_events.items()])
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
@@ -64,10 +72,10 @@ macro_html = f'''
     <b>North Carolina Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
 <div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:1px solid grey; border-radius:5px; font-size:12px;">
-    <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_html or "<li>No alerts</li>"}</ul>
+    <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_html or "<li>No alerts found</li>"}</ul>
 </div>
 {{% endmacro %}}
 '''
 macro = MacroElement(); macro._template = Template(macro_html); m.get_root().add_child(macro)
-folium.LayerControl().add_to(m)
+folium.LayerControl(collapsed=False).add_to(m)
 m.save("index.html")
