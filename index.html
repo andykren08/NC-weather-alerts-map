@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_219113602cf33495fa2689dc5e803de4 {
+                #map_7f8680b8399a14ea8d9f7f56b2c99056 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,21 +56,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_219113602cf33495fa2689dc5e803de4" ></div>
+            <div class="folium-map" id="map_7f8680b8399a14ea8d9f7f56b2c99056" ></div>
         
-    
-<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; text-align:center; font-family:Arial; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>Regional Weather Alerts</b><br><small>Updated: 03:44 PM EST</small>
-</div>
-<div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:1px solid grey; border-radius:5px; font-family:Arial; font-size:12px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>Active Hazards</b><ul style="list-style:none; padding:0; margin:0;"><li>No active alerts</li></ul>
-</div>
 </body>
 <script>
     
     
-            var map_219113602cf33495fa2689dc5e803de4 = L.map(
-                "map_219113602cf33495fa2689dc5e803de4",
+            var map_7f8680b8399a14ea8d9f7f56b2c99056 = L.map(
+                "map_7f8680b8399a14ea8d9f7f56b2c99056",
                 {
                     center: [35.5, -76.0],
                     crs: L.CRS.EPSG3857,
@@ -87,7 +80,7 @@
 
         
     
-            var tile_layer_ad975990be6a079fd082c329ba120f67 = L.tileLayer(
+            var tile_layer_8ac7a56e7abfd86961d61cc16660fbcb = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -104,10 +97,10 @@
             );
         
     
-            tile_layer_ad975990be6a079fd082c329ba120f67.addTo(map_219113602cf33495fa2689dc5e803de4);
+            tile_layer_8ac7a56e7abfd86961d61cc16660fbcb.addTo(map_7f8680b8399a14ea8d9f7f56b2c99056);
         
     
-            var tile_layer_d400df5c20570ca3b2473ff80547654e = L.tileLayer(
+            var tile_layer_bc30a1dd250839ebd8a4d5370c310f20 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -124,33 +117,13 @@
             );
         
     
-            tile_layer_d400df5c20570ca3b2473ff80547654e.addTo(map_219113602cf33495fa2689dc5e803de4);
+            tile_layer_bc30a1dd250839ebd8a4d5370c310f20.addTo(map_7f8680b8399a14ea8d9f7f56b2c99056);
         
     
-            var locate_control_12046c21264b43e75fec971b8550139b = L.control.locate(
+            var locate_control_bffe9a5e76e23f9e57575e0542341122 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_219113602cf33495fa2689dc5e803de4);
+            ).addTo(map_7f8680b8399a14ea8d9f7f56b2c99056);
             
-        
-    
-            var layer_control_fa040d187a1fe3de8d3f63d6fffd042f_layers = {
-                base_layers : {
-                    "Satellite Hybrid" : tile_layer_ad975990be6a079fd082c329ba120f67,
-                    "Light Street Map" : tile_layer_d400df5c20570ca3b2473ff80547654e,
-                },
-                overlays :  {
-                },
-            };
-            let layer_control_fa040d187a1fe3de8d3f63d6fffd042f = L.control.layers(
-                layer_control_fa040d187a1fe3de8d3f63d6fffd042f_layers.base_layers,
-                layer_control_fa040d187a1fe3de8d3f63d6fffd042f_layers.overlays,
-                {
-  "position": "topright",
-  "collapsed": false,
-  "autoZIndex": true,
-}
-            ).addTo(map_219113602cf33495fa2689dc5e803de4);
-
         
 </script>
 </html>
