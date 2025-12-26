@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_5a41d1aa1e8e3165359c93179bfc93a2 {
+                #map_d81f55c48cb5cadc84f7959a7edb050d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,11 +56,11 @@
 <body>
     
     
-            <div class="folium-map" id="map_5a41d1aa1e8e3165359c93179bfc93a2" ></div>
+            <div class="folium-map" id="map_d81f55c48cb5cadc84f7959a7edb050d" ></div>
         
     
 <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; text-align:center; font-family:Arial; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-    <b>Regional Weather Alerts</b><br><small>Updated: 03:37 PM EST</small>
+    <b>Regional Weather Alerts</b><br><small>Updated: 03:41 PM EST</small>
 </div>
 <div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:1px solid grey; border-radius:5px; font-family:Arial; font-size:12px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
     <b>Active Hazards</b><ul style="list-style:none; padding:0; margin:0;"><li>No active alerts</li></ul>
@@ -69,8 +69,8 @@
 <script>
     
     
-            var map_5a41d1aa1e8e3165359c93179bfc93a2 = L.map(
-                "map_5a41d1aa1e8e3165359c93179bfc93a2",
+            var map_d81f55c48cb5cadc84f7959a7edb050d = L.map(
+                "map_d81f55c48cb5cadc84f7959a7edb050d",
                 {
                     center: [35.5, -76.0],
                     crs: L.CRS.EPSG3857,
@@ -87,7 +87,7 @@
 
         
     
-            var tile_layer_cc0bf3f1de40ec01e0cbd5c698cc9074 = L.tileLayer(
+            var tile_layer_4f46e534dafe021bf9fd69699a7d22d7 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -104,10 +104,10 @@
             );
         
     
-            tile_layer_cc0bf3f1de40ec01e0cbd5c698cc9074.addTo(map_5a41d1aa1e8e3165359c93179bfc93a2);
+            tile_layer_4f46e534dafe021bf9fd69699a7d22d7.addTo(map_d81f55c48cb5cadc84f7959a7edb050d);
         
     
-            var tile_layer_5116ea64e792ad750af5ca7112d3ffd7 = L.tileLayer(
+            var tile_layer_0daa11a56eed7d1f79c1959354abc1e8 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -124,32 +124,32 @@
             );
         
     
-            tile_layer_5116ea64e792ad750af5ca7112d3ffd7.addTo(map_5a41d1aa1e8e3165359c93179bfc93a2);
+            tile_layer_0daa11a56eed7d1f79c1959354abc1e8.addTo(map_d81f55c48cb5cadc84f7959a7edb050d);
         
     
-            var locate_control_edf48cb6b5ff712cdd6cef17418fb777 = L.control.locate(
+            var locate_control_402fbe4da6d8b54d4fa9cc6f31b5df6d = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_5a41d1aa1e8e3165359c93179bfc93a2);
+            ).addTo(map_d81f55c48cb5cadc84f7959a7edb050d);
             
         
     
-            var layer_control_55c42bea530810fd3914b04a997036ae_layers = {
+            var layer_control_f066f75eb3937a797e826327384e771f_layers = {
                 base_layers : {
-                    "Satellite Hybrid" : tile_layer_cc0bf3f1de40ec01e0cbd5c698cc9074,
-                    "Light Street Map" : tile_layer_5116ea64e792ad750af5ca7112d3ffd7,
+                    "Satellite Hybrid" : tile_layer_4f46e534dafe021bf9fd69699a7d22d7,
+                    "Light Street Map" : tile_layer_0daa11a56eed7d1f79c1959354abc1e8,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_55c42bea530810fd3914b04a997036ae = L.control.layers(
-                layer_control_55c42bea530810fd3914b04a997036ae_layers.base_layers,
-                layer_control_55c42bea530810fd3914b04a997036ae_layers.overlays,
+            let layer_control_f066f75eb3937a797e826327384e771f = L.control.layers(
+                layer_control_f066f75eb3937a797e826327384e771f_layers.base_layers,
+                layer_control_f066f75eb3937a797e826327384e771f_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_5a41d1aa1e8e3165359c93179bfc93a2);
+            ).addTo(map_d81f55c48cb5cadc84f7959a7edb050d);
 
         
 </script>
