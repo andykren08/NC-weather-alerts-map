@@ -13,47 +13,34 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 
 def get_color(event):
     event = event.lower()
-    if 'small craft' in event: return '#3498db'
-    if 'gale' in event: return '#8e44ad'
-    if 'flood' in event: return '#2ecc71'
-    if 'tornado' in event: return '#e74c3c'
-    return '#e67e22'
+    if 'small craft' in event: return '#3498db' # Blue
+    if 'gale' in event: return '#8e44ad'        # Purple
+    if 'flood' in event: return '#2ecc71'       # Green
+    if 'tornado' in event: return '#e74c3c'     # Red
+    return '#e67e22'                            # Orange
 
 # 2. Initialize Map
 m = folium.Map(location=[35.2, -76.2], zoom_start=7, tiles=None)
 
-# Basemaps
-folium.TileLayer('CartoDB positron', name='Light Mode').add_to(m)
-folium.TileLayer('OpenStreetMap', name='Street Map').add_to(m)
-folium.TileLayer(
-    tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
-    attr='Google',
-    name='Satellite Hybrid (Borders & Cities)'
-).add_to(m)
+# Basemaps - Hybrid is best for seeing cities/lines over satellite
+folium.TileLayer('CartoDB positron', name='Light Mode (Clean View)').add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
+                attr='Google', name='Satellite Hybrid (Borders/Labels)').add_to(m)
 
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
-# 3. Add NC County Borders (New Reliable Source)
-# This uses a reliable GitHub raw link for NC Counties
-county_data_url = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/NC.json"
+# 3. Add NC County Borders (Using a high-reliability WFS source)
+county_url = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/NC.json"
+folium.GeoJson(
+    county_url,
+    name="NC County Borders",
+    style_function=lambda x: {'color': '#555555', 'weight': 1, 'fillOpacity': 0},
+    z_index=10
+).add_to(m)
 
-try:
-    counties = folium.GeoJson(
-        county_data_url,
-        name="NC County Borders",
-        style_function=lambda x: {
-            'color': '#333333', # Dark grey lines
-            'weight': 1.5,
-            'fillOpacity': 0,
-            'pointerEvents': 'none' # Don't block clicks to alerts below
-        },
-        z_index=1000 # Keep them on top
-    ).add_to(m)
-except Exception as e:
-    print(f"County load error: {e}")
-
-# 4. Fetch Weather Data (Comprehensive Search)
-marine_zones = "AMZ130,AMZ131,AMZ135,AMZ136,AMZ137,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ170,AMZ172,AMZ174,ANZ083,ANZ084,ANZ089,ANZ430,ANZ431"
+# 4. Fetch Weather Data (Now includes HIGH SEAS and ALL NC marine zones)
+# Added AMZ250, AMZ150, ANZ800 series to catch everything
+marine_zones = "AMZ130,AMZ131,AMZ135,AMZ136,AMZ137,AMZ150,AMZ152,AMZ154,AMZ156,AMZ158,AMZ170,AMZ172,AMZ174,AMZ250,AMZ252,ANZ083,ANZ089,ANZ800,ANZ899"
 urls = [
     "https://api.weather.gov/alerts/active?area=NC",
     f"https://api.weather.gov/alerts/active?zone={marine_zones}"
@@ -61,17 +48,19 @@ urls = [
 
 all_features = []
 active_event_types = {}
-headers = {'User-Agent': 'NCWeatherMap/1.0 (contact@example.com)'}
+headers = {'User-Agent': 'NCWeatherMap/1.0 (your-email@example.com)'}
 
 for url in urls:
     try:
-        res = requests.get(url, headers=headers, timeout=20)
+        res = requests.get(url, headers=headers, timeout=15)
         if res.status_code == 200:
-            for f in res.json().get('features', []):
+            features = res.json().get('features', [])
+            for f in features:
+                # Critical: Fetch geometry if missing (common for marine zones)
                 if not f.get('geometry'):
-                    zones = f['properties'].get('affectedZones', [])
-                    if zones:
-                        z_res = requests.get(zones[0], headers=headers, timeout=10)
+                    affected = f['properties'].get('affectedZones', [])
+                    if affected:
+                        z_res = requests.get(affected[0], headers=headers, timeout=5)
                         if z_res.status_code == 200:
                             f['geometry'] = z_res.json().get('geometry')
                 
@@ -81,34 +70,30 @@ for url in urls:
                     active_event_types[etype] = get_color(etype)
     except: continue
 
-# 5. Add Weather Alerts Layer
+# 5. Add Alerts to Map
 if all_features:
-    weather_layer = folium.GeoJson(
+    folium.GeoJson(
         gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326),
-        name="Active Weather Alerts",
+        name="Active Alerts",
         style_function=lambda x: {
             'fillColor': get_color(x['properties']['event']),
-            'color': 'black', 'weight': 1, 'fillOpacity': 0.6
+            'color': 'black', 'weight': 1, 'fillOpacity': 0.5
         },
         tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'], aliases=['Alert:', 'Details:'])
     ).add_to(m)
 
-# 6. UI: Title, Legend, and Control
-legend_items = "".join([f'<li><span style="background:{color}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{name}</li>' for name, color in sorted(active_event_types.items())])
-if not legend_items: legend_items = "<li><i>No active alerts</i></li>"
-
+# 6. UI: Title and Legend
+legend_html = "".join([f'<li><span style="background:{c}; border:1px solid black; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>{n}</li>' for n, c in sorted(active_event_types.items())])
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
-<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; font-family:Arial; text-align:center;">
-    <b>North Caroilna Weather Alerts</b><br><small>Updated: {local_time}</small>
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; text-align:center;">
+    <b>North Carolina Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
-<div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-family:Arial; font-size:12px;">
-    <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_items}</ul>
+<div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-size:12px;">
+    <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_html or "<li>None</li>"}</ul>
 </div>
 {{% endmacro %}}
 '''
 macro = MacroElement(); macro._template = Template(macro_html); m.get_root().add_child(macro)
-
 folium.LayerControl(position='topright', collapsed=False).add_to(m)
-
 m.save("index.html")
