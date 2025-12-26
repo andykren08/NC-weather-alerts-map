@@ -28,10 +28,11 @@ if os.path.exists(county_file):
 
 # 4. FETCH DATA (Exhaustive list to close Carova & Hatteras gaps)
 marine_list = [
-    "ANZ658", "ANZ633", "ANZ634", "ANZ656", # Carova, Currituck Sound, VA Border
-    "AMZ150", "AMZ152", "AMZ154", "AMZ156", "AMZ158", # The "Gaps" at Hatteras & Ocracoke
-    "AMZ130", "AMZ131", "AMZ135", # Albemarle, Roanoke, Pamlico Sounds
-    "AMZ250", "AMZ252", "AMZ254", "AMZ256" # Wilmington down to SC
+    "ANZ633", "ANZ658","ANZ678", # Carova, Currituck Sound, VA Border
+    "AMZ230", "AMZ131","AMZ231","AMZ150","AMZ170",
+    "AMZ135","AMZ152","AMZ172","AMZ136","AMZ137"
+    "AMZ156","AMZ154","AMZ174""AMZ176","AMZ158","AMZ178"
+    "AMZ250","AMZ270"
 ]
 marine_zones = ",".join(marine_list)
 
