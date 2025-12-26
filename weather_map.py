@@ -97,7 +97,7 @@ if not legend_items: legend_items = "<li><i>No active alerts</i></li>"
 macro_html = f'''
 {{% macro html(this, kwargs) %}}
 <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index:9999; background:white; padding:10px; border:2px solid black; border-radius:5px; font-family:Arial; text-align:center;">
-    <b>NC Weather & Marine Alerts</b><br><small>Updated: {local_time}</small>
+    <b>North Carolina Weather Alerts</b><br><small>Updated: {local_time}</small>
 </div>
 <div style="position: fixed; bottom: 30px; right: 10px; z-index:9999; background:white; padding:10px; border:2px solid grey; border-radius:5px; font-family:Arial; font-size:12px;">
     <b>Legend</b><ul style="list-style:none; padding:0; margin:0;">{legend_items}</ul>
