@@ -34,26 +34,61 @@ date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 # --- 3. MAP SETUP ---
 m = folium.Map(location=[35.5, -76.0], zoom_start=7, tiles=None)
 
-# Basemaps
-folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
-                 attr='Google', name='Satellite Hybrid', overlay=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
-                 attr='Google', name='Terrain', overlay=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
-                 attr='Google', name='Street Map', overlay=False).add_to(m)
-folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False).add_to(m)
+# --- BASEMAPS ---
+# 1. Satellite Hybrid
+folium.TileLayer(
+    'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
+    attr='Google', 
+    name='Satellite Hybrid', 
+    overlay=False,
+    control=True
+).add_to(m)
+
+# 2. Terrain
+folium.TileLayer(
+    'https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+    attr='Google',
+    name='Terrain',
+    overlay=False,
+    control=True
+).add_to(m)
+
+# 3. Street Map
+folium.TileLayer(
+    'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+    attr='Google',
+    name='Street Map',
+    overlay=False,
+    control=True
+).add_to(m)
+
+# 4. Light Gray (High Contrast)
+folium.TileLayer(
+    'CartoDB positron', 
+    name='Light Gray Base', 
+    overlay=False,
+    control=True
+).add_to(m)
 
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
-# --- 4. LOAD COUNTY BORDERS ---
+# --- 4. LOAD COUNTY BORDERS (High Visibility) ---
 county_file = "nc_counties.json"
 if os.path.exists(county_file):
     with open(county_file, 'r') as f:
+        # We use overlay=True so this layer sits ON TOP of whatever basemap is selected.
         folium.GeoJson(
             json.load(f), 
             name="County Lines",
-            style_function=lambda x: {'color': '#666666', 'weight': 1.2, 'fillOpacity': 0},
-            overlay=True 
+            style_function=lambda x: {
+                'color': 'white',       # White color stands out on Satellite
+                'weight': 1.0, 
+                'fillOpacity': 0,
+                'dashArray': '5, 5',    # Dashed line helps visibility on light maps
+                'opacity': 0.7
+            },
+            overlay=True,
+            control=True
         ).add_to(m)
 
 # --- 5. FETCH DATA ---
@@ -74,8 +109,6 @@ all_features = []
 seen_ids = set()
 active_events = {} 
 headers = {'User-Agent': 'NCWeatherMap/13.0'}
-
-# CACHE: Store geometries for zones we've already fetched so we don't fetch them twice
 zone_geom_cache = {}
 
 print("Fetching alerts...")
@@ -94,31 +127,22 @@ for url in urls:
             ename = f['properties']['event']
             active_events[ename] = get_color(ename)
             
-            # --- IMPROVED MULTI-ZONE LOGIC ---
+            # --- EXPLODE MULTI-ZONE ALERTS ---
             if f.get('geometry'):
-                # Normal Land Alert (has geometry) -> Add once
                 all_features.append(f)
             else:
-                # Marine Alert (No geometry) -> Must fetch from affectedZones
-                # "Explode" the alert: create a separate feature for EACH affected zone
                 z_links = f['properties'].get('affectedZones', [])
-                
                 for z_link in z_links:
-                    # Check Cache First
                     geom = zone_geom_cache.get(z_link)
-                    
                     if not geom:
                         try:
                             z_res = requests.get(z_link, headers=headers, timeout=5)
                             if z_res.status_code == 200:
                                 geom = z_res.json().get('geometry')
-                                zone_geom_cache[z_link] = geom # Save to cache
-                        except Exception as e:
-                            print(f"Error fetching zone {z_link}: {e}")
+                                zone_geom_cache[z_link] = geom 
+                        except Exception: pass
                     
-                    # If we found a geometry (either cached or new), create a feature
                     if geom:
-                        # Create a copy of the alert feature but with the specific zone geometry
                         new_f = {
                             "type": "Feature",
                             "properties": f['properties'],
@@ -148,12 +172,15 @@ if all_features:
             aliases=['Alert:', 'Details:'],
             localize=True
         ),
-        overlay=True
+        overlay=True,
+        control=True
     ).add_to(m)
 
-# --- 7. ADD LAYER CONTROL & LEGEND ---
+# --- 7. ADD LAYER CONTROL ---
+# This enables the top-right menu to switch basemaps AND toggle County Lines
 folium.LayerControl(collapsed=True).add_to(m)
 
+# --- 8. LEGEND & SAVE ---
 legend_html_items = ""
 if not active_events:
     legend_html_items = "<li><span style='margin-left:10px;'>No Active Hazards</span></li>"
@@ -191,7 +218,4 @@ macro._template = Template(template)
 m.get_root().add_child(macro)
 
 m.save("index.html")
-print("Map saved to index.html with corrected marine zones")
-
-m.save("index.html")
-print("Map saved to index.html with Layer Controls")
+print("Map saved to index.html with universal County Lines")
