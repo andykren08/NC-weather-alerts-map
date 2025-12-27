@@ -36,14 +36,14 @@ m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles=None)
 
 # --- BASEMAPS ---
 
-# 1. Satellite Hybrid (DEFAULT: show=True)
+# 1. Satellite Hybrid (Hidden on Load)
 folium.TileLayer(
     'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
     attr='Google', 
     name='Satellite Hybrid', 
     overlay=False,
     control=True,
-    show=True  # <--- This one is visible on load
+    show=False  # <--- Hidden
 ).add_to(m)
 
 # 2. Terrain (Hidden on load)
@@ -56,14 +56,14 @@ folium.TileLayer(
     show=False # <--- Hidden
 ).add_to(m)
 
-# 3. Street Map (Hidden on load)
+# 3. Street Map (Default: show=True)
 folium.TileLayer(
     'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
     attr='Google',
     name='Street Map',
     overlay=False,
     control=True,
-    show=False # <--- Hidden
+    show=True # <--- This one is visible on load
 ).add_to(m)
 
 # 4. Light Gray Base (Hidden on load)
@@ -85,8 +85,8 @@ if os.path.exists(county_file):
             json.load(f), 
             name="County Lines",
             style_function=lambda x: {
-                'color': 'white',       
-                'weight': 1.0, 
+                'color': 'black',       
+                'weight': 1.5, 
                 'fillOpacity': 0,
                 'dashArray': '5, 5',    
                 'opacity': 0.7
