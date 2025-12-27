@@ -32,7 +32,7 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
 # --- 3. MAP SETUP ---
-m = folium.Map(location=[35.5, -76.0], zoom_start=8, tiles=None)
+m = folium.Map(location=[35.5, -78.0], zoom_start=8, tiles=None)
 
 # --- BASEMAPS ---
 
