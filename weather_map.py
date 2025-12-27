@@ -32,41 +32,16 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
 # --- 3. MAP SETUP ---
-# Initialize with tiles=None so we can add specific layers below
 m = folium.Map(location=[35.5, -76.0], zoom_start=7, tiles=None)
 
-# --- BASEMAP LAYERS (overlay=False makes them radio buttons) ---
-
-# 1. Google Satellite Hybrid (Your original)
-folium.TileLayer(
-    'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
-    attr='Google', 
-    name='Satellite Hybrid', 
-    overlay=False
-).add_to(m)
-
-# 2. Google Terrain (New)
-folium.TileLayer(
-    'https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
-    attr='Google',
-    name='Terrain',
-    overlay=False
-).add_to(m)
-
-# 3. Google Roads (New - Standard Map)
-folium.TileLayer(
-    'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
-    attr='Google',
-    name='Street Map',
-    overlay=False
-).add_to(m)
-
-# 4. CartoDB Light (Your original - good for high contrast)
-folium.TileLayer(
-    'CartoDB positron', 
-    name='Light Gray Base', 
-    overlay=False
-).add_to(m)
+# Basemaps
+folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
+                 attr='Google', name='Satellite Hybrid', overlay=False).add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+                 attr='Google', name='Terrain', overlay=False).add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+                 attr='Google', name='Street Map', overlay=False).add_to(m)
+folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False).add_to(m)
 
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
@@ -74,7 +49,6 @@ LocateControl(auto_start=False, flyTo=True).add_to(m)
 county_file = "nc_counties.json"
 if os.path.exists(county_file):
     with open(county_file, 'r') as f:
-        # overlay=True makes this a checkbox layer you can toggle ON/OFF
         folium.GeoJson(
             json.load(f), 
             name="County Lines",
@@ -101,6 +75,9 @@ seen_ids = set()
 active_events = {} 
 headers = {'User-Agent': 'NCWeatherMap/13.0'}
 
+# CACHE: Store geometries for zones we've already fetched so we don't fetch them twice
+zone_geom_cache = {}
+
 print("Fetching alerts...")
 
 for url in urls:
@@ -117,18 +94,37 @@ for url in urls:
             ename = f['properties']['event']
             active_events[ename] = get_color(ename)
             
-            if not f.get('geometry'):
-                z_links = f['properties'].get('affectedZones', [])
-                if z_links:
-                    try:
-                        z_res = requests.get(z_links[0], headers=headers, timeout=5)
-                        if z_res.status_code == 200:
-                            f['geometry'] = z_res.json().get('geometry')
-                    except Exception:
-                        pass
-            
+            # --- IMPROVED MULTI-ZONE LOGIC ---
             if f.get('geometry'):
+                # Normal Land Alert (has geometry) -> Add once
                 all_features.append(f)
+            else:
+                # Marine Alert (No geometry) -> Must fetch from affectedZones
+                # "Explode" the alert: create a separate feature for EACH affected zone
+                z_links = f['properties'].get('affectedZones', [])
+                
+                for z_link in z_links:
+                    # Check Cache First
+                    geom = zone_geom_cache.get(z_link)
+                    
+                    if not geom:
+                        try:
+                            z_res = requests.get(z_link, headers=headers, timeout=5)
+                            if z_res.status_code == 200:
+                                geom = z_res.json().get('geometry')
+                                zone_geom_cache[z_link] = geom # Save to cache
+                        except Exception as e:
+                            print(f"Error fetching zone {z_link}: {e}")
+                    
+                    # If we found a geometry (either cached or new), create a feature
+                    if geom:
+                        # Create a copy of the alert feature but with the specific zone geometry
+                        new_f = {
+                            "type": "Feature",
+                            "properties": f['properties'],
+                            "geometry": geom
+                        }
+                        all_features.append(new_f)
 
     except Exception as e:
         print(f"Request error: {e}")
@@ -138,7 +134,6 @@ for url in urls:
 if all_features:
     gdf = gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326)
     
-    # overlay=True ensures this sits ON TOP of your satellite/terrain maps
     folium.GeoJson(
         gdf,
         name="Active Hazards",
@@ -156,11 +151,9 @@ if all_features:
         overlay=True
     ).add_to(m)
 
-# --- 7. ADD LAYER CONTROL ---
-# This creates the menu in the top-right to switch between Satellite/Terrain/etc.
+# --- 7. ADD LAYER CONTROL & LEGEND ---
 folium.LayerControl(collapsed=True).add_to(m)
 
-# --- 8. CREATE LEGEND & SAVE ---
 legend_html_items = ""
 if not active_events:
     legend_html_items = "<li><span style='margin-left:10px;'>No Active Hazards</span></li>"
@@ -196,6 +189,9 @@ template = f"""
 macro = MacroElement()
 macro._template = Template(template)
 m.get_root().add_child(macro)
+
+m.save("index.html")
+print("Map saved to index.html with corrected marine zones")
 
 m.save("index.html")
 print("Map saved to index.html with Layer Controls")
