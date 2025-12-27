@@ -32,7 +32,7 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
 # --- 3. MAP SETUP ---
-m = folium.Map(location=[35.5, -76.0], zoom_start=7, tiles=None)
+m = folium.Map(location=[35.5, -76.0], zoom_start=8, tiles=None)
 
 # --- BASEMAPS ---
 
@@ -185,7 +185,7 @@ folium.LayerControl(collapsed=True).add_to(m)
 # --- 8. LEGEND & SAVE ---
 legend_html_items = ""
 if not active_events:
-    legend_html_items = "<li><span style='margin-left:10px;'>No Active Hazards</span></li>"
+    legend_html_items = "<li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>"
 else:
     for event, color in active_events.items():
         legend_html_items += f"""
@@ -200,7 +200,7 @@ template = f"""
 <div id='maplegend' class='maplegend' 
     style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.9);
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
-    <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 16px;">NC Weather Alerts</div>
+    <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 11px; color: #555; margin-bottom: 10px;">
         Updated: {date_str}<br>{local_time}
     </div>
