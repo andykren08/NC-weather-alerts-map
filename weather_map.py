@@ -173,7 +173,7 @@ if all_features:
         tooltip=folium.GeoJsonTooltip(
             fields=['event', 'headline'],
             aliases=['Alert:', 'Details:'],
-            localize=True
+            localize=True,
             style="font-size: 15px; padding: 8px; max-width: 400px; color: black;"
         ),
         overlay=True,
