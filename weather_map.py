@@ -174,7 +174,14 @@ if all_features:
             fields=['event', 'headline'],
             aliases=['Alert:', 'Details:'],
             localize=True,
-            style="font-size: 15px; padding: 8px; max-width: 400px; color: black;"
+        style="""
+            font-size: 15px; 
+            padding: 10px; 
+            max-width: 300px;
+            white-space: normal;
+            word-wrap: break-word;
+            color: black;
+        """
         ),
         overlay=True,
         control=True
