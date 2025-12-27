@@ -35,56 +35,60 @@ date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 m = folium.Map(location=[35.5, -76.0], zoom_start=7, tiles=None)
 
 # --- BASEMAPS ---
-# 1. Satellite Hybrid
+
+# 1. Satellite Hybrid (DEFAULT: show=True)
 folium.TileLayer(
     'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', 
     attr='Google', 
     name='Satellite Hybrid', 
     overlay=False,
-    control=True
+    control=True,
+    show=True  # <--- This one is visible on load
 ).add_to(m)
 
-# 2. Terrain
+# 2. Terrain (Hidden on load)
 folium.TileLayer(
     'https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
     attr='Google',
     name='Terrain',
     overlay=False,
-    control=True
+    control=True,
+    show=False # <--- Hidden
 ).add_to(m)
 
-# 3. Street Map
+# 3. Street Map (Hidden on load)
 folium.TileLayer(
     'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
     attr='Google',
     name='Street Map',
     overlay=False,
-    control=True
+    control=True,
+    show=False # <--- Hidden
 ).add_to(m)
 
-# 4. Light Gray (High Contrast)
+# 4. Light Gray Base (Hidden on load)
 folium.TileLayer(
     'CartoDB positron', 
     name='Light Gray Base', 
     overlay=False,
-    control=True
+    control=True,
+    show=False # <--- Hidden
 ).add_to(m)
 
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
-# --- 4. LOAD COUNTY BORDERS (High Visibility) ---
+# --- 4. LOAD COUNTY BORDERS ---
 county_file = "nc_counties.json"
 if os.path.exists(county_file):
     with open(county_file, 'r') as f:
-        # We use overlay=True so this layer sits ON TOP of whatever basemap is selected.
         folium.GeoJson(
             json.load(f), 
             name="County Lines",
             style_function=lambda x: {
-                'color': 'white',       # White color stands out on Satellite
+                'color': 'white',       
                 'weight': 1.0, 
                 'fillOpacity': 0,
-                'dashArray': '5, 5',    # Dashed line helps visibility on light maps
+                'dashArray': '5, 5',    
                 'opacity': 0.7
             },
             overlay=True,
@@ -127,7 +131,6 @@ for url in urls:
             ename = f['properties']['event']
             active_events[ename] = get_color(ename)
             
-            # --- EXPLODE MULTI-ZONE ALERTS ---
             if f.get('geometry'):
                 all_features.append(f)
             else:
@@ -177,7 +180,6 @@ if all_features:
     ).add_to(m)
 
 # --- 7. ADD LAYER CONTROL ---
-# This enables the top-right menu to switch basemaps AND toggle County Lines
 folium.LayerControl(collapsed=True).add_to(m)
 
 # --- 8. LEGEND & SAVE ---
@@ -218,4 +220,4 @@ macro._template = Template(template)
 m.get_root().add_child(macro)
 
 m.save("index.html")
-print("Map saved to index.html with universal County Lines")
+print("Map saved to index.html (Default: Satellite)")
