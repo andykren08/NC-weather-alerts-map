@@ -201,7 +201,7 @@ template = f"""
     style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.9);
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
-    <div style="font-size: 11px; color: #555; margin-bottom: 10px;">
+    <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
         Updated: {date_str}<br>{local_time}
     </div>
     <div class='legend-scale'>
