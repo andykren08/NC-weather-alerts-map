@@ -32,7 +32,7 @@ local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p 
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
 # --- 3. MAP SETUP ---
-m = folium.Map(location=[35.5, -79.0], zoom_start=8, tiles=None)
+m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles=None)
 
 # --- BASEMAPS ---
 
@@ -191,7 +191,7 @@ else:
         legend_html_items += f"""
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:{color}; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:12px;">{event}</span>
+            <span style="font-size:14px;">{event}</span>
         </div>
         """
 
