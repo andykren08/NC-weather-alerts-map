@@ -175,7 +175,7 @@ if all_features:
             aliases=['Alert:', 'Details:'],
             localize=True,
         style="""
-            font-size: 14px; 
+            font-size: 13px; 
             padding: 10px; 
             max-width: 300px;
             white-space: normal;
