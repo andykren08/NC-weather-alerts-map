@@ -231,16 +231,13 @@ for url in urls:
             else:
                 z_links = f['properties'].get('affectedZones', [])
                 for z_link in z_links:
-                    # ... existing code ...
             if f.get('geometry'):
                 all_features.append(f)
             else:
                 z_links = f['properties'].get('affectedZones', [])
                 for z_link in z_links:
                     # --- FIX START: Filter out non-NC/non-Marine zones ---
-                    # Extract the Zone ID from the URL (e.g., ".../zones/forecast/NCZ015")
                     zone_id = z_link.split('/')[-1]
-                    
                     # Check if it is an NC land zone OR a requested marine zone
                     is_nc_zone = zone_id.startswith('NC') 
                     is_wanted_marine = zone_id in marine_list
