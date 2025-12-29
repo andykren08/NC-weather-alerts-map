@@ -198,7 +198,7 @@ marine_list = ["ANZ633", "ANZ658", "ANZ678", "AMZ230", "AMZ131", "AMZ231", "AMZ1
 marine_zones = ",".join(marine_list)
 
 urls = [
-    "https://api.weather.gov/alerts/active?area=NC,VA,SC", 
+    "https://api.weather.gov/alerts/active?area=NC", 
     f"https://api.weather.gov/alerts/active?zone={marine_zones}"
 ]
 
