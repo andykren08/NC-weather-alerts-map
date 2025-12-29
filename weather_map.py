@@ -265,9 +265,6 @@ if all_features:
         control=True
     ).add_to(m)
 
-# --- 7. ADD LAYER CONTROL ---
-folium.LayerControl(collapsed=True).add_to(m)
-
 # --- 8. LEGEND & SAVE ---
 # Sort the legend items by priority as well so the legend looks logical
 legend_html_items = ""
@@ -327,6 +324,9 @@ resize_css = f"""
 </style>
 """
 m.get_root().html.add_child(folium.Element(resize_css))
+
+# --- 7. ADD LAYER CONTROL ---
+folium.LayerControl(collapsed=False).add_to(m)
 
 m.save("index.html")
 print("Map saved to index.html")
