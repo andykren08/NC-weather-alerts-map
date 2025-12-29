@@ -7,6 +7,7 @@ import json
 from datetime import datetime, timezone
 import pytz
 from branca.element import Template, MacroElement
+from folium.plugins import LocateControl, FloatImage  # <--- Added FloatImage
 
 # --- 1. CONFIGURATION: NWS HAZARD DATA (Color & Priority) ---
 # Source: https://www.weather.gov/help-map
