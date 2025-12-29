@@ -280,11 +280,23 @@ macro = MacroElement()
 macro._template = Template(template)
 m.get_root().add_child(macro)
 
-# --- ADD LOGO ---
-logo_file = "nws.png"  # Ensure this file is in the same directory as index.html
+# --- ADD NWS LOGO ---
+logo_file = "nws.png"
+float_image = FloatImage(logo_file, bottom=5, left=5)
+float_image.add_to(m)
 
-# 'bottom' and 'left' are percentages (0-100) of the screen
-FloatImage(logo_file, bottom=5, left=5).add_to(m)
+# --- FORCE RESIZE WITH CSS ---
+# This injects CSS to force the logo (which is an <img> tag inside the float div) to be 100px wide.
+# You can change '100px' to whatever size looks best (e.g., '150px' or '10%').
+resize_css = f"""
+<style>
+    img[src="{logo_file}"] {{
+        width: 100px !important;
+        height: auto !important;
+    }}
+</style>
+"""
+m.get_root().html.add_child(folium.Element(resize_css))
 
 m.save("index.html")
 print("Map saved to index.html")
