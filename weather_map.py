@@ -279,5 +279,11 @@ macro = MacroElement()
 macro._template = Template(template)
 m.get_root().add_child(macro)
 
+# --- ADD LOGO ---
+logo_file = "nws.png"  # Ensure this file is in the same directory as index.html
+
+# 'bottom' and 'left' are percentages (0-100) of the screen
+FloatImage(logo_file, bottom=5, left=5).add_to(m)
+
 m.save("index.html")
 print("Map saved to index.html")
