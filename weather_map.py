@@ -226,25 +226,23 @@ for url in urls:
             # Use new color function
             active_events[ename] = get_event_color(ename) 
             
+            # --- THIS WAS THE PROBLEM AREA ---
             if f.get('geometry'):
+                # This line MUST be indented
                 all_features.append(f)
             else:
                 z_links = f['properties'].get('affectedZones', [])
                 for z_link in z_links:
-            if f.get('geometry'):
-                all_features.append(f)
-            else:
-                z_links = f['properties'].get('affectedZones', [])
-                for z_link in z_links:
-                    # --- FIX START: Filter out non-NC/non-Marine zones ---
+                    # --- FILTER START: Remove VA zones ---
                     zone_id = z_link.split('/')[-1]
-                    # Check if it is an NC land zone OR a requested marine zone
                     is_nc_zone = zone_id.startswith('NC') 
                     is_wanted_marine = zone_id in marine_list
-                    
-                    # If it's neither, skip it (this removes VA zones)
+
                     if not (is_nc_zone or is_wanted_marine):
                         continue
+                    # --- FILTER END ---
+
+                    geom = zone_geom_cache.get(z_link)
                     if not geom:
                         try:
                             z_res = requests.get(z_link, headers=headers, timeout=5)
