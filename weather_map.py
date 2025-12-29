@@ -133,9 +133,39 @@ date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles=None)
 
 # --- BASEMAPS ---
-folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google', name='Satellite Hybrid', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', attr='Google', name='Terrain', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Street Map', overlay=False, control=True, show=True).add_to(m)
+
+# Add ESRI Satellite
+# 1. ESRI World Imagery (Satellite)
+folium.TileLayer(
+    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    attr='Esri',
+    name='Esri Satellite',
+    overlay=False,
+    control=True
+).add_to(m)
+
+# 2. ESRI World Street Map
+folium.TileLayer(
+    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+    attr='Esri',
+    name='Esri Street Map',
+    overlay=False,
+    control=True
+).add_to(m)
+
+# 3. ESRI National Geographic (Good for weather maps)
+folium.TileLayer(
+    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+    attr='Esri',
+    name='Esri NatGeo',
+    overlay=False,
+    control=True
+).add_to(m)
+
+# Your existing layers
+folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google', name='Google Satellite', overlay=False, control=True, show=False).add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', attr='Google', name='Google Terrain', overlay=False, control=True, show=False).add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Google Street', overlay=False, control=True, show=True).add_to(m)
 folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False, control=True, show=False).add_to(m)
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
