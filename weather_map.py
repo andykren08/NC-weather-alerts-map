@@ -162,7 +162,7 @@ folium.TileLayer(
     name='Esri Street Map',
     overlay=False,
     control=True,
-    show=True
+    show=False
 ).add_to(m)
 
 # 3. ESRI National Geographic (Good for weather maps)
@@ -172,7 +172,7 @@ folium.TileLayer(
     name='Esri NatGeo',
     overlay=False,
     control=True,
-    show=False
+    show=True
 ).add_to(m)
 
 # Your existing layers
