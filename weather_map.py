@@ -141,7 +141,8 @@ folium.TileLayer(
     attr='Esri',
     name='Esri Satellite',
     overlay=False,
-    control=True
+    control=True,
+    show=False
 ).add_to(m)
 
 # 2. ESRI World Street Map
@@ -150,7 +151,8 @@ folium.TileLayer(
     attr='Esri',
     name='Esri Street Map',
     overlay=False,
-    control=True
+    control=True,
+    show=True
 ).add_to(m)
 
 # 3. ESRI National Geographic (Good for weather maps)
@@ -159,13 +161,14 @@ folium.TileLayer(
     attr='Esri',
     name='Esri NatGeo',
     overlay=False,
-    control=True
+    control=True,
+    show=False
 ).add_to(m)
 
 # Your existing layers
 folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google', name='Google Satellite', overlay=False, control=True, show=False).add_to(m)
 folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', attr='Google', name='Google Terrain', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Google Street', overlay=False, control=True, show=True).add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Google Street', overlay=False, control=True, show=False).add_to(m)
 folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False, control=True, show=False).add_to(m)
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
