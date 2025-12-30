@@ -375,5 +375,19 @@ m.get_root().html.add_child(folium.Element(resize_css))
 # --- 7. ADD LAYER CONTROL ---
 folium.LayerControl(collapsed=False).add_to(m)
 
+# Save the map first
 m.save("index.html")
-print("Map saved to index.html")
+
+# --- ADD AUTO-REFRESH ---
+# Re-open the file and inject a meta refresh tag
+with open("index.html", "r") as f:
+    html_content = f.read()
+
+# Refreshes page every 300 seconds (5 minutes)
+refresh_tag = '<meta http-equiv="refresh" content="300">' 
+html_content = html_content.replace('<head>', f'<head>{refresh_tag}')
+
+with open("index.html", "w") as f:
+    f.write(html_content)
+
+print("Map saved to index.html (with 5-minute auto-refresh)")
