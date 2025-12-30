@@ -194,7 +194,7 @@ if os.path.exists(county_file):
         ).add_to(m)
 
 # --- 5. FETCH DATA ---
-marine_list = ["ANZ633", "ANZ658", "ANZ678", "AMZ230", "AMZ131", "AMZ231", "AMZ150", "AMZ170", "AMZ135", "AMZ152", "AMZ172", "AMZ136", "AMZ137", "AMZ156", "AMZ154", "AMZ174", "AMZ176", "AMZ158", "AMZ178", "AMZ250", "AMZ270"]
+marine_list = ["ANZ633", "ANZ658", "ANZ678", "AMZ230", "AMZ131", "AMZ231", "AMZ150", "AMZ170", "AMZ135", "AMZ152", "AMZ172", "AMZ136", "AMZ137", "AMZ156", "AMZ154", "AMZ174", "AMZ176", "AMZ158", "AMZ178", "AMZ250", "AMZ270", "AMZ252", "AMZ272", "AMZ270", "AMZ178", "AMZ176", "AMZ174", "AMZ172", "AMZ170", "ANZ678", "ANZ828", "ANZ830", "ANZ833", "ANZ835", "ANZ935", "ANZ930", "ANZ925"]
 marine_zones = ",".join(marine_list)
 
 urls = [
