@@ -217,27 +217,38 @@ for url in urls:
         
         features = res.json().get('features', [])
         for f in features:
-            alert_id = f['properties'].get('id')
+            props = f['properties']
+            alert_id = props.get('id')
             if alert_id in seen_ids: continue
             seen_ids.add(alert_id)
 
-            # --- NEW FILTER: CHECK IF HAZARD HAS ENDED ---
-            ends_str = f['properties'].get('ends')
+            # --- FILTER 1: REMOVE CANCELED ALERTS ---
+            # If the NWS issues a cancellation, the alert stays in the feed 
+            # until the message expires, even though it's "dead".
+            if props.get('messageType') == 'Cancel':
+                continue
+            
+            # --- FILTER 2: REMOVE EXPIRED HAZARD TIMES ---
+            # Even if active, if the "ends" time has passed, don't show it.
+            ends_str = props.get('ends')
             if ends_str:
                 try:
-                    # NWS uses ISO format, sometimes with Z. Python needs explicit timezone handling.
-                    # replace("Z", "+00:00") ensures compatibility with older Python versions
                     ends_dt = datetime.fromisoformat(ends_str.replace("Z", "+00:00"))
-                    
-                    # If the hazard end time is older than right now, SKIP IT.
                     if ends_dt < utc_now:
                         continue
                 except ValueError:
-                    # If date parsing fails, keep the alert to be safe
                     pass
-            # ---------------------------------------------
 
-            ename = f['properties']['event']
+            # --- FILTER 3: KEYWORD SEARCH (Backup) ---
+            # Sometimes 'messageType' is 'Update' but the headline says 'Cancelled'
+            headline = props.get('headline', '').upper()
+            description = props.get('description', '').upper()
+            if 'CANCELLED' in headline or 'EXPIRATION' in headline:
+                 # Double check this isn't a "Storm Cancelled... but Flood Warning continues" message
+                 # usually simplicity is best: if the HEADLINE says cancelled, skip it.
+                 continue
+
+            ename = props['event']
             
             # Use new color function
             active_events[ename] = get_event_color(ename) 
@@ -245,16 +256,14 @@ for url in urls:
             if f.get('geometry'):
                 all_features.append(f)
             else:
-                z_links = f['properties'].get('affectedZones', [])
+                z_links = props.get('affectedZones', [])
                 for z_link in z_links:
-                    # --- FILTER START: Remove VA zones ---
                     zone_id = z_link.split('/')[-1]
                     is_nc_zone = zone_id.startswith('NC') 
                     is_wanted_marine = zone_id in marine_list
 
                     if not (is_nc_zone or is_wanted_marine):
                         continue
-                    # --- FILTER END ---
 
                     geom = zone_geom_cache.get(z_link)
                     if not geom:
@@ -266,7 +275,7 @@ for url in urls:
                         except Exception: pass
                     
                     if geom:
-                        new_f = {"type": "Feature", "properties": f['properties'], "geometry": geom}
+                        new_f = {"type": "Feature", "properties": props, "geometry": geom}
                         all_features.append(new_f)
 
     except Exception as e:
