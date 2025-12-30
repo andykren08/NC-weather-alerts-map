@@ -221,14 +221,28 @@ for url in urls:
             if alert_id in seen_ids: continue
             seen_ids.add(alert_id)
 
+            # --- NEW FILTER: CHECK IF HAZARD HAS ENDED ---
+            ends_str = f['properties'].get('ends')
+            if ends_str:
+                try:
+                    # NWS uses ISO format, sometimes with Z. Python needs explicit timezone handling.
+                    # replace("Z", "+00:00") ensures compatibility with older Python versions
+                    ends_dt = datetime.fromisoformat(ends_str.replace("Z", "+00:00"))
+                    
+                    # If the hazard end time is older than right now, SKIP IT.
+                    if ends_dt < utc_now:
+                        continue
+                except ValueError:
+                    # If date parsing fails, keep the alert to be safe
+                    pass
+            # ---------------------------------------------
+
             ename = f['properties']['event']
             
             # Use new color function
             active_events[ename] = get_event_color(ename) 
             
-            # --- THIS WAS THE PROBLEM AREA ---
             if f.get('geometry'):
-                # This line MUST be indented
                 all_features.append(f)
             else:
                 z_links = f['properties'].get('affectedZones', [])
