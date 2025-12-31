@@ -183,7 +183,7 @@ folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False, cont
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
 # --- 4. LOAD COUNTY BORDERS ---
-county_file = "nc_counties.json
+county_file = "nc_counties.json"
 if os.path.exists(county_file):
     with open(county_file, 'r') as f:
         folium.GeoJson(
