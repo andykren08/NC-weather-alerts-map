@@ -152,7 +152,8 @@ folium.TileLayer(
     name='Esri Satellite',
     overlay=False,
     control=True,
-    show=False
+    show=False,
+    crossOrigin='anonymous'
 ).add_to(m)
 
 # 2. ESRI World Street Map
@@ -162,7 +163,8 @@ folium.TileLayer(
     name='Esri Street Map',
     overlay=False,
     control=True,
-    show=False
+    show=False,
+    crossOrigin='anonymous'
 ).add_to(m)
 
 # 3. ESRI National Geographic (Good for weather maps)
@@ -172,14 +174,15 @@ folium.TileLayer(
     name='Esri NatGeo',
     overlay=False,
     control=True,
-    show=True
+    show=True,
+    crossOrigin='anonymous'
 ).add_to(m)
 
 # Your existing layers
-folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google', name='Google Satellite', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', attr='Google', name='Google Terrain', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Google Street', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False, control=True, show=False).add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google', name='Google Satellite', overlay=False, control=True, show=False, crossOrigin='anonymous').add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', attr='Google', name='Google Terrain', overlay=False, control=True, show=False, crossOrigin='anonymous').add_to(m)
+folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Google Street', overlay=False, control=True, show=False, crossOrigin='anonymous').add_to(m)
+folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False, control=True, show=False, crossOrigin='anonymous').add_to(m)
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
 # --- 4. LOAD COUNTY BORDERS ---
@@ -374,6 +377,31 @@ m.get_root().html.add_child(folium.Element(resize_css))
 
 # --- 7. ADD LAYER CONTROL ---
 folium.LayerControl(collapsed=False).add_to(m)
+
+# --- NEW: ADD SCREENSHOT/DOWNLOAD BUTTON ---
+# 1. Inject the plugin JS library into the map header
+m.get_root().header.add_child(
+    folium.Element('<script src="https://unpkg.com/leaflet-simple-map-screenshoter"></script>')
+)
+
+# 2. Define a custom MacroElement to initialize the plugin
+class ScreenshotControl(MacroElement):
+    _template = Template("""
+        {% macro script(this, kwargs) %}
+        L.simpleMapScreenshoter({
+            hidden: false,          // Show the button on the map
+            position: 'topleft',    // Position of the button
+            screenName: 'nc_hazard_map', // Name of the downloaded file
+            icon: '📷',             // Text or HTML for the button label
+            hideElementsWithSelectors: ['.leaflet-control-layers', '.leaflet-control-zoom'] # Elements to hide in the image
+        }).addTo({{this._parent.get_name()}});
+        {% endmacro %}
+    """)
+
+# 3. Add the control to the map
+m.add_child(ScreenshotControl())
+
+# ... [Continue to m.save()] ...
 
 # Save the map first
 m.save("index.html")
