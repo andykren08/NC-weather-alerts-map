@@ -113,7 +113,7 @@ HAZARD_DATA = {
     "911 Telephone Outage": {"color": "#C0C0C0", "priority": 97},
     "Coastal Flood Statement": {"color": "#6B8E23", "priority": 98},
     "Lakeshore Flood Statement": {"color": "#6B8E23", "priority": 99},
-    #  "Special Weather Statement": {"color": "#FFE4B5", "priority": 100},
+    "Special Weather Statement": {"color": "#FFE4B5", "priority": 100},
     "Marine Weather Statement": {"color": "#FFDAB9", "priority": 101},
     "Air Quality Alert": {"color": "#808080", "priority": 102},
     "Air Stagnation Advisory": {"color": "#808080", "priority": 103},
