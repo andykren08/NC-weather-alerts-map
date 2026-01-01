@@ -8,15 +8,7 @@ from datetime import datetime, timezone
 import pytz
 from branca.element import Template, MacroElement
 from folium.plugins import LocateControl, FloatImage  # <--- Added FloatImage
-
 from folium.plugins import Fullscreen
-
-Fullscreen(
-    position='topleft',
-    title='Expand me',
-    title_cancel='Exit me',
-    force_separate_button=True
-).add_to(m)
 
 # --- 1. CONFIGURATION: NWS HAZARD DATA (Color & Priority) ---
 # Source: https://www.weather.gov/help-map
@@ -150,6 +142,14 @@ date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
 # --- 3. MAP SETUP ---
 m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles=None)
+
+# --- ADD FULLSCREEN BUTTON HERE ---
+Fullscreen(
+    position='topleft',
+    title='Full Screen',
+    title_cancel='Exit Full Screen',
+    force_separate_button=True
+).add_to(m)
 
 # --- BASEMAPS ---
 
