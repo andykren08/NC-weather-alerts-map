@@ -155,14 +155,27 @@ utc_now = datetime.now(timezone.utc)
 local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p %Z')
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
-m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles=None)
+# CHANGE: Use 'CartoDB positron' or 'OpenStreetMap' as the default tiles
+# This ensures you always have a background map, even if the fancy ESRI ones fail.
+m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles="CartoDB positron")
 
 Fullscreen(position='topleft', force_separate_button=True).add_to(m)
 
-# Base Layers
-folium.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', attr='Esri', name='Esri NatGeo', show=True).add_to(m)
-folium.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attr='Esri', name='Esri Satellite', show=False).add_to(m)
-folium.TileLayer('CartoDB positron', name='Light Gray Base', show=False).add_to(m)
+# Optional: Add the ESRI layers as extra options, but keep CartoDB as default
+folium.TileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    attr='Esri',
+    name='Esri Satellite',
+    show=False
+).add_to(m)
+
+folium.TileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+    attr='Esri',
+    name='Esri NatGeo',
+    show=False
+).add_to(m)
+
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
 # Initialize Category Groups
