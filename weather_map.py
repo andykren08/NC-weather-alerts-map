@@ -11,13 +11,6 @@ from folium.plugins import LocateControl, FloatImage  # <--- Added FloatImage
 
 from folium.plugins import Fullscreen
 
-Fullscreen(
-    position='topleft',
-    title='Expand me',
-    title_cancel='Exit me',
-    force_separate_button=True
-).add_to(m)
-
 # --- 1. CONFIGURATION: NWS HAZARD DATA (Color & Priority) ---
 # Source: https://www.weather.gov/help-map
 # Priority: Lower number = Higher Importance. 
@@ -182,6 +175,13 @@ folium.TileLayer(
     overlay=False,
     control=True,
     show=True
+).add_to(m)
+
+Fullscreen(
+    position='topleft',
+    title='Expand me',
+    title_cancel='Exit me',
+    force_separate_button=True
 ).add_to(m)
 
 # Your existing layers
