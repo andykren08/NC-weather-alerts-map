@@ -166,7 +166,7 @@ folium.TileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     attr='Esri',
     name='Esri Satellite',
-    show=False
+    show=True
 ).add_to(m)
 
 folium.TileLayer(
