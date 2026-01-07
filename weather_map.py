@@ -1,5 +1,4 @@
 import requests
-import geopandas as gpd
 import folium
 import os
 import json
@@ -9,6 +8,7 @@ from branca.element import Template, MacroElement
 from folium.plugins import LocateControl, Fullscreen
 
 # --- 1. CONFIGURATION: NWS HAZARD DATA ---
+# (Identical to your list, kept for consistency)
 HAZARD_DATA = {
     "Tsunami Warning": {"color": "#FD6347", "priority": 1},
     "Tornado Warning": {"color": "#FF0000", "priority": 2},
@@ -127,7 +127,6 @@ def get_event_color(event_name):
 def get_event_priority(event_name):
     return HAZARD_DATA.get(event_name, {}).get("priority", 999)
 
-# --- 2. CATEGORIZATION LOGIC ---
 def get_category(event_name):
     ename = event_name.upper()
     if any(word in ename for word in ["TORNADO", "SEVERE THUNDERSTORM", "EXTREME WIND", "SHELTER", "EVACUATION", "CIVIL", "NUCLEAR", "HAZARDOUS"]):
@@ -150,32 +149,12 @@ def get_category(event_name):
         return "Wind & Visibility"
     return "Other"
 
-# --- 3. MAP & SETUP ---
-utc_now = datetime.now(timezone.utc)
-local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p %Z')
-date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
-
-# *** FIX 1: Use OpenStreetMap. It is the most reliable default. ***
+# --- 3. MAP SETUP (SAFE MODE) ---
+# Removed all custom tiles. Using only default 'OpenStreetMap'
 m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles="OpenStreetMap")
 
+# Add Fullscreen & Location buttons
 Fullscreen(position='topleft', force_separate_button=True).add_to(m)
-
-# *** FIX 2: Set additional tile layers to show=False by default ***
-# This prevents them from blanketing the map with a white box if they fail to load.
-folium.TileLayer(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    attr='Esri',
-    name='Esri Satellite',
-    show=False  # <--- MUST BE FALSE or it hides the base map!
-).add_to(m)
-
-folium.TileLayer(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
-    attr='Esri',
-    name='Esri NatGeo',
-    show=False
-).add_to(m)
-
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
 # Initialize Category Groups
@@ -192,7 +171,9 @@ groups = {
     "Other": folium.FeatureGroup(name="ℹ️ Other Advisories", show=True)
 }
 
-# --- 4. FETCH & PROCESS DATA ---
+# --- 4. FETCH DATA ---
+utc_now = datetime.now(timezone.utc)
+local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p %Z')
 marine_list = ["ANZ633", "ANZ658", "ANZ678", "AMZ230", "AMZ131", "AMZ231", "AMZ150", "AMZ170", "AMZ135", "AMZ152", "AMZ172", "AMZ136", "AMZ137", "AMZ156", "AMZ154", "AMZ174", "AMZ176", "AMZ158", "AMZ178", "AMZ250", "AMZ270", "AMZ252", "AMZ272", "ANZ828", "ANZ830", "ANZ833", "ANZ835", "ANZ935", "ANZ930", "ANZ925"]
 urls = ["https://api.weather.gov/alerts/active?area=NC", f"https://api.weather.gov/alerts/active?zone={','.join(marine_list)}"]
 
@@ -202,6 +183,8 @@ active_events = {}
 headers = {'User-Agent': 'NCWeatherMap/13.0'}
 zone_geom_cache = {}
 
+print("Fetching NWS Data...")
+
 for url in urls:
     try:
         res = requests.get(url, headers=headers, timeout=15)
@@ -210,7 +193,6 @@ for url in urls:
             props = f['properties']
             if props.get('id') in seen_ids or props.get('messageType') == 'Cancel': continue
             
-            # Check expiration
             ends_str = props.get('ends')
             if ends_str:
                 try:
@@ -237,7 +219,7 @@ for url in urls:
                         all_features.append({"type": "Feature", "properties": props, "geometry": geom})
     except: continue
 
-# --- 5. ADD TO MAP BY CATEGORY ---
+# --- 5. SORT & ADD ---
 if all_features:
     all_features.sort(key=lambda x: get_event_priority(x['properties']['event']), reverse=True)
     
@@ -255,7 +237,7 @@ if all_features:
 for g in groups.values():
     g.add_to(m)
 
-# --- 6. LEGEND & OVERLAYS ---
+# --- 6. LEGEND ---
 legend_html_items = ""
 if not active_events:
     legend_html_items = "<li>No Active Hazards</li>"
@@ -280,18 +262,15 @@ macro = MacroElement()
 macro._template = Template(template)
 m.get_root().add_child(macro)
 
-# County Borders (Filtered to prevent crash if file is missing)
+# County Borders
 if os.path.exists("nc_counties.json"):
     try:
         with open("nc_counties.json", 'r') as f:
-            folium.GeoJson(
-                json.load(f), 
-                name="County Lines", 
-                style_function=lambda x: {'color': 'black', 'weight': 1, 'fillOpacity': 0, 'dashArray': '5, 5'}
-            ).add_to(m)
-    except:
-        pass
+            folium.GeoJson(json.load(f), name="County Lines", style_function=lambda x: {'color': 'black', 'weight': 1, 'fillOpacity': 0, 'dashArray': '5, 5'}).add_to(m)
+    except: pass
 
+# --- FINAL LAYER CONTROL ---
 folium.LayerControl(collapsed=False).add_to(m)
+
 m.save("index.html")
 print("Map saved to index.html")
