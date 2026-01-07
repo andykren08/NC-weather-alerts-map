@@ -1,19 +1,14 @@
 import requests
 import geopandas as gpd
 import folium
-from folium.plugins import LocateControl
 import os
 import json
 from datetime import datetime, timezone
 import pytz
 from branca.element import Template, MacroElement
-from folium.plugins import LocateControl, FloatImage  # <--- Added FloatImage
-from folium.plugins import Fullscreen
+from folium.plugins import LocateControl, FloatImage, Fullscreen
 
-# --- 1. CONFIGURATION: NWS HAZARD DATA (Color & Priority) ---
-# Source: https://www.weather.gov/help-map
-# Priority: Lower number = Higher Importance. 
-# We draw High Priority items LAST so they appear ON TOP.
+# --- 1. CONFIGURATION: NWS HAZARD DATA ---
 HAZARD_DATA = {
     "Tsunami Warning": {"color": "#FD6347", "priority": 1},
     "Tornado Warning": {"color": "#FF0000", "priority": 2},
@@ -118,7 +113,6 @@ HAZARD_DATA = {
     "Marine Weather Statement": {"color": "#FFDAB9", "priority": 101},
     "Air Quality Alert": {"color": "#808080", "priority": 102},
     "Air Stagnation Advisory": {"color": "#808080", "priority": 103},
-    #  "Hazardous Weather Outlook": {"color": "#EEE8AA", "priority": 104},
     "Hydrologic Outlook": {"color": "#90EE90", "priority": 105},
     "Short Term Forecast": {"color": "#98FB98", "priority": 106},
     "Administrative Message": {"color": "#C0C0C0", "priority": 107},
@@ -128,275 +122,159 @@ HAZARD_DATA = {
 }
 
 def get_event_color(event_name):
-    # Lookup color, default to Gray if not found
     return HAZARD_DATA.get(event_name, {}).get("color", "#808080")
 
 def get_event_priority(event_name):
-    # Lookup priority, default to 999 (lowest priority) if not found
     return HAZARD_DATA.get(event_name, {}).get("priority", 999)
 
-# --- 2. SETUP TIME ---
+# --- 2. CATEGORIZATION LOGIC ---
+def get_category(event_name):
+    ename = event_name.upper()
+    if any(word in ename for word in ["TORNADO", "SEVERE THUNDERSTORM", "EXTREME WIND", "SHELTER", "EVACUATION", "CIVIL", "NUCLEAR", "HAZARDOUS"]):
+        return "Severe"
+    if any(word in ename for word in ["HURRICANE", "TROPICAL", "TYPHOON", "STORM SURGE"]):
+        return "Tropical"
+    if any(word in ename for word in ["WINTER", "SNOW", "BLIZZARD", "ICE", "FREEZING", "FREEZE", "FROST", "COLD"]):
+        return "Winter"
+    if any(word in ename for word in ["FLOOD", "HYDROLOGIC", "WATER"]):
+        return "Hydro"
+    if any(word in ename for word in ["MARINE", "GALE", "SURF", "SEAS", "WAVE", "SMALL CRAFT", "RIP CURRENT", "BEACH"]):
+        return "Marine"
+    if "HEAT" in ename:
+        return "Heat"
+    if any(word in ename for word in ["FIRE", "RED FLAG"]):
+        return "Fire"
+    if any(word in ename for word in ["AIR QUALITY", "STAGNATION", "SMOKE"]):
+        return "Air Quality"
+    if any(word in ename for word in ["WIND", "FOG", "DUST", "ASHFALL"]):
+        return "Wind & Visibility"
+    return "Other"
+
+# --- 3. MAP & SETUP ---
 utc_now = datetime.now(timezone.utc)
 local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p %Z')
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
-# --- 3. MAP SETUP ---
 m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles=None)
 
-# --- ADD FULLSCREEN BUTTON HERE ---
-Fullscreen(
-    position='topleft',
-    title='Full Screen',
-    title_cancel='Exit Full Screen',
-    force_separate_button=True
-).add_to(m)
+Fullscreen(position='topleft', force_separate_button=True).add_to(m)
 
-# --- BASEMAPS ---
-
-# Add ESRI Satellite
-# 1. ESRI World Imagery (Satellite)
-folium.TileLayer(
-    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    attr='Esri',
-    name='Esri Satellite',
-    overlay=False,
-    control=True,
-    show=False
-).add_to(m)
-
-# 2. ESRI World Street Map
-folium.TileLayer(
-    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
-    attr='Esri',
-    name='Esri Street Map',
-    overlay=False,
-    control=True,
-    show=False
-).add_to(m)
-
-# 3. ESRI National Geographic (Good for weather maps)
-folium.TileLayer(
-    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
-    attr='Esri',
-    name='Esri NatGeo',
-    overlay=False,
-    control=True,
-    show=True
-).add_to(m)
-
-# Your existing layers
-folium.TileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google', name='Google Satellite', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', attr='Google', name='Google Terrain', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', attr='Google', name='Google Street', overlay=False, control=True, show=False).add_to(m)
-folium.TileLayer('CartoDB positron', name='Light Gray Base', overlay=False, control=True, show=False).add_to(m)
+# Base Layers
+folium.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', attr='Esri', name='Esri NatGeo', show=True).add_to(m)
+folium.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attr='Esri', name='Esri Satellite', show=False).add_to(m)
+folium.TileLayer('CartoDB positron', name='Light Gray Base', show=False).add_to(m)
 LocateControl(auto_start=False, flyTo=True).add_to(m)
 
-# --- 4. LOAD COUNTY BORDERS ---
-county_file = "nc_counties.json"
-if os.path.exists(county_file):
-    with open(county_file, 'r') as f:
-        folium.GeoJson(
-            json.load(f), 
-            name="County Lines",
-            style_function=lambda x: {'color': 'black', 'weight': 1.5, 'fillOpacity': 0, 'dashArray': '5, 5', 'opacity': 0.7},
-            overlay=True, control=True
-        ).add_to(m)
+# Initialize Category Groups
+groups = {
+    "Severe": folium.FeatureGroup(name="⚠️ Severe (Tornado/SVR)", show=True),
+    "Tropical": folium.FeatureGroup(name="🌀 Tropical/Hurricane", show=True),
+    "Winter": folium.FeatureGroup(name="❄️ Winter Weather", show=True),
+    "Hydro": folium.FeatureGroup(name="🌊 Flooding/Hydro", show=True),
+    "Marine": folium.FeatureGroup(name="⚓ Marine Hazards", show=True),
+    "Heat": folium.FeatureGroup(name="🌡️ Heat Hazards", show=True),
+    "Fire": folium.FeatureGroup(name="🔥 Fire (Red Flag)", show=True),
+    "Air Quality": folium.FeatureGroup(name="🌫️ Air Quality", show=True),
+    "Wind & Visibility": folium.FeatureGroup(name="🌬️ Wind & Visibility", show=True),
+    "Other": folium.FeatureGroup(name="ℹ️ Other Advisories", show=True)
+}
 
-# --- 5. FETCH DATA ---
-marine_list = ["ANZ633", "ANZ658", "ANZ678", "AMZ230", "AMZ131", "AMZ231", "AMZ150", "AMZ170", "AMZ135", "AMZ152", "AMZ172", "AMZ136", "AMZ137", "AMZ156", "AMZ154", "AMZ174", "AMZ176", "AMZ158", "AMZ178", "AMZ250", "AMZ270", "AMZ252", "AMZ272", "AMZ270", "AMZ178", "AMZ176", "AMZ174", "AMZ172", "AMZ170", "ANZ678", "ANZ828", "ANZ830", "ANZ833", "ANZ835", "ANZ935", "ANZ930", "ANZ925"]
-marine_zones = ",".join(marine_list)
-
-urls = [
-    "https://api.weather.gov/alerts/active?area=NC", 
-    f"https://api.weather.gov/alerts/active?zone={marine_zones}"
-]
+# --- 4. FETCH & PROCESS DATA ---
+marine_list = ["ANZ633", "ANZ658", "ANZ678", "AMZ230", "AMZ131", "AMZ231", "AMZ150", "AMZ170", "AMZ135", "AMZ152", "AMZ172", "AMZ136", "AMZ137", "AMZ156", "AMZ154", "AMZ174", "AMZ176", "AMZ158", "AMZ178", "AMZ250", "AMZ270", "AMZ252", "AMZ272", "ANZ828", "ANZ830", "ANZ833", "ANZ835", "ANZ935", "ANZ930", "ANZ925"]
+urls = ["https://api.weather.gov/alerts/active?area=NC", f"https://api.weather.gov/alerts/active?zone={','.join(marine_list)}"]
 
 all_features = []
 seen_ids = set()
-active_events = {} 
+active_events = {}
 headers = {'User-Agent': 'NCWeatherMap/13.0'}
 zone_geom_cache = {}
-
-print("Fetching alerts...")
 
 for url in urls:
     try:
         res = requests.get(url, headers=headers, timeout=15)
         if res.status_code != 200: continue
-        
-        features = res.json().get('features', [])
-        for f in features:
+        for f in res.json().get('features', []):
             props = f['properties']
-            alert_id = props.get('id')
-            if alert_id in seen_ids: continue
-            seen_ids.add(alert_id)
-
-            # --- FILTER 1: REMOVE CANCELED ALERTS ---
-            # If the NWS issues a cancellation, the alert stays in the feed 
-            # until the message expires, even though it's "dead".
-            if props.get('messageType') == 'Cancel':
-                continue
+            if props.get('id') in seen_ids or props.get('messageType') == 'Cancel': continue
             
-            # --- FILTER 2: REMOVE EXPIRED HAZARD TIMES ---
-            # Even if active, if the "ends" time has passed, don't show it.
+            # Check expiration
             ends_str = props.get('ends')
             if ends_str:
                 try:
-                    ends_dt = datetime.fromisoformat(ends_str.replace("Z", "+00:00"))
-                    if ends_dt < utc_now:
-                        continue
-                except ValueError:
-                    pass
+                    if datetime.fromisoformat(ends_str.replace("Z", "+00:00")) < utc_now: continue
+                except: pass
 
-            # --- FILTER 3: KEYWORD SEARCH (Backup) ---
-            # Sometimes 'messageType' is 'Update' but the headline says 'Cancelled'
-            headline = props.get('headline', '').upper()
-            description = props.get('description', '').upper()
-            if 'CANCELLED' in headline or 'EXPIRATION' in headline:
-                 # Double check this isn't a "Storm Cancelled... but Flood Warning continues" message
-                 # usually simplicity is best: if the HEADLINE says cancelled, skip it.
-                 continue
-
+            seen_ids.add(props.get('id'))
             ename = props['event']
-            
-            # Use new color function
-            active_events[ename] = get_event_color(ename) 
+            active_events[ename] = get_event_color(ename)
             
             if f.get('geometry'):
                 all_features.append(f)
             else:
-                z_links = props.get('affectedZones', [])
-                for z_link in z_links:
+                for z_link in props.get('affectedZones', []):
                     zone_id = z_link.split('/')[-1]
-                    is_nc_zone = zone_id.startswith('NC') 
-                    is_wanted_marine = zone_id in marine_list
-
-                    if not (is_nc_zone or is_wanted_marine):
-                        continue
-
+                    if not (zone_id.startswith('NC') or zone_id in marine_list): continue
                     geom = zone_geom_cache.get(z_link)
                     if not geom:
-                        try:
-                            z_res = requests.get(z_link, headers=headers, timeout=5)
-                            if z_res.status_code == 200:
-                                geom = z_res.json().get('geometry')
-                                zone_geom_cache[z_link] = geom 
-                        except Exception: pass
-                    
+                        z_res = requests.get(z_link, headers=headers, timeout=5)
+                        if z_res.status_code == 200:
+                            geom = z_res.json().get('geometry')
+                            zone_geom_cache[z_link] = geom
                     if geom:
-                        new_f = {"type": "Feature", "properties": props, "geometry": geom}
-                        all_features.append(new_f)
+                        all_features.append({"type": "Feature", "properties": props, "geometry": geom})
+    except: continue
 
-    except Exception as e:
-        print(f"Request error: {e}")
-        continue
-
-# --- 6. SORT & ADD ALERTS TO MAP ---
+# --- 5. ADD TO MAP BY CATEGORY ---
 if all_features:
-    # *** CRITICAL STEP: SORT BY PRIORITY ***
-    # We sort strictly DESCENDING by priority number (100 -> 1).
-    # Since Folium draws items in order, the last items in the list are drawn ON TOP.
-    # High Priority = Low Number (1, 2, 3). So we want these at the END of the list.
-    
+    # Draw lower priority first so high priority ends up on top
     all_features.sort(key=lambda x: get_event_priority(x['properties']['event']), reverse=True)
-
-    gdf = gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326)
     
-    folium.GeoJson(
-        gdf,
-        name="Active Hazards",
-        style_function=lambda x: {
-            'fillColor': get_event_color(x['properties']['event']),
-            'color': 'black', 
-            'weight': 1, 
-            'fillOpacity': 0.5
-        },
-        tooltip=folium.GeoJsonTooltip(
-            fields=['event', 'headline'],
-            aliases=['Alert:', 'Details:'],
-            localize=True,
-            style="font-size: 13px; padding: 10px; max-width: 300px; white-space: normal; word-wrap: break-word; color: black;"
-        ),
-        overlay=True,
-        control=True
-    ).add_to(m)
+    for feat in all_features:
+        cat = get_category(feat['properties']['event'])
+        folium.GeoJson(
+            feat,
+            style_function=lambda x: {
+                'fillColor': get_event_color(x['properties']['event']),
+                'color': 'black', 'weight': 1, 'fillOpacity': 0.5
+            },
+            tooltip=folium.GeoJsonTooltip(fields=['event', 'headline'], aliases=['Alert:', 'Details:'])
+        ).add_to(groups[cat])
 
-# --- 8. LEGEND & SAVE ---
-# Sort the legend items by priority as well so the legend looks logical
+for g in groups.values():
+    g.add_to(m)
+
+# --- 6. LEGEND & OVERLAYS ---
 legend_html_items = ""
 if not active_events:
-    legend_html_items = "<li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>"
+    legend_html_items = "<li>No Active Hazards</li>"
 else:
-    # Sort keys by priority for the legend display
-    sorted_events = sorted(active_events.keys(), key=lambda k: get_event_priority(k))
-    
-    for event in sorted_events:
-        color = active_events[event]
+    for event in sorted(active_events.keys(), key=lambda k: get_event_priority(k)):
         legend_html_items += f"""
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:{color}; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">{event}</span>
-        </div>
-        """
+            <div style="background:{active_events[event]}; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px;"></div>
+            <span>{event}</span>
+        </div>"""
 
 template = f"""
 {{% macro html(this, kwargs) %}}
-<div id='maplegend' class='maplegend' 
-    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.9);
-     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
-    <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
-    <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: {date_str}<br>{local_time}
-    </div>
-    <div class='legend-scale'>
-       {legend_html_items}
-    </div>
+<div style='position: fixed; z-index:9999; border:2px solid grey; background:rgba(255,255,255,0.9);
+     padding: 10px; right: 20px; bottom: 20px; width: 220px; border-radius:6px;'>
+    <b>NC Weather Hazards</b><br><small>Updated: {local_time}</small><hr>
+    {legend_html_items}
 </div>
-<style type='text/css'>
-  .maplegend a {{ color: #777; }}
-  .maplegend a:hover {{ color: #555; }}
-</style>
-{{% endmacro %}}
-"""
+{{% endmacro %}}"""
 
 macro = MacroElement()
 macro._template = Template(template)
 m.get_root().add_child(macro)
 
-# --- ADD NWS LOGO ---
-logo_file = "nws.png"
-float_image = FloatImage(logo_file, bottom=5, left=5)
-float_image.add_to(m)
+# County Borders
+county_file = "nc_counties.json"
+if os.path.exists(county_file):
+    with open(county_file, 'r') as f:
+        folium.GeoJson(json.load(f), name="County Lines", 
+                       style_function=lambda x: {'color': 'black', 'weight': 1, 'fillOpacity': 0, 'dashArray': '5, 5'}).add_to(m)
 
-# --- FORCE RESIZE WITH CSS ---
-# This injects CSS to force the logo (which is an <img> tag inside the float div) to be 100px wide.
-# You can change '100px' to whatever size looks best (e.g., '150px' or '10%').
-resize_css = f"""
-<style>
-    img[src="{logo_file}"] {{
-        width: 100px !important;
-        height: auto !important;
-    }}
-</style>
-"""
-m.get_root().html.add_child(folium.Element(resize_css))
-
-# --- 7. ADD LAYER CONTROL ---
 folium.LayerControl(collapsed=False).add_to(m)
-
-# Save the map first
 m.save("index.html")
-
-# --- ADD AUTO-REFRESH ---
-# Re-open the file and inject a meta refresh tag
-with open("index.html", "r") as f:
-    html_content = f.read()
-
-# Refreshes page every 300 seconds (5 minutes)
-refresh_tag = '<meta http-equiv="refresh" content="300">' 
-html_content = html_content.replace('<head>', f'<head>{refresh_tag}')
-
-with open("index.html", "w") as f:
-    f.write(html_content)
-
-print("Map saved to index.html (with 5-minute auto-refresh)")
+print("Map saved to index.html")
