@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timezone
 import pytz
 from branca.element import Template, MacroElement
-from folium.plugins import LocateControl, FloatImage, Fullscreen
+from folium.plugins import LocateControl, Fullscreen
 
 # --- 1. CONFIGURATION: NWS HAZARD DATA ---
 HAZARD_DATA = {
@@ -155,18 +155,18 @@ utc_now = datetime.now(timezone.utc)
 local_time = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%I:%M %p %Z')
 date_str = utc_now.astimezone(pytz.timezone('US/Eastern')).strftime('%b %d, %Y')
 
-# CHANGE: Use 'CartoDB positron' or 'OpenStreetMap' as the default tiles
-# This ensures you always have a background map, even if the fancy ESRI ones fail.
-m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles="CartoDB positron")
+# *** FIX 1: Use OpenStreetMap. It is the most reliable default. ***
+m = folium.Map(location=[35.5, -79.5], zoom_start=8, tiles="OpenStreetMap")
 
 Fullscreen(position='topleft', force_separate_button=True).add_to(m)
 
-# Optional: Add the ESRI layers as extra options, but keep CartoDB as default
+# *** FIX 2: Set additional tile layers to show=False by default ***
+# This prevents them from blanketing the map with a white box if they fail to load.
 folium.TileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     attr='Esri',
     name='Esri Satellite',
-    show=True
+    show=False  # <--- MUST BE FALSE or it hides the base map!
 ).add_to(m)
 
 folium.TileLayer(
@@ -239,7 +239,6 @@ for url in urls:
 
 # --- 5. ADD TO MAP BY CATEGORY ---
 if all_features:
-    # Draw lower priority first so high priority ends up on top
     all_features.sort(key=lambda x: get_event_priority(x['properties']['event']), reverse=True)
     
     for feat in all_features:
@@ -281,12 +280,17 @@ macro = MacroElement()
 macro._template = Template(template)
 m.get_root().add_child(macro)
 
-# County Borders
-county_file = "nc_counties.json"
-if os.path.exists(county_file):
-    with open(county_file, 'r') as f:
-        folium.GeoJson(json.load(f), name="County Lines", 
-                       style_function=lambda x: {'color': 'black', 'weight': 1, 'fillOpacity': 0, 'dashArray': '5, 5'}).add_to(m)
+# County Borders (Filtered to prevent crash if file is missing)
+if os.path.exists("nc_counties.json"):
+    try:
+        with open("nc_counties.json", 'r') as f:
+            folium.GeoJson(
+                json.load(f), 
+                name="County Lines", 
+                style_function=lambda x: {'color': 'black', 'weight': 1, 'fillOpacity': 0, 'dashArray': '5, 5'}
+            ).add_to(m)
+    except:
+        pass
 
 folium.LayerControl(collapsed=False).add_to(m)
 m.save("index.html")
