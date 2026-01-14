@@ -310,11 +310,17 @@ if all_features:
         elif any(x in e for x in ["MARINE", "GALE", "SEAS", "SMALL CRAFT", "BEACH", "RIP CURRENT", "SURF"]):
             return "Marine/Beach"
         elif any(x in e for x in ["FLASH FLOOD", "FLOOD", "HYDROLOGIC"]):
-            return "Flooding"
+            return "Hydro"
         elif any(x in e for x in ["WINTER", "SNOW", "BLIZZARD", "ICE", "FREEZE", "FROST", "COLD", "CHILL"]):
             return "Winter Weather"
+        elif any(x in e for x in ["HEAT", "HOT"]):
+            return "Heat"
+        elif any(x in e for x in ["FOG", "SMOKE", "DUST", "AIR QUALITY"]):
+            return "Fog/Smoke/Dust"
         elif any(x in e for x in ["FIRE", "RED FLAG"]):
             return "Fire Weather"
+        elif any(x in e for x in ["SPECIAL WEATHER STATEMENT"]):
+            return "SPS"
         elif any(x in e for x in ["WIND"]):
             return "Wind"
         else:
