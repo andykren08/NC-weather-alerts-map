@@ -291,35 +291,70 @@ for url in urls:
         print(f"Request error: {e}")
         continue
 
-# --- 6. SORT & ADD ALERTS TO MAP ---
+# --- 6. CATEGORIZE, SORT & ADD ALERTS TO MAP ---
 if all_features:
-    # *** CRITICAL STEP: SORT BY PRIORITY ***
-    # We sort strictly DESCENDING by priority number (100 -> 1).
-    # Since Folium draws items in order, the last items in the list are drawn ON TOP.
-    # High Priority = Low Number (1, 2, 3). So we want these at the END of the list.
-    
+    # 1. Sort by Priority (High priority drawn last/on top)
     all_features.sort(key=lambda x: get_event_priority(x['properties']['event']), reverse=True)
 
+    # 2. Create the GeoDataFrame
     gdf = gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326)
-    
-    folium.GeoJson(
-        gdf,
-        name="Active Hazards",
-        style_function=lambda x: {
-            'fillColor': get_event_color(x['properties']['event']),
-            'color': 'black', 
-            'weight': 1, 
-            'fillOpacity': 0.5
-        },
-        tooltip=folium.GeoJsonTooltip(
-            fields=['event', 'headline'],
-            aliases=['Alert:', 'Details:'],
-            localize=True,
-            style="font-size: 13px; padding: 10px; max-width: 300px; white-space: normal; word-wrap: break-word; color: black;"
-        ),
-        overlay=True,
-        control=True
-    ).add_to(m)
+
+    # 3. Define Category Keywords
+    # We map keywords to the categories you requested
+    def get_hazard_category(event_name):
+        e = event_name.upper()
+        if any(x in e for x in ["TORNADO", "SEVERE THUNDERSTORM", "EXTREME WIND"]):
+            return "Severe Weather"
+        elif any(x in e for x in ["HURRICANE", "TROPICAL", "TYPHOON", "STORM SURGE"]):
+            return "Tropical"
+        elif any(x in e for x in ["MARINE", "GALE", "SEAS", "SMALL CRAFT", "BEACH", "RIP CURRENT", "SURF"]):
+            return "Marine/Beach"
+        elif any(x in e for x in ["FLASH FLOOD", "FLOOD", "HYDROLOGIC"]):
+            return "Flooding"
+        elif any(x in e for x in ["WINTER", "SNOW", "BLIZZARD", "ICE", "FREEZE", "FROST", "COLD", "CHILL"]):
+            return "Winter Weather"
+        elif any(x in e for x in ["FIRE", "RED FLAG"]):
+            return "Fire Weather"
+        elif any(x in e for x in ["WIND"]):
+            return "Wind"
+        else:
+            return "Other Hazards" # Heat, Air Quality, Civil, etc.
+
+    # 4. Assign a category to every row in the dataframe
+    gdf['category'] = gdf['event'].apply(get_hazard_category)
+
+    # 5. Loop through each unique category and create a separate Map Layer
+    # Get list of categories present in the current data
+    present_categories = sorted(gdf['category'].unique())
+
+    for cat in present_categories:
+        # Filter the data for just this category
+        cat_gdf = gdf[gdf['category'] == cat]
+
+        # Create a layer specifically for this category
+        # Note: We use the same style function, so colors remain consistent
+        folium.GeoJson(
+            cat_gdf,
+            name=f"Toggle: {cat}", # This string appears in the checkbox menu
+            style_function=lambda x: {
+                'fillColor': get_event_color(x['properties']['event']),
+                'color': 'black',
+                'weight': 1,
+                'fillOpacity': 0.5
+            },
+            tooltip=folium.GeoJsonTooltip(
+                fields=['event', 'headline'],
+                aliases=['Alert:', 'Details:'],
+                localize=True,
+                style="font-size: 13px; padding: 10px; max-width: 300px; white-space: normal; word-wrap: break-word; color: black;"
+            ),
+            overlay=True,
+            control=True,
+            show=True  # Set to False if you want them unchecked by default
+        ).add_to(m)
+
+else:
+    print("No active alerts found to map.")
 
 # --- 8. LEGEND & SAVE ---
 # Sort the legend items by priority as well so the legend looks logical
