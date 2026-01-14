@@ -335,7 +335,7 @@ if all_features:
         # Note: We use the same style function, so colors remain consistent
         folium.GeoJson(
             cat_gdf,
-            name=f"Toggle: {cat}", # This string appears in the checkbox menu
+            name=f" {cat}", # This string appears in the checkbox menu
             style_function=lambda x: {
                 'fillColor': get_event_color(x['properties']['event']),
                 'color': 'black',
