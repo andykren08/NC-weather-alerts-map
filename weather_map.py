@@ -352,7 +352,17 @@ if all_features:
                 fields=['event', 'headline'],
                 aliases=['Alert:', 'Details:'],
                 localize=True,
-                style="font-size: 13px; padding: 10px; max-width: 300px; white-space: normal; word-wrap: break-word; color: black;"
+                style="font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;"
+            ),
+            # ---- 2. Click Popup (Deep dive) ---
+            # This add click functionality
+            popup=folium.GeoJsonPopup(
+                fields=['event', 'ends', 'description'],
+                aliases=['Type:', 'Expires:', 'Full Text:'],
+                localized=True,
+                labels=True,
+                # We limit the height and add a scrollbar because NWS descriptions are long
+                style="font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;"
             ),
             overlay=True,
             control=True,
