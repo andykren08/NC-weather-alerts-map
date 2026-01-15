@@ -211,6 +211,9 @@ urls = [
     f"https://api.weather.gov/alerts/active?zone={marine_zones}"
 ]
 
+# --- 5. FETCH DATA ---
+# ... [Keep your existing marine_list and url definitions] ...
+
 all_features = []
 seen_ids = set()
 active_events = {} 
@@ -221,7 +224,7 @@ print("Fetching alerts...")
 
 for url in urls:
     try:
-        res = requests.get(url, headers=headers, timeout=15)
+        res = requests.get(url, headers=headers, timeout=30) # INCREASED TIMEOUT
         if res.status_code != 200: continue
         
         features = res.json().get('features', [])
@@ -231,38 +234,26 @@ for url in urls:
             if alert_id in seen_ids: continue
             seen_ids.add(alert_id)
 
-            # --- FILTER 1: REMOVE CANCELED ALERTS ---
-            # If the NWS issues a cancellation, the alert stays in the feed 
-            # until the message expires, even though it's "dead".
-            if props.get('messageType') == 'Cancel':
-                continue
+            # --- FILTERS ---
+            if props.get('messageType') == 'Cancel': continue
             
-            # --- FILTER 2: REMOVE EXPIRED HAZARD TIMES ---
-            # Even if active, if the "ends" time has passed, don't show it.
             ends_str = props.get('ends')
             if ends_str:
                 try:
                     ends_dt = datetime.fromisoformat(ends_str.replace("Z", "+00:00"))
-                    if ends_dt < utc_now:
-                        continue
-                except ValueError:
-                    pass
+                    if ends_dt < utc_now: continue
+                except ValueError: pass
 
-            # --- FILTER 3: KEYWORD SEARCH (Backup) ---
-            # Sometimes 'messageType' is 'Update' but the headline says 'Cancelled'
             headline = props.get('headline', '').upper()
-            description = props.get('description', '').upper()
-            if 'CANCELLED' in headline or 'EXPIRATION' in headline:
-                 # Double check this isn't a "Storm Cancelled... but Flood Warning continues" message
-                 # usually simplicity is best: if the HEADLINE says cancelled, skip it.
-                 continue
+            if 'CANCELLED' in headline or 'EXPIRATION' in headline: continue
 
             ename = props['event']
             
-            # Use new color function
-            active_events[ename] = get_event_color(ename) 
+            # --- GEOMETRY FETCHING ---
+            final_geometry = None
             
             if f.get('geometry'):
+                final_geometry = f['geometry']
                 all_features.append(f)
             else:
                 z_links = props.get('affectedZones', [])
@@ -271,13 +262,14 @@ for url in urls:
                     is_nc_zone = zone_id.startswith('NC') 
                     is_wanted_marine = zone_id in marine_list
 
-                    if not (is_nc_zone or is_wanted_marine):
-                        continue
+                    if not (is_nc_zone or is_wanted_marine): continue
 
                     geom = zone_geom_cache.get(z_link)
                     if not geom:
                         try:
-                            z_res = requests.get(z_link, headers=headers, timeout=5)
+                            # Added explicit sleep to be nice to NWS API if needed
+                            # time.sleep(0.1) 
+                            z_res = requests.get(z_link, headers=headers, timeout=10)
                             if z_res.status_code == 200:
                                 geom = z_res.json().get('geometry')
                                 zone_geom_cache[z_link] = geom 
@@ -286,6 +278,11 @@ for url in urls:
                     if geom:
                         new_f = {"type": "Feature", "properties": props, "geometry": geom}
                         all_features.append(new_f)
+                        final_geometry = geom # Mark that we found at least one
+
+            # --- KEY FIX 1: ONLY UPDATE LEGEND IF GEOMETRY EXISTS ---
+            if final_geometry:
+                active_events[ename] = get_event_color(ename)
 
     except Exception as e:
         print(f"Request error: {e}")
@@ -293,55 +290,38 @@ for url in urls:
 
 # --- 6. CATEGORIZE, SORT & ADD ALERTS TO MAP ---
 if all_features:
-    # 1. Sort by Priority (High priority drawn last/on top)
     all_features.sort(key=lambda x: get_event_priority(x['properties']['event']), reverse=True)
 
-    # 2. Create the GeoDataFrame
     gdf = gpd.GeoDataFrame.from_features(all_features).set_crs(epsg=4326)
 
-    # 3. Define Category Keywords
-    # We map keywords to the categories you requested
+    # --- KEY FIX 2: SIMPLIFY GEOMETRY ---
+    # This prevents the "Missing Layer Control" bug by fixing complex shapes that crash Leaflet
+    gdf['geometry'] = gdf['geometry'].simplify(tolerance=0.001, preserve_topology=True)
+
+    # Re-define your category function here (same as before)
     def get_hazard_category(event_name):
         e = event_name.upper()
-        if any(x in e for x in ["TORNADO", "SEVERE THUNDERSTORM", "EXTREME WIND"]):
-            return "Severe Weather"
-        elif any(x in e for x in ["HURRICANE", "TROPICAL", "TYPHOON", "STORM SURGE"]):
-            return "Tropical"
-        elif any(x in e for x in ["MARINE", "GALE", "SEAS", "SMALL CRAFT", "BEACH", "RIP CURRENT", "SURF"]):
-            return "Marine/Beach"
-        elif any(x in e for x in ["FLASH FLOOD", "FLOOD", "HYDROLOGIC"]):
-            return "Hydro"
-        elif any(x in e for x in ["WINTER", "SNOW", "BLIZZARD", "ICE", "FREEZE", "FROST", "COLD", "CHILL"]):
-            return "Winter Weather"
-        elif any(x in e for x in ["HEAT", "HOT"]):
-            return "Heat"
-        elif any(x in e for x in ["FOG", "SMOKE", "DUST", "AIR QUALITY"]):
-            return "Fog/Smoke/Dust"
-        elif any(x in e for x in ["FIRE", "RED FLAG"]):
-            return "Fire Weather"
-        elif any(x in e for x in ["SPECIAL WEATHER STATEMENT"]):
-            return "SPS"
-        elif any(x in e for x in ["WIND"]):
-            return "Wind"
-        else:
-            return "Other Hazards" # Heat, Air Quality, Civil, etc.
+        if any(x in e for x in ["TORNADO", "SEVERE THUNDERSTORM", "EXTREME WIND"]): return "Severe Weather"
+        elif any(x in e for x in ["HURRICANE", "TROPICAL", "TYPHOON", "STORM SURGE"]): return "Tropical"
+        elif any(x in e for x in ["MARINE", "GALE", "SEAS", "SMALL CRAFT", "BEACH", "RIP CURRENT", "SURF"]): return "Marine/Beach"
+        elif any(x in e for x in ["FLASH FLOOD", "FLOOD", "HYDROLOGIC"]): return "Hydro"
+        elif any(x in e for x in ["WINTER", "SNOW", "BLIZZARD", "ICE", "FREEZE", "FROST", "COLD", "CHILL"]): return "Winter Weather"
+        elif any(x in e for x in ["HEAT", "HOT"]): return "Heat"
+        elif any(x in e for x in ["FOG", "SMOKE", "DUST", "AIR QUALITY"]): return "Fog/Smoke/Dust"
+        elif any(x in e for x in ["FIRE", "RED FLAG"]): return "Fire Weather"
+        elif any(x in e for x in ["SPECIAL WEATHER STATEMENT"]): return "SPS"
+        elif any(x in e for x in ["WIND"]): return "Wind"
+        else: return "Other Hazards"
 
-    # 4. Assign a category to every row in the dataframe
     gdf['category'] = gdf['event'].apply(get_hazard_category)
-
-    # 5. Loop through each unique category and create a separate Map Layer
-    # Get list of categories present in the current data
     present_categories = sorted(gdf['category'].unique())
 
     for cat in present_categories:
-        # Filter the data for just this category
         cat_gdf = gdf[gdf['category'] == cat]
-
-        # Create a layer specifically for this category
-        # Note: We use the same style function, so colors remain consistent
+        
         folium.GeoJson(
             cat_gdf,
-            name=f" {cat}", # This string appears in the checkbox menu
+            name=f" {cat}",
             style_function=lambda x: {
                 'fillColor': get_event_color(x['properties']['event']),
                 'color': 'black',
@@ -354,19 +334,16 @@ if all_features:
                 localize=True,
                 style="font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;"
             ),
-            # ---- 2. Click Popup (Deep dive) ---
-            # This add click functionality
             popup=folium.GeoJsonPopup(
                 fields=['event', 'ends', 'description'],
                 aliases=['Type:', 'Expires:', 'Full Text:'],
                 localized=True,
                 labels=True,
-                # We limit the height and add a scrollbar because NWS descriptions are long
                 style="font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;"
             ),
             overlay=True,
             control=True,
-            show=True  # Set to False if you want them unchecked by default
+            show=True
         ).add_to(m)
 
 else:
