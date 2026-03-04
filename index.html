@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_6a1823eea7c627c1564fc929a628f4c7 {
+                #map_5667f36d8559975da1f6569717555eba {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_c42dc0cdab5e97a6104bee8a8033cf6f {
+                    #float_image_2bec77b25b92a425587d207beb5caa13 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_6a1823eea7c627c1564fc929a628f4c7" ></div>
+            <div class="folium-map" id="map_5667f36d8559975da1f6569717555eba" ></div>
         
     
-            <img id="float_image_c42dc0cdab5e97a6104bee8a8033cf6f" alt="float_image"
+            <img id="float_image_2bec77b25b92a425587d207beb5caa13" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Mar 04, 2026<br>12:09 PM EST
+        Updated: Mar 04, 2026<br>12:58 PM EST
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_6a1823eea7c627c1564fc929a628f4c7 = L.map(
-                "map_6a1823eea7c627c1564fc929a628f4c7",
+            var map_5667f36d8559975da1f6569717555eba = L.map(
+                "map_5667f36d8559975da1f6569717555eba",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_840e14ef4de571ea8b470f5bd9c4bdda = L.tileLayer(
+            var tile_layer_f547dcfed7eb4413e8476cd9864e3efa = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_7294cabe668f4cdf6ce492f1ad9ca5ac = L.tileLayer(
+            var tile_layer_fbcae3d719f2f2e25bea588647a255e7 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_2ae2df407c78e41e3ce34f8791149172 = L.tileLayer(
+            var tile_layer_0a118af0670ae51c69889acd5fbd1699 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_2ae2df407c78e41e3ce34f8791149172.addTo(map_6a1823eea7c627c1564fc929a628f4c7);
+            tile_layer_0a118af0670ae51c69889acd5fbd1699.addTo(map_5667f36d8559975da1f6569717555eba);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_6a1823eea7c627c1564fc929a628f4c7);
+            ).addTo(map_5667f36d8559975da1f6569717555eba);
         
     
-            var tile_layer_da0a83d5d4b3e587aa6da14201fd34c3 = L.tileLayer(
+            var tile_layer_de4156b4fc46e69b317a427caa55bfba = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_22b69a0939eff80bc7ed0324900caa66 = L.tileLayer(
+            var tile_layer_b1eedcea36c69161447b39792d224605 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_f0caaca43e2e6247853ba9b83a5e206f = L.tileLayer(
+            var tile_layer_ba720cd088306ded050ba2fda0bee349 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_c19a45176b1471b5cb09d1621629089d = L.tileLayer(
+            var tile_layer_1fe1ad9797de630fa68826936245949a = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_9c321e4a5a4cfbd01ae4ae99d0faf57c = L.control.locate(
+            var locate_control_d75e50e73f4448070207bae840537d83 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_6a1823eea7c627c1564fc929a628f4c7);
+            ).addTo(map_5667f36d8559975da1f6569717555eba);
             
         
     
-        function geo_json_34b4ee3fe1002c0655ba359a941ff58a_styler(feature) {
+        function geo_json_49856a21f5d7e5e4e50e3f755d522e3f_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#D8BFD8", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_34b4ee3fe1002c0655ba359a941ff58a_onEachFeature(feature, layer) {
+        function geo_json_49856a21f5d7e5e4e50e3f755d522e3f_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_34b4ee3fe1002c0655ba359a941ff58a = L.geoJson(null, {
-                onEachFeature: geo_json_34b4ee3fe1002c0655ba359a941ff58a_onEachFeature,
+        var geo_json_49856a21f5d7e5e4e50e3f755d522e3f = L.geoJson(null, {
+                onEachFeature: geo_json_49856a21f5d7e5e4e50e3f755d522e3f_onEachFeature,
             
-                style: geo_json_34b4ee3fe1002c0655ba359a941ff58a_styler,
+                style: geo_json_49856a21f5d7e5e4e50e3f755d522e3f_styler,
             ...{
 }
         });
 
-        function geo_json_34b4ee3fe1002c0655ba359a941ff58a_add (data) {
-            geo_json_34b4ee3fe1002c0655ba359a941ff58a
+        function geo_json_49856a21f5d7e5e4e50e3f755d522e3f_add (data) {
+            geo_json_49856a21f5d7e5e4e50e3f755d522e3f
                 .addData(data);
         }
-            geo_json_34b4ee3fe1002c0655ba359a941ff58a_add({"bbox": [-76.00027780000003, 34.853372499999985, -75.20615600000001, 35.235126400000006], "features": [{"bbox": [-76.00027780000003, 34.853372499999985, -75.20615600000001, 35.235126400000006], "geometry": {"coordinates": [[[-75.5517272, 35.2328376], [-75.53542900000001, 35.227566], [-75.53188700000001, 35.221656], [-75.53610200000001, 35.217625999999996], [-75.5316925, 35.2193641], [-75.5287241, 35.2237875], [-75.20615600000001, 35.1380557], [-75.21438590000001, 35.1121921], [-75.22902670000002, 35.077753], [-75.24799910000002, 35.04400439999999], [-75.26635550000002, 35.01756469999999], [-75.28105730000001, 34.999582199999985], [-75.31188960000001, 34.968747999999984], [-75.33003610000002, 34.95388219999998], [-75.36628910000002, 34.929658799999984], [-75.40824500000002, 34.90920059999998], [-75.44847100000003, 34.89562409999998], [-75.46971510000003, 34.89066879999998], [-75.49201770000003, 34.88700289999998], [-75.53552620000004, 34.88415329999997], [-75.55732720000003, 34.884866699999975], [-75.59193420000003, 34.88895979999998], [-75.62231060000003, 34.87803839999998], [-75.70413390000003, 34.853372499999985], [-76.00027780000003, 35.06821379999999], [-75.99099800000002, 35.078681999999986], [-75.97637930000002, 35.09089659999999], [-75.93316100000003, 35.11776799999999], [-75.88935850000003, 35.13823309999999], [-75.81222200000003, 35.16932089999999], [-75.77925100000006, 35.181136999999985], [-75.77194100000007, 35.18191299999999], [-75.75259390000006, 35.1897811], [-75.74381250000006, 35.1897392], [-75.72946160000006, 35.19368359999999], [-75.6935424000001, 35.207798], [-75.63635250000009, 35.22563170000001], [-75.5863800000001, 35.23471060000001], [-75.5700683000001, 35.235126400000006], [-75.5517272, 35.2328376]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7265cb96919fae070c19506c68e11acad0e5a369.004.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft.\n\n* WHERE...The coastal waters from Cape Hatteras to Ocracoke\nInlet.\n\n* WHEN...Until 8 PM EST this evening.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-03-04T02:57:00-05:00", "ends": "2026-03-04T20:00:00-05:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-03-04T15:00:00-05:00", "geocode": {"SAME": ["075154"], "UGC": ["AMZ154"]}, "headline": "Small Craft Advisory issued March 4 at 2:57AM EST until March 4 at 8:00PM EST by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.7265cb96919fae070c19506c68e11acad0e5a369.004.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "onset": "2026-03-04T02:57:00-05:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT UNTIL 8 PM EST THIS EVENING"], "VTEC": ["/O.CON.KMHX.SC.Y.0026.000000T0000Z-260305T0100Z/"], "WMOidentifier": ["WHUS72 KMHX 040757"], "eventEndingTime": ["2026-03-04T20:00:00-05:00"], "expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2fd9385f906718c9e3502c16d3731d453df45dc7.003.1,2026-03-03T12:32:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.031e846c1b5d0f53a1051ad718a90bb11fdfc9f7.004.1,2026-03-03T06:40:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.54dc86af0a2c4790de3b92314b078e1e4db7c8e0.004.1,2026-03-03T01:19:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3d182413be8896dcc37fab5cfe42ea6ccddeebdd.002.1,2026-03-02T12:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b38b30fe77b56963653db5f452ed51111bdaafc.003.1,2026-03-02T05:29:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ad69f83c39b173597f143e49855d621dd480a623.005.1,2026-03-02T01:47:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9e345ead67c793fbe20f4f57e3b36e554fedf15f.004.1,2026-03-01T12:37:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b28bdd4eb88d85e44a5fa1ad2907d816f62b310c.004.1,2026-03-01T00:46:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a51a7ec5ebfc5402e3ed08c1bac637bb825b0e26.002.1,2026-02-28T13:36:00-05:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.512cdc6722c2837e1447cda856595987cd9b10cd.004.1", "identifier": "urn:oid:2.49.0.1.840.0.512cdc6722c2837e1447cda856595987cd9b10cd.004.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-03-03T23:27:00-05:00"}, {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f121f5aa5a48e416134ad775e1087b85f642e7b4.003.1", "identifier": "urn:oid:2.49.0.1.840.0.f121f5aa5a48e416134ad775e1087b85f642e7b4.003.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-03-04T00:38:00-05:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-04T02:57:00-05:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_49856a21f5d7e5e4e50e3f755d522e3f_add({"bbox": [-76.0002778, 34.8533726, -75.2061561, 35.2351265], "features": [{"bbox": [-76.0002778, 34.8533726, -75.2061561, 35.2351265], "geometry": {"coordinates": [[[-75.5517273, 35.2328377], [-75.5354291, 35.227566], [-75.5318871, 35.221656], [-75.5361021, 35.217626], [-75.5316925, 35.2193642], [-75.5287241, 35.2237875], [-75.2061561, 35.1380558], [-75.214386, 35.1121922], [-75.2290268, 35.0777531], [-75.2479992, 35.0440044], [-75.2663555, 35.0175648], [-75.2810574, 34.9995823], [-75.3118896, 34.9687481], [-75.3300362, 34.9538822], [-75.3662891, 34.9296589], [-75.4082451, 34.9092007], [-75.4484711, 34.8956242], [-75.4697151, 34.8906689], [-75.4920177, 34.8870029], [-75.5355263, 34.8841534], [-75.5573273, 34.8848667], [-75.5919342, 34.8889599], [-75.6223106, 34.8780384], [-75.704134, 34.8533726], [-76.0002778, 35.0682139], [-75.990998, 35.078682], [-75.9763794, 35.0908966], [-75.933161, 35.117768], [-75.8893585, 35.1382332], [-75.812222, 35.169321], [-75.7792511, 35.1811371], [-75.771941, 35.181913], [-75.752594, 35.1897812], [-75.7438126, 35.1897392], [-75.7294617, 35.1936836], [-75.6935425, 35.207798], [-75.6363525, 35.2256317], [-75.58638, 35.2347107], [-75.5700684, 35.2351265], [-75.5517273, 35.2328377]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b5a81199cfe6944ced27b9ee0f6743cc750d1a13.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft.\n\n* WHERE...The coastal waters from Cape Hatteras to Ocracoke\nInlet.\n\n* WHEN...Until 8 PM EST this evening.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-03-04T12:40:00-05:00", "ends": "2026-03-04T20:00:00-05:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-03-04T20:00:00-05:00", "geocode": {"SAME": ["075154"], "UGC": ["AMZ154"]}, "headline": "Small Craft Advisory issued March 4 at 12:40PM EST until March 4 at 8:00PM EST by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.b5a81199cfe6944ced27b9ee0f6743cc750d1a13.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "onset": "2026-03-04T12:40:00-05:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT UNTIL 8 PM EST THIS EVENING"], "VTEC": ["/O.CON.KMHX.SC.Y.0026.000000T0000Z-260305T0100Z/"], "WMOidentifier": ["WHUS72 KMHX 041740"], "eventEndingTime": ["2026-03-04T20:00:00-05:00"], "expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.512cdc6722c2837e1447cda856595987cd9b10cd.004.1,2026-03-03T23:27:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2fd9385f906718c9e3502c16d3731d453df45dc7.003.1,2026-03-03T12:32:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.031e846c1b5d0f53a1051ad718a90bb11fdfc9f7.004.1,2026-03-03T06:40:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.54dc86af0a2c4790de3b92314b078e1e4db7c8e0.004.1,2026-03-03T01:19:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3d182413be8896dcc37fab5cfe42ea6ccddeebdd.002.1,2026-03-02T12:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b38b30fe77b56963653db5f452ed51111bdaafc.003.1,2026-03-02T05:29:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ad69f83c39b173597f143e49855d621dd480a623.005.1,2026-03-02T01:47:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9e345ead67c793fbe20f4f57e3b36e554fedf15f.004.1,2026-03-01T12:37:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b28bdd4eb88d85e44a5fa1ad2907d816f62b310c.004.1,2026-03-01T00:46:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a51a7ec5ebfc5402e3ed08c1bac637bb825b0e26.002.1,2026-02-28T13:36:00-05:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f121f5aa5a48e416134ad775e1087b85f642e7b4.003.1", "identifier": "urn:oid:2.49.0.1.840.0.f121f5aa5a48e416134ad775e1087b85f642e7b4.003.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-03-04T00:38:00-05:00"}, {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7265cb96919fae070c19506c68e11acad0e5a369.004.1", "identifier": "urn:oid:2.49.0.1.840.0.7265cb96919fae070c19506c68e11acad0e5a369.004.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-03-04T02:57:00-05:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-04T12:40:00-05:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_34b4ee3fe1002c0655ba359a941ff58a.bindTooltip(
+    geo_json_49856a21f5d7e5e4e50e3f755d522e3f.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_34b4ee3fe1002c0655ba359a941ff58a.bindPopup(
+    geo_json_49856a21f5d7e5e4e50e3f755d522e3f.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_34b4ee3fe1002c0655ba359a941ff58a.addTo(map_6a1823eea7c627c1564fc929a628f4c7);
+            geo_json_49856a21f5d7e5e4e50e3f755d522e3f.addTo(map_5667f36d8559975da1f6569717555eba);
         
     
-            var layer_control_938519131334556e8e6a6b1c32d0a6dd_layers = {
+            var layer_control_95741c0b8636d7fdc403910b76b6aceb_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_840e14ef4de571ea8b470f5bd9c4bdda,
-                    "Esri Street Map" : tile_layer_7294cabe668f4cdf6ce492f1ad9ca5ac,
-                    "Esri NatGeo" : tile_layer_2ae2df407c78e41e3ce34f8791149172,
-                    "Google Satellite" : tile_layer_da0a83d5d4b3e587aa6da14201fd34c3,
-                    "Google Terrain" : tile_layer_22b69a0939eff80bc7ed0324900caa66,
-                    "Google Street" : tile_layer_f0caaca43e2e6247853ba9b83a5e206f,
-                    "Light Gray Base" : tile_layer_c19a45176b1471b5cb09d1621629089d,
+                    "Esri Satellite" : tile_layer_f547dcfed7eb4413e8476cd9864e3efa,
+                    "Esri Street Map" : tile_layer_fbcae3d719f2f2e25bea588647a255e7,
+                    "Esri NatGeo" : tile_layer_0a118af0670ae51c69889acd5fbd1699,
+                    "Google Satellite" : tile_layer_de4156b4fc46e69b317a427caa55bfba,
+                    "Google Terrain" : tile_layer_b1eedcea36c69161447b39792d224605,
+                    "Google Street" : tile_layer_ba720cd088306ded050ba2fda0bee349,
+                    "Light Gray Base" : tile_layer_1fe1ad9797de630fa68826936245949a,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_34b4ee3fe1002c0655ba359a941ff58a,
+                    " Marine/Beach" : geo_json_49856a21f5d7e5e4e50e3f755d522e3f,
                 },
             };
-            let layer_control_938519131334556e8e6a6b1c32d0a6dd = L.control.layers(
-                layer_control_938519131334556e8e6a6b1c32d0a6dd_layers.base_layers,
-                layer_control_938519131334556e8e6a6b1c32d0a6dd_layers.overlays,
+            let layer_control_95741c0b8636d7fdc403910b76b6aceb = L.control.layers(
+                layer_control_95741c0b8636d7fdc403910b76b6aceb_layers.base_layers,
+                layer_control_95741c0b8636d7fdc403910b76b6aceb_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_6a1823eea7c627c1564fc929a628f4c7);
+            ).addTo(map_5667f36d8559975da1f6569717555eba);
 
         
 </script>
