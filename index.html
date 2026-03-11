@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_dafef4b88a6e066ffaf6020e26d2964e {
+                #map_b09ea1661eaeb292298d007ec0fbb190 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_39c7bea13db641fa502db25139c6ea90 {
+                    #float_image_59b74c646bbed1609c8df8cbffa91b4e {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_dafef4b88a6e066ffaf6020e26d2964e" ></div>
+            <div class="folium-map" id="map_b09ea1661eaeb292298d007ec0fbb190" ></div>
         
     
-            <img id="float_image_39c7bea13db641fa502db25139c6ea90" alt="float_image"
+            <img id="float_image_59b74c646bbed1609c8df8cbffa91b4e" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Mar 10, 2026<br>08:00 PM EDT
+        Updated: Mar 10, 2026<br>10:46 PM EDT
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_dafef4b88a6e066ffaf6020e26d2964e = L.map(
-                "map_dafef4b88a6e066ffaf6020e26d2964e",
+            var map_b09ea1661eaeb292298d007ec0fbb190 = L.map(
+                "map_b09ea1661eaeb292298d007ec0fbb190",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_b7ac8fa6adf030f2c9193f17cc1d720c = L.tileLayer(
+            var tile_layer_187889e70826e5fc59132260e926a88c = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_1a7335cf897157ff8a298d300136c007 = L.tileLayer(
+            var tile_layer_b7616d48aca60b3c14488aa94a15453f = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_345ec3cf4a8f24d5ecb2a5de1032d9bd = L.tileLayer(
+            var tile_layer_a2d004f61e42cfbdd009e892ad96d3e0 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_345ec3cf4a8f24d5ecb2a5de1032d9bd.addTo(map_dafef4b88a6e066ffaf6020e26d2964e);
+            tile_layer_a2d004f61e42cfbdd009e892ad96d3e0.addTo(map_b09ea1661eaeb292298d007ec0fbb190);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_dafef4b88a6e066ffaf6020e26d2964e);
+            ).addTo(map_b09ea1661eaeb292298d007ec0fbb190);
         
     
-            var tile_layer_166753dad80c008bbc7a5cbc0c6007b6 = L.tileLayer(
+            var tile_layer_e7a1b7d69825c8f0a77601e32770ef52 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_d246611c954ec9dab2f7055cfbee2027 = L.tileLayer(
+            var tile_layer_e4cf64f6370549c045b3d50fd261a75f = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_b5bf04d64594bc800a29e6ae9694c2ef = L.tileLayer(
+            var tile_layer_e4ad04b701927c3c6b66ee43234c4133 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_fac632645721d7cb65f3608cc9a9af07 = L.tileLayer(
+            var tile_layer_82fc3cfe788a86350395d2891832cd57 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_6172a9e6114249e79db9424e5fcf5a39 = L.control.locate(
+            var locate_control_58dd1db081faedbe82330999cb721a8a = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_dafef4b88a6e066ffaf6020e26d2964e);
+            ).addTo(map_b09ea1661eaeb292298d007ec0fbb190);
             
         
     
-        function geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b_styler(feature) {
+        function geo_json_c746853f9711f400f8f916ded98c4731_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFC0CB", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b_onEachFeature(feature, layer) {
+        function geo_json_c746853f9711f400f8f916ded98c4731_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b = L.geoJson(null, {
-                onEachFeature: geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b_onEachFeature,
+        var geo_json_c746853f9711f400f8f916ded98c4731 = L.geoJson(null, {
+                onEachFeature: geo_json_c746853f9711f400f8f916ded98c4731_onEachFeature,
             
-                style: geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b_styler,
+                style: geo_json_c746853f9711f400f8f916ded98c4731_styler,
             ...{
 }
         });
 
-        function geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b_add (data) {
-            geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b
+        function geo_json_c746853f9711f400f8f916ded98c4731_add (data) {
+            geo_json_c746853f9711f400f8f916ded98c4731
                 .addData(data);
         }
-            geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b_add({"bbox": [-76.00027780000003, 34.853372499999985, -75.12663960000012, 36.55290600000004], "features": [{"bbox": [-75.86709739999999, 36.221516199999996, -75.3938413, 36.55290600000004], "geometry": {"coordinates": [[[-75.3938413, 36.222162], [-75.76879050000001, 36.221516199999996], [-75.78440090000001, 36.25799560000001], [-75.81519499999999, 36.34532900000001], [-75.8335571, 36.41836920000003], [-75.85621200000001, 36.495113000000046], [-75.86709739999999, 36.551006200000046], [-75.5300769, 36.55290600000004], [-75.5284154, 36.54713210000004], [-75.5287942, 36.54040560000004], [-75.5247132, 36.533127800000045], [-75.50387159999998, 36.45659610000005], [-75.48947179999998, 36.416378000000044], [-75.48962219999997, 36.41244760000004], [-75.48673069999997, 36.40759060000004], [-75.47660699999997, 36.373135300000044], [-75.46907949999996, 36.36529770000004], [-75.46497789999997, 36.35595520000004], [-75.46251769999996, 36.34483930000004], [-75.45675229999996, 36.333815400000034], [-75.44989249999995, 36.31476390000003], [-75.44079879999995, 36.30618930000003], [-75.42523379999994, 36.273380100000026], [-75.42372099999994, 36.26554230000003], [-75.40419379999994, 36.23974540000003], [-75.39988609999995, 36.22703040000003], [-75.3938413, 36.222162]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8a7887e0d5d27a8970bd779a20db260421164055.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/ANZ656", "https://api.weather.gov/zones/forecast/ANZ658"], "areaDesc": "Coastal Waters from Cape Charles Light to Virginia-North Carolina border out to 20 nm; Coastal waters from NC VA border to Currituck Beach Light NC out 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North to northwest winds 25 to 30 kt with gusts up to 35\nkt and seas 5 to 7 ft possible.\n\n* WHERE...Coastal Waters from Cape Charles Light to Virginia-\nNorth Carolina border out to 20 nm and Coastal waters from NC\nVA border to Currituck Beach Light NC out 20 nm.\n\n* WHEN...From Thursday morning through Thursday afternoon.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.", "effective": "2026-03-10T14:15:00-04:00", "ends": "2026-03-12T16:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-10T22:15:00-04:00", "geocode": {"SAME": ["073656", "073658"], "UGC": ["ANZ656", "ANZ658"]}, "headline": "Gale Watch issued March 10 at 2:15PM EDT until March 12 at 4:00PM EDT by NWS Wakefield VA", "id": "urn:oid:2.49.0.1.840.0.8a7887e0d5d27a8970bd779a20db260421164055.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T07:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWAKQ"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY AFTERNOON"], "VTEC": ["/O.NEW.KAKQ.GL.A.0010.260312T1100Z-260312T2000Z/"], "WMOidentifier": ["WHUS71 KAKQ 101815"], "eventEndingTime": ["2026-03-12T16:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wakefield VA", "sent": "2026-03-10T14:15:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.76879049999997, 35.7670446, -75.1631576, 36.2221652], "geometry": {"coordinates": [[[-75.1631576, 35.7854836], [-75.5180258, 35.7670446], [-75.52400970000001, 35.774890899999995], [-75.53098290000001, 35.77503959999999], [-75.53140040000001, 35.77220029999999], [-75.53964990000001, 35.77557369999999], [-75.53436310000001, 35.79262209999999], [-75.5455322, 35.80609129999999], [-75.56981099999996, 35.863301000000014], [-75.66184999999996, 36.02640760000001], [-75.70940299999995, 36.09739500000001], [-75.73689299999995, 36.15087100000001], [-75.75965399999997, 36.20470499999999], [-75.76879049999997, 36.221516199999996], [-75.39195699999996, 36.2221652], [-75.37315359999997, 36.1930789], [-75.34069249999996, 36.1371326], [-75.29020499999996, 36.0465335], [-75.27083199999996, 36.0107326], [-75.25376509999995, 35.9727153], [-75.20727919999995, 35.89783659999999], [-75.19191359999995, 35.865713099999994], [-75.18131249999995, 35.839158999999995], [-75.1631576, 35.7854836]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 nm; S of Oregon Inlet NC to Cape Hatteras NC out to 20 nm; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North winds 15 to 25 kt with gusts up to 35 kt and seas\n5 to 7 ft possible.\n\n* WHERE...The coastal waters from Duck to Ocracoke Inlet.\n\n* WHEN...From Thursday morning through Thursday evening.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.\n\n* ADDITIONAL DETAILS...Moderate to strong northerly winds are\nexpected to develop in the wake of a cold front passage on\nThursday. Widespread 25 knot winds are expected, with frequent\ngale-force gusts possible.", "effective": "2026-03-10T13:48:00-04:00", "ends": "2026-03-12T20:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T03:00:00-04:00", "geocode": {"SAME": ["075150", "075152", "075154"], "UGC": ["AMZ150", "AMZ152", "AMZ154"]}, "headline": "Gale Watch issued March 10 at 1:48PM EDT until March 12 at 8:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T08:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY EVENING"], "VTEC": ["/O.NEW.KMHX.GL.A.0006.260312T1200Z-260313T0000Z/"], "WMOidentifier": ["WHUS72 KMHX 101748"], "eventEndingTime": ["2026-03-12T20:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-10T13:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.52872409999999, 35.1380557, -75.12663960000012, 35.78548359999998], "geometry": {"coordinates": [[[-75.206156, 35.1380557], [-75.52872409999999, 35.2237875], [-75.524147, 35.245105699999996], [-75.518525, 35.258267999999994], [-75.507036, 35.32278299999999], [-75.50294799999999, 35.33432399999999], [-75.49521630000001, 35.36993779999999], [-75.48706810000003, 35.39453499999999], [-75.48065180000003, 35.47268289999999], [-75.47188000000003, 35.51919899999999], [-75.46250910000003, 35.55355449999998], [-75.45999400000005, 35.584290999999986], [-75.46047400000005, 35.59205499999999], [-75.47597700000007, 35.65922099999999], [-75.47650900000008, 35.66796869999999], [-75.48929590000009, 35.711593599999986], [-75.49989500000011, 35.73815099999998], [-75.5180258000001, 35.76704459999998], [-75.1631576000001, 35.78548359999998], [-75.1495586000001, 35.73299979999997], [-75.12997140000012, 35.635564199999976], [-75.12663960000012, 35.58429099999997], [-75.12791030000011, 35.54861059999997], [-75.13555860000012, 35.488525099999976], [-75.14953830000013, 35.429958299999974], [-75.15392140000013, 35.36993389999997], [-75.16011660000014, 35.32950509999997], [-75.18333340000014, 35.23955229999997], [-75.19451780000014, 35.17988319999998], [-75.206156, 35.1380557]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 nm; S of Oregon Inlet NC to Cape Hatteras NC out to 20 nm; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North winds 15 to 25 kt with gusts up to 35 kt and seas\n5 to 7 ft possible.\n\n* WHERE...The coastal waters from Duck to Ocracoke Inlet.\n\n* WHEN...From Thursday morning through Thursday evening.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.\n\n* ADDITIONAL DETAILS...Moderate to strong northerly winds are\nexpected to develop in the wake of a cold front passage on\nThursday. Widespread 25 knot winds are expected, with frequent\ngale-force gusts possible.", "effective": "2026-03-10T13:48:00-04:00", "ends": "2026-03-12T20:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T03:00:00-04:00", "geocode": {"SAME": ["075150", "075152", "075154"], "UGC": ["AMZ150", "AMZ152", "AMZ154"]}, "headline": "Gale Watch issued March 10 at 1:48PM EDT until March 12 at 8:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T08:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY EVENING"], "VTEC": ["/O.NEW.KMHX.GL.A.0006.260312T1200Z-260313T0000Z/"], "WMOidentifier": ["WHUS72 KMHX 101748"], "eventEndingTime": ["2026-03-12T20:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-10T13:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.00027780000003, 34.853372499999985, -75.20615600000001, 35.235126400000006], "geometry": {"coordinates": [[[-75.5517272, 35.2328376], [-75.53542900000001, 35.227566], [-75.53188700000001, 35.221656], [-75.53610200000001, 35.217625999999996], [-75.5316925, 35.2193641], [-75.5287241, 35.2237875], [-75.20615600000001, 35.1380557], [-75.21438590000001, 35.1121921], [-75.22902670000002, 35.077753], [-75.24799910000002, 35.04400439999999], [-75.26635550000002, 35.01756469999999], [-75.28105730000001, 34.999582199999985], [-75.31188960000001, 34.968747999999984], [-75.33003610000002, 34.95388219999998], [-75.36628910000002, 34.929658799999984], [-75.40824500000002, 34.90920059999998], [-75.44847100000003, 34.89562409999998], [-75.46971510000003, 34.89066879999998], [-75.49201770000003, 34.88700289999998], [-75.53552620000004, 34.88415329999997], [-75.55732720000003, 34.884866699999975], [-75.59193420000003, 34.88895979999998], [-75.62231060000003, 34.87803839999998], [-75.70413390000003, 34.853372499999985], [-76.00027780000003, 35.06821379999999], [-75.99099800000002, 35.078681999999986], [-75.97637930000002, 35.09089659999999], [-75.93316100000003, 35.11776799999999], [-75.88935850000003, 35.13823309999999], [-75.81222200000003, 35.16932089999999], [-75.77925100000006, 35.181136999999985], [-75.77194100000007, 35.18191299999999], [-75.75259390000006, 35.1897811], [-75.74381250000006, 35.1897392], [-75.72946160000006, 35.19368359999999], [-75.6935424000001, 35.207798], [-75.63635250000009, 35.22563170000001], [-75.5863800000001, 35.23471060000001], [-75.5700683000001, 35.235126400000006], [-75.5517272, 35.2328376]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 nm; S of Oregon Inlet NC to Cape Hatteras NC out to 20 nm; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North winds 15 to 25 kt with gusts up to 35 kt and seas\n5 to 7 ft possible.\n\n* WHERE...The coastal waters from Duck to Ocracoke Inlet.\n\n* WHEN...From Thursday morning through Thursday evening.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.\n\n* ADDITIONAL DETAILS...Moderate to strong northerly winds are\nexpected to develop in the wake of a cold front passage on\nThursday. Widespread 25 knot winds are expected, with frequent\ngale-force gusts possible.", "effective": "2026-03-10T13:48:00-04:00", "ends": "2026-03-12T20:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T03:00:00-04:00", "geocode": {"SAME": ["075150", "075152", "075154"], "UGC": ["AMZ150", "AMZ152", "AMZ154"]}, "headline": "Gale Watch issued March 10 at 1:48PM EDT until March 12 at 8:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T08:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY EVENING"], "VTEC": ["/O.NEW.KMHX.GL.A.0006.260312T1200Z-260313T0000Z/"], "WMOidentifier": ["WHUS72 KMHX 101748"], "eventEndingTime": ["2026-03-12T20:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-10T13:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_c746853f9711f400f8f916ded98c4731_add({"bbox": [-76.00027780000003, 34.853372499999985, -75.1266397, 36.552906], "features": [{"bbox": [-75.8670974, 36.2215163, -75.3938414, 36.552906], "geometry": {"coordinates": [[[-75.3938414, 36.2221621], [-75.7687906, 36.2215163], [-75.7844009, 36.2579956], [-75.815195, 36.345329], [-75.8335571, 36.4183693], [-75.856212, 36.495113], [-75.8670974, 36.5510062], [-75.530077, 36.552906], [-75.5284155, 36.5471321], [-75.5287942, 36.5404057], [-75.5247132, 36.5331278], [-75.5038716, 36.4565962], [-75.4894718, 36.416378], [-75.4896223, 36.4124476], [-75.4867308, 36.4075906], [-75.4766071, 36.3731353], [-75.4690796, 36.3652978], [-75.4649779, 36.3559552], [-75.4625178, 36.3448393], [-75.4567523, 36.3338155], [-75.4498926, 36.3147639], [-75.4407988, 36.3061893], [-75.4252339, 36.2733802], [-75.4237211, 36.2655424], [-75.4041939, 36.2397454], [-75.3998862, 36.2270304], [-75.3938414, 36.2221621]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0aea3a091dadeae791c05a8e8490477086b5f37b.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/ANZ656", "https://api.weather.gov/zones/forecast/ANZ658"], "areaDesc": "Coastal Waters from Cape Charles Light to Virginia-North Carolina border out to 20 nm; Coastal waters from NC VA border to Currituck Beach Light NC out 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North to northwest winds 25 to 30 kt with gusts up to\n35 kt and seas 5 to 7 ft possible.\n\n* WHERE...Coastal Waters from Cape Charles Light to Virginia-\nNorth Carolina border out to 20 nm and Coastal waters from NC\nVA border to Currituck Beach Light NC out 20 nm.\n\n* WHEN...From Thursday morning through Thursday afternoon.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.", "effective": "2026-03-10T21:48:00-04:00", "ends": "2026-03-12T16:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T06:00:00-04:00", "geocode": {"SAME": ["073656", "073658"], "UGC": ["ANZ656", "ANZ658"]}, "headline": "Gale Watch issued March 10 at 9:48PM EDT until March 12 at 4:00PM EDT by NWS Wakefield VA", "id": "urn:oid:2.49.0.1.840.0.0aea3a091dadeae791c05a8e8490477086b5f37b.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Update", "onset": "2026-03-12T07:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWAKQ"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH REMAINS IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY AFTERNOON"], "VTEC": ["/O.CON.KAKQ.GL.A.0010.260312T1100Z-260312T2000Z/"], "WMOidentifier": ["WHUS71 KAKQ 110148"], "eventEndingTime": ["2026-03-12T16:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8a7887e0d5d27a8970bd779a20db260421164055.001.1", "identifier": "urn:oid:2.49.0.1.840.0.8a7887e0d5d27a8970bd779a20db260421164055.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-03-10T14:15:00-04:00"}], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wakefield VA", "sent": "2026-03-10T21:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.7687906, 35.7670447, -75.1631576, 36.2221653], "geometry": {"coordinates": [[[-75.1631576, 35.7854837], [-75.5180258, 35.7670447], [-75.5240097, 35.7748909], [-75.530983, 35.7750397], [-75.5314004, 35.7722003], [-75.53965, 35.7755737], [-75.5343631, 35.7926222], [-75.5455322, 35.8060913], [-75.5698111, 35.863301], [-75.66185, 36.0264077], [-75.7094031, 36.097395], [-75.7368931, 36.150871], [-75.7596541, 36.204705], [-75.7687906, 36.2215163], [-75.391957, 36.2221653], [-75.3731537, 36.193079], [-75.3406925, 36.1371326], [-75.290205, 36.0465336], [-75.2708321, 36.0107327], [-75.2537651, 35.9727154], [-75.2072792, 35.8978367], [-75.1919136, 35.8657131], [-75.1813126, 35.839159], [-75.1631576, 35.7854837]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 nm; S of Oregon Inlet NC to Cape Hatteras NC out to 20 nm; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North winds 15 to 25 kt with gusts up to 35 kt and seas\n5 to 7 ft possible.\n\n* WHERE...The coastal waters from Duck to Ocracoke Inlet.\n\n* WHEN...From Thursday morning through Thursday evening.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.\n\n* ADDITIONAL DETAILS...Moderate to strong northerly winds are\nexpected to develop in the wake of a cold front passage on\nThursday. Widespread 25 knot winds are expected, with frequent\ngale-force gusts possible.", "effective": "2026-03-10T13:48:00-04:00", "ends": "2026-03-12T20:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T03:00:00-04:00", "geocode": {"SAME": ["075150", "075152", "075154"], "UGC": ["AMZ150", "AMZ152", "AMZ154"]}, "headline": "Gale Watch issued March 10 at 1:48PM EDT until March 12 at 8:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T08:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY EVENING"], "VTEC": ["/O.NEW.KMHX.GL.A.0006.260312T1200Z-260313T0000Z/"], "WMOidentifier": ["WHUS72 KMHX 101748"], "eventEndingTime": ["2026-03-12T20:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-10T13:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.5287241, 35.1380558, -75.1266397, 35.7854837], "geometry": {"coordinates": [[[-75.2061561, 35.1380558], [-75.5287241, 35.2237875], [-75.524147, 35.2451057], [-75.5185251, 35.258268], [-75.5070361, 35.322783], [-75.5029481, 35.334324], [-75.4952164, 35.3699379], [-75.4870682, 35.3945351], [-75.4806519, 35.472683], [-75.4718801, 35.519199], [-75.4625092, 35.5535545], [-75.4599941, 35.584291], [-75.4604741, 35.592055], [-75.4759771, 35.659221], [-75.4765091, 35.6679688], [-75.489296, 35.7115936], [-75.4998951, 35.738151], [-75.5180258, 35.7670447], [-75.1631576, 35.7854837], [-75.1495587, 35.7329999], [-75.1299714, 35.6355642], [-75.1266397, 35.584291], [-75.1279104, 35.5486107], [-75.1355587, 35.4885251], [-75.1495383, 35.4299584], [-75.1539214, 35.3699339], [-75.1601167, 35.3295051], [-75.1833335, 35.2395524], [-75.1945179, 35.1798833], [-75.2061561, 35.1380558]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 nm; S of Oregon Inlet NC to Cape Hatteras NC out to 20 nm; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North winds 15 to 25 kt with gusts up to 35 kt and seas\n5 to 7 ft possible.\n\n* WHERE...The coastal waters from Duck to Ocracoke Inlet.\n\n* WHEN...From Thursday morning through Thursday evening.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.\n\n* ADDITIONAL DETAILS...Moderate to strong northerly winds are\nexpected to develop in the wake of a cold front passage on\nThursday. Widespread 25 knot winds are expected, with frequent\ngale-force gusts possible.", "effective": "2026-03-10T13:48:00-04:00", "ends": "2026-03-12T20:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T03:00:00-04:00", "geocode": {"SAME": ["075150", "075152", "075154"], "UGC": ["AMZ150", "AMZ152", "AMZ154"]}, "headline": "Gale Watch issued March 10 at 1:48PM EDT until March 12 at 8:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T08:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY EVENING"], "VTEC": ["/O.NEW.KMHX.GL.A.0006.260312T1200Z-260313T0000Z/"], "WMOidentifier": ["WHUS72 KMHX 101748"], "eventEndingTime": ["2026-03-12T20:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-10T13:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.00027780000003, 34.853372499999985, -75.20615600000001, 35.235126400000006], "geometry": {"coordinates": [[[-75.5517272, 35.2328376], [-75.53542900000001, 35.227566], [-75.53188700000001, 35.221656], [-75.53610200000001, 35.217625999999996], [-75.5316925, 35.2193641], [-75.5287241, 35.2237875], [-75.20615600000001, 35.1380557], [-75.21438590000001, 35.1121921], [-75.22902670000002, 35.077753], [-75.24799910000002, 35.04400439999999], [-75.26635550000002, 35.01756469999999], [-75.28105730000001, 34.999582199999985], [-75.31188960000001, 34.968747999999984], [-75.33003610000002, 34.95388219999998], [-75.36628910000002, 34.929658799999984], [-75.40824500000002, 34.90920059999998], [-75.44847100000003, 34.89562409999998], [-75.46971510000003, 34.89066879999998], [-75.49201770000003, 34.88700289999998], [-75.53552620000004, 34.88415329999997], [-75.55732720000003, 34.884866699999975], [-75.59193420000003, 34.88895979999998], [-75.62231060000003, 34.87803839999998], [-75.70413390000003, 34.853372499999985], [-76.00027780000003, 35.06821379999999], [-75.99099800000002, 35.078681999999986], [-75.97637930000002, 35.09089659999999], [-75.93316100000003, 35.11776799999999], [-75.88935850000003, 35.13823309999999], [-75.81222200000003, 35.16932089999999], [-75.77925100000006, 35.181136999999985], [-75.77194100000007, 35.18191299999999], [-75.75259390000006, 35.1897811], [-75.74381250000006, 35.1897392], [-75.72946160000006, 35.19368359999999], [-75.6935424000001, 35.207798], [-75.63635250000009, 35.22563170000001], [-75.5863800000001, 35.23471060000001], [-75.5700683000001, 35.235126400000006], [-75.5517272, 35.2328376]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 nm; S of Oregon Inlet NC to Cape Hatteras NC out to 20 nm; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 nm", "category": "Marine/Beach", "certainty": "Possible", "code": "IPAWSv1.0", "description": "* WHAT...North winds 15 to 25 kt with gusts up to 35 kt and seas\n5 to 7 ft possible.\n\n* WHERE...The coastal waters from Duck to Ocracoke Inlet.\n\n* WHEN...From Thursday morning through Thursday evening.\n\n* IMPACTS...Strong winds can cause hazardous seas which could\ncapsize or damage vessels and reduce visibility.\n\n* ADDITIONAL DETAILS...Moderate to strong northerly winds are\nexpected to develop in the wake of a cold front passage on\nThursday. Widespread 25 knot winds are expected, with frequent\ngale-force gusts possible.", "effective": "2026-03-10T13:48:00-04:00", "ends": "2026-03-12T20:00:00-04:00", "event": "Gale Watch", "eventCode": {"NationalWeatherService": ["GLA"], "SAME": ["NWS"]}, "expires": "2026-03-11T03:00:00-04:00", "geocode": {"SAME": ["075150", "075152", "075154"], "UGC": ["AMZ150", "AMZ152", "AMZ154"]}, "headline": "Gale Watch issued March 10 at 1:48PM EDT until March 12 at 8:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.506de9f97225bfa4ba0ac5411bd830b28c294c5e.001.1", "instruction": "Mariners should consider altering plans to avoid possible\nhazardous conditions.  Remain in port, seek safe harbor, alter\ncourse, and/or secure the vessel for severe wind and seas.", "language": "en-US", "messageType": "Alert", "onset": "2026-03-12T08:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["GALE WATCH IN EFFECT FROM THURSDAY MORNING THROUGH THURSDAY EVENING"], "VTEC": ["/O.NEW.KMHX.GL.A.0006.260312T1200Z-260313T0000Z/"], "WMOidentifier": ["WHUS72 KMHX 101748"], "eventEndingTime": ["2026-03-12T20:00:00-04:00"]}, "references": [], "response": "Prepare", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-03-10T13:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Future", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b.bindTooltip(
+    geo_json_c746853f9711f400f8f916ded98c4731.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b.bindPopup(
+    geo_json_c746853f9711f400f8f916ded98c4731.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b.addTo(map_dafef4b88a6e066ffaf6020e26d2964e);
+            geo_json_c746853f9711f400f8f916ded98c4731.addTo(map_b09ea1661eaeb292298d007ec0fbb190);
         
     
-            var layer_control_39238e3e698bd1bf0624b7d95b874e57_layers = {
+            var layer_control_8281a5aed4e1cec573e0b163d7fd7aad_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_b7ac8fa6adf030f2c9193f17cc1d720c,
-                    "Esri Street Map" : tile_layer_1a7335cf897157ff8a298d300136c007,
-                    "Esri NatGeo" : tile_layer_345ec3cf4a8f24d5ecb2a5de1032d9bd,
-                    "Google Satellite" : tile_layer_166753dad80c008bbc7a5cbc0c6007b6,
-                    "Google Terrain" : tile_layer_d246611c954ec9dab2f7055cfbee2027,
-                    "Google Street" : tile_layer_b5bf04d64594bc800a29e6ae9694c2ef,
-                    "Light Gray Base" : tile_layer_fac632645721d7cb65f3608cc9a9af07,
+                    "Esri Satellite" : tile_layer_187889e70826e5fc59132260e926a88c,
+                    "Esri Street Map" : tile_layer_b7616d48aca60b3c14488aa94a15453f,
+                    "Esri NatGeo" : tile_layer_a2d004f61e42cfbdd009e892ad96d3e0,
+                    "Google Satellite" : tile_layer_e7a1b7d69825c8f0a77601e32770ef52,
+                    "Google Terrain" : tile_layer_e4cf64f6370549c045b3d50fd261a75f,
+                    "Google Street" : tile_layer_e4ad04b701927c3c6b66ee43234c4133,
+                    "Light Gray Base" : tile_layer_82fc3cfe788a86350395d2891832cd57,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_63207ea2f5dbc51e539a3bb2cd4ff24b,
+                    " Marine/Beach" : geo_json_c746853f9711f400f8f916ded98c4731,
                 },
             };
-            let layer_control_39238e3e698bd1bf0624b7d95b874e57 = L.control.layers(
-                layer_control_39238e3e698bd1bf0624b7d95b874e57_layers.base_layers,
-                layer_control_39238e3e698bd1bf0624b7d95b874e57_layers.overlays,
+            let layer_control_8281a5aed4e1cec573e0b163d7fd7aad = L.control.layers(
+                layer_control_8281a5aed4e1cec573e0b163d7fd7aad_layers.base_layers,
+                layer_control_8281a5aed4e1cec573e0b163d7fd7aad_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_dafef4b88a6e066ffaf6020e26d2964e);
+            ).addTo(map_b09ea1661eaeb292298d007ec0fbb190);
 
         
 </script>
