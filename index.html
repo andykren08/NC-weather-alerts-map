@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_236fe68ef9b21e0067c99182922c4bf7 {
+                #map_e1d5cb2fc4117c00ca7b679d4fa7fc39 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -87,40 +87,8 @@
                     </style>
             
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_58c8bd6999cb49f4e9414d7ddac930d0 {
+                    #float_image_3df525543f98d98c09f26afb58715441 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -138,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_236fe68ef9b21e0067c99182922c4bf7" ></div>
+            <div class="folium-map" id="map_e1d5cb2fc4117c00ca7b679d4fa7fc39" ></div>
         
     
-            <img id="float_image_58c8bd6999cb49f4e9414d7ddac930d0" alt="float_image"
+            <img id="float_image_3df525543f98d98c09f26afb58715441" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -152,18 +120,13 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: May 18, 2026<br>06:07 AM EDT
+        Updated: May 18, 2026<br>10:00 AM EDT
     </div>
     <div class='legend-scale'>
        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#7CFC00; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Coastal Flood Advisory</span>
-        </div>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#FFE4B5; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Special Weather Statement</span>
         </div>
         
     </div>
@@ -176,8 +139,8 @@
 <script>
     
     
-            var map_236fe68ef9b21e0067c99182922c4bf7 = L.map(
-                "map_236fe68ef9b21e0067c99182922c4bf7",
+            var map_e1d5cb2fc4117c00ca7b679d4fa7fc39 = L.map(
+                "map_e1d5cb2fc4117c00ca7b679d4fa7fc39",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -194,7 +157,7 @@
 
         
     
-            var tile_layer_064f32a946f884e62d25d2eaf5a101b7 = L.tileLayer(
+            var tile_layer_043d85f05a953ac29b54f4b701bdc328 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -211,7 +174,7 @@
             );
         
     
-            var tile_layer_bd48257745adf1fdbafd1c23881e7ecb = L.tileLayer(
+            var tile_layer_71cd1869ec1445ac693e8d59bfeb7b3b = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -228,7 +191,7 @@
             );
         
     
-            var tile_layer_b7a17de01ed3c67595dd21ce73e5fca4 = L.tileLayer(
+            var tile_layer_972705d4676cd8611c3949e095deadf8 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -245,7 +208,7 @@
             );
         
     
-            tile_layer_b7a17de01ed3c67595dd21ce73e5fca4.addTo(map_236fe68ef9b21e0067c99182922c4bf7);
+            tile_layer_972705d4676cd8611c3949e095deadf8.addTo(map_e1d5cb2fc4117c00ca7b679d4fa7fc39);
         
     
             L.control.fullscreen(
@@ -255,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_236fe68ef9b21e0067c99182922c4bf7);
+            ).addTo(map_e1d5cb2fc4117c00ca7b679d4fa7fc39);
         
     
-            var tile_layer_70f16d680aa473398037accdfb5365b3 = L.tileLayer(
+            var tile_layer_71de1ae696260cf9995ea99674114540 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -275,7 +238,7 @@
             );
         
     
-            var tile_layer_c8d6dfa82e60f4d8c51d971032af5c3e = L.tileLayer(
+            var tile_layer_c07293e1192e3d109641cfd8d1ac96ec = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -292,7 +255,7 @@
             );
         
     
-            var tile_layer_3227b1045079b64fd0bdd547a391b0cb = L.tileLayer(
+            var tile_layer_734ada99a0ba470d214921eaa31cf172 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -309,7 +272,7 @@
             );
         
     
-            var tile_layer_05499f63260ce927c48816f6a24bb60c = L.tileLayer(
+            var tile_layer_b67457054849529e7aa0434f4f63acf5 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -326,41 +289,41 @@
             );
         
     
-            var locate_control_f6a53e9afc3af9214eb6cfab345c1771 = L.control.locate(
+            var locate_control_bccaf4683be863255fa372920602adb8 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_236fe68ef9b21e0067c99182922c4bf7);
+            ).addTo(map_e1d5cb2fc4117c00ca7b679d4fa7fc39);
             
         
     
-        function geo_json_2a2d926804df58f844689d386f0ffa1e_styler(feature) {
+        function geo_json_b6e5e90bd844235bba5539146b61b99b_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#7CFC00", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_2a2d926804df58f844689d386f0ffa1e_onEachFeature(feature, layer) {
+        function geo_json_b6e5e90bd844235bba5539146b61b99b_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_2a2d926804df58f844689d386f0ffa1e = L.geoJson(null, {
-                onEachFeature: geo_json_2a2d926804df58f844689d386f0ffa1e_onEachFeature,
+        var geo_json_b6e5e90bd844235bba5539146b61b99b = L.geoJson(null, {
+                onEachFeature: geo_json_b6e5e90bd844235bba5539146b61b99b_onEachFeature,
             
-                style: geo_json_2a2d926804df58f844689d386f0ffa1e_styler,
+                style: geo_json_b6e5e90bd844235bba5539146b61b99b_styler,
             ...{
 }
         });
 
-        function geo_json_2a2d926804df58f844689d386f0ffa1e_add (data) {
-            geo_json_2a2d926804df58f844689d386f0ffa1e
+        function geo_json_b6e5e90bd844235bba5539146b61b99b_add (data) {
+            geo_json_b6e5e90bd844235bba5539146b61b99b
                 .addData(data);
         }
-            geo_json_2a2d926804df58f844689d386f0ffa1e_add({"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "features": [{"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "geometry": {"geometries": [{"coordinates": [[[-77.820427, 34.384926], [-77.814934, 34.38168], [-77.810799, 34.381714], [-77.805199, 34.377113], [-77.805, 34.374912], [-77.807732, 34.373512], [-77.809395, 34.370312], [-77.814934, 34.367176], [-77.811462, 34.357479], [-77.799973, 34.34409], [-77.763375, 34.313668], [-77.76989, 34.308247], [-77.887283, 34.166992], [-77.900215, 34.145679], [-77.927155, 34.116631], [-77.928185, 34.117962], [-77.925934, 34.121944], [-77.92524, 34.124371], [-77.925545, 34.124771], [-77.925072, 34.126347], [-77.925163, 34.12817], [-77.927963, 34.131451], [-77.928352, 34.132908], [-77.929901, 34.134476], [-77.93219, 34.135693], [-77.934464, 34.137516], [-77.936554, 34.138027], [-77.939423, 34.137436], [-77.942238, 34.140362], [-77.946175, 34.143021], [-77.945953, 34.144234], [-77.943115, 34.144508], [-77.94297, 34.144875], [-77.944122, 34.154221], [-77.9431, 34.15649], [-77.942207, 34.157871], [-77.942612, 34.16077], [-77.94751, 34.164371], [-77.952507, 34.177269], [-77.953651, 34.178452], [-77.953827, 34.178921], [-77.953186, 34.180878], [-77.954712, 34.188568], [-77.95388, 34.19339], [-77.954109, 34.196106], [-77.961678, 34.203331], [-77.9515, 34.232357], [-77.954681, 34.232334], [-77.954887, 34.234436], [-77.957809, 34.234428], [-77.961929, 34.239471], [-77.955421, 34.239647], [-77.957314, 34.241367], [-77.959808, 34.242771], [-77.968513, 34.242371], [-77.969513, 34.244068], [-77.965012, 34.249268], [-77.967812, 34.252171], [-77.970009, 34.251671], [-77.973114, 34.247269], [-77.975212, 34.249371], [-77.978813, 34.260071], [-77.980408, 34.260868], [-77.985611, 34.259068], [-77.987709, 34.260071], [-77.988914, 34.262268], [-77.987511, 34.268269], [-77.991013, 34.270668], [-78.000809, 34.271568], [-78.002014, 34.273067], [-77.999313, 34.276169], [-77.991409, 34.278069], [-77.990211, 34.28167], [-77.996513, 34.28437], [-78.004814, 34.280468], [-78.005913, 34.281769], [-78.004616, 34.28677], [-78.005913, 34.288868], [-78.007812, 34.290169], [-78.015915, 34.290268], [-78.017113, 34.29277], [-78.014214, 34.302567], [-78.014816, 34.307468], [-78.012993, 34.312569], [-78.007263, 34.315624], [-78.006241, 34.319511], [-78.008659, 34.322552], [-78.012718, 34.323177], [-78.022911, 34.318008], [-78.026031, 34.317993], [-78.027519, 34.320152], [-78.025917, 34.328522], [-78.029922, 34.331768], [-78.026291, 34.330914], [-78.022186, 34.332813], [-77.99411, 34.336971], [-77.996086, 34.340313], [-77.994286, 34.346413], [-77.987579, 34.353813], [-77.978912, 34.357372], [-77.980545, 34.360069], [-77.985985, 34.36161], [-77.988884, 34.364311], [-77.987587, 34.371811], [-77.97979, 34.373711], [-77.975403, 34.372875], [-77.970985, 34.378811], [-77.962486, 34.383209], [-77.959099, 34.382511], [-77.957695, 34.380314], [-77.960976, 34.373318], [-77.959808, 34.371292], [-77.951424, 34.364941], [-77.950081, 34.370811], [-77.947571, 34.372261], [-77.940399, 34.37001], [-77.939095, 34.366814], [-77.94072, 34.36343], [-77.935211, 34.35841], [-77.933853, 34.359676], [-77.935181, 34.36581], [-77.931694, 34.368008], [-77.929893, 34.365211], [-77.931549, 34.362041], [-77.930031, 34.361622], [-77.917183, 34.376011], [-77.906868, 34.376072], [-77.901489, 34.378609], [-77.898796, 34.376812], [-77.898811, 34.36639], [-77.891678, 34.364231], [-77.880295, 34.36684], [-77.870583, 34.374611], [-77.858597, 34.380444], [-77.844582, 34.381191], [-77.831284, 34.387112], [-77.82209, 34.388794], [-77.820427, 34.384926]]], "type": "Polygon"}, {"coordinates": [[[-77.943115, 34.144508], [-77.944748, 34.144524], [-77.945953, 34.144234], [-77.946304, 34.143883], [-77.946175, 34.143021], [-77.944641, 34.141273], [-77.939423, 34.137436], [-77.938332, 34.137115], [-77.936554, 34.138027], [-77.936127, 34.138027], [-77.934464, 34.137516], [-77.930656, 34.135017], [-77.929901, 34.134476], [-77.928352, 34.132908], [-77.925163, 34.12817], [-77.925934, 34.121944], [-77.928185, 34.117962], [-77.927155, 34.116631], [-77.930359, 34.113171], [-77.931953, 34.114254], [-77.932236, 34.111141], [-77.935852, 34.107243], [-77.93737, 34.124256], [-77.952209, 34.150349], [-77.958611, 34.173771], [-77.958412, 34.184669], [-77.954482, 34.193375], [-77.95388, 34.19339], [-77.954712, 34.188568], [-77.954521, 34.183861], [-77.953186, 34.180878], [-77.953827, 34.178921], [-77.952507, 34.177269], [-77.94751, 34.164371], [-77.942612, 34.16077], [-77.942207, 34.157871], [-77.944122, 34.154221], [-77.943115, 34.144508]], [[-77.931709, 34.123707], [-77.930443, 34.123615], [-77.929916, 34.125172], [-77.931015, 34.125172], [-77.931709, 34.123707]], [[-77.931518, 34.119701], [-77.930611, 34.12199], [-77.931572, 34.122791], [-77.931984, 34.122128], [-77.931518, 34.119701]], [[-77.931267, 34.116291], [-77.929619, 34.116886], [-77.930634, 34.118717], [-77.931793, 34.117573], [-77.931267, 34.116291]]], "type": "Polygon"}], "type": "GeometryCollection"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f78a90dc55153b35742d812486e60fe7a41e1f6.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ107"], "areaDesc": "Inland New Hanover", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Up to one half foot of inundation above ground level\nexpected in low-lying areas near shorelines and tidal\nwaterways.\n\n* WHERE...The lower Cape Fear River including downtown\nWilmington.\n\n* WHEN...From 10 PM this evening to 2 AM EDT Tuesday.\n\n* IMPACTS...The lowest portions of USS North Carolina Road and\nBattleship Road begin to observe minor coastal flooding. Water\nbegins to spread out of storm drains onto Water Street just\nsouth of Market Street in downtown Wilmington.\n\n* ADDITIONAL DETAILS...Affected areas listed are based on\naverage tide conditions. Additional locations may experience\nflooding during periods of heavy rainfall, high winds, or\nother factors.", "effective": "2026-05-18T05:23:00-04:00", "ends": "2026-05-19T02:00:00-04:00", "event": "Coastal Flood Advisory", "eventCode": {"NationalWeatherService": ["CFY"], "SAME": ["NWS"]}, "expires": "2026-05-18T16:00:00-04:00", "geocode": {"SAME": ["037129"], "UGC": ["NCZ107"]}, "headline": "Coastal Flood Advisory issued May 18 at 5:23AM EDT until May 19 at 2:00AM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.7f78a90dc55153b35742d812486e60fe7a41e1f6.001.1", "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-18T22:00:00-04:00", "parameters": {"AWIPSidentifier": ["CFWILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["COASTAL FLOOD ADVISORY IN EFFECT FROM 10 PM THIS EVENING TO 2 AM EDT TUESDAY"], "VTEC": ["/O.NEW.KILM.CF.Y.0016.260519T0200Z-260519T0600Z/"], "WMOidentifier": ["WHUS42 KILM 180923"], "eventEndingTime": ["2026-05-19T02:00:00-04:00"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-05-18T05:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_b6e5e90bd844235bba5539146b61b99b_add({"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "features": [{"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "geometry": {"geometries": [{"coordinates": [[[-77.820427, 34.384926], [-77.814934, 34.38168], [-77.810799, 34.381714], [-77.805199, 34.377113], [-77.805, 34.374912], [-77.807732, 34.373512], [-77.809395, 34.370312], [-77.814934, 34.367176], [-77.811462, 34.357479], [-77.799973, 34.34409], [-77.763375, 34.313668], [-77.76989, 34.308247], [-77.887283, 34.166992], [-77.900215, 34.145679], [-77.927155, 34.116631], [-77.928185, 34.117962], [-77.925934, 34.121944], [-77.92524, 34.124371], [-77.925545, 34.124771], [-77.925072, 34.126347], [-77.925163, 34.12817], [-77.927963, 34.131451], [-77.928352, 34.132908], [-77.929901, 34.134476], [-77.93219, 34.135693], [-77.934464, 34.137516], [-77.936554, 34.138027], [-77.939423, 34.137436], [-77.942238, 34.140362], [-77.946175, 34.143021], [-77.945953, 34.144234], [-77.943115, 34.144508], [-77.94297, 34.144875], [-77.944122, 34.154221], [-77.9431, 34.15649], [-77.942207, 34.157871], [-77.942612, 34.16077], [-77.94751, 34.164371], [-77.952507, 34.177269], [-77.953651, 34.178452], [-77.953827, 34.178921], [-77.953186, 34.180878], [-77.954712, 34.188568], [-77.95388, 34.19339], [-77.954109, 34.196106], [-77.961678, 34.203331], [-77.9515, 34.232357], [-77.954681, 34.232334], [-77.954887, 34.234436], [-77.957809, 34.234428], [-77.961929, 34.239471], [-77.955421, 34.239647], [-77.957314, 34.241367], [-77.959808, 34.242771], [-77.968513, 34.242371], [-77.969513, 34.244068], [-77.965012, 34.249268], [-77.967812, 34.252171], [-77.970009, 34.251671], [-77.973114, 34.247269], [-77.975212, 34.249371], [-77.978813, 34.260071], [-77.980408, 34.260868], [-77.985611, 34.259068], [-77.987709, 34.260071], [-77.988914, 34.262268], [-77.987511, 34.268269], [-77.991013, 34.270668], [-78.000809, 34.271568], [-78.002014, 34.273067], [-77.999313, 34.276169], [-77.991409, 34.278069], [-77.990211, 34.28167], [-77.996513, 34.28437], [-78.004814, 34.280468], [-78.005913, 34.281769], [-78.004616, 34.28677], [-78.005913, 34.288868], [-78.007812, 34.290169], [-78.015915, 34.290268], [-78.017113, 34.29277], [-78.014214, 34.302567], [-78.014816, 34.307468], [-78.012993, 34.312569], [-78.007263, 34.315624], [-78.006241, 34.319511], [-78.008659, 34.322552], [-78.012718, 34.323177], [-78.022911, 34.318008], [-78.026031, 34.317993], [-78.027519, 34.320152], [-78.025917, 34.328522], [-78.029922, 34.331768], [-78.026291, 34.330914], [-78.022186, 34.332813], [-77.99411, 34.336971], [-77.996086, 34.340313], [-77.994286, 34.346413], [-77.987579, 34.353813], [-77.978912, 34.357372], [-77.980545, 34.360069], [-77.985985, 34.36161], [-77.988884, 34.364311], [-77.987587, 34.371811], [-77.97979, 34.373711], [-77.975403, 34.372875], [-77.970985, 34.378811], [-77.962486, 34.383209], [-77.959099, 34.382511], [-77.957695, 34.380314], [-77.960976, 34.373318], [-77.959808, 34.371292], [-77.951424, 34.364941], [-77.950081, 34.370811], [-77.947571, 34.372261], [-77.940399, 34.37001], [-77.939095, 34.366814], [-77.94072, 34.36343], [-77.935211, 34.35841], [-77.933853, 34.359676], [-77.935181, 34.36581], [-77.931694, 34.368008], [-77.929893, 34.365211], [-77.931549, 34.362041], [-77.930031, 34.361622], [-77.917183, 34.376011], [-77.906868, 34.376072], [-77.901489, 34.378609], [-77.898796, 34.376812], [-77.898811, 34.36639], [-77.891678, 34.364231], [-77.880295, 34.36684], [-77.870583, 34.374611], [-77.858597, 34.380444], [-77.844582, 34.381191], [-77.831284, 34.387112], [-77.82209, 34.388794], [-77.820427, 34.384926]]], "type": "Polygon"}, {"coordinates": [[[-77.943115, 34.144508], [-77.944748, 34.144524], [-77.945953, 34.144234], [-77.946304, 34.143883], [-77.946175, 34.143021], [-77.944641, 34.141273], [-77.939423, 34.137436], [-77.938332, 34.137115], [-77.936554, 34.138027], [-77.936127, 34.138027], [-77.934464, 34.137516], [-77.930656, 34.135017], [-77.929901, 34.134476], [-77.928352, 34.132908], [-77.925163, 34.12817], [-77.925934, 34.121944], [-77.928185, 34.117962], [-77.927155, 34.116631], [-77.930359, 34.113171], [-77.931953, 34.114254], [-77.932236, 34.111141], [-77.935852, 34.107243], [-77.93737, 34.124256], [-77.952209, 34.150349], [-77.958611, 34.173771], [-77.958412, 34.184669], [-77.954482, 34.193375], [-77.95388, 34.19339], [-77.954712, 34.188568], [-77.954521, 34.183861], [-77.953186, 34.180878], [-77.953827, 34.178921], [-77.952507, 34.177269], [-77.94751, 34.164371], [-77.942612, 34.16077], [-77.942207, 34.157871], [-77.944122, 34.154221], [-77.943115, 34.144508]], [[-77.931709, 34.123707], [-77.930443, 34.123615], [-77.929916, 34.125172], [-77.931015, 34.125172], [-77.931709, 34.123707]], [[-77.931518, 34.119701], [-77.930611, 34.12199], [-77.931572, 34.122791], [-77.931984, 34.122128], [-77.931518, 34.119701]], [[-77.931267, 34.116291], [-77.929619, 34.116886], [-77.930634, 34.118717], [-77.931793, 34.117573], [-77.931267, 34.116291]]], "type": "Polygon"}], "type": "GeometryCollection"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f78a90dc55153b35742d812486e60fe7a41e1f6.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ107"], "areaDesc": "Inland New Hanover", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Up to one half foot of inundation above ground level\nexpected in low-lying areas near shorelines and tidal\nwaterways.\n\n* WHERE...The lower Cape Fear River including downtown\nWilmington.\n\n* WHEN...From 10 PM this evening to 2 AM EDT Tuesday.\n\n* IMPACTS...The lowest portions of USS North Carolina Road and\nBattleship Road begin to observe minor coastal flooding. Water\nbegins to spread out of storm drains onto Water Street just\nsouth of Market Street in downtown Wilmington.\n\n* ADDITIONAL DETAILS...Affected areas listed are based on\naverage tide conditions. Additional locations may experience\nflooding during periods of heavy rainfall, high winds, or\nother factors.", "effective": "2026-05-18T05:23:00-04:00", "ends": "2026-05-19T02:00:00-04:00", "event": "Coastal Flood Advisory", "eventCode": {"NationalWeatherService": ["CFY"], "SAME": ["NWS"]}, "expires": "2026-05-18T16:00:00-04:00", "geocode": {"SAME": ["037129"], "UGC": ["NCZ107"]}, "headline": "Coastal Flood Advisory issued May 18 at 5:23AM EDT until May 19 at 2:00AM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.7f78a90dc55153b35742d812486e60fe7a41e1f6.001.1", "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-18T22:00:00-04:00", "parameters": {"AWIPSidentifier": ["CFWILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["COASTAL FLOOD ADVISORY IN EFFECT FROM 10 PM THIS EVENING TO 2 AM EDT TUESDAY"], "VTEC": ["/O.NEW.KILM.CF.Y.0016.260519T0200Z-260519T0600Z/"], "WMOidentifier": ["WHUS42 KILM 180923"], "eventEndingTime": ["2026-05-19T02:00:00-04:00"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-05-18T05:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_2a2d926804df58f844689d386f0ffa1e.bindTooltip(
+    geo_json_b6e5e90bd844235bba5539146b61b99b.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -395,7 +358,7 @@
 });
                      
     
-    geo_json_2a2d926804df58f844689d386f0ffa1e.bindPopup(
+    geo_json_b6e5e90bd844235bba5539146b61b99b.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -430,134 +393,32 @@
 });
                      
     
-            geo_json_2a2d926804df58f844689d386f0ffa1e.addTo(map_236fe68ef9b21e0067c99182922c4bf7);
+            geo_json_b6e5e90bd844235bba5539146b61b99b.addTo(map_e1d5cb2fc4117c00ca7b679d4fa7fc39);
         
     
-        function geo_json_568d1d38379b97390d74c702d993afa7_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_568d1d38379b97390d74c702d993afa7_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_568d1d38379b97390d74c702d993afa7 = L.geoJson(null, {
-                onEachFeature: geo_json_568d1d38379b97390d74c702d993afa7_onEachFeature,
-            
-                style: geo_json_568d1d38379b97390d74c702d993afa7_styler,
-            ...{
-}
-        });
-
-        function geo_json_568d1d38379b97390d74c702d993afa7_add (data) {
-            geo_json_568d1d38379b97390d74c702d993afa7
-                .addData(data);
-        }
-            geo_json_568d1d38379b97390d74c702d993afa7_add({"bbox": [-78.200195, 34.477012, -77.049599, 35.427414], "features": [{"bbox": [-78.200195, 34.709812, -77.651146, 35.193611], "geometry": {"coordinates": [[[-78.018097, 35.191612], [-78.005798, 35.190613], [-77.999695, 35.18811], [-77.994698, 35.183212], [-77.9841, 35.183212], [-77.978699, 35.171013], [-77.969093, 35.166111], [-77.953796, 35.165611], [-77.943893, 35.172413], [-77.935699, 35.17131], [-77.929695, 35.173412], [-77.925598, 35.172413], [-77.914894, 35.166813], [-77.909897, 35.161812], [-77.909698, 35.158211], [-77.899994, 35.150513], [-77.892593, 35.147213], [-77.893997, 35.153713], [-77.892494, 35.156612], [-77.884697, 35.162014], [-77.834297, 35.177811], [-77.769295, 35.145714], [-77.749397, 35.108513], [-77.7491, 35.055214], [-77.746895, 35.048214], [-77.745995, 35.022511], [-77.730797, 35.008114], [-77.690895, 34.983212], [-77.679199, 34.972813], [-77.651146, 34.923138], [-77.684944, 34.739338], [-77.685791, 34.732929], [-77.680298, 34.720116], [-77.92218, 34.719913], [-77.93029, 34.72261], [-77.936783, 34.721516], [-77.938889, 34.722904], [-77.943199, 34.719311], [-77.952499, 34.715912], [-77.958786, 34.716312], [-77.961586, 34.719509], [-77.970894, 34.718712], [-77.974197, 34.717613], [-77.975197, 34.71442], [-77.97699, 34.715912], [-77.981689, 34.714115], [-77.994781, 34.717312], [-78.012291, 34.732113], [-78.024597, 34.729813], [-78.026596, 34.72681], [-78.029991, 34.725616], [-78.03299, 34.727512], [-78.049881, 34.724812], [-78.066582, 34.727814], [-78.081581, 34.72261], [-78.087181, 34.725311], [-78.09478, 34.723412], [-78.100586, 34.725613], [-78.115494, 34.720814], [-78.121094, 34.715412], [-78.133896, 34.709812], [-78.149696, 34.721714], [-78.200195, 34.737213], [-78.146896, 34.902111], [-78.155396, 35.037712], [-78.159599, 35.079811], [-78.1716, 35.093613], [-78.171097, 35.115013], [-78.162895, 35.137012], [-78.164795, 35.178413], [-78.163498, 35.189411], [-78.076294, 35.175713], [-78.0439, 35.192711], [-78.0373, 35.191914], [-78.020294, 35.193611], [-78.018097, 35.191612]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ090", "https://api.weather.gov/zones/forecast/NCZ091", "https://api.weather.gov/zones/forecast/NCZ092", "https://api.weather.gov/zones/forecast/NCZ198"], "areaDesc": "Duplin; Lenoir; Jones; Inland Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Patchy dense fog in Duplin, Onslow, Jones, and Lenoir counties\ncould drop visibilities to one quarter mile or less this morning.\nFog is expected to lift by 9 AM.", "effective": "2026-05-18T05:40:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-05-18T09:00:00-04:00", "geocode": {"SAME": ["037061", "037107", "037103", "037133"], "UGC": ["NCZ090", "NCZ091", "NCZ092", "NCZ198"]}, "headline": "Special Weather Statement issued May 18 at 5:40AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-18T05:40:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["PATCHY DENSE FOG UNTIL 9 AM"], "WMOidentifier": ["WWUS82 KMHX 180940"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-18T05:40:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.834297, 35.008114, -77.390923, 35.427414], "geometry": {"coordinates": [[[-77.470993, 35.412712], [-77.469894, 35.408913], [-77.464195, 35.403614], [-77.460899, 35.397511], [-77.455498, 35.393513], [-77.4506, 35.392914], [-77.449493, 35.389912], [-77.454292, 35.384712], [-77.445793, 35.380913], [-77.448601, 35.373611], [-77.4468, 35.370514], [-77.4394, 35.36721], [-77.432594, 35.367714], [-77.427795, 35.361511], [-77.426498, 35.350014], [-77.421898, 35.349411], [-77.419098, 35.352211], [-77.407394, 35.353012], [-77.402496, 35.34901], [-77.393494, 35.346912], [-77.391693, 35.34481], [-77.390923, 35.340558], [-77.394859, 35.343449], [-77.409157, 35.339748], [-77.411194, 35.337212], [-77.410423, 35.33355], [-77.423157, 35.329647], [-77.429764, 35.33025], [-77.4319, 35.327213], [-77.431778, 35.312935], [-77.43866, 35.31155], [-77.440376, 35.304207], [-77.449097, 35.300911], [-77.446594, 35.294312], [-77.440094, 35.28931], [-77.439896, 35.283413], [-77.4375, 35.27721], [-77.428596, 35.269814], [-77.425598, 35.259514], [-77.426895, 35.25621], [-77.434464, 35.24955], [-77.46286, 35.239651], [-77.465355, 35.235584], [-77.473198, 35.230213], [-77.478897, 35.230011], [-77.524193, 35.241814], [-77.5243, 35.235813], [-77.510399, 35.170212], [-77.511993, 35.163811], [-77.527794, 35.153313], [-77.6017, 35.071213], [-77.730797, 35.008114], [-77.745995, 35.022511], [-77.746895, 35.048214], [-77.7491, 35.055214], [-77.749397, 35.108513], [-77.769295, 35.145714], [-77.834297, 35.177811], [-77.824394, 35.343914], [-77.816994, 35.358913], [-77.806099, 35.369411], [-77.777794, 35.367714], [-77.703293, 35.380413], [-77.6987, 35.378311], [-77.696594, 35.370312], [-77.690193, 35.363312], [-77.690598, 35.360714], [-77.687599, 35.358612], [-77.681595, 35.348812], [-77.672493, 35.348011], [-77.658096, 35.35371], [-77.653595, 35.352612], [-77.648895, 35.354713], [-77.640999, 35.354313], [-77.635895, 35.35601], [-77.627594, 35.366413], [-77.610397, 35.379013], [-77.606995, 35.379311], [-77.602295, 35.375011], [-77.596893, 35.375912], [-77.589897, 35.373611], [-77.586494, 35.377911], [-77.5662, 35.383713], [-77.532394, 35.404613], [-77.527794, 35.413612], [-77.508995, 35.421814], [-77.498894, 35.417213], [-77.498695, 35.41431], [-77.495499, 35.412312], [-77.492195, 35.412312], [-77.481796, 35.415211], [-77.482895, 35.421913], [-77.475494, 35.427414], [-77.472198, 35.424614], [-77.470299, 35.420311], [-77.470993, 35.412712]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ090", "https://api.weather.gov/zones/forecast/NCZ091", "https://api.weather.gov/zones/forecast/NCZ092", "https://api.weather.gov/zones/forecast/NCZ198"], "areaDesc": "Duplin; Lenoir; Jones; Inland Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Patchy dense fog in Duplin, Onslow, Jones, and Lenoir counties\ncould drop visibilities to one quarter mile or less this morning.\nFog is expected to lift by 9 AM.", "effective": "2026-05-18T05:40:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-05-18T09:00:00-04:00", "geocode": {"SAME": ["037061", "037107", "037103", "037133"], "UGC": ["NCZ090", "NCZ091", "NCZ092", "NCZ198"]}, "headline": "Special Weather Statement issued May 18 at 5:40AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-18T05:40:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["PATCHY DENSE FOG UNTIL 9 AM"], "WMOidentifier": ["WWUS82 KMHX 180940"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-18T05:40:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.730797, 34.780281, -77.049599, 35.241814], "geometry": {"coordinates": [[[[-77.17527, 35.058041], [-77.174325, 35.058986], [-77.174255, 35.05869], [-77.17527, 35.058041]]], [[[-77.169189, 35.060959], [-77.169579, 35.06073], [-77.170166, 35.060639], [-77.170817, 35.060916], [-77.169189, 35.060959]]], [[[-77.157549, 35.062856], [-77.15819, 35.062833], [-77.159476, 35.063107], [-77.157464, 35.063747], [-77.157549, 35.062856]]], [[[-77.168617, 35.062771], [-77.168289, 35.06358], [-77.166117, 35.064913], [-77.166237, 35.064484], [-77.168617, 35.062771]]], [[[-77.499695, 35.235714], [-77.478897, 35.230011], [-77.473198, 35.230213], [-77.470894, 35.227814], [-77.463997, 35.22591], [-77.329094, 35.149513], [-77.191399, 35.083012], [-77.188599, 35.080112], [-77.190796, 35.073914], [-77.188599, 35.065613], [-77.179497, 35.059914], [-77.177895, 35.057114], [-77.176376, 35.057457], [-77.177528, 35.056232], [-77.172453, 35.060818], [-77.169205, 35.060528], [-77.164621, 35.065716], [-77.15966, 35.062636], [-77.154541, 35.062782], [-77.146964, 35.05707], [-77.144852, 35.060687], [-77.136868, 35.063518], [-77.132842, 35.067452], [-77.130224, 35.074006], [-77.124673, 35.077742], [-77.113937, 35.074265], [-77.109596, 35.067814], [-77.1092, 35.045612], [-77.106796, 35.035412], [-77.099297, 35.026413], [-77.102798, 35.020611], [-77.111496, 34.831211], [-77.049599, 34.834412], [-77.054497, 34.823212], [-77.052322, 34.819767], [-77.054558, 34.818649], [-77.065063, 34.821449], [-77.068062, 34.820747], [-77.079956, 34.810349], [-77.083656, 34.810947], [-77.089256, 34.808449], [-77.089996, 34.800713], [-77.091698, 34.799011], [-77.1073, 34.802711], [-77.111694, 34.797413], [-77.120499, 34.793613], [-77.124992, 34.794113], [-77.131393, 34.797611], [-77.1409, 34.796913], [-77.143005, 34.794807], [-77.149796, 34.792912], [-77.161499, 34.793911], [-77.164299, 34.79071], [-77.166893, 34.790512], [-77.162598, 34.786312], [-77.168159, 34.783436], [-77.169357, 34.780602], [-77.172165, 34.780281], [-77.173134, 34.781769], [-77.170494, 34.784611], [-77.175156, 34.787239], [-77.171394, 34.789711], [-77.17588, 34.791981], [-77.175598, 34.795513], [-77.190834, 34.80217], [-77.190697, 34.805714], [-77.196281, 34.809746], [-77.193596, 34.813614], [-77.195862, 34.815628], [-77.195557, 34.81739], [-77.189667, 34.817829], [-77.186699, 34.819714], [-77.184792, 34.825657], [-77.179794, 34.829113], [-77.181595, 34.836014], [-77.184799, 34.836212], [-77.191116, 34.832134], [-77.201889, 34.834217], [-77.203529, 34.836826], [-77.200996, 34.841312], [-77.203392, 34.842392], [-77.203094, 34.84481], [-77.209396, 34.851013], [-77.211296, 34.854111], [-77.210197, 34.85791], [-77.217293, 34.866413], [-77.218895, 34.870113], [-77.215797, 34.873013], [-77.221397, 34.882313], [-77.221497, 34.886299], [-77.224396, 34.887211], [-77.232697, 34.885914], [-77.232895, 34.892712], [-77.238197, 34.894012], [-77.237999, 34.899014], [-77.249794, 34.901314], [-77.251495, 34.903111], [-77.251694, 34.909714], [-77.259293, 34.909412], [-77.259697, 34.91431], [-77.267296, 34.924713], [-77.2705, 34.926113], [-77.281296, 34.927811], [-77.289597, 34.931213], [-77.294098, 34.930714], [-77.297195, 34.933411], [-77.303993, 34.934612], [-77.307297, 34.936913], [-77.314095, 34.933014], [-77.3293, 34.938313], [-77.337395, 34.936314], [-77.344498, 34.931011], [-77.357597, 34.928711], [-77.363998, 34.924614], [-77.366196, 34.911911], [-77.502693, 34.969612], [-77.639496, 34.984211], [-77.679199, 34.972813], [-77.690895, 34.983212], [-77.730797, 35.008114], [-77.6017, 35.071213], [-77.527794, 35.153313], [-77.511993, 35.163811], [-77.510399, 35.170212], [-77.5243, 35.235813], [-77.524193, 35.241814], [-77.499695, 35.235714]]]], "type": "MultiPolygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ090", "https://api.weather.gov/zones/forecast/NCZ091", "https://api.weather.gov/zones/forecast/NCZ092", "https://api.weather.gov/zones/forecast/NCZ198"], "areaDesc": "Duplin; Lenoir; Jones; Inland Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Patchy dense fog in Duplin, Onslow, Jones, and Lenoir counties\ncould drop visibilities to one quarter mile or less this morning.\nFog is expected to lift by 9 AM.", "effective": "2026-05-18T05:40:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-05-18T09:00:00-04:00", "geocode": {"SAME": ["037061", "037107", "037103", "037133"], "UGC": ["NCZ090", "NCZ091", "NCZ092", "NCZ198"]}, "headline": "Special Weather Statement issued May 18 at 5:40AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-18T05:40:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["PATCHY DENSE FOG UNTIL 9 AM"], "WMOidentifier": ["WWUS82 KMHX 180940"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-18T05:40:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.685791, 34.477012, -77.170326, 34.984211], "geometry": {"coordinates": [[[[-77.446044, 34.609895], [-77.446724, 34.609476], [-77.446796, 34.609724], [-77.446044, 34.609895]]], [[[-77.42794, 34.621073], [-77.427802, 34.621284], [-77.427666, 34.621242], [-77.427722, 34.621207], [-77.42794, 34.621073]]], [[[-77.43425, 34.680355], [-77.433887, 34.679576], [-77.435188, 34.680515], [-77.43425, 34.680355]]], [[[-77.424997, 34.739899], [-77.426086, 34.739365], [-77.426231, 34.740433], [-77.425241, 34.740744], [-77.424997, 34.739899]]], [[[-77.437425, 34.73589], [-77.438835, 34.73658], [-77.438272, 34.740935], [-77.436549, 34.736968], [-77.437425, 34.73589]]], [[[-77.434168, 34.755286], [-77.435814, 34.755623], [-77.434764, 34.757025], [-77.434062, 34.756507], [-77.434168, 34.755286]]], [[[-77.369293, 34.91291], [-77.366196, 34.911911], [-77.363998, 34.924614], [-77.357597, 34.928711], [-77.344498, 34.931011], [-77.337395, 34.936314], [-77.3293, 34.938313], [-77.314095, 34.933014], [-77.307297, 34.936913], [-77.303993, 34.934612], [-77.297195, 34.933411], [-77.294098, 34.930714], [-77.289597, 34.931213], [-77.267296, 34.924713], [-77.259697, 34.91431], [-77.259293, 34.909412], [-77.253395, 34.910614], [-77.251694, 34.909714], [-77.251495, 34.903111], [-77.249794, 34.901314], [-77.237999, 34.899014], [-77.238197, 34.894012], [-77.232895, 34.892712], [-77.232697, 34.885914], [-77.224396, 34.887211], [-77.221497, 34.886299], [-77.221397, 34.882313], [-77.215797, 34.873013], [-77.218895, 34.870113], [-77.217293, 34.866413], [-77.210197, 34.85791], [-77.211296, 34.854111], [-77.209396, 34.851013], [-77.203094, 34.84481], [-77.203392, 34.842392], [-77.200996, 34.841312], [-77.203529, 34.836826], [-77.201889, 34.834217], [-77.191116, 34.832134], [-77.184799, 34.836212], [-77.181595, 34.836014], [-77.179794, 34.829113], [-77.184792, 34.825657], [-77.186699, 34.819714], [-77.189667, 34.817829], [-77.195557, 34.81739], [-77.195862, 34.815628], [-77.193596, 34.813614], [-77.196281, 34.809746], [-77.190697, 34.805714], [-77.190834, 34.80217], [-77.175598, 34.795513], [-77.17588, 34.791981], [-77.171394, 34.789711], [-77.175186, 34.786644], [-77.170494, 34.784611], [-77.173134, 34.780968], [-77.170326, 34.780117], [-77.357669, 34.664456], [-77.358536, 34.669446], [-77.364995, 34.673587], [-77.377632, 34.674824], [-77.371841, 34.678848], [-77.361282, 34.67654], [-77.358764, 34.680435], [-77.354301, 34.682014], [-77.354138, 34.684008], [-77.34726, 34.690041], [-77.340963, 34.692534], [-77.34078, 34.694327], [-77.341492, 34.692745], [-77.347939, 34.690323], [-77.3573, 34.683044], [-77.362366, 34.680733], [-77.364723, 34.681371], [-77.371437, 34.688072], [-77.371345, 34.695243], [-77.372764, 34.695366], [-77.377739, 34.70372], [-77.382988, 34.706596], [-77.39521, 34.709648], [-77.398445, 34.718109], [-77.392464, 34.723182], [-77.388008, 34.723128], [-77.386086, 34.720993], [-77.381782, 34.720404], [-77.372352, 34.724128], [-77.369102, 34.721404], [-77.368614, 34.7237], [-77.361761, 34.72412], [-77.356499, 34.727032], [-77.354897, 34.72588], [-77.354255, 34.728085], [-77.351904, 34.728498], [-77.354147, 34.728765], [-77.354254, 34.731794], [-77.349384, 34.736762], [-77.351288, 34.738499], [-77.350355, 34.743482], [-77.351852, 34.744354], [-77.350159, 34.748249], [-77.345482, 34.752163], [-77.351082, 34.747864], [-77.352381, 34.750661], [-77.352165, 34.736855], [-77.361243, 34.729833], [-77.371773, 34.729027], [-77.38076, 34.725601], [-77.38346, 34.727964], [-77.401308, 34.729726], [-77.406898, 34.725937], [-77.414726, 34.71656], [-77.41671, 34.717926], [-77.416512, 34.721451], [-77.41819, 34.724129], [-77.425865, 34.729012], [-77.428222, 34.73521], [-77.430282, 34.735431], [-77.42231, 34.735176], [-77.424156, 34.73658], [-77.423016, 34.739072], [-77.424385, 34.741364], [-77.429084, 34.742272], [-77.428985, 34.743361], [-77.43103, 34.740097], [-77.438285, 34.741662], [-77.436783, 34.746464], [-77.439047, 34.747517], [-77.433884, 34.751163], [-77.429818, 34.757876], [-77.426398, 34.757171], [-77.429118, 34.758611], [-77.43235, 34.756084], [-77.432388, 34.758357], [-77.429955, 34.758862], [-77.429585, 34.760663], [-77.434317, 34.759077], [-77.43919, 34.762315], [-77.43911, 34.760308], [-77.444925, 34.760769], [-77.43954, 34.759192], [-77.437251, 34.756911], [-77.438029, 34.7545], [-77.439906, 34.754706], [-77.435188, 34.752865], [-77.435021, 34.751136], [-77.440974, 34.747467], [-77.440567, 34.745632], [-77.438286, 34.745563], [-77.440486, 34.736263], [-77.440086, 34.734363], [-77.436272, 34.734802], [-77.434962, 34.739836], [-77.432938, 34.737946], [-77.432669, 34.733896], [-77.430536, 34.733084], [-77.431604, 34.731086], [-77.428401, 34.722664], [-77.430795, 34.720114], [-77.432168, 34.713891], [-77.433817, 34.714944], [-77.428155, 34.708998], [-77.43017, 34.705064], [-77.427774, 34.701485], [-77.421661, 34.700478], [-77.428848, 34.689919], [-77.42936, 34.684556], [-77.4332, 34.687664], [-77.430728, 34.683651], [-77.426571, 34.683605], [-77.432945, 34.679966], [-77.43602, 34.681797], [-77.436964, 34.686146], [-77.438238, 34.686948], [-77.43763, 34.685644], [-77.439264, 34.685551], [-77.43763, 34.681774], [-77.433945, 34.678936], [-77.430725, 34.679508], [-77.429564, 34.681889], [-77.425518, 34.683605], [-77.427818, 34.685482], [-77.425514, 34.688789], [-77.41555, 34.694908], [-77.416725, 34.699596], [-77.412515, 34.699904], [-77.409874, 34.693931], [-77.409721, 34.684196], [-77.408478, 34.682182], [-77.399553, 34.679274], [-77.399834, 34.673], [-77.397453, 34.668423], [-77.380775, 34.664066], [-77.384849, 34.660085], [-77.382136, 34.657566], [-77.380684, 34.650247], [-77.426749, 34.621808], [-77.426168, 34.623002], [-77.428299, 34.623528], [-77.430648, 34.627611], [-77.428551, 34.620695], [-77.430985, 34.619192], [-77.442367, 34.614189], [-77.442284, 34.615952], [-77.447489, 34.618767], [-77.443391, 34.614556], [-77.446436, 34.613204], [-77.447525, 34.610111], [-77.452, 34.608785], [-77.452207, 34.606091], [-77.479685, 34.589126], [-77.512265, 34.521502], [-77.55518, 34.49577], [-77.576318, 34.477012], [-77.584129, 34.500168], [-77.685791, 34.732929], [-77.651146, 34.923138], [-77.679199, 34.972813], [-77.639496, 34.984211], [-77.502693, 34.969612], [-77.369293, 34.91291]]]], "type": "MultiPolygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ090", "https://api.weather.gov/zones/forecast/NCZ091", "https://api.weather.gov/zones/forecast/NCZ092", "https://api.weather.gov/zones/forecast/NCZ198"], "areaDesc": "Duplin; Lenoir; Jones; Inland Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Patchy dense fog in Duplin, Onslow, Jones, and Lenoir counties\ncould drop visibilities to one quarter mile or less this morning.\nFog is expected to lift by 9 AM.", "effective": "2026-05-18T05:40:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-05-18T09:00:00-04:00", "geocode": {"SAME": ["037061", "037107", "037103", "037133"], "UGC": ["NCZ090", "NCZ091", "NCZ092", "NCZ198"]}, "headline": "Special Weather Statement issued May 18 at 5:40AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.9e7017cf100995b86ec48e9ec2e1b4f9bb3bb3c7.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-18T05:40:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["PATCHY DENSE FOG UNTIL 9 AM"], "WMOidentifier": ["WWUS82 KMHX 180940"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-18T05:40:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_568d1d38379b97390d74c702d993afa7.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_568d1d38379b97390d74c702d993afa7.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_568d1d38379b97390d74c702d993afa7.addTo(map_236fe68ef9b21e0067c99182922c4bf7);
-        
-    
-            var layer_control_4edca680b6f1764600b5d6d7df988022_layers = {
+            var layer_control_0a0a83e238ec0ba193ba6104d95da361_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_064f32a946f884e62d25d2eaf5a101b7,
-                    "Esri Street Map" : tile_layer_bd48257745adf1fdbafd1c23881e7ecb,
-                    "Esri NatGeo" : tile_layer_b7a17de01ed3c67595dd21ce73e5fca4,
-                    "Google Satellite" : tile_layer_70f16d680aa473398037accdfb5365b3,
-                    "Google Terrain" : tile_layer_c8d6dfa82e60f4d8c51d971032af5c3e,
-                    "Google Street" : tile_layer_3227b1045079b64fd0bdd547a391b0cb,
-                    "Light Gray Base" : tile_layer_05499f63260ce927c48816f6a24bb60c,
+                    "Esri Satellite" : tile_layer_043d85f05a953ac29b54f4b701bdc328,
+                    "Esri Street Map" : tile_layer_71cd1869ec1445ac693e8d59bfeb7b3b,
+                    "Esri NatGeo" : tile_layer_972705d4676cd8611c3949e095deadf8,
+                    "Google Satellite" : tile_layer_71de1ae696260cf9995ea99674114540,
+                    "Google Terrain" : tile_layer_c07293e1192e3d109641cfd8d1ac96ec,
+                    "Google Street" : tile_layer_734ada99a0ba470d214921eaa31cf172,
+                    "Light Gray Base" : tile_layer_b67457054849529e7aa0434f4f63acf5,
                 },
                 overlays :  {
-                    " Hydro" : geo_json_2a2d926804df58f844689d386f0ffa1e,
-                    " SPS" : geo_json_568d1d38379b97390d74c702d993afa7,
+                    " Hydro" : geo_json_b6e5e90bd844235bba5539146b61b99b,
                 },
             };
-            let layer_control_4edca680b6f1764600b5d6d7df988022 = L.control.layers(
-                layer_control_4edca680b6f1764600b5d6d7df988022_layers.base_layers,
-                layer_control_4edca680b6f1764600b5d6d7df988022_layers.overlays,
+            let layer_control_0a0a83e238ec0ba193ba6104d95da361 = L.control.layers(
+                layer_control_0a0a83e238ec0ba193ba6104d95da361_layers.base_layers,
+                layer_control_0a0a83e238ec0ba193ba6104d95da361_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_236fe68ef9b21e0067c99182922c4bf7);
+            ).addTo(map_e1d5cb2fc4117c00ca7b679d4fa7fc39);
 
         
 </script>
