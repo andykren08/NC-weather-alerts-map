@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8de5b988e7471143c55cf3343fdd1e49 {
+                #map_a3e963e24ebc1a28715f799fc2742586 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_4566f4b55b8fdca315fda6d2c7ba4194 {
+                    #float_image_f17e8b865e15801b6d8344cf84da3eb2 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_8de5b988e7471143c55cf3343fdd1e49" ></div>
+            <div class="folium-map" id="map_a3e963e24ebc1a28715f799fc2742586" ></div>
         
     
-            <img id="float_image_4566f4b55b8fdca315fda6d2c7ba4194" alt="float_image"
+            <img id="float_image_f17e8b865e15801b6d8344cf84da3eb2" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: May 22, 2026<br>11:23 AM EDT
+        Updated: May 22, 2026<br>01:22 PM EDT
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_8de5b988e7471143c55cf3343fdd1e49 = L.map(
-                "map_8de5b988e7471143c55cf3343fdd1e49",
+            var map_a3e963e24ebc1a28715f799fc2742586 = L.map(
+                "map_a3e963e24ebc1a28715f799fc2742586",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_3c1cd5e30c6a820f7bbd23740e20d203 = L.tileLayer(
+            var tile_layer_73cefde545d7c9b4bba564bf6bbbb871 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_815072265ce21cdd4ab679a8c76436ff = L.tileLayer(
+            var tile_layer_86d803970f5521d9c36ed547741d2f60 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_81375a34bb47808bdcc070894fd4381a = L.tileLayer(
+            var tile_layer_574a68e27ac3d6581ec68810d288f584 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_81375a34bb47808bdcc070894fd4381a.addTo(map_8de5b988e7471143c55cf3343fdd1e49);
+            tile_layer_574a68e27ac3d6581ec68810d288f584.addTo(map_a3e963e24ebc1a28715f799fc2742586);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_8de5b988e7471143c55cf3343fdd1e49);
+            ).addTo(map_a3e963e24ebc1a28715f799fc2742586);
         
     
-            var tile_layer_bcd7efccd598bc2176f2a22bac41472e = L.tileLayer(
+            var tile_layer_74e5d40d616e174adc52af9724446b39 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_0e509f2f7955772ae127742c06e4511c = L.tileLayer(
+            var tile_layer_56ebe8da0b362b5826efd9f8a4ee699e = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_246658d67554765aeb7b2f9fe36345f6 = L.tileLayer(
+            var tile_layer_a8d9eb9128cfb2fabadf45d2e0e5814f = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_2c52903504a7a064f39375471157be09 = L.tileLayer(
+            var tile_layer_758d3282af8a5eee635e491bbd7071d1 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_83741d8dce6a3ddead9544d871e94fa2 = L.control.locate(
+            var locate_control_4abfcd8e48f4770ecc719061d65950a6 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_8de5b988e7471143c55cf3343fdd1e49);
+            ).addTo(map_a3e963e24ebc1a28715f799fc2742586);
             
         
     
-        function geo_json_4f0c652816ad4a97b69152713662b3a9_styler(feature) {
+        function geo_json_62af1160cfa7b92c2ced28e3aa7a9134_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#D8BFD8", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_4f0c652816ad4a97b69152713662b3a9_onEachFeature(feature, layer) {
+        function geo_json_62af1160cfa7b92c2ced28e3aa7a9134_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_4f0c652816ad4a97b69152713662b3a9 = L.geoJson(null, {
-                onEachFeature: geo_json_4f0c652816ad4a97b69152713662b3a9_onEachFeature,
+        var geo_json_62af1160cfa7b92c2ced28e3aa7a9134 = L.geoJson(null, {
+                onEachFeature: geo_json_62af1160cfa7b92c2ced28e3aa7a9134_onEachFeature,
             
-                style: geo_json_4f0c652816ad4a97b69152713662b3a9_styler,
+                style: geo_json_62af1160cfa7b92c2ced28e3aa7a9134_styler,
             ...{
 }
         });
 
-        function geo_json_4f0c652816ad4a97b69152713662b3a9_add (data) {
-            geo_json_4f0c652816ad4a97b69152713662b3a9
+        function geo_json_62af1160cfa7b92c2ced28e3aa7a9134_add (data) {
+            geo_json_62af1160cfa7b92c2ced28e3aa7a9134
                 .addData(data);
         }
-            geo_json_4f0c652816ad4a97b69152713662b3a9_add({"bbox": [-75.867097, 36.221516, -75.393841, 36.552906], "features": [{"bbox": [-75.867097, 36.221516, -75.393841, 36.552906], "geometry": {"coordinates": [[[-75.393841, 36.222162], [-75.768791, 36.221516], [-75.784401, 36.257996], [-75.815195, 36.345329], [-75.833557, 36.418369], [-75.856212, 36.495113], [-75.867097, 36.551006], [-75.530077, 36.552906], [-75.528415, 36.547132], [-75.528794, 36.540406], [-75.524713, 36.533128], [-75.503872, 36.456596], [-75.489472, 36.416378], [-75.489622, 36.412448], [-75.486731, 36.407591], [-75.476607, 36.373135], [-75.46908, 36.365298], [-75.464978, 36.355955], [-75.462518, 36.344839], [-75.456752, 36.333815], [-75.449893, 36.314764], [-75.440799, 36.306189], [-75.425234, 36.27338], [-75.423721, 36.265542], [-75.404194, 36.239745], [-75.399886, 36.22703], [-75.393841, 36.222162]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6cf8abc573aee38a2603b592a31706f04e010c0.006.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/ANZ658"], "areaDesc": "Coastal waters from NC VA border to Currituck Beach Light NC out 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...North winds 10 kt and seas 4 to 5 ft.\n\n* WHERE...Coastal waters from NC VA border to Currituck Beach\nLight NC out 20 NM.\n\n* WHEN...Until 7 PM EDT this evening.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-22T10:18:00-04:00", "ends": "2026-05-22T19:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-22T18:30:00-04:00", "geocode": {"SAME": ["073658"], "UGC": ["ANZ658"]}, "headline": "Small Craft Advisory issued May 22 at 10:18AM EDT until May 22 at 7:00PM EDT by NWS Wakefield VA", "id": "urn:oid:2.49.0.1.840.0.b6cf8abc573aee38a2603b592a31706f04e010c0.006.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-05-22T10:18:00-04:00", "parameters": {"AWIPSidentifier": ["MWWAKQ"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT UNTIL 7 PM EDT THIS EVENING"], "VTEC": ["/O.CON.KAKQ.SC.Y.0066.000000T0000Z-260522T2300Z/"], "WMOidentifier": ["WHUS71 KAKQ 221418"], "eventEndingTime": ["2026-05-22T19:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.44ef9fbb8940c02157a42513c6e069f8937ddaf7.001.1", "identifier": "urn:oid:2.49.0.1.840.0.44ef9fbb8940c02157a42513c6e069f8937ddaf7.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-05-22T05:58:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wakefield VA", "sent": "2026-05-22T10:18:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_62af1160cfa7b92c2ced28e3aa7a9134_add({"bbox": [-75.867097, 36.221516, -75.393841, 36.552906], "features": [{"bbox": [-75.867097, 36.221516, -75.393841, 36.552906], "geometry": {"coordinates": [[[-75.393841, 36.222162], [-75.768791, 36.221516], [-75.784401, 36.257996], [-75.815195, 36.345329], [-75.833557, 36.418369], [-75.856212, 36.495113], [-75.867097, 36.551006], [-75.530077, 36.552906], [-75.528415, 36.547132], [-75.528794, 36.540406], [-75.524713, 36.533128], [-75.503872, 36.456596], [-75.489472, 36.416378], [-75.489622, 36.412448], [-75.486731, 36.407591], [-75.476607, 36.373135], [-75.46908, 36.365298], [-75.464978, 36.355955], [-75.462518, 36.344839], [-75.456752, 36.333815], [-75.449893, 36.314764], [-75.440799, 36.306189], [-75.425234, 36.27338], [-75.423721, 36.265542], [-75.404194, 36.239745], [-75.399886, 36.22703], [-75.393841, 36.222162]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6cf8abc573aee38a2603b592a31706f04e010c0.006.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/ANZ658"], "areaDesc": "Coastal waters from NC VA border to Currituck Beach Light NC out 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...North winds 10 kt and seas 4 to 5 ft.\n\n* WHERE...Coastal waters from NC VA border to Currituck Beach\nLight NC out 20 NM.\n\n* WHEN...Until 7 PM EDT this evening.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-22T10:18:00-04:00", "ends": "2026-05-22T19:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-22T18:30:00-04:00", "geocode": {"SAME": ["073658"], "UGC": ["ANZ658"]}, "headline": "Small Craft Advisory issued May 22 at 10:18AM EDT until May 22 at 7:00PM EDT by NWS Wakefield VA", "id": "urn:oid:2.49.0.1.840.0.b6cf8abc573aee38a2603b592a31706f04e010c0.006.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-05-22T10:18:00-04:00", "parameters": {"AWIPSidentifier": ["MWWAKQ"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT UNTIL 7 PM EDT THIS EVENING"], "VTEC": ["/O.CON.KAKQ.SC.Y.0066.000000T0000Z-260522T2300Z/"], "WMOidentifier": ["WHUS71 KAKQ 221418"], "eventEndingTime": ["2026-05-22T19:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.44ef9fbb8940c02157a42513c6e069f8937ddaf7.001.1", "identifier": "urn:oid:2.49.0.1.840.0.44ef9fbb8940c02157a42513c6e069f8937ddaf7.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-05-22T05:58:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wakefield VA", "sent": "2026-05-22T10:18:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_4f0c652816ad4a97b69152713662b3a9.bindTooltip(
+    geo_json_62af1160cfa7b92c2ced28e3aa7a9134.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_4f0c652816ad4a97b69152713662b3a9.bindPopup(
+    geo_json_62af1160cfa7b92c2ced28e3aa7a9134.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_4f0c652816ad4a97b69152713662b3a9.addTo(map_8de5b988e7471143c55cf3343fdd1e49);
+            geo_json_62af1160cfa7b92c2ced28e3aa7a9134.addTo(map_a3e963e24ebc1a28715f799fc2742586);
         
     
-            var layer_control_83568786dca066db3de41ad44b0bf172_layers = {
+            var layer_control_24e7f3b29d98bdbe461b15ef2483aa3e_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_3c1cd5e30c6a820f7bbd23740e20d203,
-                    "Esri Street Map" : tile_layer_815072265ce21cdd4ab679a8c76436ff,
-                    "Esri NatGeo" : tile_layer_81375a34bb47808bdcc070894fd4381a,
-                    "Google Satellite" : tile_layer_bcd7efccd598bc2176f2a22bac41472e,
-                    "Google Terrain" : tile_layer_0e509f2f7955772ae127742c06e4511c,
-                    "Google Street" : tile_layer_246658d67554765aeb7b2f9fe36345f6,
-                    "Light Gray Base" : tile_layer_2c52903504a7a064f39375471157be09,
+                    "Esri Satellite" : tile_layer_73cefde545d7c9b4bba564bf6bbbb871,
+                    "Esri Street Map" : tile_layer_86d803970f5521d9c36ed547741d2f60,
+                    "Esri NatGeo" : tile_layer_574a68e27ac3d6581ec68810d288f584,
+                    "Google Satellite" : tile_layer_74e5d40d616e174adc52af9724446b39,
+                    "Google Terrain" : tile_layer_56ebe8da0b362b5826efd9f8a4ee699e,
+                    "Google Street" : tile_layer_a8d9eb9128cfb2fabadf45d2e0e5814f,
+                    "Light Gray Base" : tile_layer_758d3282af8a5eee635e491bbd7071d1,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_4f0c652816ad4a97b69152713662b3a9,
+                    " Marine/Beach" : geo_json_62af1160cfa7b92c2ced28e3aa7a9134,
                 },
             };
-            let layer_control_83568786dca066db3de41ad44b0bf172 = L.control.layers(
-                layer_control_83568786dca066db3de41ad44b0bf172_layers.base_layers,
-                layer_control_83568786dca066db3de41ad44b0bf172_layers.overlays,
+            let layer_control_24e7f3b29d98bdbe461b15ef2483aa3e = L.control.layers(
+                layer_control_24e7f3b29d98bdbe461b15ef2483aa3e_layers.base_layers,
+                layer_control_24e7f3b29d98bdbe461b15ef2483aa3e_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_8de5b988e7471143c55cf3343fdd1e49);
+            ).addTo(map_a3e963e24ebc1a28715f799fc2742586);
 
         
 </script>
