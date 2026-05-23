@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b9240d4a592585c31baab92743046884 {
+                #map_940c0c0254be7cfb12b9b40885c13dc9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_7a02a24cdb0f45d3c7d71b7cb4fe69e6 {
+                    #float_image_5b0a7596455bab2cc3149e7a00c1ce01 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_b9240d4a592585c31baab92743046884" ></div>
+            <div class="folium-map" id="map_940c0c0254be7cfb12b9b40885c13dc9" ></div>
         
     
-            <img id="float_image_7a02a24cdb0f45d3c7d71b7cb4fe69e6" alt="float_image"
+            <img id="float_image_5b0a7596455bab2cc3149e7a00c1ce01" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,13 +120,18 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: May 23, 2026<br>04:55 AM EDT
+        Updated: May 23, 2026<br>07:46 AM EDT
     </div>
     <div class='legend-scale'>
        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#D8BFD8; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Small Craft Advisory</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#FFDAB9; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Marine Weather Statement</span>
         </div>
         
     </div>
@@ -139,8 +144,8 @@
 <script>
     
     
-            var map_b9240d4a592585c31baab92743046884 = L.map(
-                "map_b9240d4a592585c31baab92743046884",
+            var map_940c0c0254be7cfb12b9b40885c13dc9 = L.map(
+                "map_940c0c0254be7cfb12b9b40885c13dc9",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +162,7 @@
 
         
     
-            var tile_layer_c0b752f578971bbdda9f4de7f429ecc2 = L.tileLayer(
+            var tile_layer_bbebeb22cba4ba24fef1a2d0b8b5e063 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +179,7 @@
             );
         
     
-            var tile_layer_4f4c7fe9c88850788c968f1a700269af = L.tileLayer(
+            var tile_layer_a4e4edefe30ee6642cf873ab6bae8b4a = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +196,7 @@
             );
         
     
-            var tile_layer_a608a05ac3a7d849ee79d6f54e949232 = L.tileLayer(
+            var tile_layer_192c467fe2a5d321cee56f7fcea3827b = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +213,7 @@
             );
         
     
-            tile_layer_a608a05ac3a7d849ee79d6f54e949232.addTo(map_b9240d4a592585c31baab92743046884);
+            tile_layer_192c467fe2a5d321cee56f7fcea3827b.addTo(map_940c0c0254be7cfb12b9b40885c13dc9);
         
     
             L.control.fullscreen(
@@ -218,10 +223,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_b9240d4a592585c31baab92743046884);
+            ).addTo(map_940c0c0254be7cfb12b9b40885c13dc9);
         
     
-            var tile_layer_0df98d9dd489123f8a3235baaeaf7aa3 = L.tileLayer(
+            var tile_layer_3715ed3245c9223ae2bfc1b8d26f565c = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +243,7 @@
             );
         
     
-            var tile_layer_5cd46190b2a3bd9e5c6a2e98b71f8246 = L.tileLayer(
+            var tile_layer_a0b2037fe8fd90f3d29a4fe7ef3864e2 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +260,7 @@
             );
         
     
-            var tile_layer_bd771070a8c0d12ff6e3b456183a7702 = L.tileLayer(
+            var tile_layer_a60a204cc8e020738eaeede5862ef3ad = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +277,7 @@
             );
         
     
-            var tile_layer_faed1d251394b01c15b917efb395c927 = L.tileLayer(
+            var tile_layer_c4592ed5d2906f4a08d57fffe2c900aa = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +294,43 @@
             );
         
     
-            var locate_control_ccb39bfc74bfeaba6855daf149a88ea2 = L.control.locate(
+            var locate_control_cfba23992635ae45433e909214e327a0 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_b9240d4a592585c31baab92743046884);
+            ).addTo(map_940c0c0254be7cfb12b9b40885c13dc9);
             
         
     
-        function geo_json_d26252dfe54abac67f1186326d6ce68e_styler(feature) {
+        function geo_json_658a1c103c946b29765891f957cb466e_styler(feature) {
             switch(feature.id) {
+                case "0": 
+                    return {"color": "black", "fillColor": "#FFDAB9", "fillOpacity": 0.5, "weight": 1};
                 default:
                     return {"color": "black", "fillColor": "#D8BFD8", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_d26252dfe54abac67f1186326d6ce68e_onEachFeature(feature, layer) {
+        function geo_json_658a1c103c946b29765891f957cb466e_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_d26252dfe54abac67f1186326d6ce68e = L.geoJson(null, {
-                onEachFeature: geo_json_d26252dfe54abac67f1186326d6ce68e_onEachFeature,
+        var geo_json_658a1c103c946b29765891f957cb466e = L.geoJson(null, {
+                onEachFeature: geo_json_658a1c103c946b29765891f957cb466e_onEachFeature,
             
-                style: geo_json_d26252dfe54abac67f1186326d6ce68e_styler,
+                style: geo_json_658a1c103c946b29765891f957cb466e_styler,
             ...{
 }
         });
 
-        function geo_json_d26252dfe54abac67f1186326d6ce68e_add (data) {
-            geo_json_d26252dfe54abac67f1186326d6ce68e
+        function geo_json_658a1c103c946b29765891f957cb466e_add (data) {
+            geo_json_658a1c103c946b29765891f957cb466e
                 .addData(data);
         }
-            geo_json_d26252dfe54abac67f1186326d6ce68e_add({"bbox": [-76.000278, 34.853373, -75.12664, 36.552906], "features": [{"bbox": [-75.867097, 36.221516, -75.393841, 36.552906], "geometry": {"coordinates": [[[-75.393841, 36.222162], [-75.768791, 36.221516], [-75.784401, 36.257996], [-75.815195, 36.345329], [-75.833557, 36.418369], [-75.856212, 36.495113], [-75.867097, 36.551006], [-75.530077, 36.552906], [-75.528415, 36.547132], [-75.528794, 36.540406], [-75.524713, 36.533128], [-75.503872, 36.456596], [-75.489472, 36.416378], [-75.489622, 36.412448], [-75.486731, 36.407591], [-75.476607, 36.373135], [-75.46908, 36.365298], [-75.464978, 36.355955], [-75.462518, 36.344839], [-75.456752, 36.333815], [-75.449893, 36.314764], [-75.440799, 36.306189], [-75.425234, 36.27338], [-75.423721, 36.265542], [-75.404194, 36.239745], [-75.399886, 36.22703], [-75.393841, 36.222162]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27637691af166b2c07d2691953888208fe889bdf.006.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/ANZ658"], "areaDesc": "Coastal waters from NC VA border to Currituck Beach Light NC out 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Southeast winds 5 to 10 kt and seas 4 to 6 ft.\n\n* WHERE...Coastal waters from NC VA border to Currituck Beach\nLight NC out 20 NM.\n\n* WHEN...Until 7 PM EDT Sunday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T03:33:00-04:00", "ends": "2026-05-24T19:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T11:45:00-04:00", "geocode": {"SAME": ["073658"], "UGC": ["ANZ658"]}, "headline": "Small Craft Advisory issued May 23 at 3:33AM EDT until May 24 at 7:00PM EDT by NWS Wakefield VA", "id": "urn:oid:2.49.0.1.840.0.27637691af166b2c07d2691953888208fe889bdf.006.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-05-23T03:33:00-04:00", "parameters": {"AWIPSidentifier": ["MWWAKQ"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT UNTIL 7 PM EDT SUNDAY"], "VTEC": ["/O.CON.KAKQ.SC.Y.0066.000000T0000Z-260524T2300Z/"], "WMOidentifier": ["WHUS71 KAKQ 230733"], "eventEndingTime": ["2026-05-24T19:00:00-04:00"], "expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3c74a373a695377e0dbd7057a99f220603e88367.005.1,2026-05-22T14:01:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b6cf8abc573aee38a2603b592a31706f04e010c0.006.1,2026-05-22T10:18:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.44ef9fbb8940c02157a42513c6e069f8937ddaf7.001.1,2026-05-22T05:58:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2775cd5ee89518bab64e3056dcb7de2bbf949e46.006.1", "identifier": "urn:oid:2.49.0.1.840.0.2775cd5ee89518bab64e3056dcb7de2bbf949e46.006.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-05-22T21:26:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wakefield VA", "sent": "2026-05-23T03:33:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.000278, 34.853373, -75.206156, 35.235126], "geometry": {"coordinates": [[[-75.551727, 35.232838], [-75.535429, 35.227566], [-75.531887, 35.221656], [-75.536102, 35.217626], [-75.531693, 35.219364], [-75.528724, 35.223788], [-75.206156, 35.138056], [-75.214386, 35.112192], [-75.229027, 35.077753], [-75.247999, 35.044004], [-75.266356, 35.017565], [-75.281057, 34.999582], [-75.31189, 34.968748], [-75.330036, 34.953882], [-75.366289, 34.929659], [-75.408245, 34.909201], [-75.448471, 34.895624], [-75.469715, 34.890669], [-75.492018, 34.887003], [-75.535526, 34.884153], [-75.557327, 34.884867], [-75.591934, 34.88896], [-75.622311, 34.878038], [-75.704134, 34.853373], [-76.000278, 35.068214], [-75.990998, 35.078682], [-75.976379, 35.090897], [-75.933161, 35.117768], [-75.889359, 35.138233], [-75.812222, 35.169321], [-75.779251, 35.181137], [-75.771941, 35.181913], [-75.752594, 35.189781], [-75.743813, 35.189739], [-75.729462, 35.193684], [-75.693542, 35.207798], [-75.636353, 35.225632], [-75.58638, 35.234711], [-75.570068, 35.235126], [-75.551727, 35.232838]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.003.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 7 ft expected.\n\n* WHERE...The coastal waters from Cape Hatteras to Ocracoke\nInlet.\n\n* WHEN...From noon today to 6 AM EDT Monday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T02:23:00-04:00", "ends": "2026-05-25T06:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T14:30:00-04:00", "geocode": {"SAME": ["075154"], "UGC": ["AMZ154"]}, "headline": "Small Craft Advisory issued May 23 at 2:23AM EDT until May 25 at 6:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.003.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T12:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT FROM NOON TODAY TO 6 AM EDT MONDAY"], "VTEC": ["/O.NEW.KMHX.SC.Y.0054.260523T1600Z-260525T1000Z/"], "WMOidentifier": ["WHUS72 KMHX 230623"], "eventEndingTime": ["2026-05-25T06:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-23T02:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.528724, 35.138056, -75.12664, 35.785484], "geometry": {"coordinates": [[[-75.205043, 35.141823], [-75.206156, 35.138056], [-75.528724, 35.223788], [-75.524147, 35.245106], [-75.518525, 35.258268], [-75.507036, 35.322783], [-75.502948, 35.334324], [-75.495216, 35.369938], [-75.487068, 35.394535], [-75.480652, 35.472683], [-75.47188, 35.519199], [-75.462509, 35.553555], [-75.459994, 35.584291], [-75.460474, 35.592055], [-75.475977, 35.659221], [-75.476509, 35.667969], [-75.489296, 35.711594], [-75.499895, 35.738151], [-75.518026, 35.767045], [-75.163158, 35.785484], [-75.149559, 35.733], [-75.129971, 35.635564], [-75.12664, 35.584291], [-75.12791, 35.548611], [-75.135559, 35.488525], [-75.149538, 35.429958], [-75.153921, 35.369934], [-75.160117, 35.329505], [-75.183333, 35.239552], [-75.194518, 35.179883], [-75.205043, 35.141823]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.002.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 7 ft.\n\n* WHERE...The coastal waters from Oregon Inlet to Cape Hatteras.\n\n* WHEN...Until 6 AM EDT Monday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T02:23:00-04:00", "ends": "2026-05-25T06:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T14:30:00-04:00", "geocode": {"SAME": ["075152"], "UGC": ["AMZ152"]}, "headline": "Small Craft Advisory issued May 23 at 2:23AM EDT until May 25 at 6:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.002.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T02:23:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT UNTIL 6 AM EDT MONDAY"], "VTEC": ["/O.NEW.KMHX.SC.Y.0054.260523T0623Z-260525T1000Z/"], "WMOidentifier": ["WHUS72 KMHX 230623"], "eventEndingTime": ["2026-05-25T06:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-23T02:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.768791, 35.767045, -75.163158, 36.222165], "geometry": {"coordinates": [[[-75.163158, 35.785484], [-75.518026, 35.767045], [-75.52401, 35.774891], [-75.530983, 35.77504], [-75.5314, 35.7722], [-75.53965, 35.775574], [-75.534363, 35.792622], [-75.545532, 35.806091], [-75.569811, 35.863301], [-75.66185, 36.026408], [-75.709403, 36.097395], [-75.736893, 36.150871], [-75.759654, 36.204705], [-75.768791, 36.221516], [-75.391957, 36.222165], [-75.373154, 36.193079], [-75.340693, 36.137133], [-75.290205, 36.046534], [-75.270832, 36.010733], [-75.253765, 35.972715], [-75.207279, 35.897837], [-75.191914, 35.865713], [-75.181313, 35.839159], [-75.163158, 35.785484]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft.\n\n* WHERE...The coastal waters from Duck to Oregon Inlet.\n\n* WHEN...Until 10 PM EDT Sunday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T02:23:00-04:00", "ends": "2026-05-24T22:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T14:30:00-04:00", "geocode": {"SAME": ["075150"], "UGC": ["AMZ150"]}, "headline": "Small Craft Advisory issued May 23 at 2:23AM EDT until May 24 at 10:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T02:23:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT UNTIL 10 PM EDT SUNDAY"], "VTEC": ["/O.NEW.KMHX.SC.Y.0054.260523T0623Z-260525T0200Z/"], "WMOidentifier": ["WHUS72 KMHX 230623"], "eventEndingTime": ["2026-05-24T22:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-23T02:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_658a1c103c946b29765891f957cb466e_add({"bbox": [-78.67, 33.48, -75.12664, 36.552906], "features": [{"bbox": [-78.67, 33.48, -78.38, 33.9], "geometry": {"coordinates": [[[-78.6, 33.84], [-78.55, 33.85], [-78.38, 33.9], [-78.44, 33.53], [-78.56, 33.5], [-78.58, 33.48], [-78.67, 33.82], [-78.6, 33.84]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.92f79615338d1ee19735a81d61378f98b0014158.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ252", "https://api.weather.gov/zones/forecast/AMZ254"], "areaDesc": "Coastal waters from Cape Fear NC to Little River Inlet SC out 20 NM; Coastal waters from Little River Inlet to Murrells Inlet SC out 20 NM", "category": "Marine/Beach", "certainty": "Observed", "code": "IPAWSv1.0", "description": "The areas affected include...\nCoastal waters from Cape Fear NC to Little River Inlet SC out 20\nNM...\nCoastal waters from Little River Inlet to Murrells Inlet SC out 20\nNM...\n\nAt 721 AM EDT, Doppler radar indicated a shower with some rotation\nindicated aloft. This shower is capable of producing a waterspout if\nthe rotation drops downward towards the water. This shower was\nlocated near Jungle, moving north at 25 knots.", "effective": "2026-05-23T07:24:00-04:00", "ends": null, "event": "Marine Weather Statement", "eventCode": {"NationalWeatherService": ["MWS"], "SAME": ["NWS"]}, "expires": "2026-05-23T08:15:00-04:00", "geocode": {"SAME": ["075252", "075254"], "UGC": ["AMZ252", "AMZ254"]}, "headline": "Marine Weather Statement issued May 23 at 7:24AM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.92f79615338d1ee19735a81d61378f98b0014158.001.1", "instruction": "This shower may produce a waterspout. A Special Marine Warning may\nbe needed.\n\nA Special Marine Warning may eventually be required if this shower\nproduces a waterspout. Boaters should consider heading for shore\nbefore this shower arrives.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T07:24:00-04:00", "parameters": {"AWIPSidentifier": ["MWSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["A SHOWER WITH SOME ROTATION OVER THE WATERS"], "WMOidentifier": ["FZUS72 KILM 231124"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-05-23T07:24:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.867097, 36.221516, -75.393841, 36.552906], "geometry": {"coordinates": [[[-75.393841, 36.222162], [-75.768791, 36.221516], [-75.784401, 36.257996], [-75.815195, 36.345329], [-75.833557, 36.418369], [-75.856212, 36.495113], [-75.867097, 36.551006], [-75.530077, 36.552906], [-75.528415, 36.547132], [-75.528794, 36.540406], [-75.524713, 36.533128], [-75.503872, 36.456596], [-75.489472, 36.416378], [-75.489622, 36.412448], [-75.486731, 36.407591], [-75.476607, 36.373135], [-75.46908, 36.365298], [-75.464978, 36.355955], [-75.462518, 36.344839], [-75.456752, 36.333815], [-75.449893, 36.314764], [-75.440799, 36.306189], [-75.425234, 36.27338], [-75.423721, 36.265542], [-75.404194, 36.239745], [-75.399886, 36.22703], [-75.393841, 36.222162]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27637691af166b2c07d2691953888208fe889bdf.006.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/ANZ658"], "areaDesc": "Coastal waters from NC VA border to Currituck Beach Light NC out 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Southeast winds 5 to 10 kt and seas 4 to 6 ft.\n\n* WHERE...Coastal waters from NC VA border to Currituck Beach\nLight NC out 20 NM.\n\n* WHEN...Until 7 PM EDT Sunday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T03:33:00-04:00", "ends": "2026-05-24T19:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T11:45:00-04:00", "geocode": {"SAME": ["073658"], "UGC": ["ANZ658"]}, "headline": "Small Craft Advisory issued May 23 at 3:33AM EDT until May 24 at 7:00PM EDT by NWS Wakefield VA", "id": "urn:oid:2.49.0.1.840.0.27637691af166b2c07d2691953888208fe889bdf.006.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-05-23T03:33:00-04:00", "parameters": {"AWIPSidentifier": ["MWWAKQ"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT UNTIL 7 PM EDT SUNDAY"], "VTEC": ["/O.CON.KAKQ.SC.Y.0066.000000T0000Z-260524T2300Z/"], "WMOidentifier": ["WHUS71 KAKQ 230733"], "eventEndingTime": ["2026-05-24T19:00:00-04:00"], "expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3c74a373a695377e0dbd7057a99f220603e88367.005.1,2026-05-22T14:01:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b6cf8abc573aee38a2603b592a31706f04e010c0.006.1,2026-05-22T10:18:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.44ef9fbb8940c02157a42513c6e069f8937ddaf7.001.1,2026-05-22T05:58:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2775cd5ee89518bab64e3056dcb7de2bbf949e46.006.1", "identifier": "urn:oid:2.49.0.1.840.0.2775cd5ee89518bab64e3056dcb7de2bbf949e46.006.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-05-22T21:26:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wakefield VA", "sent": "2026-05-23T03:33:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.000278, 34.853373, -75.206156, 35.235126], "geometry": {"coordinates": [[[-75.551727, 35.232838], [-75.535429, 35.227566], [-75.531887, 35.221656], [-75.536102, 35.217626], [-75.531693, 35.219364], [-75.528724, 35.223788], [-75.206156, 35.138056], [-75.214386, 35.112192], [-75.229027, 35.077753], [-75.247999, 35.044004], [-75.266356, 35.017565], [-75.281057, 34.999582], [-75.31189, 34.968748], [-75.330036, 34.953882], [-75.366289, 34.929659], [-75.408245, 34.909201], [-75.448471, 34.895624], [-75.469715, 34.890669], [-75.492018, 34.887003], [-75.535526, 34.884153], [-75.557327, 34.884867], [-75.591934, 34.88896], [-75.622311, 34.878038], [-75.704134, 34.853373], [-76.000278, 35.068214], [-75.990998, 35.078682], [-75.976379, 35.090897], [-75.933161, 35.117768], [-75.889359, 35.138233], [-75.812222, 35.169321], [-75.779251, 35.181137], [-75.771941, 35.181913], [-75.752594, 35.189781], [-75.743813, 35.189739], [-75.729462, 35.193684], [-75.693542, 35.207798], [-75.636353, 35.225632], [-75.58638, 35.234711], [-75.570068, 35.235126], [-75.551727, 35.232838]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.003.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 7 ft expected.\n\n* WHERE...The coastal waters from Cape Hatteras to Ocracoke\nInlet.\n\n* WHEN...From noon today to 6 AM EDT Monday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T02:23:00-04:00", "ends": "2026-05-25T06:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T14:30:00-04:00", "geocode": {"SAME": ["075154"], "UGC": ["AMZ154"]}, "headline": "Small Craft Advisory issued May 23 at 2:23AM EDT until May 25 at 6:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.003.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T12:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT FROM NOON TODAY TO 6 AM EDT MONDAY"], "VTEC": ["/O.NEW.KMHX.SC.Y.0054.260523T1600Z-260525T1000Z/"], "WMOidentifier": ["WHUS72 KMHX 230623"], "eventEndingTime": ["2026-05-25T06:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-23T02:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.528724, 35.138056, -75.12664, 35.785484], "geometry": {"coordinates": [[[-75.205043, 35.141823], [-75.206156, 35.138056], [-75.528724, 35.223788], [-75.524147, 35.245106], [-75.518525, 35.258268], [-75.507036, 35.322783], [-75.502948, 35.334324], [-75.495216, 35.369938], [-75.487068, 35.394535], [-75.480652, 35.472683], [-75.47188, 35.519199], [-75.462509, 35.553555], [-75.459994, 35.584291], [-75.460474, 35.592055], [-75.475977, 35.659221], [-75.476509, 35.667969], [-75.489296, 35.711594], [-75.499895, 35.738151], [-75.518026, 35.767045], [-75.163158, 35.785484], [-75.149559, 35.733], [-75.129971, 35.635564], [-75.12664, 35.584291], [-75.12791, 35.548611], [-75.135559, 35.488525], [-75.149538, 35.429958], [-75.153921, 35.369934], [-75.160117, 35.329505], [-75.183333, 35.239552], [-75.194518, 35.179883], [-75.205043, 35.141823]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.002.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 7 ft.\n\n* WHERE...The coastal waters from Oregon Inlet to Cape Hatteras.\n\n* WHEN...Until 6 AM EDT Monday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T02:23:00-04:00", "ends": "2026-05-25T06:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T14:30:00-04:00", "geocode": {"SAME": ["075152"], "UGC": ["AMZ152"]}, "headline": "Small Craft Advisory issued May 23 at 2:23AM EDT until May 25 at 6:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.002.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T02:23:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT UNTIL 6 AM EDT MONDAY"], "VTEC": ["/O.NEW.KMHX.SC.Y.0054.260523T0623Z-260525T1000Z/"], "WMOidentifier": ["WHUS72 KMHX 230623"], "eventEndingTime": ["2026-05-25T06:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-23T02:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-75.768791, 35.767045, -75.163158, 36.222165], "geometry": {"coordinates": [[[-75.163158, 35.785484], [-75.518026, 35.767045], [-75.52401, 35.774891], [-75.530983, 35.77504], [-75.5314, 35.7722], [-75.53965, 35.775574], [-75.534363, 35.792622], [-75.545532, 35.806091], [-75.569811, 35.863301], [-75.66185, 36.026408], [-75.709403, 36.097395], [-75.736893, 36.150871], [-75.759654, 36.204705], [-75.768791, 36.221516], [-75.391957, 36.222165], [-75.373154, 36.193079], [-75.340693, 36.137133], [-75.290205, 36.046534], [-75.270832, 36.010733], [-75.253765, 35.972715], [-75.207279, 35.897837], [-75.191914, 35.865713], [-75.181313, 35.839159], [-75.163158, 35.785484]]], "type": "Polygon"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ150"], "areaDesc": "S of Currituck Beach Light NC to Oregon Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft.\n\n* WHERE...The coastal waters from Duck to Oregon Inlet.\n\n* WHEN...Until 10 PM EDT Sunday.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-05-23T02:23:00-04:00", "ends": "2026-05-24T22:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-05-23T14:30:00-04:00", "geocode": {"SAME": ["075150"], "UGC": ["AMZ150"]}, "headline": "Small Craft Advisory issued May 23 at 2:23AM EDT until May 24 at 10:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5c98c6024f26db1f12fdf6636a90a75e90034e20.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-05-23T02:23:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT UNTIL 10 PM EDT SUNDAY"], "VTEC": ["/O.NEW.KMHX.SC.Y.0054.260523T0623Z-260525T0200Z/"], "WMOidentifier": ["WHUS72 KMHX 230623"], "eventEndingTime": ["2026-05-24T22:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-05-23T02:23:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_d26252dfe54abac67f1186326d6ce68e.bindTooltip(
+    geo_json_658a1c103c946b29765891f957cb466e.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +365,7 @@
 });
                      
     
-    geo_json_d26252dfe54abac67f1186326d6ce68e.bindPopup(
+    geo_json_658a1c103c946b29765891f957cb466e.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +400,32 @@
 });
                      
     
-            geo_json_d26252dfe54abac67f1186326d6ce68e.addTo(map_b9240d4a592585c31baab92743046884);
+            geo_json_658a1c103c946b29765891f957cb466e.addTo(map_940c0c0254be7cfb12b9b40885c13dc9);
         
     
-            var layer_control_a16b4ac93487cdf2f4bc0b057047a541_layers = {
+            var layer_control_047539f29d32bc3656cc453b2fe1241e_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_c0b752f578971bbdda9f4de7f429ecc2,
-                    "Esri Street Map" : tile_layer_4f4c7fe9c88850788c968f1a700269af,
-                    "Esri NatGeo" : tile_layer_a608a05ac3a7d849ee79d6f54e949232,
-                    "Google Satellite" : tile_layer_0df98d9dd489123f8a3235baaeaf7aa3,
-                    "Google Terrain" : tile_layer_5cd46190b2a3bd9e5c6a2e98b71f8246,
-                    "Google Street" : tile_layer_bd771070a8c0d12ff6e3b456183a7702,
-                    "Light Gray Base" : tile_layer_faed1d251394b01c15b917efb395c927,
+                    "Esri Satellite" : tile_layer_bbebeb22cba4ba24fef1a2d0b8b5e063,
+                    "Esri Street Map" : tile_layer_a4e4edefe30ee6642cf873ab6bae8b4a,
+                    "Esri NatGeo" : tile_layer_192c467fe2a5d321cee56f7fcea3827b,
+                    "Google Satellite" : tile_layer_3715ed3245c9223ae2bfc1b8d26f565c,
+                    "Google Terrain" : tile_layer_a0b2037fe8fd90f3d29a4fe7ef3864e2,
+                    "Google Street" : tile_layer_a60a204cc8e020738eaeede5862ef3ad,
+                    "Light Gray Base" : tile_layer_c4592ed5d2906f4a08d57fffe2c900aa,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_d26252dfe54abac67f1186326d6ce68e,
+                    " Marine/Beach" : geo_json_658a1c103c946b29765891f957cb466e,
                 },
             };
-            let layer_control_a16b4ac93487cdf2f4bc0b057047a541 = L.control.layers(
-                layer_control_a16b4ac93487cdf2f4bc0b057047a541_layers.base_layers,
-                layer_control_a16b4ac93487cdf2f4bc0b057047a541_layers.overlays,
+            let layer_control_047539f29d32bc3656cc453b2fe1241e = L.control.layers(
+                layer_control_047539f29d32bc3656cc453b2fe1241e_layers.base_layers,
+                layer_control_047539f29d32bc3656cc453b2fe1241e_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_b9240d4a592585c31baab92743046884);
+            ).addTo(map_940c0c0254be7cfb12b9b40885c13dc9);
 
         
 </script>
