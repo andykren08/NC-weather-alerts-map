@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9042818c52c884bf566c12a9c8a1572e {
+                #map_108fa82f48a4c9ec0ca8013ddf990a3a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_869dd9098f8bd9f03e9a41fddbb934f0 {
+                    #float_image_c02b3b7e316feac39645cb463a7c162a {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_9042818c52c884bf566c12a9c8a1572e" ></div>
+            <div class="folium-map" id="map_108fa82f48a4c9ec0ca8013ddf990a3a" ></div>
         
     
-            <img id="float_image_869dd9098f8bd9f03e9a41fddbb934f0" alt="float_image"
+            <img id="float_image_c02b3b7e316feac39645cb463a7c162a" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Jun 09, 2026<br>10:01 AM EDT
+        Updated: Jun 09, 2026<br>12:40 PM EDT
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_9042818c52c884bf566c12a9c8a1572e = L.map(
-                "map_9042818c52c884bf566c12a9c8a1572e",
+            var map_108fa82f48a4c9ec0ca8013ddf990a3a = L.map(
+                "map_108fa82f48a4c9ec0ca8013ddf990a3a",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_c7601ce13e38c239dbebc664269720f1 = L.tileLayer(
+            var tile_layer_556a21f13e247534e1f32749928fd211 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_ee6d679bd63b03dbd47774e835d0cc0f = L.tileLayer(
+            var tile_layer_b53193bc2161ad7ac0fce5d37f4e6c31 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_4fca5d7761dd630610459e283b359db7 = L.tileLayer(
+            var tile_layer_2ef0377a837ca677c6817b83cc14df73 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_4fca5d7761dd630610459e283b359db7.addTo(map_9042818c52c884bf566c12a9c8a1572e);
+            tile_layer_2ef0377a837ca677c6817b83cc14df73.addTo(map_108fa82f48a4c9ec0ca8013ddf990a3a);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_9042818c52c884bf566c12a9c8a1572e);
+            ).addTo(map_108fa82f48a4c9ec0ca8013ddf990a3a);
         
     
-            var tile_layer_9edc54cdfd456eed8520a40c8a63e6fa = L.tileLayer(
+            var tile_layer_56d7a4b3b08d9ff9427d6511b85abb97 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_a482afc5259285df121f2e661696925a = L.tileLayer(
+            var tile_layer_e4d7abce00bf6d2484336c83ac1d6e61 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_ba71d51ea6edfb2c877652bd39332324 = L.tileLayer(
+            var tile_layer_4d098f17e21add6b7d1068afe3c04270 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_fc01fb49048411b100fdb801b33bf7cf = L.tileLayer(
+            var tile_layer_6ffc1d63bdc7f0fb640ab8dee9097b6b = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_04ca5cc6589e8353715d8df8d9d72fe9 = L.control.locate(
+            var locate_control_8213f059f3aaa541de5262c48ead8180 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_9042818c52c884bf566c12a9c8a1572e);
+            ).addTo(map_108fa82f48a4c9ec0ca8013ddf990a3a);
             
         
     
-        function geo_json_1070c4c5dd78df7aca6d6be8207cda67_styler(feature) {
+        function geo_json_4983e17232bfd9570ba101d36965233f_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#00FF7F", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_1070c4c5dd78df7aca6d6be8207cda67_onEachFeature(feature, layer) {
+        function geo_json_4983e17232bfd9570ba101d36965233f_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_1070c4c5dd78df7aca6d6be8207cda67 = L.geoJson(null, {
-                onEachFeature: geo_json_1070c4c5dd78df7aca6d6be8207cda67_onEachFeature,
+        var geo_json_4983e17232bfd9570ba101d36965233f = L.geoJson(null, {
+                onEachFeature: geo_json_4983e17232bfd9570ba101d36965233f_onEachFeature,
             
-                style: geo_json_1070c4c5dd78df7aca6d6be8207cda67_styler,
+                style: geo_json_4983e17232bfd9570ba101d36965233f_styler,
             ...{
 }
         });
 
-        function geo_json_1070c4c5dd78df7aca6d6be8207cda67_add (data) {
-            geo_json_1070c4c5dd78df7aca6d6be8207cda67
+        function geo_json_4983e17232bfd9570ba101d36965233f_add (data) {
+            geo_json_4983e17232bfd9570ba101d36965233f
                 .addData(data);
         }
-            geo_json_1070c4c5dd78df7aca6d6be8207cda67_add({"bbox": [-82.14, 35.53, -81.93, 35.79], "features": [{"bbox": [-82.14, 35.53, -81.93, 35.79], "geometry": {"coordinates": [[[-82.02, 35.54], [-82.08, 35.54], [-82.12, 35.53], [-82.14, 35.69], [-82.12, 35.76], [-82.04, 35.79], [-81.97, 35.79], [-81.94, 35.77], [-81.93, 35.62], [-82.0, 35.55], [-82.01, 35.55], [-82.02, 35.54]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2aee073e126bd039fdc49c8761020405dedb52dc.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC111"], "areaDesc": "McDowell, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...South Central McDowell County in western North Carolina...\n\n* WHEN...Until 1245 PM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 957 AM EDT, Doppler radar and automated rain gauges indicated\nheavy rain due to thunderstorms. Minor flooding is ongoing or\nexpected to begin shortly in the advisory area. Between 1.5 and\n2.5 inches of rain have fallen.\n- Over 2 inches of rain has fallen this morning at the Sugar Hill\nFD with flooding of low-lying areas along Montford Cove Rd and\neastward toward Highway 221.  Nuisance flooding is also possible\nalong select 2nd Broad tributaries south of I-40.  A second area\nof heavy rain of 1.5 to 2 inches had also occurred around greater\nMarion, so remain wary of urban runoff issues around town this\nmorning and flooding of poor drainage areas.\n- Some locations that will experience flooding include...\nMarion, Lake James, Pleasant Gardens, Glenwood, Sugar Hill, Fero,\nNebo and Woodlawn.\n- http://www.weather.gov/safety/flood", "effective": "2026-06-09T09:57:00-04:00", "ends": "2026-06-09T12:45:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-06-09T12:45:00-04:00", "geocode": {"SAME": ["037111"], "UGC": ["NCC111"]}, "headline": "Flood Advisory issued June 9 at 9:57AM EDT until June 9 at 12:45PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.2aee073e126bd039fdc49c8761020405dedb52dc.001.1", "instruction": "Be aware of your surroundings and do not drive on flooded roads.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-06-09T09:57:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY REMAINS IN EFFECT UNTIL 1245 PM EDT THIS AFTERNOON"], "VTEC": ["/O.CON.KGSP.FA.Y.0024.000000T0000Z-260609T1645Z/"], "WMOidentifier": ["WGUS82 KGSP 091357"], "eventEndingTime": ["2026-06-09T12:45:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3c571862b83bfec185d00eaef2426d5c766aaaed.001.1", "identifier": "urn:oid:2.49.0.1.840.0.3c571862b83bfec185d00eaef2426d5c766aaaed.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-09T09:46:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-09T09:57:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_4983e17232bfd9570ba101d36965233f_add({"bbox": [-82.14, 35.53, -81.93, 35.79], "features": [{"bbox": [-82.14, 35.53, -81.93, 35.79], "geometry": {"coordinates": [[[-82.02, 35.54], [-82.08, 35.54], [-82.12, 35.53], [-82.14, 35.69], [-82.12, 35.76], [-82.04, 35.79], [-81.97, 35.79], [-81.94, 35.77], [-81.93, 35.62], [-82.0, 35.55], [-82.01, 35.55], [-82.02, 35.54]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8130035093f7ba9e4c563c75d950cbe88a8661ac.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC111"], "areaDesc": "McDowell, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Lingering flooding caused by excessive runoff.\n\n* WHERE...South Central McDowell County in western North Carolina...\n\n* WHEN...Until 1245 PM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1111 AM EDT, Doppler radar indicated diminished rainfall rates\natop the advised area and rain will continue to taper off into\nearly afternoon. As much as 2.5 to 3 inches of rain had fallen\nthis morning in a corridor from around Marion south to Sugar\nHill.  Continue to remain wary of lingering high water conditions\nand flooding of low-lying areas.  This advisory will expire on\nschedule.\n- Some locations that will experience flooding include...\nMarion, Lake James, Pleasant Gardens, Glenwood, Sugar Hill, Fero,\nNebo and Woodlawn.\n- http://www.weather.gov/safety/flood", "effective": "2026-06-09T11:15:00-04:00", "ends": "2026-06-09T12:45:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-06-09T12:45:00-04:00", "geocode": {"SAME": ["037111"], "UGC": ["NCC111"]}, "headline": "Flood Advisory issued June 9 at 11:15AM EDT until June 9 at 12:45PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.8130035093f7ba9e4c563c75d950cbe88a8661ac.001.1", "instruction": "Be aware of your surroundings and do not drive on flooded roads.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-06-09T11:15:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY REMAINS IN EFFECT UNTIL 1245 PM EDT THIS AFTERNOON"], "VTEC": ["/O.CON.KGSP.FA.Y.0024.000000T0000Z-260609T1645Z/"], "WMOidentifier": ["WGUS82 KGSP 091515"], "eventEndingTime": ["2026-06-09T12:45:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3c571862b83bfec185d00eaef2426d5c766aaaed.001.1", "identifier": "urn:oid:2.49.0.1.840.0.3c571862b83bfec185d00eaef2426d5c766aaaed.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-09T09:46:00-04:00"}, {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2aee073e126bd039fdc49c8761020405dedb52dc.001.1", "identifier": "urn:oid:2.49.0.1.840.0.2aee073e126bd039fdc49c8761020405dedb52dc.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-09T09:57:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-09T11:15:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_1070c4c5dd78df7aca6d6be8207cda67.bindTooltip(
+    geo_json_4983e17232bfd9570ba101d36965233f.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_1070c4c5dd78df7aca6d6be8207cda67.bindPopup(
+    geo_json_4983e17232bfd9570ba101d36965233f.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_1070c4c5dd78df7aca6d6be8207cda67.addTo(map_9042818c52c884bf566c12a9c8a1572e);
+            geo_json_4983e17232bfd9570ba101d36965233f.addTo(map_108fa82f48a4c9ec0ca8013ddf990a3a);
         
     
-            var layer_control_7e577764c7999a38175b755304b06ed9_layers = {
+            var layer_control_848dec6d89358c9e046e9732c0934552_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_c7601ce13e38c239dbebc664269720f1,
-                    "Esri Street Map" : tile_layer_ee6d679bd63b03dbd47774e835d0cc0f,
-                    "Esri NatGeo" : tile_layer_4fca5d7761dd630610459e283b359db7,
-                    "Google Satellite" : tile_layer_9edc54cdfd456eed8520a40c8a63e6fa,
-                    "Google Terrain" : tile_layer_a482afc5259285df121f2e661696925a,
-                    "Google Street" : tile_layer_ba71d51ea6edfb2c877652bd39332324,
-                    "Light Gray Base" : tile_layer_fc01fb49048411b100fdb801b33bf7cf,
+                    "Esri Satellite" : tile_layer_556a21f13e247534e1f32749928fd211,
+                    "Esri Street Map" : tile_layer_b53193bc2161ad7ac0fce5d37f4e6c31,
+                    "Esri NatGeo" : tile_layer_2ef0377a837ca677c6817b83cc14df73,
+                    "Google Satellite" : tile_layer_56d7a4b3b08d9ff9427d6511b85abb97,
+                    "Google Terrain" : tile_layer_e4d7abce00bf6d2484336c83ac1d6e61,
+                    "Google Street" : tile_layer_4d098f17e21add6b7d1068afe3c04270,
+                    "Light Gray Base" : tile_layer_6ffc1d63bdc7f0fb640ab8dee9097b6b,
                 },
                 overlays :  {
-                    " Hydro" : geo_json_1070c4c5dd78df7aca6d6be8207cda67,
+                    " Hydro" : geo_json_4983e17232bfd9570ba101d36965233f,
                 },
             };
-            let layer_control_7e577764c7999a38175b755304b06ed9 = L.control.layers(
-                layer_control_7e577764c7999a38175b755304b06ed9_layers.base_layers,
-                layer_control_7e577764c7999a38175b755304b06ed9_layers.overlays,
+            let layer_control_848dec6d89358c9e046e9732c0934552 = L.control.layers(
+                layer_control_848dec6d89358c9e046e9732c0934552_layers.base_layers,
+                layer_control_848dec6d89358c9e046e9732c0934552_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_9042818c52c884bf566c12a9c8a1572e);
+            ).addTo(map_108fa82f48a4c9ec0ca8013ddf990a3a);
 
         
 </script>
