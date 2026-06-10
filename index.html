@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9ce398e15f6e9cb12f16191c8d8308c3 {
+                #map_753f7cf8302d88c57b96e47df8b2f605 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     
                 <style>
-                    #float_image_3db6c1640bc5d8439cb2b729e7bf4ce2 {
+                    #float_image_2f6b9f0f0d9b1e0772c9a4d78a2b924e {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -74,10 +74,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_9ce398e15f6e9cb12f16191c8d8308c3" ></div>
+            <div class="folium-map" id="map_753f7cf8302d88c57b96e47df8b2f605" ></div>
         
     
-            <img id="float_image_3db6c1640bc5d8439cb2b729e7bf4ce2" alt="float_image"
+            <img id="float_image_2f6b9f0f0d9b1e0772c9a4d78a2b924e" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -88,7 +88,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Jun 09, 2026<br>06:47 PM EDT
+        Updated: Jun 09, 2026<br>08:02 PM EDT
     </div>
     <div class='legend-scale'>
        <li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>
@@ -102,8 +102,8 @@
 <script>
     
     
-            var map_9ce398e15f6e9cb12f16191c8d8308c3 = L.map(
-                "map_9ce398e15f6e9cb12f16191c8d8308c3",
+            var map_753f7cf8302d88c57b96e47df8b2f605 = L.map(
+                "map_753f7cf8302d88c57b96e47df8b2f605",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -120,7 +120,7 @@
 
         
     
-            var tile_layer_3eb883e5bd0f6b92427260321d7f8ccd = L.tileLayer(
+            var tile_layer_0a633e35ec23918347ad9e65bfb89839 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -137,7 +137,7 @@
             );
         
     
-            var tile_layer_9d818a12f61b94c61d7ea7f2a9a77da7 = L.tileLayer(
+            var tile_layer_23b7617ba878e61b8ae75c220e9dc5a9 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -154,7 +154,7 @@
             );
         
     
-            var tile_layer_0a7f42ee1c7f5e3810e60ba6d47ca67d = L.tileLayer(
+            var tile_layer_8ff5ce0371cad37d1d9c36a54ca782c9 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -171,7 +171,7 @@
             );
         
     
-            tile_layer_0a7f42ee1c7f5e3810e60ba6d47ca67d.addTo(map_9ce398e15f6e9cb12f16191c8d8308c3);
+            tile_layer_8ff5ce0371cad37d1d9c36a54ca782c9.addTo(map_753f7cf8302d88c57b96e47df8b2f605);
         
     
             L.control.fullscreen(
@@ -181,10 +181,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_9ce398e15f6e9cb12f16191c8d8308c3);
+            ).addTo(map_753f7cf8302d88c57b96e47df8b2f605);
         
     
-            var tile_layer_3db3adc447a54693b608f745d614cf3b = L.tileLayer(
+            var tile_layer_9a9ad0adb9cc69e7745dec31aaac551b = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -201,7 +201,7 @@
             );
         
     
-            var tile_layer_d5d1de62a5389b9a1445a807f2502320 = L.tileLayer(
+            var tile_layer_b97d331829c64a46debd9cddea4630e5 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -218,7 +218,7 @@
             );
         
     
-            var tile_layer_2eb504e99f90554b54a7d7d946f4441a = L.tileLayer(
+            var tile_layer_d34be16254d8905e8b8c36c88efdaf03 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -235,7 +235,7 @@
             );
         
     
-            var tile_layer_e68dc6aaa36684732a67936c5db38b20 = L.tileLayer(
+            var tile_layer_d71f3d063a041ab47d1e9871e98e42b4 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -252,34 +252,34 @@
             );
         
     
-            var locate_control_d41446ed8f59531431f5d15f898fb29e = L.control.locate(
+            var locate_control_78e97adf7797da7073d4505fe7cab2e4 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_9ce398e15f6e9cb12f16191c8d8308c3);
+            ).addTo(map_753f7cf8302d88c57b96e47df8b2f605);
             
         
     
-            var layer_control_6a6338f7bf2bb562c3decdadb8f1c4a5_layers = {
+            var layer_control_19b6bf8ffe7d6868cd228d814c0168b5_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_3eb883e5bd0f6b92427260321d7f8ccd,
-                    "Esri Street Map" : tile_layer_9d818a12f61b94c61d7ea7f2a9a77da7,
-                    "Esri NatGeo" : tile_layer_0a7f42ee1c7f5e3810e60ba6d47ca67d,
-                    "Google Satellite" : tile_layer_3db3adc447a54693b608f745d614cf3b,
-                    "Google Terrain" : tile_layer_d5d1de62a5389b9a1445a807f2502320,
-                    "Google Street" : tile_layer_2eb504e99f90554b54a7d7d946f4441a,
-                    "Light Gray Base" : tile_layer_e68dc6aaa36684732a67936c5db38b20,
+                    "Esri Satellite" : tile_layer_0a633e35ec23918347ad9e65bfb89839,
+                    "Esri Street Map" : tile_layer_23b7617ba878e61b8ae75c220e9dc5a9,
+                    "Esri NatGeo" : tile_layer_8ff5ce0371cad37d1d9c36a54ca782c9,
+                    "Google Satellite" : tile_layer_9a9ad0adb9cc69e7745dec31aaac551b,
+                    "Google Terrain" : tile_layer_b97d331829c64a46debd9cddea4630e5,
+                    "Google Street" : tile_layer_d34be16254d8905e8b8c36c88efdaf03,
+                    "Light Gray Base" : tile_layer_d71f3d063a041ab47d1e9871e98e42b4,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_6a6338f7bf2bb562c3decdadb8f1c4a5 = L.control.layers(
-                layer_control_6a6338f7bf2bb562c3decdadb8f1c4a5_layers.base_layers,
-                layer_control_6a6338f7bf2bb562c3decdadb8f1c4a5_layers.overlays,
+            let layer_control_19b6bf8ffe7d6868cd228d814c0168b5 = L.control.layers(
+                layer_control_19b6bf8ffe7d6868cd228d814c0168b5_layers.base_layers,
+                layer_control_19b6bf8ffe7d6868cd228d814c0168b5_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_9ce398e15f6e9cb12f16191c8d8308c3);
+            ).addTo(map_753f7cf8302d88c57b96e47df8b2f605);
 
         
 </script>
