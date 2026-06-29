@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_fbc227436790efa21c3015da147659d7 {
+                #map_6194afb7bb127fc115c7df9303b899bd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,8 +55,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     
+                    <style>
+                        .foliumtooltip {
+                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
                 <style>
-                    #float_image_011758edd63e1ae0930487dbe2b2b197 {
+                    #float_image_a115bded1da30468149786f2127c47db {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -74,10 +138,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_fbc227436790efa21c3015da147659d7" ></div>
+            <div class="folium-map" id="map_6194afb7bb127fc115c7df9303b899bd" ></div>
         
     
-            <img id="float_image_011758edd63e1ae0930487dbe2b2b197" alt="float_image"
+            <img id="float_image_a115bded1da30468149786f2127c47db" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -88,10 +152,20 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Jun 29, 2026<br>02:59 AM EDT
+        Updated: Jun 29, 2026<br>08:05 AM EDT
     </div>
     <div class='legend-scale'>
-       <li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>
+       
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#D8BFD8; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Small Craft Advisory</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#FFE4B5; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Special Weather Statement</span>
+        </div>
+        
     </div>
 </div>
 <style type='text/css'>
@@ -102,8 +176,8 @@
 <script>
     
     
-            var map_fbc227436790efa21c3015da147659d7 = L.map(
-                "map_fbc227436790efa21c3015da147659d7",
+            var map_6194afb7bb127fc115c7df9303b899bd = L.map(
+                "map_6194afb7bb127fc115c7df9303b899bd",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -120,7 +194,7 @@
 
         
     
-            var tile_layer_45e7e9f8f0bc84febc9cdcfa45513923 = L.tileLayer(
+            var tile_layer_836d23766a41c920a247e388f1e3023f = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -137,7 +211,7 @@
             );
         
     
-            var tile_layer_be874627eced71c04dfa02cb47dd55bc = L.tileLayer(
+            var tile_layer_2e04745c66df3e2121e62c308d7ccf59 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -154,7 +228,7 @@
             );
         
     
-            var tile_layer_9de7a12370f6994e643ff4ecc950f60d = L.tileLayer(
+            var tile_layer_1101238be9340a70c65a381a333bcc4b = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -171,7 +245,7 @@
             );
         
     
-            tile_layer_9de7a12370f6994e643ff4ecc950f60d.addTo(map_fbc227436790efa21c3015da147659d7);
+            tile_layer_1101238be9340a70c65a381a333bcc4b.addTo(map_6194afb7bb127fc115c7df9303b899bd);
         
     
             L.control.fullscreen(
@@ -181,10 +255,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_fbc227436790efa21c3015da147659d7);
+            ).addTo(map_6194afb7bb127fc115c7df9303b899bd);
         
     
-            var tile_layer_aa01548f33e5c730e415c22e6428f6bc = L.tileLayer(
+            var tile_layer_bc4b2653020839c1d0ca4395da1ad0a1 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -201,7 +275,7 @@
             );
         
     
-            var tile_layer_1b9abcfd510058e7a0e278f69998a49a = L.tileLayer(
+            var tile_layer_a167bef2585dae2a54eb7e4f3dca780a = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -218,7 +292,7 @@
             );
         
     
-            var tile_layer_8d91ecb821dfc5a142f7e4362f24f0ce = L.tileLayer(
+            var tile_layer_fc1b25cedc1d0ffc98c59c44f7e3e942 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -235,7 +309,7 @@
             );
         
     
-            var tile_layer_ae87bd4654b0df149f16e5668f780e9b = L.tileLayer(
+            var tile_layer_c1b7faeaac878bbf981b666be1d73b6b = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -252,34 +326,238 @@
             );
         
     
-            var locate_control_fe43380b6c02f466146abde897206e4b = L.control.locate(
+            var locate_control_337445f86bacfedf5398f67fd3093497 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_fbc227436790efa21c3015da147659d7);
+            ).addTo(map_6194afb7bb127fc115c7df9303b899bd);
             
         
     
-            var layer_control_1982e716dfe3229b948c5c4a08c22c22_layers = {
+        function geo_json_7d5e78a44f1d518abec6242e28883d44_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#D8BFD8", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_7d5e78a44f1d518abec6242e28883d44_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7d5e78a44f1d518abec6242e28883d44 = L.geoJson(null, {
+                onEachFeature: geo_json_7d5e78a44f1d518abec6242e28883d44_onEachFeature,
+            
+                style: geo_json_7d5e78a44f1d518abec6242e28883d44_styler,
+            ...{
+}
+        });
+
+        function geo_json_7d5e78a44f1d518abec6242e28883d44_add (data) {
+            geo_json_7d5e78a44f1d518abec6242e28883d44
+                .addData(data);
+        }
+            geo_json_7d5e78a44f1d518abec6242e28883d44_add({"bbox": [-76.000278, 34.853373, -75.12664, 35.785484], "features": [{"bbox": [-75.528724, 35.138056, -75.12664, 35.785484], "geometry": {"coordinates": [[[-75.205043, 35.141823], [-75.206156, 35.138056], [-75.528724, 35.223788], [-75.524147, 35.245106], [-75.518525, 35.258268], [-75.507036, 35.322783], [-75.502948, 35.334324], [-75.495216, 35.369938], [-75.487068, 35.394535], [-75.480652, 35.472683], [-75.47188, 35.519199], [-75.462509, 35.553555], [-75.459994, 35.584291], [-75.460474, 35.592055], [-75.475977, 35.659221], [-75.476509, 35.667969], [-75.489296, 35.711594], [-75.499895, 35.738151], [-75.518026, 35.767045], [-75.163158, 35.785484], [-75.149559, 35.733], [-75.129971, 35.635564], [-75.12664, 35.584291], [-75.12791, 35.548611], [-75.135559, 35.488525], [-75.149538, 35.429958], [-75.153921, 35.369934], [-75.160117, 35.329505], [-75.183333, 35.239552], [-75.194518, 35.179883], [-75.205043, 35.141823]]], "type": "Polygon"}, "id": "9", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 7 ft expected.\n\n* WHERE...The coastal waters from Oregon Inlet to Ocracoke Inlet.\n\n* WHEN...From 8 PM this evening to midnight EDT Tuesday night.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-06-29T03:53:00-04:00", "ends": "2026-07-01T00:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-06-29T16:00:00-04:00", "geocode": {"SAME": ["075152", "075154"], "UGC": ["AMZ152", "AMZ154"]}, "headline": "Small Craft Advisory issued June 29 at 3:53AM EDT until July 1 at 12:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT FROM 8 PM THIS EVENING TO MIDNIGHT EDT TUESDAY NIGHT"], "VTEC": ["/O.NEW.KMHX.SC.Y.0070.260630T0000Z-260701T0400Z/"], "WMOidentifier": ["WHUS72 KMHX 290753"], "eventEndingTime": ["2026-07-01T00:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-06-29T03:53:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.000278, 34.853373, -75.206156, 35.235126], "geometry": {"coordinates": [[[-75.551727, 35.232838], [-75.535429, 35.227566], [-75.531887, 35.221656], [-75.536102, 35.217626], [-75.531693, 35.219364], [-75.528724, 35.223788], [-75.206156, 35.138056], [-75.214386, 35.112192], [-75.229027, 35.077753], [-75.247999, 35.044004], [-75.266356, 35.017565], [-75.281057, 34.999582], [-75.31189, 34.968748], [-75.330036, 34.953882], [-75.366289, 34.929659], [-75.408245, 34.909201], [-75.448471, 34.895624], [-75.469715, 34.890669], [-75.492018, 34.887003], [-75.535526, 34.884153], [-75.557327, 34.884867], [-75.591934, 34.88896], [-75.622311, 34.878038], [-75.704134, 34.853373], [-76.000278, 35.068214], [-75.990998, 35.078682], [-75.976379, 35.090897], [-75.933161, 35.117768], [-75.889359, 35.138233], [-75.812222, 35.169321], [-75.779251, 35.181137], [-75.771941, 35.181913], [-75.752594, 35.189781], [-75.743813, 35.189739], [-75.729462, 35.193684], [-75.693542, 35.207798], [-75.636353, 35.225632], [-75.58638, 35.234711], [-75.570068, 35.235126], [-75.551727, 35.232838]]], "type": "Polygon"}, "id": "10", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 7 ft expected.\n\n* WHERE...The coastal waters from Oregon Inlet to Ocracoke Inlet.\n\n* WHEN...From 8 PM this evening to midnight EDT Tuesday night.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-06-29T03:53:00-04:00", "ends": "2026-07-01T00:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-06-29T16:00:00-04:00", "geocode": {"SAME": ["075152", "075154"], "UGC": ["AMZ152", "AMZ154"]}, "headline": "Small Craft Advisory issued June 29 at 3:53AM EDT until July 1 at 12:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY IN EFFECT FROM 8 PM THIS EVENING TO MIDNIGHT EDT TUESDAY NIGHT"], "VTEC": ["/O.NEW.KMHX.SC.Y.0070.260630T0000Z-260701T0400Z/"], "WMOidentifier": ["WHUS72 KMHX 290753"], "eventEndingTime": ["2026-07-01T00:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-06-29T03:53:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_7d5e78a44f1d518abec6242e28883d44.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "headline"];
+    let aliases = ["Alert:", "Details:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_7d5e78a44f1d518abec6242e28883d44.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "ends", "description"];
+    let aliases = ["Type:", "Expires:", "Full Text:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "localized": true,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_7d5e78a44f1d518abec6242e28883d44.addTo(map_6194afb7bb127fc115c7df9303b899bd);
+        
+    
+        function geo_json_ad5b894fbdabe61ecde2faa7715830fd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_ad5b894fbdabe61ecde2faa7715830fd_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ad5b894fbdabe61ecde2faa7715830fd = L.geoJson(null, {
+                onEachFeature: geo_json_ad5b894fbdabe61ecde2faa7715830fd_onEachFeature,
+            
+                style: geo_json_ad5b894fbdabe61ecde2faa7715830fd_styler,
+            ...{
+}
+        });
+
+        function geo_json_ad5b894fbdabe61ecde2faa7715830fd_add (data) {
+            geo_json_ad5b894fbdabe61ecde2faa7715830fd
+                .addData(data);
+        }
+            geo_json_ad5b894fbdabe61ecde2faa7715830fd_add({"bbox": [-81.917801, 35.995514, -79.1371, 36.587914], "features": [{"bbox": [-81.741196, 36.240211, -81.244499, 36.587914], "geometry": {"coordinates": [[[-81.3535, 36.574711], [-81.353195, 36.559113], [-81.354996, 36.549511], [-81.352798, 36.546211], [-81.349098, 36.551712], [-81.346199, 36.551613], [-81.346397, 36.544811], [-81.348099, 36.542614], [-81.347198, 36.538914], [-81.329994, 36.519211], [-81.328094, 36.515114], [-81.326996, 36.505013], [-81.322495, 36.496712], [-81.322197, 36.480614], [-81.305099, 36.479012], [-81.303795, 36.475513], [-81.299294, 36.473412], [-81.295494, 36.465012], [-81.285393, 36.459911], [-81.282494, 36.45491], [-81.272194, 36.446613], [-81.264198, 36.429512], [-81.262794, 36.418911], [-81.267998, 36.412212], [-81.264099, 36.409512], [-81.265594, 36.405212], [-81.259094, 36.398811], [-81.246597, 36.392212], [-81.244499, 36.381714], [-81.246696, 36.375214], [-81.252396, 36.368511], [-81.250397, 36.363613], [-81.259796, 36.359814], [-81.264496, 36.360813], [-81.2761, 36.358212], [-81.282997, 36.359612], [-81.296196, 36.367012], [-81.307198, 36.364914], [-81.3153, 36.368313], [-81.320099, 36.368511], [-81.321793, 36.374413], [-81.333694, 36.370514], [-81.343697, 36.371212], [-81.349594, 36.367714], [-81.359894, 36.366112], [-81.365997, 36.359211], [-81.366493, 36.35461], [-81.361496, 36.308613], [-81.363197, 36.30471], [-81.3666, 36.302711], [-81.367699, 36.284412], [-81.3741, 36.284813], [-81.379295, 36.288113], [-81.388298, 36.284412], [-81.412895, 36.29491], [-81.415794, 36.291313], [-81.413094, 36.281811], [-81.4151, 36.279312], [-81.429596, 36.270313], [-81.429695, 36.267014], [-81.443199, 36.260014], [-81.451393, 36.262211], [-81.4618, 36.257912], [-81.477493, 36.240211], [-81.555, 36.275711], [-81.566795, 36.272812], [-81.582199, 36.291412], [-81.588799, 36.302612], [-81.600197, 36.31171], [-81.638199, 36.34951], [-81.729095, 36.391613], [-81.731598, 36.394512], [-81.7388, 36.395412], [-81.738594, 36.401112], [-81.741096, 36.402611], [-81.741196, 36.412113], [-81.7351, 36.412613], [-81.719795, 36.424213], [-81.717995, 36.430012], [-81.719696, 36.434311], [-81.715096, 36.437714], [-81.7146, 36.441612], [-81.7173, 36.444611], [-81.713898, 36.447514], [-81.715996, 36.455711], [-81.714699, 36.457912], [-81.706398, 36.462612], [-81.697998, 36.464714], [-81.695496, 36.46841], [-81.6978, 36.48801], [-81.696594, 36.492512], [-81.700096, 36.499512], [-81.6977, 36.503212], [-81.697899, 36.508011], [-81.703598, 36.521812], [-81.707901, 36.52441], [-81.707893, 36.535511], [-81.699997, 36.537514], [-81.698395, 36.542713], [-81.693398, 36.55051], [-81.690598, 36.552311], [-81.690895, 36.568012], [-81.679695, 36.568913], [-81.677094, 36.571411], [-81.678696, 36.578213], [-81.677399, 36.580811], [-81.679596, 36.585911], [-81.677795, 36.587914], [-81.600899, 36.587013], [-81.5215, 36.580513], [-81.489594, 36.579014], [-81.476295, 36.580414], [-81.438194, 36.576714], [-81.3535, 36.574711]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.354996, 36.363613, -80.902199, 36.575012], "geometry": {"coordinates": [[[-80.902199, 36.561413], [-80.908394, 36.556412], [-80.909195, 36.553013], [-80.918594, 36.540413], [-80.927399, 36.500912], [-80.976097, 36.445213], [-80.952797, 36.418213], [-80.966599, 36.401112], [-80.980598, 36.38681], [-80.977798, 36.380512], [-80.981598, 36.374714], [-81.028099, 36.374813], [-81.0438, 36.393814], [-81.044296, 36.411114], [-81.0774, 36.417812], [-81.078995, 36.425713], [-81.083694, 36.432911], [-81.086197, 36.434113], [-81.091797, 36.435413], [-81.098595, 36.433113], [-81.104294, 36.434311], [-81.112297, 36.429611], [-81.122398, 36.427513], [-81.134094, 36.419811], [-81.145599, 36.419411], [-81.151497, 36.426712], [-81.161095, 36.430214], [-81.165199, 36.437313], [-81.189598, 36.399311], [-81.201195, 36.394611], [-81.225296, 36.376812], [-81.250397, 36.363613], [-81.252396, 36.368511], [-81.246696, 36.375214], [-81.244499, 36.381714], [-81.246597, 36.392212], [-81.259094, 36.398811], [-81.265594, 36.405212], [-81.264099, 36.409512], [-81.267998, 36.412212], [-81.262794, 36.418911], [-81.264198, 36.429512], [-81.272194, 36.446613], [-81.282494, 36.45491], [-81.285393, 36.459911], [-81.295494, 36.465012], [-81.299294, 36.473412], [-81.303795, 36.475513], [-81.305099, 36.479012], [-81.322197, 36.480614], [-81.322495, 36.496712], [-81.326996, 36.505013], [-81.328094, 36.515114], [-81.329994, 36.519211], [-81.347198, 36.538914], [-81.348099, 36.542614], [-81.346397, 36.544811], [-81.346199, 36.551613], [-81.349098, 36.551712], [-81.352798, 36.546211], [-81.354996, 36.549511], [-81.353195, 36.559113], [-81.3535, 36.574711], [-81.307693, 36.575012], [-81.176697, 36.571911], [-81.003799, 36.563614], [-80.902199, 36.561413]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-80.976097, 36.236713, -80.440094, 36.562313], "geometry": {"coordinates": [[[-80.612396, 36.558212], [-80.440094, 36.550613], [-80.447197, 36.423611], [-80.4524, 36.241512], [-80.461098, 36.248211], [-80.461296, 36.254013], [-80.463295, 36.257313], [-80.469894, 36.260414], [-80.477295, 36.260311], [-80.481995, 36.256313], [-80.485497, 36.255814], [-80.504097, 36.259712], [-80.516495, 36.258312], [-80.534897, 36.25901], [-80.5373, 36.264511], [-80.5355, 36.273613], [-80.536598, 36.278713], [-80.539101, 36.281914], [-80.544701, 36.284412], [-80.5485, 36.285213], [-80.554695, 36.28231], [-80.560898, 36.28281], [-80.570099, 36.28091], [-80.580696, 36.277214], [-80.592293, 36.270111], [-80.596893, 36.270912], [-80.607399, 36.277111], [-80.615898, 36.280113], [-80.6213, 36.284813], [-80.628197, 36.287613], [-80.631294, 36.28561], [-80.626297, 36.27581], [-80.628494, 36.272911], [-80.642296, 36.272312], [-80.647499, 36.263412], [-80.648598, 36.256111], [-80.656197, 36.251812], [-80.667999, 36.250912], [-80.673195, 36.252113], [-80.676994, 36.257011], [-80.679298, 36.264713], [-80.683296, 36.267712], [-80.702797, 36.265911], [-80.715096, 36.26741], [-80.719093, 36.269814], [-80.732193, 36.267014], [-80.734398, 36.268814], [-80.732399, 36.276711], [-80.738197, 36.279812], [-80.741798, 36.277512], [-80.743996, 36.271214], [-80.749695, 36.26461], [-80.752495, 36.263313], [-80.756195, 36.26461], [-80.759796, 36.268913], [-80.768997, 36.274712], [-80.775597, 36.273811], [-80.7799, 36.269512], [-80.778496, 36.257511], [-80.783501, 36.253113], [-80.794998, 36.248611], [-80.797295, 36.248314], [-80.805, 36.25341], [-80.8097, 36.253914], [-80.849495, 36.241013], [-80.868393, 36.238811], [-80.873199, 36.236713], [-80.868996, 36.326412], [-80.879097, 36.334911], [-80.883301, 36.335712], [-80.895393, 36.343014], [-80.898499, 36.348213], [-80.899193, 36.354412], [-80.907097, 36.361912], [-80.912201, 36.363213], [-80.916893, 36.367813], [-80.922096, 36.365013], [-80.930893, 36.36721], [-80.940598, 36.384411], [-80.966599, 36.401112], [-80.952797, 36.418213], [-80.976097, 36.445213], [-80.927399, 36.500912], [-80.918594, 36.540413], [-80.909195, 36.553013], [-80.908394, 36.556412], [-80.902199, 36.561413], [-80.898994, 36.56171], [-80.837601, 36.559113], [-80.801399, 36.561012], [-80.704697, 36.562313], [-80.612396, 36.558212]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-80.451996, 36.257412, -80.027298, 36.550613], "geometry": {"coordinates": [[[-80.053101, 36.543011], [-80.027298, 36.542511], [-80.033394, 36.341312], [-80.0327, 36.295414], [-80.0355, 36.257412], [-80.451996, 36.261513], [-80.447197, 36.423611], [-80.440094, 36.550613], [-80.2948, 36.544014], [-80.053101, 36.543011]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-80.0355, 36.241512, -79.510696, 36.542511], "geometry": {"coordinates": [[[-79.714897, 36.541912], [-79.510696, 36.540314], [-79.519997, 36.461811], [-79.532394, 36.241512], [-79.749794, 36.247211], [-80.0355, 36.257412], [-80.0327, 36.295414], [-80.033394, 36.341312], [-80.027298, 36.542511], [-79.714897, 36.541912]]], "type": "Polygon"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-79.531998, 36.242111, -79.1371, 36.541714], "geometry": {"coordinates": [[[-79.1371, 36.541714], [-79.1465, 36.389511], [-79.153397, 36.242111], [-79.531998, 36.250011], [-79.519997, 36.461811], [-79.510696, 36.540314], [-79.1371, 36.541714]]], "type": "Polygon"}, "id": "5", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.917801, 36.11161, -81.461197, 36.391613], "geometry": {"coordinates": [[[-81.477493, 36.240211], [-81.461197, 36.204914], [-81.465897, 36.189613], [-81.4776, 36.180912], [-81.499695, 36.142914], [-81.545494, 36.117512], [-81.659798, 36.118412], [-81.674797, 36.122513], [-81.811195, 36.11161], [-81.825096, 36.158913], [-81.829697, 36.168812], [-81.835197, 36.169312], [-81.857094, 36.19371], [-81.885696, 36.190113], [-81.887894, 36.195511], [-81.901497, 36.205914], [-81.908195, 36.215214], [-81.9077, 36.222511], [-81.911301, 36.229313], [-81.908195, 36.234112], [-81.908195, 36.238811], [-81.903297, 36.239014], [-81.897598, 36.243111], [-81.900497, 36.248711], [-81.903793, 36.250813], [-81.899193, 36.254112], [-81.8965, 36.258011], [-81.896896, 36.261913], [-81.894196, 36.264011], [-81.895798, 36.272713], [-81.900696, 36.280811], [-81.906494, 36.278912], [-81.9123, 36.281113], [-81.917801, 36.286213], [-81.906799, 36.302612], [-81.900093, 36.306313], [-81.886993, 36.309311], [-81.879997, 36.313614], [-81.8657, 36.328712], [-81.855194, 36.33691], [-81.8526, 36.336914], [-81.833893, 36.346813], [-81.811096, 36.35181], [-81.796997, 36.359112], [-81.794296, 36.361912], [-81.7892, 36.348511], [-81.779495, 36.348312], [-81.764694, 36.339111], [-81.761101, 36.340214], [-81.753899, 36.337112], [-81.747498, 36.337513], [-81.739899, 36.339611], [-81.7369, 36.342213], [-81.733994, 36.342113], [-81.727997, 36.341412], [-81.718094, 36.336113], [-81.708298, 36.335213], [-81.705498, 36.341511], [-81.708, 36.346111], [-81.717598, 36.348011], [-81.722496, 36.352814], [-81.722694, 36.360611], [-81.726898, 36.366211], [-81.726593, 36.369312], [-81.733597, 36.378914], [-81.733398, 36.382111], [-81.730301, 36.384514], [-81.729095, 36.391613], [-81.638199, 36.34951], [-81.600197, 36.31171], [-81.588799, 36.302612], [-81.582199, 36.291412], [-81.566795, 36.272812], [-81.555, 36.275711], [-81.477493, 36.240211]]], "type": "Polygon"}, "id": "6", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.545494, 35.995514, -80.868996, 36.437313], "geometry": {"coordinates": [[[-80.966599, 36.401112], [-80.940598, 36.384411], [-80.930893, 36.36721], [-80.922096, 36.365013], [-80.916893, 36.367813], [-80.912201, 36.363213], [-80.907097, 36.361912], [-80.899193, 36.354412], [-80.898499, 36.348213], [-80.895393, 36.343014], [-80.883301, 36.335712], [-80.879097, 36.334911], [-80.868996, 36.326412], [-80.882195, 36.055714], [-80.976601, 36.057911], [-81.047798, 36.041313], [-81.057198, 36.031712], [-81.098595, 36.02951], [-81.105698, 36.036312], [-81.108994, 36.037212], [-81.112198, 36.037514], [-81.115997, 36.034813], [-81.124695, 36.037514], [-81.140198, 36.037212], [-81.167397, 36.025513], [-81.173195, 36.026711], [-81.176697, 36.031414], [-81.191399, 36.036613], [-81.197395, 36.03511], [-81.203094, 36.036312], [-81.205299, 36.033611], [-81.212196, 36.033611], [-81.219597, 36.029812], [-81.237793, 36.030113], [-81.245193, 36.025112], [-81.248596, 36.026611], [-81.266495, 36.025211], [-81.282295, 36.017612], [-81.285095, 36.012611], [-81.2948, 36.007713], [-81.300995, 36.004913], [-81.313797, 36.004211], [-81.318001, 35.996914], [-81.326797, 35.995514], [-81.343994, 36.022511], [-81.366096, 36.033314], [-81.369896, 36.039913], [-81.375099, 36.037712], [-81.3769, 36.04071], [-81.379997, 36.041313], [-81.382095, 36.043911], [-81.395195, 36.041111], [-81.396095, 36.043411], [-81.390297, 36.050312], [-81.397697, 36.057411], [-81.400497, 36.06311], [-81.407097, 36.067913], [-81.407898, 36.070614], [-81.412094, 36.072411], [-81.417397, 36.071712], [-81.425598, 36.077511], [-81.443596, 36.07291], [-81.446693, 36.077312], [-81.447495, 36.08271], [-81.456398, 36.091511], [-81.461594, 36.090511], [-81.469193, 36.086113], [-81.4776, 36.092812], [-81.477394, 36.096611], [-81.484299, 36.095913], [-81.490395, 36.098312], [-81.493996, 36.097813], [-81.496796, 36.100212], [-81.506798, 36.09761], [-81.5168, 36.098114], [-81.545494, 36.117512], [-81.499695, 36.142914], [-81.4776, 36.180912], [-81.465897, 36.189613], [-81.461197, 36.204914], [-81.477493, 36.240211], [-81.4618, 36.257912], [-81.451393, 36.262211], [-81.443199, 36.260014], [-81.429695, 36.267014], [-81.429596, 36.270313], [-81.413094, 36.281811], [-81.415794, 36.291313], [-81.412895, 36.29491], [-81.388298, 36.284412], [-81.379295, 36.288113], [-81.3741, 36.284813], [-81.367699, 36.284412], [-81.3666, 36.302711], [-81.363197, 36.30471], [-81.361496, 36.308613], [-81.366493, 36.35461], [-81.365997, 36.359211], [-81.359894, 36.366112], [-81.349594, 36.367714], [-81.343697, 36.371212], [-81.333694, 36.370514], [-81.321793, 36.374413], [-81.320099, 36.368511], [-81.3153, 36.368313], [-81.307198, 36.364914], [-81.296196, 36.367012], [-81.279793, 36.358711], [-81.273499, 36.358311], [-81.264496, 36.360813], [-81.259796, 36.359814], [-81.252197, 36.362511], [-81.225296, 36.376812], [-81.201195, 36.394611], [-81.189598, 36.399311], [-81.165199, 36.437313], [-81.161095, 36.430214], [-81.151497, 36.426712], [-81.145599, 36.419411], [-81.134094, 36.419811], [-81.122398, 36.427513], [-81.112297, 36.429611], [-81.104294, 36.434311], [-81.098595, 36.433113], [-81.091797, 36.435413], [-81.086197, 36.434113], [-81.083694, 36.432911], [-81.078995, 36.425713], [-81.0774, 36.417812], [-81.044296, 36.411114], [-81.0438, 36.393814], [-81.028099, 36.374813], [-80.981598, 36.374714], [-80.977798, 36.380512], [-80.980598, 36.38681], [-80.966599, 36.401112]]], "type": "Polygon"}, "id": "7", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-80.882195, 36.047012, -80.432098, 36.287613], "geometry": {"coordinates": [[[-80.596893, 36.270912], [-80.592293, 36.270111], [-80.580696, 36.277214], [-80.570099, 36.28091], [-80.560898, 36.28281], [-80.554695, 36.28231], [-80.5485, 36.285213], [-80.544701, 36.284412], [-80.539101, 36.281914], [-80.536598, 36.278713], [-80.5355, 36.273613], [-80.5373, 36.264511], [-80.534897, 36.25901], [-80.516495, 36.258312], [-80.504097, 36.259712], [-80.485497, 36.255814], [-80.481995, 36.256313], [-80.477295, 36.260311], [-80.466599, 36.259613], [-80.461296, 36.254013], [-80.461098, 36.248211], [-80.459, 36.246014], [-80.436394, 36.22821], [-80.432098, 36.218212], [-80.432899, 36.215611], [-80.441193, 36.213612], [-80.446198, 36.208214], [-80.439796, 36.191811], [-80.439598, 36.187912], [-80.443398, 36.183014], [-80.443695, 36.179913], [-80.436798, 36.16901], [-80.4431, 36.155212], [-80.439293, 36.138111], [-80.453697, 36.122513], [-80.460297, 36.118912], [-80.463898, 36.117512], [-80.474495, 36.118412], [-80.4869, 36.116013], [-80.504593, 36.10931], [-80.507401, 36.10741], [-80.510399, 36.09761], [-80.516098, 36.091911], [-80.516296, 36.082813], [-80.509399, 36.071812], [-80.506996, 36.054512], [-80.497299, 36.047012], [-80.630394, 36.048912], [-80.882195, 36.055714], [-80.873199, 36.236713], [-80.868393, 36.238811], [-80.849495, 36.241013], [-80.8097, 36.253914], [-80.805, 36.25341], [-80.797295, 36.248314], [-80.794998, 36.248611], [-80.783501, 36.253113], [-80.778496, 36.257511], [-80.7799, 36.269512], [-80.775597, 36.273811], [-80.768997, 36.274712], [-80.759796, 36.268913], [-80.756195, 36.26461], [-80.752495, 36.263313], [-80.749695, 36.26461], [-80.743996, 36.271214], [-80.741798, 36.277512], [-80.738197, 36.279812], [-80.732399, 36.276711], [-80.734398, 36.268814], [-80.732193, 36.267014], [-80.719093, 36.269814], [-80.715096, 36.26741], [-80.702797, 36.265911], [-80.683296, 36.267712], [-80.679298, 36.264713], [-80.6754, 36.254414], [-80.673195, 36.252113], [-80.667999, 36.250912], [-80.652298, 36.252911], [-80.648598, 36.256111], [-80.647499, 36.263412], [-80.642296, 36.272312], [-80.628494, 36.272911], [-80.626297, 36.27581], [-80.631294, 36.28561], [-80.628197, 36.287613], [-80.596893, 36.270912]]], "type": "Polygon"}, "id": "8", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ001", "https://api.weather.gov/zones/forecast/NCZ002", "https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004", "https://api.weather.gov/zones/forecast/NCZ005", "https://api.weather.gov/zones/forecast/NCZ006", "https://api.weather.gov/zones/forecast/NCZ018", "https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020", "https://api.weather.gov/zones/forecast/VAZ007", "https://api.weather.gov/zones/forecast/VAZ009", "https://api.weather.gov/zones/forecast/VAZ010", "https://api.weather.gov/zones/forecast/VAZ011", "https://api.weather.gov/zones/forecast/VAZ012", "https://api.weather.gov/zones/forecast/VAZ013", "https://api.weather.gov/zones/forecast/VAZ014", "https://api.weather.gov/zones/forecast/VAZ015", "https://api.weather.gov/zones/forecast/VAZ016", "https://api.weather.gov/zones/forecast/VAZ017", "https://api.weather.gov/zones/forecast/VAZ018", "https://api.weather.gov/zones/forecast/VAZ019", "https://api.weather.gov/zones/forecast/VAZ020", "https://api.weather.gov/zones/forecast/VAZ022", "https://api.weather.gov/zones/forecast/VAZ023", "https://api.weather.gov/zones/forecast/VAZ024", "https://api.weather.gov/zones/forecast/VAZ032", "https://api.weather.gov/zones/forecast/VAZ033", "https://api.weather.gov/zones/forecast/VAZ034", "https://api.weather.gov/zones/forecast/VAZ035", "https://api.weather.gov/zones/forecast/VAZ043", "https://api.weather.gov/zones/forecast/VAZ044", "https://api.weather.gov/zones/forecast/VAZ045", "https://api.weather.gov/zones/forecast/VAZ046", "https://api.weather.gov/zones/forecast/VAZ047", "https://api.weather.gov/zones/forecast/VAZ058", "https://api.weather.gov/zones/forecast/VAZ059", "https://api.weather.gov/zones/forecast/WVZ042", "https://api.weather.gov/zones/forecast/WVZ043", "https://api.weather.gov/zones/forecast/WVZ044", "https://api.weather.gov/zones/forecast/WVZ507", "https://api.weather.gov/zones/forecast/WVZ508"], "areaDesc": "Ashe; Alleghany; Surry; Stokes; Rockingham; Caswell; Watauga; Wilkes; Yadkin; Tazewell; Smyth; Bland; Giles; Wythe; Pulaski; Montgomery; Grayson; Carroll; Floyd; Craig; Alleghany; Bath; Roanoke; Botetourt; Rockbridge; Patrick; Franklin; Bedford; Amherst; Henry; Pittsylvania; Campbell; Appomattox; Buckingham; Halifax; Charlotte; Mercer; Summers; Monroe; Eastern Greenbrier; Western Greenbrier", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Partially clear skies, light winds and plenty of left over low-\nlevel moisture are helping areas of valley fog to develop and\nbecome dense early this morning. This fog will continue to expand\nthrough the rest of the night but likely will remain the densest\nin the valleys. Visibilities will be below a quarter of a mile at\ntimes in the thickest of fog. Be sure to slow down and use your\nlow beam headlights when you encounter any fog", "effective": "2026-06-29T04:04:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T10:00:00-04:00", "geocode": {"SAME": ["037009", "037005", "037171", "037169", "037157", "037033", "037189", "037193", "037197", "051185", "051173", "051021", "051071", "051197", "051155", "051750", "051121", "051077", "051035", "051640", "051063", "051045", "051005", "051580", "051017", "051161", "051770", "051775", "051023", "051163", "051530", "051678", "051141", "051067", "051019", "051009", "051089", "051690", "051143", "051590", "051031", "051680", "051011", "051029", "051083", "051037", "054055", "054089", "054063", "054025"], "UGC": ["NCZ001", "NCZ002", "NCZ003", "NCZ004", "NCZ005", "NCZ006", "NCZ018", "NCZ019", "NCZ020", "VAZ007", "VAZ009", "VAZ010", "VAZ011", "VAZ012", "VAZ013", "VAZ014", "VAZ015", "VAZ016", "VAZ017", "VAZ018", "VAZ019", "VAZ020", "VAZ022", "VAZ023", "VAZ024", "VAZ032", "VAZ033", "VAZ034", "VAZ035", "VAZ043", "VAZ044", "VAZ045", "VAZ046", "VAZ047", "VAZ058", "VAZ059", "WVZ042", "WVZ043", "WVZ044", "WVZ507", "WVZ508"]}, "headline": "Special Weather Statement issued June 29 at 4:04AM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.006942913383e94965b2fe71a757d08d1f2c8180.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T04:04:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Areas of Fog, Locally Dense, During the Morning Commute"], "WMOidentifier": ["WWUS81 KRNK 290804"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-06-29T04:04:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_ad5b894fbdabe61ecde2faa7715830fd.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "headline"];
+    let aliases = ["Alert:", "Details:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_ad5b894fbdabe61ecde2faa7715830fd.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "ends", "description"];
+    let aliases = ["Type:", "Expires:", "Full Text:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "localized": true,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_ad5b894fbdabe61ecde2faa7715830fd.addTo(map_6194afb7bb127fc115c7df9303b899bd);
+        
+    
+            var layer_control_9406fd5195acbbfabaa3bd80156e2199_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_45e7e9f8f0bc84febc9cdcfa45513923,
-                    "Esri Street Map" : tile_layer_be874627eced71c04dfa02cb47dd55bc,
-                    "Esri NatGeo" : tile_layer_9de7a12370f6994e643ff4ecc950f60d,
-                    "Google Satellite" : tile_layer_aa01548f33e5c730e415c22e6428f6bc,
-                    "Google Terrain" : tile_layer_1b9abcfd510058e7a0e278f69998a49a,
-                    "Google Street" : tile_layer_8d91ecb821dfc5a142f7e4362f24f0ce,
-                    "Light Gray Base" : tile_layer_ae87bd4654b0df149f16e5668f780e9b,
+                    "Esri Satellite" : tile_layer_836d23766a41c920a247e388f1e3023f,
+                    "Esri Street Map" : tile_layer_2e04745c66df3e2121e62c308d7ccf59,
+                    "Esri NatGeo" : tile_layer_1101238be9340a70c65a381a333bcc4b,
+                    "Google Satellite" : tile_layer_bc4b2653020839c1d0ca4395da1ad0a1,
+                    "Google Terrain" : tile_layer_a167bef2585dae2a54eb7e4f3dca780a,
+                    "Google Street" : tile_layer_fc1b25cedc1d0ffc98c59c44f7e3e942,
+                    "Light Gray Base" : tile_layer_c1b7faeaac878bbf981b666be1d73b6b,
                 },
                 overlays :  {
+                    " Marine/Beach" : geo_json_7d5e78a44f1d518abec6242e28883d44,
+                    " SPS" : geo_json_ad5b894fbdabe61ecde2faa7715830fd,
                 },
             };
-            let layer_control_1982e716dfe3229b948c5c4a08c22c22 = L.control.layers(
-                layer_control_1982e716dfe3229b948c5c4a08c22c22_layers.base_layers,
-                layer_control_1982e716dfe3229b948c5c4a08c22c22_layers.overlays,
+            let layer_control_9406fd5195acbbfabaa3bd80156e2199 = L.control.layers(
+                layer_control_9406fd5195acbbfabaa3bd80156e2199_layers.base_layers,
+                layer_control_9406fd5195acbbfabaa3bd80156e2199_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_fbc227436790efa21c3015da147659d7);
+            ).addTo(map_6194afb7bb127fc115c7df9303b899bd);
 
         
 </script>
