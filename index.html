@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2b2980ed3b60d4f426f6d5aba47c5686 {
+                #map_1ba69151b164c894f43663e81b69f824 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -183,8 +183,40 @@
                     </style>
             
     
+                    <style>
+                        .foliumtooltip {
+                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
                 <style>
-                    #float_image_8695094bd0b8c87e27920f8ad28e79fb {
+                    #float_image_56a75344573baa115ff6215c6bc823e4 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -202,10 +234,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_2b2980ed3b60d4f426f6d5aba47c5686" ></div>
+            <div class="folium-map" id="map_1ba69151b164c894f43663e81b69f824" ></div>
         
     
-            <img id="float_image_8695094bd0b8c87e27920f8ad28e79fb" alt="float_image"
+            <img id="float_image_56a75344573baa115ff6215c6bc823e4" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -216,7 +248,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Jun 29, 2026<br>05:51 PM EDT
+        Updated: Jun 29, 2026<br>06:50 PM EDT
     </div>
     <div class='legend-scale'>
        
@@ -228,6 +260,11 @@
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#FF7F50; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Heat Advisory</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#00FF7F; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Flood Advisory</span>
         </div>
         
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
@@ -250,8 +287,8 @@
 <script>
     
     
-            var map_2b2980ed3b60d4f426f6d5aba47c5686 = L.map(
-                "map_2b2980ed3b60d4f426f6d5aba47c5686",
+            var map_1ba69151b164c894f43663e81b69f824 = L.map(
+                "map_1ba69151b164c894f43663e81b69f824",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -268,7 +305,7 @@
 
         
     
-            var tile_layer_15bde00b659744360e0f241e249b8959 = L.tileLayer(
+            var tile_layer_0ee55432d05732aa0404e6119ede68e5 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -285,7 +322,7 @@
             );
         
     
-            var tile_layer_7fab8c66fdb15adebd7795a55494ce00 = L.tileLayer(
+            var tile_layer_bfb92577610f9ef668c8d522796b4e32 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -302,7 +339,7 @@
             );
         
     
-            var tile_layer_ca5a45a5543858d6975edfcb32c07036 = L.tileLayer(
+            var tile_layer_097ec7db4ac1a83fd1c8de20c7e7e45f = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -319,7 +356,7 @@
             );
         
     
-            tile_layer_ca5a45a5543858d6975edfcb32c07036.addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            tile_layer_097ec7db4ac1a83fd1c8de20c7e7e45f.addTo(map_1ba69151b164c894f43663e81b69f824);
         
     
             L.control.fullscreen(
@@ -329,10 +366,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            ).addTo(map_1ba69151b164c894f43663e81b69f824);
         
     
-            var tile_layer_b8080f8903babb73a3eb81b99d97c790 = L.tileLayer(
+            var tile_layer_5cc238bbc83fd676a5b66c9494f00f11 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -349,7 +386,7 @@
             );
         
     
-            var tile_layer_0b9cfbd0ff2d2bc42bf7d53a81a30454 = L.tileLayer(
+            var tile_layer_86975f866ea8ff2c208794cc144d8855 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -366,7 +403,7 @@
             );
         
     
-            var tile_layer_5b4e616bc2903546e3df0f630e614ddf = L.tileLayer(
+            var tile_layer_16dd405c6c5f72838b09effc069ad305 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -383,7 +420,7 @@
             );
         
     
-            var tile_layer_293e102e92254b87b8687ff776f981a1 = L.tileLayer(
+            var tile_layer_6f7d3ec0c31f463253082e3fa4ea9d38 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -400,41 +437,41 @@
             );
         
     
-            var locate_control_caf224d657bc951d58c27f631cb3ac18 = L.control.locate(
+            var locate_control_f4967515c9b47af9c8b364d16abda6b8 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            ).addTo(map_1ba69151b164c894f43663e81b69f824);
             
         
     
-        function geo_json_b877937affbe6b80c17b97981b987963_styler(feature) {
+        function geo_json_96c56cdf98580a36ba24722048fed860_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FF7F50", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_b877937affbe6b80c17b97981b987963_onEachFeature(feature, layer) {
+        function geo_json_96c56cdf98580a36ba24722048fed860_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_b877937affbe6b80c17b97981b987963 = L.geoJson(null, {
-                onEachFeature: geo_json_b877937affbe6b80c17b97981b987963_onEachFeature,
+        var geo_json_96c56cdf98580a36ba24722048fed860 = L.geoJson(null, {
+                onEachFeature: geo_json_96c56cdf98580a36ba24722048fed860_onEachFeature,
             
-                style: geo_json_b877937affbe6b80c17b97981b987963_styler,
+                style: geo_json_96c56cdf98580a36ba24722048fed860_styler,
             ...{
 }
         });
 
-        function geo_json_b877937affbe6b80c17b97981b987963_add (data) {
-            geo_json_b877937affbe6b80c17b97981b987963
+        function geo_json_96c56cdf98580a36ba24722048fed860_add (data) {
+            geo_json_96c56cdf98580a36ba24722048fed860
                 .addData(data);
         }
-            geo_json_b877937affbe6b80c17b97981b987963_add({"bbox": [-84.321098, 34.98661, -83.4842, 35.292011], "features": [{"bbox": [-84.321098, 34.987011, -83.690193, 35.292011], "geometry": {"coordinates": [[[-84.001595, 35.250912], [-84.005096, 35.241112], [-84.002197, 35.234013], [-83.984894, 35.230011], [-83.972298, 35.219612], [-83.958893, 35.217113], [-83.956993, 35.21981], [-83.944199, 35.219913], [-83.942497, 35.222111], [-83.936195, 35.222813], [-83.924599, 35.228413], [-83.919701, 35.228813], [-83.9039, 35.235111], [-83.901398, 35.237614], [-83.894096, 35.233913], [-83.887695, 35.235313], [-83.8815, 35.237911], [-83.873894, 35.243912], [-83.869797, 35.243713], [-83.859299, 35.248512], [-83.852493, 35.248913], [-83.844597, 35.255211], [-83.830894, 35.255611], [-83.825195, 35.251011], [-83.820999, 35.251114], [-83.813095, 35.254311], [-83.810799, 35.252811], [-83.805099, 35.253212], [-83.795296, 35.257214], [-83.782494, 35.252312], [-83.773796, 35.24641], [-83.7631, 35.248211], [-83.756393, 35.242813], [-83.732399, 35.246014], [-83.712395, 35.257614], [-83.708099, 35.256512], [-83.703995, 35.252213], [-83.7034, 35.249313], [-83.692993, 35.243011], [-83.690193, 35.237411], [-83.696693, 35.225613], [-83.709198, 35.219112], [-83.713898, 35.213112], [-83.722794, 35.208714], [-83.728195, 35.201214], [-83.724197, 35.197811], [-83.720497, 35.197311], [-83.716797, 35.199211], [-83.713799, 35.197613], [-83.711693, 35.195011], [-83.712196, 35.191513], [-83.713196, 35.188911], [-83.724594, 35.183712], [-83.730995, 35.178013], [-83.732498, 35.16851], [-83.738495, 35.156013], [-83.745895, 35.160511], [-83.752594, 35.160511], [-83.758995, 35.156811], [-83.770996, 35.156311], [-83.778595, 35.150112], [-83.784996, 35.147911], [-83.794296, 35.147911], [-83.799194, 35.144611], [-83.806999, 35.143414], [-83.8088, 35.141514], [-83.818001, 35.139214], [-83.840797, 35.143711], [-83.855797, 35.137711], [-83.863899, 35.130112], [-83.865097, 35.127213], [-83.863693, 35.12141], [-83.865997, 35.118713], [-83.874695, 35.113514], [-83.876099, 35.110611], [-83.882797, 35.10601], [-83.895996, 35.091812], [-83.903999, 35.087711], [-83.907997, 35.078114], [-83.921799, 35.074211], [-83.926094, 35.068913], [-83.933998, 35.068413], [-83.9347, 35.065613], [-83.944695, 35.055313], [-83.9515, 35.053612], [-83.9562, 35.054211], [-83.959, 35.05191], [-83.965195, 35.044113], [-83.958893, 35.039211], [-83.959396, 35.030113], [-83.956795, 35.026711], [-83.962494, 35.020313], [-83.972298, 35.014313], [-83.972298, 35.011711], [-83.979195, 35.00621], [-84.003998, 34.994312], [-84.0056, 34.988411], [-84.130699, 34.987011], [-84.321098, 34.988411], [-84.3069, 35.106514], [-84.289696, 35.225014], [-84.287399, 35.224812], [-84.275398, 35.234512], [-84.261696, 35.241314], [-84.2519, 35.250011], [-84.242996, 35.253113], [-84.226494, 35.268311], [-84.218697, 35.268112], [-84.2108, 35.265114], [-84.203293, 35.256012], [-84.199898, 35.244911], [-84.192596, 35.244011], [-84.189499, 35.240913], [-84.179199, 35.240612], [-84.1698, 35.246014], [-84.161194, 35.243713], [-84.155197, 35.24641], [-84.147095, 35.246811], [-84.139297, 35.246014], [-84.131996, 35.242111], [-84.126694, 35.241512], [-84.125595, 35.249012], [-84.119896, 35.251713], [-84.114494, 35.249512], [-84.105095, 35.250412], [-84.099197, 35.24781], [-84.094696, 35.248611], [-84.082794, 35.257214], [-84.081299, 35.260811], [-84.057297, 35.267811], [-84.049797, 35.273811], [-84.046494, 35.274612], [-84.040199, 35.280212], [-84.035095, 35.288914], [-84.0289, 35.292011], [-84.022499, 35.286713], [-84.014297, 35.275013], [-84.009796, 35.272511], [-84.010399, 35.256413], [-84.001595, 35.250912]]], "type": "Polygon"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ060", "https://api.weather.gov/zones/forecast/NCZ061", "https://api.weather.gov/zones/forecast/TNZ012", "https://api.weather.gov/zones/forecast/TNZ013", "https://api.weather.gov/zones/forecast/TNZ014", "https://api.weather.gov/zones/forecast/TNZ015", "https://api.weather.gov/zones/forecast/TNZ016", "https://api.weather.gov/zones/forecast/TNZ017", "https://api.weather.gov/zones/forecast/TNZ018", "https://api.weather.gov/zones/forecast/TNZ035", "https://api.weather.gov/zones/forecast/TNZ036", "https://api.weather.gov/zones/forecast/TNZ037", "https://api.weather.gov/zones/forecast/TNZ038", "https://api.weather.gov/zones/forecast/TNZ039", "https://api.weather.gov/zones/forecast/TNZ040", "https://api.weather.gov/zones/forecast/TNZ041", "https://api.weather.gov/zones/forecast/TNZ042", "https://api.weather.gov/zones/forecast/TNZ043", "https://api.weather.gov/zones/forecast/TNZ044", "https://api.weather.gov/zones/forecast/TNZ045", "https://api.weather.gov/zones/forecast/TNZ046", "https://api.weather.gov/zones/forecast/TNZ047", "https://api.weather.gov/zones/forecast/TNZ067", "https://api.weather.gov/zones/forecast/TNZ068", "https://api.weather.gov/zones/forecast/TNZ069", "https://api.weather.gov/zones/forecast/TNZ070", "https://api.weather.gov/zones/forecast/TNZ071", "https://api.weather.gov/zones/forecast/TNZ072", "https://api.weather.gov/zones/forecast/TNZ073", "https://api.weather.gov/zones/forecast/TNZ074", "https://api.weather.gov/zones/forecast/TNZ081", "https://api.weather.gov/zones/forecast/TNZ082", "https://api.weather.gov/zones/forecast/TNZ083", "https://api.weather.gov/zones/forecast/TNZ084", "https://api.weather.gov/zones/forecast/TNZ085", "https://api.weather.gov/zones/forecast/TNZ086", "https://api.weather.gov/zones/forecast/TNZ087", "https://api.weather.gov/zones/forecast/TNZ098", "https://api.weather.gov/zones/forecast/TNZ099", "https://api.weather.gov/zones/forecast/TNZ100", "https://api.weather.gov/zones/forecast/TNZ101", "https://api.weather.gov/zones/forecast/TNZ102", "https://api.weather.gov/zones/forecast/VAZ001", "https://api.weather.gov/zones/forecast/VAZ002", "https://api.weather.gov/zones/forecast/VAZ005", "https://api.weather.gov/zones/forecast/VAZ006", "https://api.weather.gov/zones/forecast/VAZ008"], "areaDesc": "Cherokee; Clay; Scott; Campbell; Claiborne; Hancock; Hawkins; Sullivan; Johnson; Morgan; Anderson; Union; Grainger; Hamblen; Northwest Cocke; Cocke Smoky Mountains; Northwest Greene; Southeast Greene; Washington; Unicoi; Northwest Carter; Southeast Carter; Roane; Loudon; Knox; Jefferson; NW Blount; Blount Smoky Mountains; North Sevier; Sevier Smoky Mountains; Sequatchie; Bledsoe; Rhea; Meigs; McMinn; Northwest Monroe; Southeast Monroe; Marion; Hamilton; Bradley; West Polk; East Polk; Lee; Wise; Scott; Russell; Washington", "category": "Heat", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Afternoon heat index values will approach or exceed 100 at\ntimes over all but the higher elevations, and some valley\nlocations may see heat index values exceed 105.\n\n* WHERE...Portions of southwest North Carolina, east Tennessee, and\nsouthwest Virginia.\n\n* WHEN...From 11 AM EDT /10 AM CDT/ Tuesday to 9 PM EDT /8 PM CDT/\nThursday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.", "effective": "2026-06-29T13:34:00-04:00", "ends": "2026-07-02T21:00:00-04:00", "event": "Heat Advisory", "eventCode": {"NationalWeatherService": ["HTY"], "SAME": ["NWS"]}, "expires": "2026-06-30T02:45:00-04:00", "geocode": {"SAME": ["037039", "037043", "047151", "047013", "047025", "047067", "047073", "047163", "047091", "047129", "047001", "047173", "047057", "047063", "047029", "047059", "047179", "047171", "047019", "047145", "047105", "047093", "047089", "047009", "047155", "047153", "047007", "047143", "047121", "047107", "047123", "047115", "047065", "047011", "047139", "051105", "051195", "051720", "051169", "051167", "051191", "051520"], "UGC": ["NCZ060", "NCZ061", "TNZ012", "TNZ013", "TNZ014", "TNZ015", "TNZ016", "TNZ017", "TNZ018", "TNZ035", "TNZ036", "TNZ037", "TNZ038", "TNZ039", "TNZ040", "TNZ041", "TNZ042", "TNZ043", "TNZ044", "TNZ045", "TNZ046", "TNZ047", "TNZ067", "TNZ068", "TNZ069", "TNZ070", "TNZ071", "TNZ072", "TNZ073", "TNZ074", "TNZ081", "TNZ082", "TNZ083", "TNZ084", "TNZ085", "TNZ086", "TNZ087", "TNZ098", "TNZ099", "TNZ100", "TNZ101", "TNZ102", "VAZ001", "VAZ002", "VAZ005", "VAZ006", "VAZ008"]}, "headline": "Heat Advisory issued June 29 at 1:34PM EDT until July 2 at 9:00PM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nTo reduce risk during outdoor work, the Occupational Safety and\nHealth Administration recommends scheduling frequent rest breaks in\nshaded or air conditioned environments. Anyone overcome by heat\nshould be moved to a cool and shaded location. Heat stroke is an\nemergency! Call 9 1 1.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-30T11:00:00-04:00", "parameters": {"AWIPSidentifier": ["NPWMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["HEAT ADVISORY IN EFFECT FROM 11 AM EDT /10 AM CDT/ TUESDAY TO 9 PM EDT /8 PM CDT/ THURSDAY"], "VTEC": ["/O.NEW.KMRX.HT.Y.0001.260630T1500Z-260703T0100Z/"], "WMOidentifier": ["WWUS74 KMRX 291734"], "eventEndingTime": ["2026-07-02T21:00:00-04:00"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-06-29T13:34:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-84.0056, 34.98661, -83.4842, 35.160511], "geometry": {"coordinates": [[[-83.738495, 35.156013], [-83.726295, 35.145912], [-83.7164, 35.15451], [-83.7136, 35.155014], [-83.701897, 35.153111], [-83.692894, 35.155514], [-83.6875, 35.15451], [-83.684395, 35.157112], [-83.673599, 35.156612], [-83.667099, 35.150414], [-83.659798, 35.154312], [-83.6595, 35.158611], [-83.655899, 35.158112], [-83.647499, 35.151211], [-83.648697, 35.147713], [-83.645699, 35.144913], [-83.648994, 35.141113], [-83.656494, 35.139412], [-83.654594, 35.136013], [-83.650101, 35.135414], [-83.642799, 35.138111], [-83.639397, 35.137314], [-83.637695, 35.135113], [-83.638199, 35.132813], [-83.643196, 35.132111], [-83.640297, 35.130211], [-83.636597, 35.122414], [-83.634499, 35.121311], [-83.632896, 35.124611], [-83.624794, 35.125912], [-83.626297, 35.130314], [-83.619095, 35.128212], [-83.619598, 35.123013], [-83.615196, 35.113411], [-83.618195, 35.108612], [-83.617996, 35.10601], [-83.611198, 35.102211], [-83.603195, 35.100712], [-83.595299, 35.094414], [-83.587097, 35.091412], [-83.584396, 35.087414], [-83.584694, 35.082714], [-83.582497, 35.079311], [-83.575996, 35.072712], [-83.567299, 35.070713], [-83.567894, 35.067711], [-83.562599, 35.059711], [-83.566399, 35.051712], [-83.558197, 35.039413], [-83.547295, 35.03931], [-83.538399, 35.035713], [-83.5298, 35.025311], [-83.521393, 35.018112], [-83.521797, 35.014713], [-83.526199, 35.009312], [-83.522095, 35.003212], [-83.520699, 34.996914], [-83.517395, 34.998211], [-83.516701, 35.001213], [-83.5131, 35.004513], [-83.5093, 35.004414], [-83.503998, 35.000912], [-83.488197, 34.998814], [-83.4842, 34.994114], [-83.620193, 34.992111], [-83.619995, 34.98661], [-83.999496, 34.987312], [-84.0056, 34.988411], [-84.003998, 34.994312], [-83.979195, 35.00621], [-83.972298, 35.011711], [-83.972298, 35.014313], [-83.962494, 35.020313], [-83.956795, 35.026711], [-83.959396, 35.030113], [-83.958893, 35.039211], [-83.965195, 35.044113], [-83.959, 35.05191], [-83.9562, 35.054211], [-83.9515, 35.053612], [-83.944695, 35.055313], [-83.9347, 35.065613], [-83.933998, 35.068413], [-83.926094, 35.068913], [-83.921799, 35.074211], [-83.907997, 35.078114], [-83.903999, 35.087711], [-83.895996, 35.091812], [-83.882797, 35.10601], [-83.876099, 35.110611], [-83.874695, 35.113514], [-83.865997, 35.118713], [-83.863693, 35.12141], [-83.865097, 35.127213], [-83.863899, 35.130112], [-83.855797, 35.137711], [-83.840797, 35.143711], [-83.818001, 35.139214], [-83.8088, 35.141514], [-83.806999, 35.143414], [-83.799194, 35.144611], [-83.794296, 35.147911], [-83.784996, 35.147911], [-83.778595, 35.150112], [-83.770996, 35.156311], [-83.758995, 35.156811], [-83.752594, 35.160511], [-83.745895, 35.160511], [-83.738495, 35.156013]]], "type": "Polygon"}, "id": "5", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ060", "https://api.weather.gov/zones/forecast/NCZ061", "https://api.weather.gov/zones/forecast/TNZ012", "https://api.weather.gov/zones/forecast/TNZ013", "https://api.weather.gov/zones/forecast/TNZ014", "https://api.weather.gov/zones/forecast/TNZ015", "https://api.weather.gov/zones/forecast/TNZ016", "https://api.weather.gov/zones/forecast/TNZ017", "https://api.weather.gov/zones/forecast/TNZ018", "https://api.weather.gov/zones/forecast/TNZ035", "https://api.weather.gov/zones/forecast/TNZ036", "https://api.weather.gov/zones/forecast/TNZ037", "https://api.weather.gov/zones/forecast/TNZ038", "https://api.weather.gov/zones/forecast/TNZ039", "https://api.weather.gov/zones/forecast/TNZ040", "https://api.weather.gov/zones/forecast/TNZ041", "https://api.weather.gov/zones/forecast/TNZ042", "https://api.weather.gov/zones/forecast/TNZ043", "https://api.weather.gov/zones/forecast/TNZ044", "https://api.weather.gov/zones/forecast/TNZ045", "https://api.weather.gov/zones/forecast/TNZ046", "https://api.weather.gov/zones/forecast/TNZ047", "https://api.weather.gov/zones/forecast/TNZ067", "https://api.weather.gov/zones/forecast/TNZ068", "https://api.weather.gov/zones/forecast/TNZ069", "https://api.weather.gov/zones/forecast/TNZ070", "https://api.weather.gov/zones/forecast/TNZ071", "https://api.weather.gov/zones/forecast/TNZ072", "https://api.weather.gov/zones/forecast/TNZ073", "https://api.weather.gov/zones/forecast/TNZ074", "https://api.weather.gov/zones/forecast/TNZ081", "https://api.weather.gov/zones/forecast/TNZ082", "https://api.weather.gov/zones/forecast/TNZ083", "https://api.weather.gov/zones/forecast/TNZ084", "https://api.weather.gov/zones/forecast/TNZ085", "https://api.weather.gov/zones/forecast/TNZ086", "https://api.weather.gov/zones/forecast/TNZ087", "https://api.weather.gov/zones/forecast/TNZ098", "https://api.weather.gov/zones/forecast/TNZ099", "https://api.weather.gov/zones/forecast/TNZ100", "https://api.weather.gov/zones/forecast/TNZ101", "https://api.weather.gov/zones/forecast/TNZ102", "https://api.weather.gov/zones/forecast/VAZ001", "https://api.weather.gov/zones/forecast/VAZ002", "https://api.weather.gov/zones/forecast/VAZ005", "https://api.weather.gov/zones/forecast/VAZ006", "https://api.weather.gov/zones/forecast/VAZ008"], "areaDesc": "Cherokee; Clay; Scott; Campbell; Claiborne; Hancock; Hawkins; Sullivan; Johnson; Morgan; Anderson; Union; Grainger; Hamblen; Northwest Cocke; Cocke Smoky Mountains; Northwest Greene; Southeast Greene; Washington; Unicoi; Northwest Carter; Southeast Carter; Roane; Loudon; Knox; Jefferson; NW Blount; Blount Smoky Mountains; North Sevier; Sevier Smoky Mountains; Sequatchie; Bledsoe; Rhea; Meigs; McMinn; Northwest Monroe; Southeast Monroe; Marion; Hamilton; Bradley; West Polk; East Polk; Lee; Wise; Scott; Russell; Washington", "category": "Heat", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Afternoon heat index values will approach or exceed 100 at\ntimes over all but the higher elevations, and some valley\nlocations may see heat index values exceed 105.\n\n* WHERE...Portions of southwest North Carolina, east Tennessee, and\nsouthwest Virginia.\n\n* WHEN...From 11 AM EDT /10 AM CDT/ Tuesday to 9 PM EDT /8 PM CDT/\nThursday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.", "effective": "2026-06-29T13:34:00-04:00", "ends": "2026-07-02T21:00:00-04:00", "event": "Heat Advisory", "eventCode": {"NationalWeatherService": ["HTY"], "SAME": ["NWS"]}, "expires": "2026-06-30T02:45:00-04:00", "geocode": {"SAME": ["037039", "037043", "047151", "047013", "047025", "047067", "047073", "047163", "047091", "047129", "047001", "047173", "047057", "047063", "047029", "047059", "047179", "047171", "047019", "047145", "047105", "047093", "047089", "047009", "047155", "047153", "047007", "047143", "047121", "047107", "047123", "047115", "047065", "047011", "047139", "051105", "051195", "051720", "051169", "051167", "051191", "051520"], "UGC": ["NCZ060", "NCZ061", "TNZ012", "TNZ013", "TNZ014", "TNZ015", "TNZ016", "TNZ017", "TNZ018", "TNZ035", "TNZ036", "TNZ037", "TNZ038", "TNZ039", "TNZ040", "TNZ041", "TNZ042", "TNZ043", "TNZ044", "TNZ045", "TNZ046", "TNZ047", "TNZ067", "TNZ068", "TNZ069", "TNZ070", "TNZ071", "TNZ072", "TNZ073", "TNZ074", "TNZ081", "TNZ082", "TNZ083", "TNZ084", "TNZ085", "TNZ086", "TNZ087", "TNZ098", "TNZ099", "TNZ100", "TNZ101", "TNZ102", "VAZ001", "VAZ002", "VAZ005", "VAZ006", "VAZ008"]}, "headline": "Heat Advisory issued June 29 at 1:34PM EDT until July 2 at 9:00PM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nTo reduce risk during outdoor work, the Occupational Safety and\nHealth Administration recommends scheduling frequent rest breaks in\nshaded or air conditioned environments. Anyone overcome by heat\nshould be moved to a cool and shaded location. Heat stroke is an\nemergency! Call 9 1 1.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-30T11:00:00-04:00", "parameters": {"AWIPSidentifier": ["NPWMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["HEAT ADVISORY IN EFFECT FROM 11 AM EDT /10 AM CDT/ TUESDAY TO 9 PM EDT /8 PM CDT/ THURSDAY"], "VTEC": ["/O.NEW.KMRX.HT.Y.0001.260630T1500Z-260703T0100Z/"], "WMOidentifier": ["WWUS74 KMRX 291734"], "eventEndingTime": ["2026-07-02T21:00:00-04:00"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-06-29T13:34:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_96c56cdf98580a36ba24722048fed860_add({"bbox": [-84.321098, 34.98661, -83.4842, 35.292011], "features": [{"bbox": [-84.321098, 34.987011, -83.690193, 35.292011], "geometry": {"coordinates": [[[-84.001595, 35.250912], [-84.005096, 35.241112], [-84.002197, 35.234013], [-83.984894, 35.230011], [-83.972298, 35.219612], [-83.958893, 35.217113], [-83.956993, 35.21981], [-83.944199, 35.219913], [-83.942497, 35.222111], [-83.936195, 35.222813], [-83.924599, 35.228413], [-83.919701, 35.228813], [-83.9039, 35.235111], [-83.901398, 35.237614], [-83.894096, 35.233913], [-83.887695, 35.235313], [-83.8815, 35.237911], [-83.873894, 35.243912], [-83.869797, 35.243713], [-83.859299, 35.248512], [-83.852493, 35.248913], [-83.844597, 35.255211], [-83.830894, 35.255611], [-83.825195, 35.251011], [-83.820999, 35.251114], [-83.813095, 35.254311], [-83.810799, 35.252811], [-83.805099, 35.253212], [-83.795296, 35.257214], [-83.782494, 35.252312], [-83.773796, 35.24641], [-83.7631, 35.248211], [-83.756393, 35.242813], [-83.732399, 35.246014], [-83.712395, 35.257614], [-83.708099, 35.256512], [-83.703995, 35.252213], [-83.7034, 35.249313], [-83.692993, 35.243011], [-83.690193, 35.237411], [-83.696693, 35.225613], [-83.709198, 35.219112], [-83.713898, 35.213112], [-83.722794, 35.208714], [-83.728195, 35.201214], [-83.724197, 35.197811], [-83.720497, 35.197311], [-83.716797, 35.199211], [-83.713799, 35.197613], [-83.711693, 35.195011], [-83.712196, 35.191513], [-83.713196, 35.188911], [-83.724594, 35.183712], [-83.730995, 35.178013], [-83.732498, 35.16851], [-83.738495, 35.156013], [-83.745895, 35.160511], [-83.752594, 35.160511], [-83.758995, 35.156811], [-83.770996, 35.156311], [-83.778595, 35.150112], [-83.784996, 35.147911], [-83.794296, 35.147911], [-83.799194, 35.144611], [-83.806999, 35.143414], [-83.8088, 35.141514], [-83.818001, 35.139214], [-83.840797, 35.143711], [-83.855797, 35.137711], [-83.863899, 35.130112], [-83.865097, 35.127213], [-83.863693, 35.12141], [-83.865997, 35.118713], [-83.874695, 35.113514], [-83.876099, 35.110611], [-83.882797, 35.10601], [-83.895996, 35.091812], [-83.903999, 35.087711], [-83.907997, 35.078114], [-83.921799, 35.074211], [-83.926094, 35.068913], [-83.933998, 35.068413], [-83.9347, 35.065613], [-83.944695, 35.055313], [-83.9515, 35.053612], [-83.9562, 35.054211], [-83.959, 35.05191], [-83.965195, 35.044113], [-83.958893, 35.039211], [-83.959396, 35.030113], [-83.956795, 35.026711], [-83.962494, 35.020313], [-83.972298, 35.014313], [-83.972298, 35.011711], [-83.979195, 35.00621], [-84.003998, 34.994312], [-84.0056, 34.988411], [-84.130699, 34.987011], [-84.321098, 34.988411], [-84.3069, 35.106514], [-84.289696, 35.225014], [-84.287399, 35.224812], [-84.275398, 35.234512], [-84.261696, 35.241314], [-84.2519, 35.250011], [-84.242996, 35.253113], [-84.226494, 35.268311], [-84.218697, 35.268112], [-84.2108, 35.265114], [-84.203293, 35.256012], [-84.199898, 35.244911], [-84.192596, 35.244011], [-84.189499, 35.240913], [-84.179199, 35.240612], [-84.1698, 35.246014], [-84.161194, 35.243713], [-84.155197, 35.24641], [-84.147095, 35.246811], [-84.139297, 35.246014], [-84.131996, 35.242111], [-84.126694, 35.241512], [-84.125595, 35.249012], [-84.119896, 35.251713], [-84.114494, 35.249512], [-84.105095, 35.250412], [-84.099197, 35.24781], [-84.094696, 35.248611], [-84.082794, 35.257214], [-84.081299, 35.260811], [-84.057297, 35.267811], [-84.049797, 35.273811], [-84.046494, 35.274612], [-84.040199, 35.280212], [-84.035095, 35.288914], [-84.0289, 35.292011], [-84.022499, 35.286713], [-84.014297, 35.275013], [-84.009796, 35.272511], [-84.010399, 35.256413], [-84.001595, 35.250912]]], "type": "Polygon"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ060", "https://api.weather.gov/zones/forecast/NCZ061", "https://api.weather.gov/zones/forecast/TNZ012", "https://api.weather.gov/zones/forecast/TNZ013", "https://api.weather.gov/zones/forecast/TNZ014", "https://api.weather.gov/zones/forecast/TNZ015", "https://api.weather.gov/zones/forecast/TNZ016", "https://api.weather.gov/zones/forecast/TNZ017", "https://api.weather.gov/zones/forecast/TNZ018", "https://api.weather.gov/zones/forecast/TNZ035", "https://api.weather.gov/zones/forecast/TNZ036", "https://api.weather.gov/zones/forecast/TNZ037", "https://api.weather.gov/zones/forecast/TNZ038", "https://api.weather.gov/zones/forecast/TNZ039", "https://api.weather.gov/zones/forecast/TNZ040", "https://api.weather.gov/zones/forecast/TNZ041", "https://api.weather.gov/zones/forecast/TNZ042", "https://api.weather.gov/zones/forecast/TNZ043", "https://api.weather.gov/zones/forecast/TNZ044", "https://api.weather.gov/zones/forecast/TNZ045", "https://api.weather.gov/zones/forecast/TNZ046", "https://api.weather.gov/zones/forecast/TNZ047", "https://api.weather.gov/zones/forecast/TNZ067", "https://api.weather.gov/zones/forecast/TNZ068", "https://api.weather.gov/zones/forecast/TNZ069", "https://api.weather.gov/zones/forecast/TNZ070", "https://api.weather.gov/zones/forecast/TNZ071", "https://api.weather.gov/zones/forecast/TNZ072", "https://api.weather.gov/zones/forecast/TNZ073", "https://api.weather.gov/zones/forecast/TNZ074", "https://api.weather.gov/zones/forecast/TNZ081", "https://api.weather.gov/zones/forecast/TNZ082", "https://api.weather.gov/zones/forecast/TNZ083", "https://api.weather.gov/zones/forecast/TNZ084", "https://api.weather.gov/zones/forecast/TNZ085", "https://api.weather.gov/zones/forecast/TNZ086", "https://api.weather.gov/zones/forecast/TNZ087", "https://api.weather.gov/zones/forecast/TNZ098", "https://api.weather.gov/zones/forecast/TNZ099", "https://api.weather.gov/zones/forecast/TNZ100", "https://api.weather.gov/zones/forecast/TNZ101", "https://api.weather.gov/zones/forecast/TNZ102", "https://api.weather.gov/zones/forecast/VAZ001", "https://api.weather.gov/zones/forecast/VAZ002", "https://api.weather.gov/zones/forecast/VAZ005", "https://api.weather.gov/zones/forecast/VAZ006", "https://api.weather.gov/zones/forecast/VAZ008"], "areaDesc": "Cherokee; Clay; Scott; Campbell; Claiborne; Hancock; Hawkins; Sullivan; Johnson; Morgan; Anderson; Union; Grainger; Hamblen; Northwest Cocke; Cocke Smoky Mountains; Northwest Greene; Southeast Greene; Washington; Unicoi; Northwest Carter; Southeast Carter; Roane; Loudon; Knox; Jefferson; NW Blount; Blount Smoky Mountains; North Sevier; Sevier Smoky Mountains; Sequatchie; Bledsoe; Rhea; Meigs; McMinn; Northwest Monroe; Southeast Monroe; Marion; Hamilton; Bradley; West Polk; East Polk; Lee; Wise; Scott; Russell; Washington", "category": "Heat", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Afternoon heat index values will approach or exceed 100 at\ntimes over all but the higher elevations, and some valley\nlocations may see heat index values exceed 105.\n\n* WHERE...Portions of southwest North Carolina, east Tennessee, and\nsouthwest Virginia.\n\n* WHEN...From 11 AM EDT /10 AM CDT/ Tuesday to 9 PM EDT /8 PM CDT/\nThursday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.", "effective": "2026-06-29T13:34:00-04:00", "ends": "2026-07-02T21:00:00-04:00", "event": "Heat Advisory", "eventCode": {"NationalWeatherService": ["HTY"], "SAME": ["NWS"]}, "expires": "2026-06-30T02:45:00-04:00", "geocode": {"SAME": ["037039", "037043", "047151", "047013", "047025", "047067", "047073", "047163", "047091", "047129", "047001", "047173", "047057", "047063", "047029", "047059", "047179", "047171", "047019", "047145", "047105", "047093", "047089", "047009", "047155", "047153", "047007", "047143", "047121", "047107", "047123", "047115", "047065", "047011", "047139", "051105", "051195", "051720", "051169", "051167", "051191", "051520"], "UGC": ["NCZ060", "NCZ061", "TNZ012", "TNZ013", "TNZ014", "TNZ015", "TNZ016", "TNZ017", "TNZ018", "TNZ035", "TNZ036", "TNZ037", "TNZ038", "TNZ039", "TNZ040", "TNZ041", "TNZ042", "TNZ043", "TNZ044", "TNZ045", "TNZ046", "TNZ047", "TNZ067", "TNZ068", "TNZ069", "TNZ070", "TNZ071", "TNZ072", "TNZ073", "TNZ074", "TNZ081", "TNZ082", "TNZ083", "TNZ084", "TNZ085", "TNZ086", "TNZ087", "TNZ098", "TNZ099", "TNZ100", "TNZ101", "TNZ102", "VAZ001", "VAZ002", "VAZ005", "VAZ006", "VAZ008"]}, "headline": "Heat Advisory issued June 29 at 1:34PM EDT until July 2 at 9:00PM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nTo reduce risk during outdoor work, the Occupational Safety and\nHealth Administration recommends scheduling frequent rest breaks in\nshaded or air conditioned environments. Anyone overcome by heat\nshould be moved to a cool and shaded location. Heat stroke is an\nemergency! Call 9 1 1.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-30T11:00:00-04:00", "parameters": {"AWIPSidentifier": ["NPWMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["HEAT ADVISORY IN EFFECT FROM 11 AM EDT /10 AM CDT/ TUESDAY TO 9 PM EDT /8 PM CDT/ THURSDAY"], "VTEC": ["/O.NEW.KMRX.HT.Y.0001.260630T1500Z-260703T0100Z/"], "WMOidentifier": ["WWUS74 KMRX 291734"], "eventEndingTime": ["2026-07-02T21:00:00-04:00"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-06-29T13:34:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-84.0056, 34.98661, -83.4842, 35.160511], "geometry": {"coordinates": [[[-83.738495, 35.156013], [-83.726295, 35.145912], [-83.7164, 35.15451], [-83.7136, 35.155014], [-83.701897, 35.153111], [-83.692894, 35.155514], [-83.6875, 35.15451], [-83.684395, 35.157112], [-83.673599, 35.156612], [-83.667099, 35.150414], [-83.659798, 35.154312], [-83.6595, 35.158611], [-83.655899, 35.158112], [-83.647499, 35.151211], [-83.648697, 35.147713], [-83.645699, 35.144913], [-83.648994, 35.141113], [-83.656494, 35.139412], [-83.654594, 35.136013], [-83.650101, 35.135414], [-83.642799, 35.138111], [-83.639397, 35.137314], [-83.637695, 35.135113], [-83.638199, 35.132813], [-83.643196, 35.132111], [-83.640297, 35.130211], [-83.636597, 35.122414], [-83.634499, 35.121311], [-83.632896, 35.124611], [-83.624794, 35.125912], [-83.626297, 35.130314], [-83.619095, 35.128212], [-83.619598, 35.123013], [-83.615196, 35.113411], [-83.618195, 35.108612], [-83.617996, 35.10601], [-83.611198, 35.102211], [-83.603195, 35.100712], [-83.595299, 35.094414], [-83.587097, 35.091412], [-83.584396, 35.087414], [-83.584694, 35.082714], [-83.582497, 35.079311], [-83.575996, 35.072712], [-83.567299, 35.070713], [-83.567894, 35.067711], [-83.562599, 35.059711], [-83.566399, 35.051712], [-83.558197, 35.039413], [-83.547295, 35.03931], [-83.538399, 35.035713], [-83.5298, 35.025311], [-83.521393, 35.018112], [-83.521797, 35.014713], [-83.526199, 35.009312], [-83.522095, 35.003212], [-83.520699, 34.996914], [-83.517395, 34.998211], [-83.516701, 35.001213], [-83.5131, 35.004513], [-83.5093, 35.004414], [-83.503998, 35.000912], [-83.488197, 34.998814], [-83.4842, 34.994114], [-83.620193, 34.992111], [-83.619995, 34.98661], [-83.999496, 34.987312], [-84.0056, 34.988411], [-84.003998, 34.994312], [-83.979195, 35.00621], [-83.972298, 35.011711], [-83.972298, 35.014313], [-83.962494, 35.020313], [-83.956795, 35.026711], [-83.959396, 35.030113], [-83.958893, 35.039211], [-83.965195, 35.044113], [-83.959, 35.05191], [-83.9562, 35.054211], [-83.9515, 35.053612], [-83.944695, 35.055313], [-83.9347, 35.065613], [-83.933998, 35.068413], [-83.926094, 35.068913], [-83.921799, 35.074211], [-83.907997, 35.078114], [-83.903999, 35.087711], [-83.895996, 35.091812], [-83.882797, 35.10601], [-83.876099, 35.110611], [-83.874695, 35.113514], [-83.865997, 35.118713], [-83.863693, 35.12141], [-83.865097, 35.127213], [-83.863899, 35.130112], [-83.855797, 35.137711], [-83.840797, 35.143711], [-83.818001, 35.139214], [-83.8088, 35.141514], [-83.806999, 35.143414], [-83.799194, 35.144611], [-83.794296, 35.147911], [-83.784996, 35.147911], [-83.778595, 35.150112], [-83.770996, 35.156311], [-83.758995, 35.156811], [-83.752594, 35.160511], [-83.745895, 35.160511], [-83.738495, 35.156013]]], "type": "Polygon"}, "id": "5", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ060", "https://api.weather.gov/zones/forecast/NCZ061", "https://api.weather.gov/zones/forecast/TNZ012", "https://api.weather.gov/zones/forecast/TNZ013", "https://api.weather.gov/zones/forecast/TNZ014", "https://api.weather.gov/zones/forecast/TNZ015", "https://api.weather.gov/zones/forecast/TNZ016", "https://api.weather.gov/zones/forecast/TNZ017", "https://api.weather.gov/zones/forecast/TNZ018", "https://api.weather.gov/zones/forecast/TNZ035", "https://api.weather.gov/zones/forecast/TNZ036", "https://api.weather.gov/zones/forecast/TNZ037", "https://api.weather.gov/zones/forecast/TNZ038", "https://api.weather.gov/zones/forecast/TNZ039", "https://api.weather.gov/zones/forecast/TNZ040", "https://api.weather.gov/zones/forecast/TNZ041", "https://api.weather.gov/zones/forecast/TNZ042", "https://api.weather.gov/zones/forecast/TNZ043", "https://api.weather.gov/zones/forecast/TNZ044", "https://api.weather.gov/zones/forecast/TNZ045", "https://api.weather.gov/zones/forecast/TNZ046", "https://api.weather.gov/zones/forecast/TNZ047", "https://api.weather.gov/zones/forecast/TNZ067", "https://api.weather.gov/zones/forecast/TNZ068", "https://api.weather.gov/zones/forecast/TNZ069", "https://api.weather.gov/zones/forecast/TNZ070", "https://api.weather.gov/zones/forecast/TNZ071", "https://api.weather.gov/zones/forecast/TNZ072", "https://api.weather.gov/zones/forecast/TNZ073", "https://api.weather.gov/zones/forecast/TNZ074", "https://api.weather.gov/zones/forecast/TNZ081", "https://api.weather.gov/zones/forecast/TNZ082", "https://api.weather.gov/zones/forecast/TNZ083", "https://api.weather.gov/zones/forecast/TNZ084", "https://api.weather.gov/zones/forecast/TNZ085", "https://api.weather.gov/zones/forecast/TNZ086", "https://api.weather.gov/zones/forecast/TNZ087", "https://api.weather.gov/zones/forecast/TNZ098", "https://api.weather.gov/zones/forecast/TNZ099", "https://api.weather.gov/zones/forecast/TNZ100", "https://api.weather.gov/zones/forecast/TNZ101", "https://api.weather.gov/zones/forecast/TNZ102", "https://api.weather.gov/zones/forecast/VAZ001", "https://api.weather.gov/zones/forecast/VAZ002", "https://api.weather.gov/zones/forecast/VAZ005", "https://api.weather.gov/zones/forecast/VAZ006", "https://api.weather.gov/zones/forecast/VAZ008"], "areaDesc": "Cherokee; Clay; Scott; Campbell; Claiborne; Hancock; Hawkins; Sullivan; Johnson; Morgan; Anderson; Union; Grainger; Hamblen; Northwest Cocke; Cocke Smoky Mountains; Northwest Greene; Southeast Greene; Washington; Unicoi; Northwest Carter; Southeast Carter; Roane; Loudon; Knox; Jefferson; NW Blount; Blount Smoky Mountains; North Sevier; Sevier Smoky Mountains; Sequatchie; Bledsoe; Rhea; Meigs; McMinn; Northwest Monroe; Southeast Monroe; Marion; Hamilton; Bradley; West Polk; East Polk; Lee; Wise; Scott; Russell; Washington", "category": "Heat", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Afternoon heat index values will approach or exceed 100 at\ntimes over all but the higher elevations, and some valley\nlocations may see heat index values exceed 105.\n\n* WHERE...Portions of southwest North Carolina, east Tennessee, and\nsouthwest Virginia.\n\n* WHEN...From 11 AM EDT /10 AM CDT/ Tuesday to 9 PM EDT /8 PM CDT/\nThursday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.", "effective": "2026-06-29T13:34:00-04:00", "ends": "2026-07-02T21:00:00-04:00", "event": "Heat Advisory", "eventCode": {"NationalWeatherService": ["HTY"], "SAME": ["NWS"]}, "expires": "2026-06-30T02:45:00-04:00", "geocode": {"SAME": ["037039", "037043", "047151", "047013", "047025", "047067", "047073", "047163", "047091", "047129", "047001", "047173", "047057", "047063", "047029", "047059", "047179", "047171", "047019", "047145", "047105", "047093", "047089", "047009", "047155", "047153", "047007", "047143", "047121", "047107", "047123", "047115", "047065", "047011", "047139", "051105", "051195", "051720", "051169", "051167", "051191", "051520"], "UGC": ["NCZ060", "NCZ061", "TNZ012", "TNZ013", "TNZ014", "TNZ015", "TNZ016", "TNZ017", "TNZ018", "TNZ035", "TNZ036", "TNZ037", "TNZ038", "TNZ039", "TNZ040", "TNZ041", "TNZ042", "TNZ043", "TNZ044", "TNZ045", "TNZ046", "TNZ047", "TNZ067", "TNZ068", "TNZ069", "TNZ070", "TNZ071", "TNZ072", "TNZ073", "TNZ074", "TNZ081", "TNZ082", "TNZ083", "TNZ084", "TNZ085", "TNZ086", "TNZ087", "TNZ098", "TNZ099", "TNZ100", "TNZ101", "TNZ102", "VAZ001", "VAZ002", "VAZ005", "VAZ006", "VAZ008"]}, "headline": "Heat Advisory issued June 29 at 1:34PM EDT until July 2 at 9:00PM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.d12b62eb1fbec92f30363f30ce250bd90dd3850e.001.1", "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nTo reduce risk during outdoor work, the Occupational Safety and\nHealth Administration recommends scheduling frequent rest breaks in\nshaded or air conditioned environments. Anyone overcome by heat\nshould be moved to a cool and shaded location. Heat stroke is an\nemergency! Call 9 1 1.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-30T11:00:00-04:00", "parameters": {"AWIPSidentifier": ["NPWMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["HEAT ADVISORY IN EFFECT FROM 11 AM EDT /10 AM CDT/ TUESDAY TO 9 PM EDT /8 PM CDT/ THURSDAY"], "VTEC": ["/O.NEW.KMRX.HT.Y.0001.260630T1500Z-260703T0100Z/"], "WMOidentifier": ["WWUS74 KMRX 291734"], "eventEndingTime": ["2026-07-02T21:00:00-04:00"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-06-29T13:34:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_b877937affbe6b80c17b97981b987963.bindTooltip(
+    geo_json_96c56cdf98580a36ba24722048fed860.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -469,7 +506,7 @@
 });
                      
     
-    geo_json_b877937affbe6b80c17b97981b987963.bindPopup(
+    geo_json_96c56cdf98580a36ba24722048fed860.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -504,38 +541,139 @@
 });
                      
     
-            geo_json_b877937affbe6b80c17b97981b987963.addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            geo_json_96c56cdf98580a36ba24722048fed860.addTo(map_1ba69151b164c894f43663e81b69f824);
         
     
-        function geo_json_450ebce7eecf87717d315316fce9d5a9_styler(feature) {
+        function geo_json_435afa7d6a4f896d6a05428e5f4a1711_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#00FF7F", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_435afa7d6a4f896d6a05428e5f4a1711_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_435afa7d6a4f896d6a05428e5f4a1711 = L.geoJson(null, {
+                onEachFeature: geo_json_435afa7d6a4f896d6a05428e5f4a1711_onEachFeature,
+            
+                style: geo_json_435afa7d6a4f896d6a05428e5f4a1711_styler,
+            ...{
+}
+        });
+
+        function geo_json_435afa7d6a4f896d6a05428e5f4a1711_add (data) {
+            geo_json_435afa7d6a4f896d6a05428e5f4a1711
+                .addData(data);
+        }
+            geo_json_435afa7d6a4f896d6a05428e5f4a1711_add({"bbox": [-82.43, 35.35, -82.32, 35.45], "features": [{"bbox": [-82.43, 35.35, -82.32, 35.45], "geometry": {"coordinates": [[[-82.43, 35.36], [-82.42, 35.41], [-82.35, 35.45], [-82.32, 35.44], [-82.33, 35.37], [-82.41, 35.35], [-82.43, 35.36]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f4b2b22966e3573b337d25f9cabc72d779699b6b.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC089"], "areaDesc": "Henderson, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Northeastern Henderson County in western North Carolina...\n\n* WHEN...Until 1015 PM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\nOverflowing poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 615 PM EDT, Doppler radar and automated rain gauges indicated\nheavy rain due to thunderstorms. Minor flooding is ongoing or\nexpected to begin shortly in the advisory area. Between 1.7 and 2\ninches of rain have fallen.\n- Some locations that will experience flooding include...\nEdneyville.\n- Locations along and near Clear Creek, northwest of Edneyville and\nnorth of Hwy 64, may already be experiencing nuisance flooding in\npoor drainage areas and low-water crossings.\n\nAffected roadways may include but are not limited to Bearwallow\nMtn Rd, Old Clear Creek Rd, and Rhodes Rd.\n- http://www.weather.gov/safety/flood", "effective": "2026-06-29T18:18:00-04:00", "ends": "2026-06-29T22:15:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-06-29T22:15:00-04:00", "geocode": {"SAME": ["037089"], "UGC": ["NCC089"]}, "headline": "Flood Advisory issued June 29 at 6:18PM EDT until June 29 at 10:15PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.f4b2b22966e3573b337d25f9cabc72d779699b6b.001.1", "instruction": "Please report observed flooding to local emergency services or law\nenforcement and request they pass this information to the National\nWeather Service when you can do so safely.\n\nTurn around, don\u0027t drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nIn hilly terrain there are hundreds of low water crossings which are\npotentially dangerous in heavy rain. Do not attempt to cross flooded\nroads. Find an alternate route.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T18:18:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 1015 PM EDT THIS EVENING"], "VTEC": ["/O.NEW.KGSP.FA.Y.0029.260629T2218Z-260630T0215Z/"], "WMOidentifier": ["WGUS82 KGSP 292218"], "eventEndingTime": ["2026-06-29T22:15:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T18:18:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_435afa7d6a4f896d6a05428e5f4a1711.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "headline"];
+    let aliases = ["Alert:", "Details:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_435afa7d6a4f896d6a05428e5f4a1711.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "ends", "description"];
+    let aliases = ["Type:", "Expires:", "Full Text:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "localized": true,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_435afa7d6a4f896d6a05428e5f4a1711.addTo(map_1ba69151b164c894f43663e81b69f824);
+        
+    
+        function geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#D8BFD8", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_450ebce7eecf87717d315316fce9d5a9_onEachFeature(feature, layer) {
+        function geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_450ebce7eecf87717d315316fce9d5a9 = L.geoJson(null, {
-                onEachFeature: geo_json_450ebce7eecf87717d315316fce9d5a9_onEachFeature,
+        var geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4 = L.geoJson(null, {
+                onEachFeature: geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4_onEachFeature,
             
-                style: geo_json_450ebce7eecf87717d315316fce9d5a9_styler,
+                style: geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4_styler,
             ...{
 }
         });
 
-        function geo_json_450ebce7eecf87717d315316fce9d5a9_add (data) {
-            geo_json_450ebce7eecf87717d315316fce9d5a9
+        function geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4_add (data) {
+            geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4
                 .addData(data);
         }
-            geo_json_450ebce7eecf87717d315316fce9d5a9_add({"bbox": [-76.000278, 34.853373, -75.12664, 35.785484], "features": [{"bbox": [-75.528724, 35.138056, -75.12664, 35.785484], "geometry": {"coordinates": [[[-75.205043, 35.141823], [-75.206156, 35.138056], [-75.528724, 35.223788], [-75.524147, 35.245106], [-75.518525, 35.258268], [-75.507036, 35.322783], [-75.502948, 35.334324], [-75.495216, 35.369938], [-75.487068, 35.394535], [-75.480652, 35.472683], [-75.47188, 35.519199], [-75.462509, 35.553555], [-75.459994, 35.584291], [-75.460474, 35.592055], [-75.475977, 35.659221], [-75.476509, 35.667969], [-75.489296, 35.711594], [-75.499895, 35.738151], [-75.518026, 35.767045], [-75.163158, 35.785484], [-75.149559, 35.733], [-75.129971, 35.635564], [-75.12664, 35.584291], [-75.12791, 35.548611], [-75.135559, 35.488525], [-75.149538, 35.429958], [-75.153921, 35.369934], [-75.160117, 35.329505], [-75.183333, 35.239552], [-75.194518, 35.179883], [-75.205043, 35.141823]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft expected.\n\n* WHERE...The coastal waters from Oregon Inlet to Ocracoke Inlet.\n\n* WHEN...From 8 PM this evening to midnight EDT Tuesday night.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-06-29T15:17:00-04:00", "ends": "2026-07-01T00:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-06-30T03:30:00-04:00", "geocode": {"SAME": ["075152", "075154"], "UGC": ["AMZ152", "AMZ154"]}, "headline": "Small Craft Advisory issued June 29 at 3:17PM EDT until July 1 at 12:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-06-29T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT FROM 8 PM THIS EVENING TO MIDNIGHT EDT TUESDAY NIGHT"], "VTEC": ["/O.CON.KMHX.SC.Y.0070.260630T0000Z-260701T0400Z/"], "WMOidentifier": ["WHUS72 KMHX 291917"], "eventEndingTime": ["2026-07-01T00:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "identifier": "urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-29T03:53:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-06-29T15:17:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.000278, 34.853373, -75.206156, 35.235126], "geometry": {"coordinates": [[[-75.551727, 35.232838], [-75.535429, 35.227566], [-75.531887, 35.221656], [-75.536102, 35.217626], [-75.531693, 35.219364], [-75.528724, 35.223788], [-75.206156, 35.138056], [-75.214386, 35.112192], [-75.229027, 35.077753], [-75.247999, 35.044004], [-75.266356, 35.017565], [-75.281057, 34.999582], [-75.31189, 34.968748], [-75.330036, 34.953882], [-75.366289, 34.929659], [-75.408245, 34.909201], [-75.448471, 34.895624], [-75.469715, 34.890669], [-75.492018, 34.887003], [-75.535526, 34.884153], [-75.557327, 34.884867], [-75.591934, 34.88896], [-75.622311, 34.878038], [-75.704134, 34.853373], [-76.000278, 35.068214], [-75.990998, 35.078682], [-75.976379, 35.090897], [-75.933161, 35.117768], [-75.889359, 35.138233], [-75.812222, 35.169321], [-75.779251, 35.181137], [-75.771941, 35.181913], [-75.752594, 35.189781], [-75.743813, 35.189739], [-75.729462, 35.193684], [-75.693542, 35.207798], [-75.636353, 35.225632], [-75.58638, 35.234711], [-75.570068, 35.235126], [-75.551727, 35.232838]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft expected.\n\n* WHERE...The coastal waters from Oregon Inlet to Ocracoke Inlet.\n\n* WHEN...From 8 PM this evening to midnight EDT Tuesday night.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-06-29T15:17:00-04:00", "ends": "2026-07-01T00:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-06-30T03:30:00-04:00", "geocode": {"SAME": ["075152", "075154"], "UGC": ["AMZ152", "AMZ154"]}, "headline": "Small Craft Advisory issued June 29 at 3:17PM EDT until July 1 at 12:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-06-29T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT FROM 8 PM THIS EVENING TO MIDNIGHT EDT TUESDAY NIGHT"], "VTEC": ["/O.CON.KMHX.SC.Y.0070.260630T0000Z-260701T0400Z/"], "WMOidentifier": ["WHUS72 KMHX 291917"], "eventEndingTime": ["2026-07-01T00:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "identifier": "urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-29T03:53:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-06-29T15:17:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4_add({"bbox": [-76.000278, 34.853373, -75.12664, 35.785484], "features": [{"bbox": [-75.528724, 35.138056, -75.12664, 35.785484], "geometry": {"coordinates": [[[-75.205043, 35.141823], [-75.206156, 35.138056], [-75.528724, 35.223788], [-75.524147, 35.245106], [-75.518525, 35.258268], [-75.507036, 35.322783], [-75.502948, 35.334324], [-75.495216, 35.369938], [-75.487068, 35.394535], [-75.480652, 35.472683], [-75.47188, 35.519199], [-75.462509, 35.553555], [-75.459994, 35.584291], [-75.460474, 35.592055], [-75.475977, 35.659221], [-75.476509, 35.667969], [-75.489296, 35.711594], [-75.499895, 35.738151], [-75.518026, 35.767045], [-75.163158, 35.785484], [-75.149559, 35.733], [-75.129971, 35.635564], [-75.12664, 35.584291], [-75.12791, 35.548611], [-75.135559, 35.488525], [-75.149538, 35.429958], [-75.153921, 35.369934], [-75.160117, 35.329505], [-75.183333, 35.239552], [-75.194518, 35.179883], [-75.205043, 35.141823]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft expected.\n\n* WHERE...The coastal waters from Oregon Inlet to Ocracoke Inlet.\n\n* WHEN...From 8 PM this evening to midnight EDT Tuesday night.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-06-29T15:17:00-04:00", "ends": "2026-07-01T00:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-06-30T03:30:00-04:00", "geocode": {"SAME": ["075152", "075154"], "UGC": ["AMZ152", "AMZ154"]}, "headline": "Small Craft Advisory issued June 29 at 3:17PM EDT until July 1 at 12:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-06-29T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT FROM 8 PM THIS EVENING TO MIDNIGHT EDT TUESDAY NIGHT"], "VTEC": ["/O.CON.KMHX.SC.Y.0070.260630T0000Z-260701T0400Z/"], "WMOidentifier": ["WHUS72 KMHX 291917"], "eventEndingTime": ["2026-07-01T00:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "identifier": "urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-29T03:53:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-06-29T15:17:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.000278, 34.853373, -75.206156, 35.235126], "geometry": {"coordinates": [[[-75.551727, 35.232838], [-75.535429, 35.227566], [-75.531887, 35.221656], [-75.536102, 35.217626], [-75.531693, 35.219364], [-75.528724, 35.223788], [-75.206156, 35.138056], [-75.214386, 35.112192], [-75.229027, 35.077753], [-75.247999, 35.044004], [-75.266356, 35.017565], [-75.281057, 34.999582], [-75.31189, 34.968748], [-75.330036, 34.953882], [-75.366289, 34.929659], [-75.408245, 34.909201], [-75.448471, 34.895624], [-75.469715, 34.890669], [-75.492018, 34.887003], [-75.535526, 34.884153], [-75.557327, 34.884867], [-75.591934, 34.88896], [-75.622311, 34.878038], [-75.704134, 34.853373], [-76.000278, 35.068214], [-75.990998, 35.078682], [-75.976379, 35.090897], [-75.933161, 35.117768], [-75.889359, 35.138233], [-75.812222, 35.169321], [-75.779251, 35.181137], [-75.771941, 35.181913], [-75.752594, 35.189781], [-75.743813, 35.189739], [-75.729462, 35.193684], [-75.693542, 35.207798], [-75.636353, 35.225632], [-75.58638, 35.234711], [-75.570068, 35.235126], [-75.551727, 35.232838]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Seas 4 to 6 ft expected.\n\n* WHERE...The coastal waters from Oregon Inlet to Ocracoke Inlet.\n\n* WHEN...From 8 PM this evening to midnight EDT Tuesday night.\n\n* IMPACTS...Conditions will be hazardous to small craft.", "effective": "2026-06-29T15:17:00-04:00", "ends": "2026-07-01T00:00:00-04:00", "event": "Small Craft Advisory", "eventCode": {"NationalWeatherService": ["SCY"], "SAME": ["NWS"]}, "expires": "2026-06-30T03:30:00-04:00", "geocode": {"SAME": ["075152", "075154"], "UGC": ["AMZ152", "AMZ154"]}, "headline": "Small Craft Advisory issued June 29 at 3:17PM EDT until July 1 at 12:00AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.4650fe3c99084804d6e275607247b7c2a10027e1.001.1", "instruction": "Inexperienced mariners, especially those operating smaller\nvessels, should avoid navigating in hazardous conditions.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-06-29T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["MWWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["SMALL CRAFT ADVISORY REMAINS IN EFFECT FROM 8 PM THIS EVENING TO MIDNIGHT EDT TUESDAY NIGHT"], "VTEC": ["/O.CON.KMHX.SC.Y.0070.260630T0000Z-260701T0400Z/"], "WMOidentifier": ["WHUS72 KMHX 291917"], "eventEndingTime": ["2026-07-01T00:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "identifier": "urn:oid:2.49.0.1.840.0.2cd2c849d57ce76044231a9a764cbfbef0cad4b9.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-06-29T03:53:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-06-29T15:17:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_450ebce7eecf87717d315316fce9d5a9.bindTooltip(
+    geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -570,7 +708,7 @@
 });
                      
     
-    geo_json_450ebce7eecf87717d315316fce9d5a9.bindPopup(
+    geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -605,38 +743,38 @@
 });
                      
     
-            geo_json_450ebce7eecf87717d315316fce9d5a9.addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4.addTo(map_1ba69151b164c894f43663e81b69f824);
         
     
-        function geo_json_0eba588b2361deb7a357ff5400ed153c_styler(feature) {
+        function geo_json_11ca5a4df13573162519bdc99e0d0dc5_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_0eba588b2361deb7a357ff5400ed153c_onEachFeature(feature, layer) {
+        function geo_json_11ca5a4df13573162519bdc99e0d0dc5_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_0eba588b2361deb7a357ff5400ed153c = L.geoJson(null, {
-                onEachFeature: geo_json_0eba588b2361deb7a357ff5400ed153c_onEachFeature,
+        var geo_json_11ca5a4df13573162519bdc99e0d0dc5 = L.geoJson(null, {
+                onEachFeature: geo_json_11ca5a4df13573162519bdc99e0d0dc5_onEachFeature,
             
-                style: geo_json_0eba588b2361deb7a357ff5400ed153c_styler,
+                style: geo_json_11ca5a4df13573162519bdc99e0d0dc5_styler,
             ...{
 }
         });
 
-        function geo_json_0eba588b2361deb7a357ff5400ed153c_add (data) {
-            geo_json_0eba588b2361deb7a357ff5400ed153c
+        function geo_json_11ca5a4df13573162519bdc99e0d0dc5_add (data) {
+            geo_json_11ca5a4df13573162519bdc99e0d0dc5
                 .addData(data);
         }
-            geo_json_0eba588b2361deb7a357ff5400ed153c_add({"bbox": [-82.14, 35.43, -81.54, 36.0], "features": [{"bbox": [-82.14, 35.43, -81.95, 35.6], "geometry": {"coordinates": [[[-81.95, 35.43], [-82.14, 35.44], [-82.13, 35.47], [-82.08, 35.53], [-82.11, 35.53], [-82.09, 35.6], [-81.97, 35.6], [-81.95, 35.43]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.edda101391bbba23f20a442d507b6d10e8c1ad02.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ505", "https://api.weather.gov/zones/forecast/NCZ506", "https://api.weather.gov/zones/forecast/NCZ508"], "areaDesc": "McDowell Mountains; Eastern McDowell; Greater Rutherford", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 550 PM EDT, Doppler radar was tracking a strong thunderstorm 10\nmiles south of Marion, moving south at 15 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nShingle Hollow, Sugar Hill, Thermal City, Fero, Union Mills, and\nGlenwood.", "effective": "2026-06-29T17:50:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T18:15:00-04:00", "geocode": {"SAME": ["037111", "037161"], "UGC": ["NCZ505", "NCZ506", "NCZ508"]}, "headline": "Special Weather Statement issued June 29 at 5:50PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.edda101391bbba23f20a442d507b6d10e8c1ad02.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T17:50:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTH CENTRAL MCDOWELL AND NORTH CENTRAL RUTHERFORD COUNTIES THROUGH 615 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 292150"], "eventMotionDescription": ["2026-06-29T21:50:00-00:00...storm...008DEG...13KT...35.53,-82.03"], "maxHailSize": ["0.00"], "maxWindGust": ["50 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T17:50:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.73, 35.81, -81.54, 36.0], "geometry": {"coordinates": [[[-81.66, 36.0], [-81.55, 36.0], [-81.54, 35.81], [-81.73, 35.82], [-81.66, 36.0]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fb89cc59fae7e810fdb52fc86cd91d929fc038c7.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ501", "https://api.weather.gov/zones/forecast/NCZ502", "https://api.weather.gov/zones/forecast/NCZ504"], "areaDesc": "Caldwell Mountains; Greater Caldwell; Greater Burke", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 538 PM EDT, Doppler radar was tracking a strong thunderstorm 5\nmiles west of Lenoir, or 4 miles north of Gamewell, moving south at\n10 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nLenoir, Gamewell, Cajah\u0027s Mountain, Collettsville, and Patterson.", "effective": "2026-06-29T17:38:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T18:30:00-04:00", "geocode": {"SAME": ["037027", "037023"], "UGC": ["NCZ501", "NCZ502", "NCZ504"]}, "headline": "Special Weather Statement issued June 29 at 5:38PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.fb89cc59fae7e810fdb52fc86cd91d929fc038c7.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T17:38:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT CENTRAL CALDWELL AND CENTRAL BURKE COUNTIES THROUGH 630 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 292138"], "eventMotionDescription": ["2026-06-29T21:38:00-00:00...storm...010DEG...9KT...35.93,-81.63"], "maxHailSize": ["0.00"], "maxWindGust": ["50 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T17:38:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_11ca5a4df13573162519bdc99e0d0dc5_add({"bbox": [-82.23, 35.46, -82.02, 35.68], "features": [{"bbox": [-82.23, 35.46, -82.02, 35.68], "geometry": {"coordinates": [[[-82.02, 35.65], [-82.03, 35.46], [-82.22, 35.5], [-82.23, 35.51], [-82.22, 35.52], [-82.17, 35.53], [-82.21, 35.55], [-82.12, 35.68], [-82.02, 35.65]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e34f0a51b6a6f72877ae4bcc6dac8d92ae5e98cb.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ505", "https://api.weather.gov/zones/forecast/NCZ506", "https://api.weather.gov/zones/forecast/NCZ507", "https://api.weather.gov/zones/forecast/NCZ508"], "areaDesc": "McDowell Mountains; Eastern McDowell; Rutherford Mountains; Greater Rutherford", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 649 PM EDT, Doppler radar was tracking a strong thunderstorm 7\nmiles southwest of Marion, or 6 miles southeast of Old Fort, moving\nsouth at 15 mph.\n\nHAZARD...Wind gusts of 50 to 55 mph and half inch hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nShingle Hollow and Sugar Hill.", "effective": "2026-06-29T18:49:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-06-29T19:15:00-04:00", "geocode": {"SAME": ["037111", "037161"], "UGC": ["NCZ505", "NCZ506", "NCZ507", "NCZ508"]}, "headline": "Special Weather Statement issued June 29 at 6:49PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.e34f0a51b6a6f72877ae4bcc6dac8d92ae5e98cb.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T18:49:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTH CENTRAL MCDOWELL AND NORTHWESTERN RUTHERFORD COUNTIES THROUGH 715 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 292249"], "eventMotionDescription": ["2026-06-29T22:49:00-00:00...storm...017DEG...14KT...35.58,-82.08"], "maxHailSize": ["0.50"], "maxWindGust": ["55 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T18:49:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_0eba588b2361deb7a357ff5400ed153c.bindTooltip(
+    geo_json_11ca5a4df13573162519bdc99e0d0dc5.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -671,7 +809,7 @@
 });
                      
     
-    geo_json_0eba588b2361deb7a357ff5400ed153c.bindPopup(
+    geo_json_11ca5a4df13573162519bdc99e0d0dc5.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -706,38 +844,38 @@
 });
                      
     
-            geo_json_0eba588b2361deb7a357ff5400ed153c.addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            geo_json_11ca5a4df13573162519bdc99e0d0dc5.addTo(map_1ba69151b164c894f43663e81b69f824);
         
     
-        function geo_json_d1af2e51092ea51427eb7b478df2a295_styler(feature) {
+        function geo_json_6b5dd42520c07eb5155528c9de2801f0_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_d1af2e51092ea51427eb7b478df2a295_onEachFeature(feature, layer) {
+        function geo_json_6b5dd42520c07eb5155528c9de2801f0_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_d1af2e51092ea51427eb7b478df2a295 = L.geoJson(null, {
-                onEachFeature: geo_json_d1af2e51092ea51427eb7b478df2a295_onEachFeature,
+        var geo_json_6b5dd42520c07eb5155528c9de2801f0 = L.geoJson(null, {
+                onEachFeature: geo_json_6b5dd42520c07eb5155528c9de2801f0_onEachFeature,
             
-                style: geo_json_d1af2e51092ea51427eb7b478df2a295_styler,
+                style: geo_json_6b5dd42520c07eb5155528c9de2801f0_styler,
             ...{
 }
         });
 
-        function geo_json_d1af2e51092ea51427eb7b478df2a295_add (data) {
-            geo_json_d1af2e51092ea51427eb7b478df2a295
+        function geo_json_6b5dd42520c07eb5155528c9de2801f0_add (data) {
+            geo_json_6b5dd42520c07eb5155528c9de2801f0
                 .addData(data);
         }
-            geo_json_d1af2e51092ea51427eb7b478df2a295_add({"bbox": [-82.5, 35.23, -82.24, 35.47], "features": [{"bbox": [-82.5, 35.23, -82.24, 35.47], "geometry": {"coordinates": [[[-82.28, 35.44], [-82.24, 35.23], [-82.5, 35.24], [-82.42, 35.47], [-82.39, 35.47], [-82.37, 35.46], [-82.37, 35.47], [-82.28, 35.47], [-82.28, 35.44]]], "type": "Polygon"}, "id": "6", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.75172d9f2529f0c293f207d792b782a74a1948c8.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC089", "https://api.weather.gov/zones/county/NCC149"], "areaDesc": "Henderson, NC; Polk, NC", "category": "Severe Weather", "certainty": "Observed", "code": "IPAWSv1.0", "description": "SVRGSP\n\nThe National Weather Service in Greenville-Spartanburg has issued a\n\n* Severe Thunderstorm Warning for...\nNortheastern Henderson County in western North Carolina...\nWestern Polk County in western North Carolina...\n\n* Until 630 PM EDT.\n\n* At 536 PM EDT, a severe thunderstorm was located 8 miles northeast\nof Hendersonville, or 5 miles southwest of Bat Cave, moving south\nat 10 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to trees and power lines.\n\n* Locations impacted include...\nHendersonville, Flat Rock, Saluda, Bat Cave, Dana, Edneyville, East\nFlat Rock, Valley Hill, and Gerton.", "effective": "2026-06-29T17:36:00-04:00", "ends": "2026-06-29T18:30:00-04:00", "event": "Severe Thunderstorm Warning", "eventCode": {"NationalWeatherService": ["SVW"], "SAME": ["SVR"]}, "expires": "2026-06-29T18:30:00-04:00", "geocode": {"SAME": ["037089", "037149"], "UGC": ["NCC089", "NCC149"]}, "headline": "Severe Thunderstorm Warning issued June 29 at 5:36PM EDT until June 29 at 6:30PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.75172d9f2529f0c293f207d792b782a74a1948c8.001.1", "instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nPlease report damaging winds, hail, or flooding to the National\nWeather Service by calling toll free, 1, 800, 2 6 7, 8 1 0 1, or by\nposting on our Facebook page, or post it to X using hashtag nwsgsp.\nYour message should describe the event and the specific location\nwhere it occurred.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T17:36:00-04:00", "parameters": {"AWIPSidentifier": ["SVRGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KGSP.SV.W.0077.260629T2136Z-260629T2230Z/"], "WMOidentifier": ["WUUS52 KGSP 292136"], "eventEndingTime": ["2026-06-29T18:30:00-04:00"], "eventMotionDescription": ["2026-06-29T21:36:00-00:00...storm...004DEG...10KT...35.4,-82.35"], "hailThreat": ["RADAR INDICATED"], "maxHailSize": ["Up to .75"], "maxWindGust": ["60 MPH"], "windThreat": ["RADAR INDICATED"]}, "references": [], "response": "Shelter", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T17:36:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_6b5dd42520c07eb5155528c9de2801f0_add({"bbox": [-82.61, 34.94, -81.75, 35.45], "features": [{"bbox": [-82.05, 34.94, -81.75, 35.26], "geometry": {"coordinates": [[[-82.05, 35.03], [-81.9, 35.26], [-81.75, 35.23], [-81.77, 35.18], [-81.76, 35.18], [-81.78, 34.94], [-82.05, 35.03]]], "type": "Polygon"}, "id": "6", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9eb5ec5af41fc6447a1bb6a4072e5c17df512bd4.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC161", "https://api.weather.gov/zones/county/SCC021", "https://api.weather.gov/zones/county/SCC083"], "areaDesc": "Rutherford, NC; Cherokee, SC; Spartanburg, SC", "category": "Severe Weather", "certainty": "Observed", "code": "IPAWSv1.0", "description": "SVRGSP\n\nThe National Weather Service in Greenville-Spartanburg has issued a\n\n* Severe Thunderstorm Warning for...\nSoutheastern Rutherford County in western North Carolina...\nNortheastern Spartanburg County in Upstate South Carolina...\nNorthwestern Cherokee County in Upstate South Carolina...\n\n* Until 745 PM EDT.\n\n* At 647 PM EDT, a severe thunderstorm was located 10 miles south of\nForest City, or near Chesnee, moving south at 15 mph.\n\nHAZARD...60 mph wind gusts and quarter size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Minor hail damage to vehicles is expected. Expect wind\ndamage to trees and power lines.\n\n* Locations impacted include...\nBoiling Springs SC, Cowpens, Mayo, Chesnee, Cowpens National\nBattlefield, Harris, Cliffside, and USC Upstate.", "effective": "2026-06-29T18:47:00-04:00", "ends": "2026-06-29T19:45:00-04:00", "event": "Severe Thunderstorm Warning", "eventCode": {"NationalWeatherService": ["SVW"], "SAME": ["SVR"]}, "expires": "2026-06-29T19:45:00-04:00", "geocode": {"SAME": ["037161", "045021", "045083"], "UGC": ["NCC161", "SCC021", "SCC083"]}, "headline": "Severe Thunderstorm Warning issued June 29 at 6:47PM EDT until June 29 at 7:45PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.9eb5ec5af41fc6447a1bb6a4072e5c17df512bd4.001.1", "instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nPlease report damaging winds, hail, or flooding to the National\nWeather Service by calling toll free, 1, 800, 2 6 7, 8 1 0 1, or by\nposting on our Facebook page, or post it to X using hashtag nwsgsp.\nYour message should describe the event and the specific location\nwhere it occurred.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T18:47:00-04:00", "parameters": {"AWIPSidentifier": ["SVRGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KGSP.SV.W.0081.260629T2247Z-260629T2345Z/"], "WMOidentifier": ["WUUS52 KGSP 292247"], "eventEndingTime": ["2026-06-29T19:45:00-04:00"], "eventMotionDescription": ["2026-06-29T22:47:00-00:00...storm...017DEG...14KT...35.18,-81.86"], "hailThreat": ["RADAR INDICATED"], "maxHailSize": ["1.00"], "maxWindGust": ["60 MPH"], "windThreat": ["RADAR INDICATED"]}, "references": [], "response": "Shelter", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T18:47:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-82.61, 35.2, -82.32, 35.45], "geometry": {"coordinates": [[[-82.32, 35.41], [-82.38, 35.21], [-82.39, 35.21], [-82.4, 35.2], [-82.41, 35.2], [-82.61, 35.29], [-82.45, 35.45], [-82.32, 35.41]]], "type": "Polygon"}, "id": "7", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e21704f5ba486218d6aa8083cd0c0d611813ccf5.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC089"], "areaDesc": "Henderson, NC", "category": "Severe Weather", "certainty": "Observed", "code": "IPAWSv1.0", "description": "SVRGSP\n\nThe National Weather Service in Greenville-Spartanburg has issued a\n\n* Severe Thunderstorm Warning for...\nCentral Henderson County in western North Carolina...\n\n* Until 730 PM EDT.\n\n* At 631 PM EDT, a severe thunderstorm was located 4 miles northeast\nof Hendersonville, moving southwest at 10 mph.\n\nHAZARD...Golf ball size hail and 70 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...People and animals outdoors will be injured. Expect hail\ndamage to roofs, siding, windows, and vehicles. Expect\nconsiderable tree damage. Wind damage is also likely to\nmobile homes, roofs, and outbuildings.\n\n* Locations impacted include...\nHendersonville, Flat Rock, Mountain Home, Laurel Park, Valley Hill,\nDana, Horse Shoe, Tuxedo, Edneyville, and East Flat Rock.", "effective": "2026-06-29T18:31:00-04:00", "ends": "2026-06-29T19:30:00-04:00", "event": "Severe Thunderstorm Warning", "eventCode": {"NationalWeatherService": ["SVW"], "SAME": ["SVR"]}, "expires": "2026-06-29T19:30:00-04:00", "geocode": {"SAME": ["037089"], "UGC": ["NCC089"]}, "headline": "Severe Thunderstorm Warning issued June 29 at 6:31PM EDT until June 29 at 7:30PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.e21704f5ba486218d6aa8083cd0c0d611813ccf5.001.1", "instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nTorrential rainfall is occurring with this storm, and may lead to\nflash flooding. Do not drive your vehicle through flooded roadways.\n\nPlease report damaging winds, hail, or flooding to the National\nWeather Service by calling toll free, 1, 800, 2 6 7, 8 1 0 1, or by\nposting on our Facebook page, or post it to X using hashtag nwsgsp.\nYour message should describe the event and the specific location\nwhere it occurred.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-06-29T18:31:00-04:00", "parameters": {"AWIPSidentifier": ["SVRGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KGSP.SV.W.0080.260629T2231Z-260629T2330Z/"], "WMOidentifier": ["WUUS52 KGSP 292231"], "eventEndingTime": ["2026-06-29T19:30:00-04:00"], "eventMotionDescription": ["2026-06-29T22:31:00-00:00...storm...027DEG...7KT...35.38,-82.42"], "hailThreat": ["RADAR INDICATED"], "maxHailSize": ["1.75"], "maxWindGust": ["70 MPH"], "thunderstormDamageThreat": ["CONSIDERABLE"], "windThreat": ["RADAR INDICATED"]}, "references": [], "response": "Shelter", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-06-29T18:31:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_d1af2e51092ea51427eb7b478df2a295.bindTooltip(
+    geo_json_6b5dd42520c07eb5155528c9de2801f0.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -772,7 +910,7 @@
 });
                      
     
-    geo_json_d1af2e51092ea51427eb7b478df2a295.bindPopup(
+    geo_json_6b5dd42520c07eb5155528c9de2801f0.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -807,35 +945,36 @@
 });
                      
     
-            geo_json_d1af2e51092ea51427eb7b478df2a295.addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            geo_json_6b5dd42520c07eb5155528c9de2801f0.addTo(map_1ba69151b164c894f43663e81b69f824);
         
     
-            var layer_control_bcd895cfdcf8d2feeee95fd4a277f804_layers = {
+            var layer_control_a2abea1d13f7aefb1e4f1bdee7d462e7_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_15bde00b659744360e0f241e249b8959,
-                    "Esri Street Map" : tile_layer_7fab8c66fdb15adebd7795a55494ce00,
-                    "Esri NatGeo" : tile_layer_ca5a45a5543858d6975edfcb32c07036,
-                    "Google Satellite" : tile_layer_b8080f8903babb73a3eb81b99d97c790,
-                    "Google Terrain" : tile_layer_0b9cfbd0ff2d2bc42bf7d53a81a30454,
-                    "Google Street" : tile_layer_5b4e616bc2903546e3df0f630e614ddf,
-                    "Light Gray Base" : tile_layer_293e102e92254b87b8687ff776f981a1,
+                    "Esri Satellite" : tile_layer_0ee55432d05732aa0404e6119ede68e5,
+                    "Esri Street Map" : tile_layer_bfb92577610f9ef668c8d522796b4e32,
+                    "Esri NatGeo" : tile_layer_097ec7db4ac1a83fd1c8de20c7e7e45f,
+                    "Google Satellite" : tile_layer_5cc238bbc83fd676a5b66c9494f00f11,
+                    "Google Terrain" : tile_layer_86975f866ea8ff2c208794cc144d8855,
+                    "Google Street" : tile_layer_16dd405c6c5f72838b09effc069ad305,
+                    "Light Gray Base" : tile_layer_6f7d3ec0c31f463253082e3fa4ea9d38,
                 },
                 overlays :  {
-                    " Heat" : geo_json_b877937affbe6b80c17b97981b987963,
-                    " Marine/Beach" : geo_json_450ebce7eecf87717d315316fce9d5a9,
-                    " SPS" : geo_json_0eba588b2361deb7a357ff5400ed153c,
-                    " Severe Weather" : geo_json_d1af2e51092ea51427eb7b478df2a295,
+                    " Heat" : geo_json_96c56cdf98580a36ba24722048fed860,
+                    " Hydro" : geo_json_435afa7d6a4f896d6a05428e5f4a1711,
+                    " Marine/Beach" : geo_json_a7a9bcff7c0c3de100f6bc43bdd392c4,
+                    " SPS" : geo_json_11ca5a4df13573162519bdc99e0d0dc5,
+                    " Severe Weather" : geo_json_6b5dd42520c07eb5155528c9de2801f0,
                 },
             };
-            let layer_control_bcd895cfdcf8d2feeee95fd4a277f804 = L.control.layers(
-                layer_control_bcd895cfdcf8d2feeee95fd4a277f804_layers.base_layers,
-                layer_control_bcd895cfdcf8d2feeee95fd4a277f804_layers.overlays,
+            let layer_control_a2abea1d13f7aefb1e4f1bdee7d462e7 = L.control.layers(
+                layer_control_a2abea1d13f7aefb1e4f1bdee7d462e7_layers.base_layers,
+                layer_control_a2abea1d13f7aefb1e4f1bdee7d462e7_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_2b2980ed3b60d4f426f6d5aba47c5686);
+            ).addTo(map_1ba69151b164c894f43663e81b69f824);
 
         
 </script>
