@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_5f14560f70f293c4d1c7f986a143bbda {
+                #map_f83689a3cbbc496918fe116c78cf2e70 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -87,40 +87,8 @@
                     </style>
             
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_46fdd8deb3febb5052aacd76aa222c92 {
+                    #float_image_6145525857d97d934991a0c4dc7b121a {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -138,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_5f14560f70f293c4d1c7f986a143bbda" ></div>
+            <div class="folium-map" id="map_f83689a3cbbc496918fe116c78cf2e70" ></div>
         
     
-            <img id="float_image_46fdd8deb3febb5052aacd76aa222c92" alt="float_image"
+            <img id="float_image_6145525857d97d934991a0c4dc7b121a" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -152,15 +120,10 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Jul 16, 2026<br>12:27 AM EDT
+        Updated: Jul 16, 2026<br>03:03 AM EDT
     </div>
     <div class='legend-scale'>
        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#7CFC00; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Coastal Flood Advisory</span>
-        </div>
-        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#808080; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Air Quality Alert</span>
@@ -176,8 +139,8 @@
 <script>
     
     
-            var map_5f14560f70f293c4d1c7f986a143bbda = L.map(
-                "map_5f14560f70f293c4d1c7f986a143bbda",
+            var map_f83689a3cbbc496918fe116c78cf2e70 = L.map(
+                "map_f83689a3cbbc496918fe116c78cf2e70",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -194,7 +157,7 @@
 
         
     
-            var tile_layer_10ae3ef0eadc1c7023a0823dc9337527 = L.tileLayer(
+            var tile_layer_4d0a0c7c53a9a1645fb14aec6db2b5b4 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -211,7 +174,7 @@
             );
         
     
-            var tile_layer_70b562c22a2441277d6c94797e5e765e = L.tileLayer(
+            var tile_layer_773a939b77fb7afe12ccccad866ae720 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -228,7 +191,7 @@
             );
         
     
-            var tile_layer_a3a392460f052dc10befad67b9771039 = L.tileLayer(
+            var tile_layer_1318ddbe1058349fcd2503621806f773 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -245,7 +208,7 @@
             );
         
     
-            tile_layer_a3a392460f052dc10befad67b9771039.addTo(map_5f14560f70f293c4d1c7f986a143bbda);
+            tile_layer_1318ddbe1058349fcd2503621806f773.addTo(map_f83689a3cbbc496918fe116c78cf2e70);
         
     
             L.control.fullscreen(
@@ -255,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_5f14560f70f293c4d1c7f986a143bbda);
+            ).addTo(map_f83689a3cbbc496918fe116c78cf2e70);
         
     
-            var tile_layer_ba8e71a0b75b657d8a0a74065f5388ba = L.tileLayer(
+            var tile_layer_86b08de0e8ef386b0bfd41692bfa4139 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -275,7 +238,7 @@
             );
         
     
-            var tile_layer_b86a6cb8d95046102c7035e743af27d7 = L.tileLayer(
+            var tile_layer_29bfd4da40cb31309d7908a1c945dac2 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -292,7 +255,7 @@
             );
         
     
-            var tile_layer_ac5c027cc3565359cffbf8a8caee498b = L.tileLayer(
+            var tile_layer_63aae74737c99450833579aef6b89f6d = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -309,7 +272,7 @@
             );
         
     
-            var tile_layer_af19d7ffa2f32ce6634ffae5b241fb98 = L.tileLayer(
+            var tile_layer_7e7215a85ad1964ef640576b3bb4f8b8 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -326,41 +289,41 @@
             );
         
     
-            var locate_control_d410e1210d5e47a20750611e29da7ee6 = L.control.locate(
+            var locate_control_502a47151269a9c1142c65dd3aa00b1f = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_5f14560f70f293c4d1c7f986a143bbda);
+            ).addTo(map_f83689a3cbbc496918fe116c78cf2e70);
             
         
     
-        function geo_json_8e5703a3f27521ce0eb3121235d12934_styler(feature) {
+        function geo_json_b7d0ca635dd12ad769d4178d0eab4cc5_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#808080", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_8e5703a3f27521ce0eb3121235d12934_onEachFeature(feature, layer) {
+        function geo_json_b7d0ca635dd12ad769d4178d0eab4cc5_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_8e5703a3f27521ce0eb3121235d12934 = L.geoJson(null, {
-                onEachFeature: geo_json_8e5703a3f27521ce0eb3121235d12934_onEachFeature,
+        var geo_json_b7d0ca635dd12ad769d4178d0eab4cc5 = L.geoJson(null, {
+                onEachFeature: geo_json_b7d0ca635dd12ad769d4178d0eab4cc5_onEachFeature,
             
-                style: geo_json_8e5703a3f27521ce0eb3121235d12934_styler,
+                style: geo_json_b7d0ca635dd12ad769d4178d0eab4cc5_styler,
             ...{
 }
         });
 
-        function geo_json_8e5703a3f27521ce0eb3121235d12934_add (data) {
-            geo_json_8e5703a3f27521ce0eb3121235d12934
+        function geo_json_b7d0ca635dd12ad769d4178d0eab4cc5_add (data) {
+            geo_json_b7d0ca635dd12ad769d4178d0eab4cc5
                 .addData(data);
         }
-            geo_json_8e5703a3f27521ce0eb3121235d12934_add({"bbox": [-81.057396, 35.00201, -80.550293, 35.514912], "features": [{"bbox": [-81.057396, 35.00201, -80.550293, 35.514912], "geometry": {"coordinates": [[[-80.784096, 35.507011], [-80.786499, 35.499313], [-80.7864, 35.492413], [-80.781593, 35.48241], [-80.779099, 35.472111], [-80.773598, 35.463314], [-80.772598, 35.458012], [-80.752594, 35.414513], [-80.763298, 35.412411], [-80.765999, 35.402611], [-80.755295, 35.394913], [-80.740494, 35.377911], [-80.707001, 35.354111], [-80.693794, 35.34671], [-80.666496, 35.267712], [-80.550293, 35.208412], [-80.705597, 35.083912], [-80.770393, 35.034412], [-80.781998, 35.033211], [-80.804695, 35.027813], [-80.810997, 35.021812], [-80.820198, 35.017612], [-80.824493, 35.012413], [-80.836197, 35.006214], [-80.840195, 35.00201], [-80.887497, 35.056412], [-80.933693, 35.106113], [-80.936798, 35.106213], [-80.957893, 35.092613], [-81.041496, 35.044712], [-81.057396, 35.061913], [-81.056999, 35.084812], [-81.050499, 35.098312], [-81.036797, 35.103012], [-81.032494, 35.109612], [-81.038994, 35.126312], [-81.050697, 35.131313], [-81.051094, 35.133812], [-81.047798, 35.143711], [-81.043694, 35.148712], [-81.023796, 35.148613], [-81.018097, 35.153912], [-81.009796, 35.153614], [-81.006294, 35.156013], [-81.006599, 35.164513], [-81.002594, 35.172211], [-81.002098, 35.184414], [-81.005798, 35.192711], [-81.006096, 35.210011], [-81.014297, 35.222012], [-81.008598, 35.249912], [-81.013893, 35.258114], [-81.014999, 35.26881], [-81.014, 35.272511], [-81.008598, 35.282513], [-81.006294, 35.292313], [-81.000397, 35.305611], [-80.994698, 35.310413], [-80.988693, 35.321114], [-80.981194, 35.328411], [-80.981194, 35.331913], [-80.984795, 35.336613], [-80.984894, 35.339813], [-80.982697, 35.342213], [-80.975197, 35.344913], [-80.972298, 35.350613], [-80.968498, 35.351311], [-80.961998, 35.347313], [-80.9562, 35.350311], [-80.943199, 35.350712], [-80.935593, 35.356213], [-80.924896, 35.358414], [-80.923195, 35.360111], [-80.9282, 35.362812], [-80.937096, 35.362511], [-80.949196, 35.366413], [-80.959198, 35.375111], [-80.961998, 35.375313], [-80.964294, 35.373512], [-80.969299, 35.366913], [-80.974998, 35.364311], [-80.9786, 35.364914], [-80.983498, 35.368214], [-80.986694, 35.376011], [-80.986694, 35.379311], [-80.984795, 35.381413], [-80.975899, 35.382912], [-80.955093, 35.393311], [-80.9543, 35.398212], [-80.958595, 35.410812], [-80.955399, 35.422813], [-80.958496, 35.432713], [-80.950394, 35.447411], [-80.943199, 35.453011], [-80.942398, 35.456112], [-80.943596, 35.459511], [-80.9515, 35.467312], [-80.945999, 35.483112], [-80.946495, 35.486511], [-80.940498, 35.492512], [-80.910095, 35.514912], [-80.784096, 35.507011]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cfb6965c90b26af21314c7aa984dfb3042734ba0.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ071"], "areaDesc": "Mecklenburg", "category": "Fog/Smoke/Dust", "certainty": "Unknown", "code": "IPAWSv1.0", "description": "The North Carolina Department of Environmental Quality in Raleigh NC\nhas issued a Code Orange Air Quality Action Day for Ground Level\nOzone for Mecklenburg County, from 10 AM to 8 PM EDT Thursday.\n\nAn Air Quality Action Day means that Ground Level Ozone\nconcentrations within the region may approach or exceed unhealthy\nstandards. For additional information, please visit the North\nCarolina Division of Air Quality Web site at\nhttps://airquality.climate.ncsu.edu/.", "effective": "2026-07-15T20:00:00-04:00", "ends": null, "event": "Air Quality Alert", "eventCode": {"NationalWeatherService": ["AQA"], "SAME": ["NWS"]}, "expires": "2026-07-16T20:00:00-04:00", "geocode": {"SAME": ["037119"], "UGC": ["NCZ071"]}, "headline": "Air Quality Alert issued July 15 at 8:00PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.cfb6965c90b26af21314c7aa984dfb3042734ba0.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": "Non-Weather Emergency Message. Not sent to IPAWS.", "onset": "2026-07-15T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["AQAGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["AIR QUALITY ALERT IN EFFECT FROM 10 AM TO 8 PM EDT THURSDAY"], "WMOidentifier": ["AEUS72 KGSP 160000"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-07-15T20:00:00-04:00", "severity": "Unknown", "status": "Actual", "urgency": "Unknown", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_b7d0ca635dd12ad769d4178d0eab4cc5_add({"bbox": [-81.057396, 35.00201, -80.550293, 35.514912], "features": [{"bbox": [-81.057396, 35.00201, -80.550293, 35.514912], "geometry": {"coordinates": [[[-80.784096, 35.507011], [-80.786499, 35.499313], [-80.7864, 35.492413], [-80.781593, 35.48241], [-80.779099, 35.472111], [-80.773598, 35.463314], [-80.772598, 35.458012], [-80.752594, 35.414513], [-80.763298, 35.412411], [-80.765999, 35.402611], [-80.755295, 35.394913], [-80.740494, 35.377911], [-80.707001, 35.354111], [-80.693794, 35.34671], [-80.666496, 35.267712], [-80.550293, 35.208412], [-80.705597, 35.083912], [-80.770393, 35.034412], [-80.781998, 35.033211], [-80.804695, 35.027813], [-80.810997, 35.021812], [-80.820198, 35.017612], [-80.824493, 35.012413], [-80.836197, 35.006214], [-80.840195, 35.00201], [-80.887497, 35.056412], [-80.933693, 35.106113], [-80.936798, 35.106213], [-80.957893, 35.092613], [-81.041496, 35.044712], [-81.057396, 35.061913], [-81.056999, 35.084812], [-81.050499, 35.098312], [-81.036797, 35.103012], [-81.032494, 35.109612], [-81.038994, 35.126312], [-81.050697, 35.131313], [-81.051094, 35.133812], [-81.047798, 35.143711], [-81.043694, 35.148712], [-81.023796, 35.148613], [-81.018097, 35.153912], [-81.009796, 35.153614], [-81.006294, 35.156013], [-81.006599, 35.164513], [-81.002594, 35.172211], [-81.002098, 35.184414], [-81.005798, 35.192711], [-81.006096, 35.210011], [-81.014297, 35.222012], [-81.008598, 35.249912], [-81.013893, 35.258114], [-81.014999, 35.26881], [-81.014, 35.272511], [-81.008598, 35.282513], [-81.006294, 35.292313], [-81.000397, 35.305611], [-80.994698, 35.310413], [-80.988693, 35.321114], [-80.981194, 35.328411], [-80.981194, 35.331913], [-80.984795, 35.336613], [-80.984894, 35.339813], [-80.982697, 35.342213], [-80.975197, 35.344913], [-80.972298, 35.350613], [-80.968498, 35.351311], [-80.961998, 35.347313], [-80.9562, 35.350311], [-80.943199, 35.350712], [-80.935593, 35.356213], [-80.924896, 35.358414], [-80.923195, 35.360111], [-80.9282, 35.362812], [-80.937096, 35.362511], [-80.949196, 35.366413], [-80.959198, 35.375111], [-80.961998, 35.375313], [-80.964294, 35.373512], [-80.969299, 35.366913], [-80.974998, 35.364311], [-80.9786, 35.364914], [-80.983498, 35.368214], [-80.986694, 35.376011], [-80.986694, 35.379311], [-80.984795, 35.381413], [-80.975899, 35.382912], [-80.955093, 35.393311], [-80.9543, 35.398212], [-80.958595, 35.410812], [-80.955399, 35.422813], [-80.958496, 35.432713], [-80.950394, 35.447411], [-80.943199, 35.453011], [-80.942398, 35.456112], [-80.943596, 35.459511], [-80.9515, 35.467312], [-80.945999, 35.483112], [-80.946495, 35.486511], [-80.940498, 35.492512], [-80.910095, 35.514912], [-80.784096, 35.507011]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cfb6965c90b26af21314c7aa984dfb3042734ba0.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ071"], "areaDesc": "Mecklenburg", "category": "Fog/Smoke/Dust", "certainty": "Unknown", "code": "IPAWSv1.0", "description": "The North Carolina Department of Environmental Quality in Raleigh NC\nhas issued a Code Orange Air Quality Action Day for Ground Level\nOzone for Mecklenburg County, from 10 AM to 8 PM EDT Thursday.\n\nAn Air Quality Action Day means that Ground Level Ozone\nconcentrations within the region may approach or exceed unhealthy\nstandards. For additional information, please visit the North\nCarolina Division of Air Quality Web site at\nhttps://airquality.climate.ncsu.edu/.", "effective": "2026-07-15T20:00:00-04:00", "ends": null, "event": "Air Quality Alert", "eventCode": {"NationalWeatherService": ["AQA"], "SAME": ["NWS"]}, "expires": "2026-07-16T20:00:00-04:00", "geocode": {"SAME": ["037119"], "UGC": ["NCZ071"]}, "headline": "Air Quality Alert issued July 15 at 8:00PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.cfb6965c90b26af21314c7aa984dfb3042734ba0.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": "Non-Weather Emergency Message. Not sent to IPAWS.", "onset": "2026-07-15T20:00:00-04:00", "parameters": {"AWIPSidentifier": ["AQAGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["AIR QUALITY ALERT IN EFFECT FROM 10 AM TO 8 PM EDT THURSDAY"], "WMOidentifier": ["AEUS72 KGSP 160000"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-07-15T20:00:00-04:00", "severity": "Unknown", "status": "Actual", "urgency": "Unknown", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_8e5703a3f27521ce0eb3121235d12934.bindTooltip(
+    geo_json_b7d0ca635dd12ad769d4178d0eab4cc5.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -395,7 +358,7 @@
 });
                      
     
-    geo_json_8e5703a3f27521ce0eb3121235d12934.bindPopup(
+    geo_json_b7d0ca635dd12ad769d4178d0eab4cc5.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -430,134 +393,32 @@
 });
                      
     
-            geo_json_8e5703a3f27521ce0eb3121235d12934.addTo(map_5f14560f70f293c4d1c7f986a143bbda);
+            geo_json_b7d0ca635dd12ad769d4178d0eab4cc5.addTo(map_f83689a3cbbc496918fe116c78cf2e70);
         
     
-        function geo_json_6018f798c152a15ea4873da72e183d61_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "#7CFC00", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_6018f798c152a15ea4873da72e183d61_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_6018f798c152a15ea4873da72e183d61 = L.geoJson(null, {
-                onEachFeature: geo_json_6018f798c152a15ea4873da72e183d61_onEachFeature,
-            
-                style: geo_json_6018f798c152a15ea4873da72e183d61_styler,
-            ...{
-}
-        });
-
-        function geo_json_6018f798c152a15ea4873da72e183d61_add (data) {
-            geo_json_6018f798c152a15ea4873da72e183d61
-                .addData(data);
-        }
-            geo_json_6018f798c152a15ea4873da72e183d61_add({"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "features": [{"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "geometry": {"geometries": [{"coordinates": [[[-77.820427, 34.384926], [-77.814934, 34.38168], [-77.810799, 34.381714], [-77.805199, 34.377113], [-77.805, 34.374912], [-77.807732, 34.373512], [-77.809395, 34.370312], [-77.814934, 34.367176], [-77.811462, 34.357479], [-77.799973, 34.34409], [-77.763375, 34.313668], [-77.76989, 34.308247], [-77.887283, 34.166992], [-77.900215, 34.145679], [-77.927155, 34.116631], [-77.928185, 34.117962], [-77.925934, 34.121944], [-77.92524, 34.124371], [-77.925545, 34.124771], [-77.925072, 34.126347], [-77.925163, 34.12817], [-77.927963, 34.131451], [-77.928352, 34.132908], [-77.929901, 34.134476], [-77.93219, 34.135693], [-77.934464, 34.137516], [-77.936554, 34.138027], [-77.939423, 34.137436], [-77.942238, 34.140362], [-77.946175, 34.143021], [-77.945953, 34.144234], [-77.943115, 34.144508], [-77.94297, 34.144875], [-77.944122, 34.154221], [-77.9431, 34.15649], [-77.942207, 34.157871], [-77.942612, 34.16077], [-77.94751, 34.164371], [-77.952507, 34.177269], [-77.953651, 34.178452], [-77.953827, 34.178921], [-77.953186, 34.180878], [-77.954712, 34.188568], [-77.95388, 34.19339], [-77.954109, 34.196106], [-77.961678, 34.203331], [-77.9515, 34.232357], [-77.954681, 34.232334], [-77.954887, 34.234436], [-77.957809, 34.234428], [-77.961929, 34.239471], [-77.955421, 34.239647], [-77.957314, 34.241367], [-77.959808, 34.242771], [-77.968513, 34.242371], [-77.969513, 34.244068], [-77.965012, 34.249268], [-77.967812, 34.252171], [-77.970009, 34.251671], [-77.973114, 34.247269], [-77.975212, 34.249371], [-77.978813, 34.260071], [-77.980408, 34.260868], [-77.985611, 34.259068], [-77.987709, 34.260071], [-77.988914, 34.262268], [-77.987511, 34.268269], [-77.991013, 34.270668], [-78.000809, 34.271568], [-78.002014, 34.273067], [-77.999313, 34.276169], [-77.991409, 34.278069], [-77.990211, 34.28167], [-77.996513, 34.28437], [-78.004814, 34.280468], [-78.005913, 34.281769], [-78.004616, 34.28677], [-78.005913, 34.288868], [-78.007812, 34.290169], [-78.015915, 34.290268], [-78.017113, 34.29277], [-78.014214, 34.302567], [-78.014816, 34.307468], [-78.012993, 34.312569], [-78.007263, 34.315624], [-78.006241, 34.319511], [-78.008659, 34.322552], [-78.012718, 34.323177], [-78.022911, 34.318008], [-78.026031, 34.317993], [-78.027519, 34.320152], [-78.025917, 34.328522], [-78.029922, 34.331768], [-78.026291, 34.330914], [-78.022186, 34.332813], [-77.99411, 34.336971], [-77.996086, 34.340313], [-77.994286, 34.346413], [-77.987579, 34.353813], [-77.978912, 34.357372], [-77.980545, 34.360069], [-77.985985, 34.36161], [-77.988884, 34.364311], [-77.987587, 34.371811], [-77.97979, 34.373711], [-77.975403, 34.372875], [-77.970985, 34.378811], [-77.962486, 34.383209], [-77.959099, 34.382511], [-77.957695, 34.380314], [-77.960976, 34.373318], [-77.959808, 34.371292], [-77.951424, 34.364941], [-77.950081, 34.370811], [-77.947571, 34.372261], [-77.940399, 34.37001], [-77.939095, 34.366814], [-77.94072, 34.36343], [-77.935211, 34.35841], [-77.933853, 34.359676], [-77.935181, 34.36581], [-77.931694, 34.368008], [-77.929893, 34.365211], [-77.931549, 34.362041], [-77.930031, 34.361622], [-77.917183, 34.376011], [-77.906868, 34.376072], [-77.901489, 34.378609], [-77.898796, 34.376812], [-77.898811, 34.36639], [-77.891678, 34.364231], [-77.880295, 34.36684], [-77.870583, 34.374611], [-77.858597, 34.380444], [-77.844582, 34.381191], [-77.831284, 34.387112], [-77.82209, 34.388794], [-77.820427, 34.384926]]], "type": "Polygon"}, {"coordinates": [[[-77.943115, 34.144508], [-77.944748, 34.144524], [-77.945953, 34.144234], [-77.946304, 34.143883], [-77.946175, 34.143021], [-77.944641, 34.141273], [-77.939423, 34.137436], [-77.938332, 34.137115], [-77.936554, 34.138027], [-77.936127, 34.138027], [-77.934464, 34.137516], [-77.930656, 34.135017], [-77.929901, 34.134476], [-77.928352, 34.132908], [-77.925163, 34.12817], [-77.925934, 34.121944], [-77.928185, 34.117962], [-77.927155, 34.116631], [-77.930359, 34.113171], [-77.931953, 34.114254], [-77.932236, 34.111141], [-77.935852, 34.107243], [-77.93737, 34.124256], [-77.952209, 34.150349], [-77.958611, 34.173771], [-77.958412, 34.184669], [-77.954482, 34.193375], [-77.95388, 34.19339], [-77.954712, 34.188568], [-77.954521, 34.183861], [-77.953186, 34.180878], [-77.953827, 34.178921], [-77.952507, 34.177269], [-77.94751, 34.164371], [-77.942612, 34.16077], [-77.942207, 34.157871], [-77.944122, 34.154221], [-77.943115, 34.144508]], [[-77.931709, 34.123707], [-77.930443, 34.123615], [-77.929916, 34.125172], [-77.931015, 34.125172], [-77.931709, 34.123707]], [[-77.931518, 34.119701], [-77.930611, 34.12199], [-77.931572, 34.122791], [-77.931984, 34.122128], [-77.931518, 34.119701]], [[-77.931267, 34.116291], [-77.929619, 34.116886], [-77.930634, 34.118717], [-77.931793, 34.117573], [-77.931267, 34.116291]]], "type": "Polygon"}], "type": "GeometryCollection"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.23d12dcb0087e6fdd3059d9f5581c624263fc87d.002.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ107"], "areaDesc": "Inland New Hanover", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Up to one half foot of inundation above ground level in\nlow-lying areas near shorelines and tidal waterways.\n\n* WHERE...The lower Cape Fear River including downtown\nWilmington.\n\n* WHEN...Until 3 AM EDT Thursday.\n\n* IMPACTS...Portions of Battleship Road and USS North Carolina\nRoad observe minor coastal flooding up to one half foot in\ndepth. In downtown Wilmington, a block of Water Street\nobserves minor flooding up to one quarter foot in depth.\n\n* ADDITIONAL DETAILS...Affected areas listed are based on\naverage tide conditions. Additional locations may experience\nflooding during periods of heavy rainfall, high winds, or\nother factors.", "effective": "2026-07-15T23:29:00-04:00", "ends": "2026-07-16T03:00:00-04:00", "event": "Coastal Flood Advisory", "eventCode": {"NationalWeatherService": ["CFY"], "SAME": ["NWS"]}, "expires": "2026-07-16T03:00:00-04:00", "geocode": {"SAME": ["037129"], "UGC": ["NCZ107"]}, "headline": "Coastal Flood Advisory issued July 15 at 11:29PM EDT until July 16 at 3:00AM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.23d12dcb0087e6fdd3059d9f5581c624263fc87d.002.1", "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-07-15T23:29:00-04:00", "parameters": {"AWIPSidentifier": ["CFWILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 3 AM EDT THURSDAY"], "VTEC": ["/O.CON.KILM.CF.Y.0026.000000T0000Z-260716T0700Z/"], "WMOidentifier": ["WHUS42 KILM 160329"], "eventEndingTime": ["2026-07-16T03:00:00-04:00"], "expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6e05fec17a78f7497c6b999aa7ca220b6304df58.001.1,2026-07-15T14:40:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bbe40c03f8b2e96b200a54b509ecf7e42b86cae8.001.1,2026-07-15T02:24:00-04:00"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-07-15T23:29:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_6018f798c152a15ea4873da72e183d61.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_6018f798c152a15ea4873da72e183d61.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_6018f798c152a15ea4873da72e183d61.addTo(map_5f14560f70f293c4d1c7f986a143bbda);
-        
-    
-            var layer_control_6814fe8bf69b8114e25e360960bf0b6d_layers = {
+            var layer_control_cda0fb5be80c6f07ae4aae0815b493c1_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_10ae3ef0eadc1c7023a0823dc9337527,
-                    "Esri Street Map" : tile_layer_70b562c22a2441277d6c94797e5e765e,
-                    "Esri NatGeo" : tile_layer_a3a392460f052dc10befad67b9771039,
-                    "Google Satellite" : tile_layer_ba8e71a0b75b657d8a0a74065f5388ba,
-                    "Google Terrain" : tile_layer_b86a6cb8d95046102c7035e743af27d7,
-                    "Google Street" : tile_layer_ac5c027cc3565359cffbf8a8caee498b,
-                    "Light Gray Base" : tile_layer_af19d7ffa2f32ce6634ffae5b241fb98,
+                    "Esri Satellite" : tile_layer_4d0a0c7c53a9a1645fb14aec6db2b5b4,
+                    "Esri Street Map" : tile_layer_773a939b77fb7afe12ccccad866ae720,
+                    "Esri NatGeo" : tile_layer_1318ddbe1058349fcd2503621806f773,
+                    "Google Satellite" : tile_layer_86b08de0e8ef386b0bfd41692bfa4139,
+                    "Google Terrain" : tile_layer_29bfd4da40cb31309d7908a1c945dac2,
+                    "Google Street" : tile_layer_63aae74737c99450833579aef6b89f6d,
+                    "Light Gray Base" : tile_layer_7e7215a85ad1964ef640576b3bb4f8b8,
                 },
                 overlays :  {
-                    " Fog/Smoke/Dust" : geo_json_8e5703a3f27521ce0eb3121235d12934,
-                    " Hydro" : geo_json_6018f798c152a15ea4873da72e183d61,
+                    " Fog/Smoke/Dust" : geo_json_b7d0ca635dd12ad769d4178d0eab4cc5,
                 },
             };
-            let layer_control_6814fe8bf69b8114e25e360960bf0b6d = L.control.layers(
-                layer_control_6814fe8bf69b8114e25e360960bf0b6d_layers.base_layers,
-                layer_control_6814fe8bf69b8114e25e360960bf0b6d_layers.overlays,
+            let layer_control_cda0fb5be80c6f07ae4aae0815b493c1 = L.control.layers(
+                layer_control_cda0fb5be80c6f07ae4aae0815b493c1_layers.base_layers,
+                layer_control_cda0fb5be80c6f07ae4aae0815b493c1_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_5f14560f70f293c4d1c7f986a143bbda);
+            ).addTo(map_f83689a3cbbc496918fe116c78cf2e70);
 
         
 </script>
