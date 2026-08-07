@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ed5e3e4aff48ba9dfb5ae911d64ab487 {
+                #map_3fe2bd9aa8472d78ff3208133d48de9e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,40 +55,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_e1283fd2197938fd81317c7951e96df0 {
+                    #float_image_3a47d8b6b375ca1d8782ed0a7abb2d85 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +74,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_ed5e3e4aff48ba9dfb5ae911d64ab487" ></div>
+            <div class="folium-map" id="map_3fe2bd9aa8472d78ff3208133d48de9e" ></div>
         
     
-            <img id="float_image_e1283fd2197938fd81317c7951e96df0" alt="float_image"
+            <img id="float_image_3a47d8b6b375ca1d8782ed0a7abb2d85" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,15 +88,10 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 06, 2026<br>11:36 PM EDT
+        Updated: Aug 07, 2026<br>01:22 AM EDT
     </div>
     <div class='legend-scale'>
-       
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#00FF7F; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Flood Advisory</span>
-        </div>
-        
+       <li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>
     </div>
 </div>
 <style type='text/css'>
@@ -139,8 +102,8 @@
 <script>
     
     
-            var map_ed5e3e4aff48ba9dfb5ae911d64ab487 = L.map(
-                "map_ed5e3e4aff48ba9dfb5ae911d64ab487",
+            var map_3fe2bd9aa8472d78ff3208133d48de9e = L.map(
+                "map_3fe2bd9aa8472d78ff3208133d48de9e",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +120,7 @@
 
         
     
-            var tile_layer_9a1e33a20f4b1fd3642c9e4fe5b6efb9 = L.tileLayer(
+            var tile_layer_b0a1a16c51fbbc70f67c8286c0e23b0c = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +137,7 @@
             );
         
     
-            var tile_layer_1567c478c2060d1909fb92959f8ac984 = L.tileLayer(
+            var tile_layer_33c820ecb44602ba17bb056c88ce102e = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +154,7 @@
             );
         
     
-            var tile_layer_e0b3a0b5707672b07490d91694dd2c5d = L.tileLayer(
+            var tile_layer_b6f14deedcc75f0d2c7c0118ecd16775 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +171,7 @@
             );
         
     
-            tile_layer_e0b3a0b5707672b07490d91694dd2c5d.addTo(map_ed5e3e4aff48ba9dfb5ae911d64ab487);
+            tile_layer_b6f14deedcc75f0d2c7c0118ecd16775.addTo(map_3fe2bd9aa8472d78ff3208133d48de9e);
         
     
             L.control.fullscreen(
@@ -218,10 +181,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_ed5e3e4aff48ba9dfb5ae911d64ab487);
+            ).addTo(map_3fe2bd9aa8472d78ff3208133d48de9e);
         
     
-            var tile_layer_4e9a9b4b0df4cbae864358876b0d0416 = L.tileLayer(
+            var tile_layer_174ee01904d745535365b94a147d3882 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +201,7 @@
             );
         
     
-            var tile_layer_c83a124be20f6030903b2ec4ae94fb59 = L.tileLayer(
+            var tile_layer_345113750245883f4c24f120f1a1d73b = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +218,7 @@
             );
         
     
-            var tile_layer_182ae3f4be5805eb2323be96231e533f = L.tileLayer(
+            var tile_layer_27dc2bc7a0612cd3e7cbb6c5bbbc8311 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +235,7 @@
             );
         
     
-            var tile_layer_d4a581150b3121dac70df79b794f8995 = L.tileLayer(
+            var tile_layer_af9758d8341535266f503a777c8309c8 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,136 +252,34 @@
             );
         
     
-            var locate_control_2ddb03b3582976669797fa4810fefad4 = L.control.locate(
+            var locate_control_d3eb7d6cca0221b01926443075a7aeb1 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_ed5e3e4aff48ba9dfb5ae911d64ab487);
+            ).addTo(map_3fe2bd9aa8472d78ff3208133d48de9e);
             
         
     
-        function geo_json_879f0eac52cd9158babea6f8ce12172d_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "#00FF7F", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_879f0eac52cd9158babea6f8ce12172d_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_879f0eac52cd9158babea6f8ce12172d = L.geoJson(null, {
-                onEachFeature: geo_json_879f0eac52cd9158babea6f8ce12172d_onEachFeature,
-            
-                style: geo_json_879f0eac52cd9158babea6f8ce12172d_styler,
-            ...{
-}
-        });
-
-        function geo_json_879f0eac52cd9158babea6f8ce12172d_add (data) {
-            geo_json_879f0eac52cd9158babea6f8ce12172d
-                .addData(data);
-        }
-            geo_json_879f0eac52cd9158babea6f8ce12172d_add({"bbox": [-84.1, 35.01, -81.7, 35.46], "features": [{"bbox": [-82.28, 35.19, -81.7, 35.46], "geometry": {"coordinates": [[[-82.28, 35.2], [-82.27, 35.31], [-81.7, 35.46], [-81.71, 35.34], [-81.72, 35.33], [-81.93, 35.2], [-82.05, 35.19], [-82.18, 35.19], [-82.28, 35.2]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d6d668597980a1a63927ec84451e37c1388eaca.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC149", "https://api.weather.gov/zones/county/NCC161"], "areaDesc": "Polk, NC; Rutherford, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Polk County in western North Carolina...\nSoutheastern Rutherford County in western North Carolina...\n\n* WHEN...Until 1145 PM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\nWater over roadways.\n\n* ADDITIONAL DETAILS...\n- At 920 PM EDT, While no additional heavy rainfall is expected,\nhigh water levels from the previous heavy rainfall will slowly\nwork its way through creeks and streams. Minor flooding is\nongoing or expected to begin shortly in the advisory area.\n- Jim Dobbins Road is closed due to water over the bridge from\nGrays Creek.\n- Some locations that will experience flooding include...\nForest City, Rutherfordton, Columbus, Spindale, Tryon, Ellenboro,\nBostic, Alexander Mills, Green Creek, Harris, Mill Spring,\nCaroleen and Lake Adger.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-06T21:21:00-04:00", "ends": "2026-08-06T23:45:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-06T23:45:00-04:00", "geocode": {"SAME": ["037149", "037161"], "UGC": ["NCC149", "NCC161"]}, "headline": "Flood Advisory issued August 6 at 9:21PM EDT until August 6 at 11:45PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.7d6d668597980a1a63927ec84451e37c1388eaca.001.1", "instruction": "Only when it is safe to do so, please report flooding or landslides\nthreatening roads or property to the National Weather Service\nGreenville-Spartanburg by calling 1...800...2 6 7...8 1 0 1, by\nposting on our Facebook page, or by posting on X using hashtag\nNWSGSP. Your message should describe the specific location, address,\nor intersection where impacts occurred and the depth of flooding\nobserved.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-08-06T21:21:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY NOW IN EFFECT UNTIL 1145 PM EDT THIS EVENING"], "VTEC": ["/O.EXT.KGSP.FA.Y.0078.000000T0000Z-260807T0345Z/"], "WMOidentifier": ["WGUS82 KGSP 070121"], "eventEndingTime": ["2026-08-06T23:45:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9a62c5b3d0cb410b84405f18926cf8abf8c81d81.001.1", "identifier": "urn:oid:2.49.0.1.840.0.9a62c5b3d0cb410b84405f18926cf8abf8c81d81.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-08-06T18:50:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-06T21:21:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-84.1, 35.01, -83.75, 35.26], "geometry": {"coordinates": [[[-83.75, 35.24], [-83.86, 35.13], [-83.94, 35.06], [-83.96, 35.05], [-83.97, 35.04], [-83.96, 35.04], [-83.99, 35.01], [-84.1, 35.07], [-83.92, 35.23], [-83.9, 35.24], [-83.89, 35.24], [-83.85, 35.25], [-83.79, 35.26], [-83.75, 35.24]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3c1674dbbfe5fc2b0e6c73f980b1ab6824b18d3f.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC039"], "areaDesc": "Cherokee, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Central Cherokee County in southwestern North Carolina...\n\n* WHEN...Until midnight EDT tonight.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 904 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 1 and 2 inches of rain have\nfallen.\n- Additional rainfall amounts up to 0.5 inch are expected over the\narea. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nAndrews, Murphy and Marble.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-06T21:04:00-04:00", "ends": "2026-08-07T00:00:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-07T00:00:00-04:00", "geocode": {"SAME": ["037039"], "UGC": ["NCC039"]}, "headline": "Flood Advisory issued August 6 at 9:04PM EDT until August 7 at 12:00AM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.3c1674dbbfe5fc2b0e6c73f980b1ab6824b18d3f.001.1", "instruction": "Turn around, don\u0027t drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-06T21:04:00-04:00", "parameters": {"AWIPSidentifier": ["FLSMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL MIDNIGHT EDT TONIGHT"], "VTEC": ["/O.NEW.KMRX.FA.Y.0140.260807T0104Z-260807T0400Z/"], "WMOidentifier": ["WGUS84 KMRX 070104"], "eventEndingTime": ["2026-08-07T00:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-08-06T21:04:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_879f0eac52cd9158babea6f8ce12172d.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_879f0eac52cd9158babea6f8ce12172d.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_879f0eac52cd9158babea6f8ce12172d.addTo(map_ed5e3e4aff48ba9dfb5ae911d64ab487);
-        
-    
-            var layer_control_b7931ad06e09f0ce3b599aa010ea8c8e_layers = {
+            var layer_control_372100b6fcf429695da5283585b24e68_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_9a1e33a20f4b1fd3642c9e4fe5b6efb9,
-                    "Esri Street Map" : tile_layer_1567c478c2060d1909fb92959f8ac984,
-                    "Esri NatGeo" : tile_layer_e0b3a0b5707672b07490d91694dd2c5d,
-                    "Google Satellite" : tile_layer_4e9a9b4b0df4cbae864358876b0d0416,
-                    "Google Terrain" : tile_layer_c83a124be20f6030903b2ec4ae94fb59,
-                    "Google Street" : tile_layer_182ae3f4be5805eb2323be96231e533f,
-                    "Light Gray Base" : tile_layer_d4a581150b3121dac70df79b794f8995,
+                    "Esri Satellite" : tile_layer_b0a1a16c51fbbc70f67c8286c0e23b0c,
+                    "Esri Street Map" : tile_layer_33c820ecb44602ba17bb056c88ce102e,
+                    "Esri NatGeo" : tile_layer_b6f14deedcc75f0d2c7c0118ecd16775,
+                    "Google Satellite" : tile_layer_174ee01904d745535365b94a147d3882,
+                    "Google Terrain" : tile_layer_345113750245883f4c24f120f1a1d73b,
+                    "Google Street" : tile_layer_27dc2bc7a0612cd3e7cbb6c5bbbc8311,
+                    "Light Gray Base" : tile_layer_af9758d8341535266f503a777c8309c8,
                 },
                 overlays :  {
-                    " Hydro" : geo_json_879f0eac52cd9158babea6f8ce12172d,
                 },
             };
-            let layer_control_b7931ad06e09f0ce3b599aa010ea8c8e = L.control.layers(
-                layer_control_b7931ad06e09f0ce3b599aa010ea8c8e_layers.base_layers,
-                layer_control_b7931ad06e09f0ce3b599aa010ea8c8e_layers.overlays,
+            let layer_control_372100b6fcf429695da5283585b24e68 = L.control.layers(
+                layer_control_372100b6fcf429695da5283585b24e68_layers.base_layers,
+                layer_control_372100b6fcf429695da5283585b24e68_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_ed5e3e4aff48ba9dfb5ae911d64ab487);
+            ).addTo(map_3fe2bd9aa8472d78ff3208133d48de9e);
 
         
 </script>
