@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_69c7889271204fc87403c4bd45da5889 {
+                #map_4d5cc63118a78e289484e4772f1bde58 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_39901290b470f939cda38796e06db33c {
+                    #float_image_314880c4679b16b02a062fd830ef85ae {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_69c7889271204fc87403c4bd45da5889" ></div>
+            <div class="folium-map" id="map_4d5cc63118a78e289484e4772f1bde58" ></div>
         
     
-            <img id="float_image_39901290b470f939cda38796e06db33c" alt="float_image"
+            <img id="float_image_314880c4679b16b02a062fd830ef85ae" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 09, 2026<br>02:53 PM EDT
+        Updated: Aug 09, 2026<br>03:32 PM EDT
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_69c7889271204fc87403c4bd45da5889 = L.map(
-                "map_69c7889271204fc87403c4bd45da5889",
+            var map_4d5cc63118a78e289484e4772f1bde58 = L.map(
+                "map_4d5cc63118a78e289484e4772f1bde58",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_6e0570e70ca0a116d137a99c75a1ede6 = L.tileLayer(
+            var tile_layer_a274d1a7311eb33495516a62b9a6b157 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_9fe4b19dbaa873196b5887b8b81f758e = L.tileLayer(
+            var tile_layer_33c5c259f96c645ca4ec0196c9f43115 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_e2901ebd39f5568b97d8dd9581386384 = L.tileLayer(
+            var tile_layer_85494035c6ec5d1e725327879ea48334 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_e2901ebd39f5568b97d8dd9581386384.addTo(map_69c7889271204fc87403c4bd45da5889);
+            tile_layer_85494035c6ec5d1e725327879ea48334.addTo(map_4d5cc63118a78e289484e4772f1bde58);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_69c7889271204fc87403c4bd45da5889);
+            ).addTo(map_4d5cc63118a78e289484e4772f1bde58);
         
     
-            var tile_layer_07d2241ffeab86158b76127617bd0303 = L.tileLayer(
+            var tile_layer_3561977824b22c003db67b118e816f55 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_92813023aa4d79ba50f4fa1c7aaece02 = L.tileLayer(
+            var tile_layer_d7ce61d6978dcaea387a33d914212ec6 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_da15f9bb5b47b1a1bea30d25a005f32b = L.tileLayer(
+            var tile_layer_526ccba9ff60e7f22c9f2f5afe65de8c = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_58c6fea4ac8ca611eaa83f0eba2befa3 = L.tileLayer(
+            var tile_layer_71f058f27e087a6c5dce231a6ca8ae1d = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_a7823beb49e7cdf7c0c0637821e895a4 = L.control.locate(
+            var locate_control_d283582534ef04a570c83755383dfe76 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_69c7889271204fc87403c4bd45da5889);
+            ).addTo(map_4d5cc63118a78e289484e4772f1bde58);
             
         
     
-        function geo_json_790e1ce2c78fa17f79d0b80b5e26f21f_styler(feature) {
+        function geo_json_3f8cd7278912f8f2608dbbef9d83c1ab_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_790e1ce2c78fa17f79d0b80b5e26f21f_onEachFeature(feature, layer) {
+        function geo_json_3f8cd7278912f8f2608dbbef9d83c1ab_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_790e1ce2c78fa17f79d0b80b5e26f21f = L.geoJson(null, {
-                onEachFeature: geo_json_790e1ce2c78fa17f79d0b80b5e26f21f_onEachFeature,
+        var geo_json_3f8cd7278912f8f2608dbbef9d83c1ab = L.geoJson(null, {
+                onEachFeature: geo_json_3f8cd7278912f8f2608dbbef9d83c1ab_onEachFeature,
             
-                style: geo_json_790e1ce2c78fa17f79d0b80b5e26f21f_styler,
+                style: geo_json_3f8cd7278912f8f2608dbbef9d83c1ab_styler,
             ...{
 }
         });
 
-        function geo_json_790e1ce2c78fa17f79d0b80b5e26f21f_add (data) {
-            geo_json_790e1ce2c78fa17f79d0b80b5e26f21f
+        function geo_json_3f8cd7278912f8f2608dbbef9d83c1ab_add (data) {
+            geo_json_3f8cd7278912f8f2608dbbef9d83c1ab
                 .addData(data);
         }
-            geo_json_790e1ce2c78fa17f79d0b80b5e26f21f_add({"bbox": [-83.9, 34.99, -83.49, 35.16], "features": [{"bbox": [-83.9, 34.99, -83.49, 35.16], "geometry": {"coordinates": [[[-83.9, 35.09], [-83.82, 35.14], [-83.77, 35.16], [-83.74, 35.16], [-83.73, 35.15], [-83.65, 35.16], [-83.64, 35.15], [-83.66, 35.14], [-83.64, 35.14], [-83.64, 35.12], [-83.62, 35.13], [-83.62, 35.11], [-83.57, 35.07], [-83.56, 35.04], [-83.52, 35.02], [-83.52, 35.01], [-83.49, 35.0], [-83.83, 34.99], [-83.9, 35.09]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e027f757d308b41d78a5ca22c3d3ffbfc90822ae.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ061"], "areaDesc": "Clay", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 241 PM EDT, Doppler radar was tracking a strong thunderstorm near\nHayesville, moving northeast at 15 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nHayesville, Nantahala Lake, Shooting Creek, and Tusquitee.", "effective": "2026-08-09T14:41:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-09T15:15:00-04:00", "geocode": {"SAME": ["037043"], "UGC": ["NCZ061"]}, "headline": "Special Weather Statement issued August 9 at 2:41PM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.e027f757d308b41d78a5ca22c3d3ffbfc90822ae.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nThis storm may intensify, so closely monitor for additional\ninformation or possible warnings from the National Weather Service.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-09T14:41:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT CLAY COUNTY THROUGH 315 PM EDT"], "WMOidentifier": ["WWUS84 KMRX 091841"], "eventMotionDescription": ["2026-08-09T18:41:00-00:00...storm...243DEG...15KT...35.07,-83.77"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-08-09T14:41:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_3f8cd7278912f8f2608dbbef9d83c1ab_add({"bbox": [-81.85, 36.13, -81.5, 36.36], "features": [{"bbox": [-81.85, 36.13, -81.5, 36.36], "geometry": {"coordinates": [[[-81.66, 36.36], [-81.65, 36.36], [-81.59, 36.3], [-81.57, 36.27], [-81.56, 36.27], [-81.5, 36.16], [-81.79, 36.13], [-81.85, 36.25], [-81.66, 36.36]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f6ba1e7b0a28464941b6e876f6138ef9ddc7caf.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ018"], "areaDesc": "Watauga", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 331 PM EDT, Doppler radar was tracking a strong thunderstorm over\nLovill, or near Foscoe, moving east at 5 mph.\n\nHAZARD...Wind gusts up to 40 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nBoone...\nFoscoe...\nSugar Grove...\nTodd...\nRutherwood...\nAho...\nand Meat Camp.", "effective": "2026-08-09T15:31:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-09T16:00:00-04:00", "geocode": {"SAME": ["037189"], "UGC": ["NCZ018"]}, "headline": "Special Weather Statement issued August 9 at 3:31PM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.4f6ba1e7b0a28464941b6e876f6138ef9ddc7caf.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nLocally heavy rain will quickly reduce visibility and result in\nponding of water on roadways, standing water in low lying areas, and\nminor flooding of creeks, streams, and areas of poor drainage.\nDrivers are urged to slow down and use extra caution to avoid\nhydroplaning.\n\nFrequent cloud to ground lightning is occurring with this storm.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-09T15:31:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT WATAUGA COUNTY THROUGH 400 PM EDT"], "WMOidentifier": ["WWUS81 KRNK 091931"], "eventMotionDescription": ["2026-08-09T19:31:00-00:00...storm...251DEG...5KT...36.21,-81.74"], "maxHailSize": ["0.00"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-08-09T15:31:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_790e1ce2c78fa17f79d0b80b5e26f21f.bindTooltip(
+    geo_json_3f8cd7278912f8f2608dbbef9d83c1ab.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_790e1ce2c78fa17f79d0b80b5e26f21f.bindPopup(
+    geo_json_3f8cd7278912f8f2608dbbef9d83c1ab.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_790e1ce2c78fa17f79d0b80b5e26f21f.addTo(map_69c7889271204fc87403c4bd45da5889);
+            geo_json_3f8cd7278912f8f2608dbbef9d83c1ab.addTo(map_4d5cc63118a78e289484e4772f1bde58);
         
     
-            var layer_control_8135c71f9cb14061577cdde7149853ca_layers = {
+            var layer_control_18e85b90e09e70ad82bc86ccac2177bb_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_6e0570e70ca0a116d137a99c75a1ede6,
-                    "Esri Street Map" : tile_layer_9fe4b19dbaa873196b5887b8b81f758e,
-                    "Esri NatGeo" : tile_layer_e2901ebd39f5568b97d8dd9581386384,
-                    "Google Satellite" : tile_layer_07d2241ffeab86158b76127617bd0303,
-                    "Google Terrain" : tile_layer_92813023aa4d79ba50f4fa1c7aaece02,
-                    "Google Street" : tile_layer_da15f9bb5b47b1a1bea30d25a005f32b,
-                    "Light Gray Base" : tile_layer_58c6fea4ac8ca611eaa83f0eba2befa3,
+                    "Esri Satellite" : tile_layer_a274d1a7311eb33495516a62b9a6b157,
+                    "Esri Street Map" : tile_layer_33c5c259f96c645ca4ec0196c9f43115,
+                    "Esri NatGeo" : tile_layer_85494035c6ec5d1e725327879ea48334,
+                    "Google Satellite" : tile_layer_3561977824b22c003db67b118e816f55,
+                    "Google Terrain" : tile_layer_d7ce61d6978dcaea387a33d914212ec6,
+                    "Google Street" : tile_layer_526ccba9ff60e7f22c9f2f5afe65de8c,
+                    "Light Gray Base" : tile_layer_71f058f27e087a6c5dce231a6ca8ae1d,
                 },
                 overlays :  {
-                    " SPS" : geo_json_790e1ce2c78fa17f79d0b80b5e26f21f,
+                    " SPS" : geo_json_3f8cd7278912f8f2608dbbef9d83c1ab,
                 },
             };
-            let layer_control_8135c71f9cb14061577cdde7149853ca = L.control.layers(
-                layer_control_8135c71f9cb14061577cdde7149853ca_layers.base_layers,
-                layer_control_8135c71f9cb14061577cdde7149853ca_layers.overlays,
+            let layer_control_18e85b90e09e70ad82bc86ccac2177bb = L.control.layers(
+                layer_control_18e85b90e09e70ad82bc86ccac2177bb_layers.base_layers,
+                layer_control_18e85b90e09e70ad82bc86ccac2177bb_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_69c7889271204fc87403c4bd45da5889);
+            ).addTo(map_4d5cc63118a78e289484e4772f1bde58);
 
         
 </script>
