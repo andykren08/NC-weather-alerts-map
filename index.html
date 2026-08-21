@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8ac14d5280fa1623eb6ac04abf9dfcba {
+                #map_a07e34165c8fc7f42326ec2de3f750e8 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -120,7 +120,7 @@
             
     
                 <style>
-                    #float_image_7e4c50706298b65f223549d00a155b83 {
+                    #float_image_f21677ec8d66ec604638bfe98166f958 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -138,10 +138,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_8ac14d5280fa1623eb6ac04abf9dfcba" ></div>
+            <div class="folium-map" id="map_a07e34165c8fc7f42326ec2de3f750e8" ></div>
         
     
-            <img id="float_image_7e4c50706298b65f223549d00a155b83" alt="float_image"
+            <img id="float_image_f21677ec8d66ec604638bfe98166f958" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -152,7 +152,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 20, 2026<br>11:52 PM EDT
+        Updated: Aug 21, 2026<br>12:35 AM EDT
     </div>
     <div class='legend-scale'>
        
@@ -176,8 +176,8 @@
 <script>
     
     
-            var map_8ac14d5280fa1623eb6ac04abf9dfcba = L.map(
-                "map_8ac14d5280fa1623eb6ac04abf9dfcba",
+            var map_a07e34165c8fc7f42326ec2de3f750e8 = L.map(
+                "map_a07e34165c8fc7f42326ec2de3f750e8",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -194,7 +194,7 @@
 
         
     
-            var tile_layer_7e90ccc1db861739d2ac03c5d2ff403d = L.tileLayer(
+            var tile_layer_4e7608e40587fc0e0ff6866a652fd528 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -211,7 +211,7 @@
             );
         
     
-            var tile_layer_60faee7592189727eb1faf1c75e9d243 = L.tileLayer(
+            var tile_layer_6f4647309dd4124a23ba6c607b85f8ec = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -228,7 +228,7 @@
             );
         
     
-            var tile_layer_e128f383863fb691503e89e471dac048 = L.tileLayer(
+            var tile_layer_058ea283a202db850f2af7a0251b75d3 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -245,7 +245,7 @@
             );
         
     
-            tile_layer_e128f383863fb691503e89e471dac048.addTo(map_8ac14d5280fa1623eb6ac04abf9dfcba);
+            tile_layer_058ea283a202db850f2af7a0251b75d3.addTo(map_a07e34165c8fc7f42326ec2de3f750e8);
         
     
             L.control.fullscreen(
@@ -255,10 +255,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_8ac14d5280fa1623eb6ac04abf9dfcba);
+            ).addTo(map_a07e34165c8fc7f42326ec2de3f750e8);
         
     
-            var tile_layer_1f01b5ff6bfe7d038015d5152cd8b496 = L.tileLayer(
+            var tile_layer_55b6f95a2af5964ea6ba9c1b6d09e611 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -275,7 +275,7 @@
             );
         
     
-            var tile_layer_2642fbe88bb306c33e0dfcbb90d0ab1d = L.tileLayer(
+            var tile_layer_ce2eaa06cf81a93d05014981e259ab12 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -292,7 +292,7 @@
             );
         
     
-            var tile_layer_4338d12e561644e09a581175ca7d4bfa = L.tileLayer(
+            var tile_layer_defc6669210883ed0a24171af482acaf = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -309,7 +309,7 @@
             );
         
     
-            var tile_layer_2dc6e71c8015cefa8b1438909466ed7d = L.tileLayer(
+            var tile_layer_7aeb50a507f14e068939dc55e9e86b4f = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -326,41 +326,41 @@
             );
         
     
-            var locate_control_d464dee93ece5e6175f9b97165bcd702 = L.control.locate(
+            var locate_control_b277312294bf4b8ebd2448e0d612c717 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_8ac14d5280fa1623eb6ac04abf9dfcba);
+            ).addTo(map_a07e34165c8fc7f42326ec2de3f750e8);
             
         
     
-        function geo_json_34ab634e0f423aec61f6d76e5a7db1fc_styler(feature) {
+        function geo_json_efe99c35c7a0919142d2b80da89f6483_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#00FF7F", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_34ab634e0f423aec61f6d76e5a7db1fc_onEachFeature(feature, layer) {
+        function geo_json_efe99c35c7a0919142d2b80da89f6483_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_34ab634e0f423aec61f6d76e5a7db1fc = L.geoJson(null, {
-                onEachFeature: geo_json_34ab634e0f423aec61f6d76e5a7db1fc_onEachFeature,
+        var geo_json_efe99c35c7a0919142d2b80da89f6483 = L.geoJson(null, {
+                onEachFeature: geo_json_efe99c35c7a0919142d2b80da89f6483_onEachFeature,
             
-                style: geo_json_34ab634e0f423aec61f6d76e5a7db1fc_styler,
+                style: geo_json_efe99c35c7a0919142d2b80da89f6483_styler,
             ...{
 }
         });
 
-        function geo_json_34ab634e0f423aec61f6d76e5a7db1fc_add (data) {
-            geo_json_34ab634e0f423aec61f6d76e5a7db1fc
+        function geo_json_efe99c35c7a0919142d2b80da89f6483_add (data) {
+            geo_json_efe99c35c7a0919142d2b80da89f6483
                 .addData(data);
         }
-            geo_json_34ab634e0f423aec61f6d76e5a7db1fc_add({"bbox": [-82.03, 35.26, -81.88, 35.39], "features": [{"bbox": [-82.03, 35.26, -81.88, 35.39], "geometry": {"coordinates": [[[-82.0, 35.29], [-82.03, 35.33], [-81.97, 35.39], [-81.88, 35.36], [-81.91, 35.29], [-81.96, 35.26], [-82.0, 35.29]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.872ac074d03dab64b1b567ac0861144daafa228c.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC161"], "areaDesc": "Rutherford, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...South Central Rutherford County in western North\nCarolina...\n\n* WHEN...Until 100 AM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1000 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 1 and 3 inches of rain have\nfallen.\n- Additional rainfall amounts of up to 2 inches are expected over\nthe area. This additional rain will result in minor flooding,\nespecially in low-lying and poor drainage areas.\n- Some locations that will experience flooding include...\nForest City, Rutherfordton and Spindale.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-20T22:01:00-04:00", "ends": "2026-08-21T01:00:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-21T01:00:00-04:00", "geocode": {"SAME": ["037161"], "UGC": ["NCC161"]}, "headline": "Flood Advisory issued August 20 at 10:01PM EDT until August 21 at 1:00AM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.872ac074d03dab64b1b567ac0861144daafa228c.001.1", "instruction": "Only when it is safe to do so, please report flooding or landslides\nthreatening roads or property to the National Weather Service\nGreenville-Spartanburg by calling 1...800...2 6 7...8 1 0 1, by\nposting on our Facebook page, or by posting on X using hashtag\nNWSGSP. Your message should describe the specific location, address,\nor intersection where impacts occurred and the depth of flooding\nobserved.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-20T22:01:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 1 AM EDT FRIDAY"], "VTEC": ["/O.NEW.KGSP.FA.Y.0093.260821T0201Z-260821T0500Z/"], "WMOidentifier": ["WGUS82 KGSP 210201"], "eventEndingTime": ["2026-08-21T01:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-20T22:01:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_efe99c35c7a0919142d2b80da89f6483_add({"bbox": [-82.03, 35.26, -81.88, 35.39], "features": [{"bbox": [-82.03, 35.26, -81.88, 35.39], "geometry": {"coordinates": [[[-82.0, 35.29], [-82.03, 35.33], [-81.97, 35.39], [-81.88, 35.36], [-81.91, 35.29], [-81.96, 35.26], [-82.0, 35.29]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.872ac074d03dab64b1b567ac0861144daafa228c.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC161"], "areaDesc": "Rutherford, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...South Central Rutherford County in western North\nCarolina...\n\n* WHEN...Until 100 AM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1000 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 1 and 3 inches of rain have\nfallen.\n- Additional rainfall amounts of up to 2 inches are expected over\nthe area. This additional rain will result in minor flooding,\nespecially in low-lying and poor drainage areas.\n- Some locations that will experience flooding include...\nForest City, Rutherfordton and Spindale.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-20T22:01:00-04:00", "ends": "2026-08-21T01:00:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-21T01:00:00-04:00", "geocode": {"SAME": ["037161"], "UGC": ["NCC161"]}, "headline": "Flood Advisory issued August 20 at 10:01PM EDT until August 21 at 1:00AM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.872ac074d03dab64b1b567ac0861144daafa228c.001.1", "instruction": "Only when it is safe to do so, please report flooding or landslides\nthreatening roads or property to the National Weather Service\nGreenville-Spartanburg by calling 1...800...2 6 7...8 1 0 1, by\nposting on our Facebook page, or by posting on X using hashtag\nNWSGSP. Your message should describe the specific location, address,\nor intersection where impacts occurred and the depth of flooding\nobserved.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-20T22:01:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 1 AM EDT FRIDAY"], "VTEC": ["/O.NEW.KGSP.FA.Y.0093.260821T0201Z-260821T0500Z/"], "WMOidentifier": ["WGUS82 KGSP 210201"], "eventEndingTime": ["2026-08-21T01:00:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-20T22:01:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_34ab634e0f423aec61f6d76e5a7db1fc.bindTooltip(
+    geo_json_efe99c35c7a0919142d2b80da89f6483.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -395,7 +395,7 @@
 });
                      
     
-    geo_json_34ab634e0f423aec61f6d76e5a7db1fc.bindPopup(
+    geo_json_efe99c35c7a0919142d2b80da89f6483.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -430,38 +430,38 @@
 });
                      
     
-            geo_json_34ab634e0f423aec61f6d76e5a7db1fc.addTo(map_8ac14d5280fa1623eb6ac04abf9dfcba);
+            geo_json_efe99c35c7a0919142d2b80da89f6483.addTo(map_a07e34165c8fc7f42326ec2de3f750e8);
         
     
-        function geo_json_7b7a2dc5f89014d3c762945fc3860bc7_styler(feature) {
+        function geo_json_e883fdda1ade7486df2f108c44b39aa5_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_7b7a2dc5f89014d3c762945fc3860bc7_onEachFeature(feature, layer) {
+        function geo_json_e883fdda1ade7486df2f108c44b39aa5_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_7b7a2dc5f89014d3c762945fc3860bc7 = L.geoJson(null, {
-                onEachFeature: geo_json_7b7a2dc5f89014d3c762945fc3860bc7_onEachFeature,
+        var geo_json_e883fdda1ade7486df2f108c44b39aa5 = L.geoJson(null, {
+                onEachFeature: geo_json_e883fdda1ade7486df2f108c44b39aa5_onEachFeature,
             
-                style: geo_json_7b7a2dc5f89014d3c762945fc3860bc7_styler,
+                style: geo_json_e883fdda1ade7486df2f108c44b39aa5_styler,
             ...{
 }
         });
 
-        function geo_json_7b7a2dc5f89014d3c762945fc3860bc7_add (data) {
-            geo_json_7b7a2dc5f89014d3c762945fc3860bc7
+        function geo_json_e883fdda1ade7486df2f108c44b39aa5_add (data) {
+            geo_json_e883fdda1ade7486df2f108c44b39aa5
                 .addData(data);
         }
-            geo_json_7b7a2dc5f89014d3c762945fc3860bc7_add({"bbox": [-81.77, 35.14, -80.79, 35.67], "features": [{"bbox": [-81.17, 35.3, -80.79, 35.67], "geometry": {"coordinates": [[[-81.14, 35.37], [-81.17, 35.54], [-80.92, 35.67], [-80.79, 35.41], [-80.97, 35.3], [-81.14, 35.37]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a48fd4dd489066af1159758c9816230b3df04b0b.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ036", "https://api.weather.gov/zones/forecast/NCZ056", "https://api.weather.gov/zones/forecast/NCZ069", "https://api.weather.gov/zones/forecast/NCZ070", "https://api.weather.gov/zones/forecast/NCZ071"], "areaDesc": "Iredell; Catawba; Lincoln; Gaston; Mecklenburg", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 1142 PM EDT, Doppler radar was tracking a strong thunderstorm 10\nmiles west of Huntersville, or near Westport, moving northeast at 20\nmph.\n\nHAZARD...Wind gusts up to 40 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nHuntersville, Cornelius, Davidson, Stanley, Westport, Lake Norman,\nDenver, Ramsey Creek Park, Iron Station, and Lake Norman State Park.", "effective": "2026-08-20T23:43:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-21T00:15:00-04:00", "geocode": {"SAME": ["037097", "037035", "037109", "037071", "037119"], "UGC": ["NCZ036", "NCZ056", "NCZ069", "NCZ070", "NCZ071"]}, "headline": "Special Weather Statement issued August 20 at 11:43PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.a48fd4dd489066af1159758c9816230b3df04b0b.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nIf on or near Lake Norman or Mountain Island Lake get out of the\nwater and move indoors or inside a vehicle. Remember, lightning can\nstrike out to 10 miles from the parent thunderstorm. If you can hear\nthunder, you are close enough to be struck by lightning. Move to\nsafe shelter now! Do not be caught on the water in a thunderstorm.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-20T23:43:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN CATAWBA...EASTERN LINCOLN...SOUTH CENTRAL IREDELL...NORTHWESTERN MECKLENBURG AND NORTHEASTERN GASTON COUNTIES THROUGH 1215 AM EDT"], "WMOidentifier": ["WWUS82 KGSP 210343"], "eventMotionDescription": ["2026-08-21T03:42:00-00:00...storm...245DEG...17KT...35.46,-81.03"], "maxHailSize": ["0.00"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-20T23:43:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.18, 35.14, -80.88, 35.38], "geometry": {"coordinates": [[[-81.05, 35.14], [-81.04, 35.15], [-81.11, 35.15], [-81.18, 35.23], [-81.05, 35.38], [-80.88, 35.2], [-81.05, 35.14]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6a628aafefd7fece0bc8cfcce3a23f528773614.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ070", "https://api.weather.gov/zones/forecast/NCZ071"], "areaDesc": "Gaston; Mecklenburg", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 1133 PM EDT, Doppler radar was tracking a strong thunderstorm 5\nmiles southeast of Gastonia, or near Cramerton, moving northeast at\n15 mph.\n\nHAZARD...Wind gusts up to 50 mph and half inch hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nGastonia, Central Charlotte, Mt Holly, Belmont, Cramerton, Lowell,\nMcadenville, Charlotte Douglas Airport, Ranlo, and Paw Creek.", "effective": "2026-08-20T23:33:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-21T00:15:00-04:00", "geocode": {"SAME": ["037071", "037119"], "UGC": ["NCZ070", "NCZ071"]}, "headline": "Special Weather Statement issued August 20 at 11:33PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.a6a628aafefd7fece0bc8cfcce3a23f528773614.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nIf on or near Lake Wylie get out of the water and move indoors or\ninside a vehicle. Remember, lightning can strike out to 10 miles\nfrom the parent thunderstorm. If you can hear thunder, you are close\nenough to be struck by lightning. Move to safe shelter now! Do not\nbe caught on the water in a thunderstorm.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-20T23:33:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT WEST CENTRAL MECKLENBURG AND EASTERN GASTON COUNTIES THROUGH 1215 AM EDT"], "WMOidentifier": ["WWUS82 KGSP 210333"], "eventMotionDescription": ["2026-08-21T03:33:00-00:00...storm...230DEG...11KT...35.22,-81.09"], "maxHailSize": ["0.50"], "maxWindGust": ["50 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-20T23:33:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.77, 35.16, -81.32, 35.38], "geometry": {"coordinates": [[[-81.39, 35.35], [-81.36, 35.33], [-81.37, 35.31], [-81.36, 35.3], [-81.36, 35.28], [-81.32, 35.26], [-81.32, 35.19], [-81.33, 35.16], [-81.77, 35.18], [-81.7, 35.37], [-81.42, 35.38], [-81.39, 35.35]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4dc2baf39693185c9e464ca8224e54197c423370.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ068"], "areaDesc": "Cleveland", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 1123 PM EDT, Doppler radar was tracking a strong thunderstorm near\nShelby, or near Boiling Springs NC, moving east at 20 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nShelby, Kings Mountain, Boiling Springs NC, Grover, Patterson\nSprings, Lattimore, Mooresboro, Waco, Earl, and Kingstown.", "effective": "2026-08-20T23:23:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-21T00:15:00-04:00", "geocode": {"SAME": ["037045"], "UGC": ["NCZ068"]}, "headline": "Special Weather Statement issued August 20 at 11:23PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.4dc2baf39693185c9e464ca8224e54197c423370.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-20T23:23:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT CLEVELAND COUNTY THROUGH 1215 AM EDT"], "WMOidentifier": ["WWUS82 KGSP 210323"], "eventMotionDescription": ["2026-08-21T03:23:00-00:00...storm...273DEG...16KT...35.27,-81.61"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-20T23:23:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_e883fdda1ade7486df2f108c44b39aa5_add({"bbox": [-82.71, 35.02, -81.74, 35.39], "features": [{"bbox": [-82.14, 35.13, -81.74, 35.39], "geometry": {"coordinates": [[[-81.76, 35.2], [-81.77, 35.18], [-81.76, 35.18], [-81.74, 35.14], [-82.11, 35.13], [-82.14, 35.28], [-81.84, 35.39], [-81.76, 35.2]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9d080ead3bdacd2c0deef345eb6d3571bbbe598c.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ508", "https://api.weather.gov/zones/forecast/NCZ510", "https://api.weather.gov/zones/forecast/SCZ008", "https://api.weather.gov/zones/forecast/SCZ108"], "areaDesc": "Greater Rutherford; Eastern Polk; Cherokee; Northern Spartanburg", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 1225 AM EDT, Doppler radar was tracking a strong thunderstorm 9\nmiles east of Columbus, or 9 miles north of Lake Bowen, moving east\nat 25 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nForest City, Rutherfordton, Chesnee, Bostic, Cowpens National\nBattlefield, Spindale, Henrietta, Green Creek, Harris, and\nFingerville.", "effective": "2026-08-21T00:25:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-21T01:00:00-04:00", "geocode": {"SAME": ["037161", "037149", "045021", "045083"], "UGC": ["NCZ508", "NCZ510", "SCZ008", "SCZ108"]}, "headline": "Special Weather Statement issued August 21 at 12:25AM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.9d080ead3bdacd2c0deef345eb6d3571bbbe598c.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-21T00:25:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN RUTHERFORD... SOUTHEASTERN POLK...NORTH CENTRAL SPARTANBURG AND NORTHWESTERN CHEROKEE COUNTIES THROUGH 100 AM EDT"], "WMOidentifier": ["WWUS82 KGSP 210425"], "eventMotionDescription": ["2026-08-21T04:25:00-00:00...storm...256DEG...21KT...35.24,-82.04"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-21T00:25:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-82.71, 35.02, -82.44, 35.25], "geometry": {"coordinates": [[[-82.51, 35.25], [-82.44, 35.02], [-82.59, 35.02], [-82.59, 35.04], [-82.6, 35.04], [-82.6, 35.05], [-82.68, 35.04], [-82.71, 35.17], [-82.51, 35.25]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.abcb1d4e4108d913a4496bce82143fdd775f17a3.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ064", "https://api.weather.gov/zones/forecast/NCZ065", "https://api.weather.gov/zones/forecast/SCZ102", "https://api.weather.gov/zones/forecast/SCZ103", "https://api.weather.gov/zones/forecast/SCZ106"], "areaDesc": "Transylvania; Henderson; Pickens Mountains; Greenville Mountains; Central Greenville", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 1209 AM EDT, Doppler radar was tracking a strong thunderstorm 10\nmiles southeast of Brevard, or over Caesars Head State Park, moving\neast at 10 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nSlater-Marietta, Pleasant Ridge State Park, Jones Gap State Park,\nCaesars Head State Park, Dupont State Forest, Cleveland, Cedar\nMountain, and Crab Creek.", "effective": "2026-08-21T00:09:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-21T00:45:00-04:00", "geocode": {"SAME": ["037175", "037089", "045077", "045045"], "UGC": ["NCZ064", "NCZ065", "SCZ102", "SCZ103", "SCZ106"]}, "headline": "Special Weather Statement issued August 21 at 12:09AM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.abcb1d4e4108d913a4496bce82143fdd775f17a3.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-21T00:09:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN TRANSYLVANIA... SOUTH CENTRAL HENDERSON AND NORTHWESTERN GREENVILLE COUNTIES THROUGH 1245 AM EDT"], "WMOidentifier": ["WWUS82 KGSP 210409"], "eventMotionDescription": ["2026-08-21T04:09:00-00:00...storm...256DEG...8KT...35.11,-82.63"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-21T00:09:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_7b7a2dc5f89014d3c762945fc3860bc7.bindTooltip(
+    geo_json_e883fdda1ade7486df2f108c44b39aa5.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -496,7 +496,7 @@
 });
                      
     
-    geo_json_7b7a2dc5f89014d3c762945fc3860bc7.bindPopup(
+    geo_json_e883fdda1ade7486df2f108c44b39aa5.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -531,33 +531,33 @@
 });
                      
     
-            geo_json_7b7a2dc5f89014d3c762945fc3860bc7.addTo(map_8ac14d5280fa1623eb6ac04abf9dfcba);
+            geo_json_e883fdda1ade7486df2f108c44b39aa5.addTo(map_a07e34165c8fc7f42326ec2de3f750e8);
         
     
-            var layer_control_0167ffe8b3b79ffa77b56a192344461a_layers = {
+            var layer_control_57f88db4816e98c4af5809cd5a8a67fc_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_7e90ccc1db861739d2ac03c5d2ff403d,
-                    "Esri Street Map" : tile_layer_60faee7592189727eb1faf1c75e9d243,
-                    "Esri NatGeo" : tile_layer_e128f383863fb691503e89e471dac048,
-                    "Google Satellite" : tile_layer_1f01b5ff6bfe7d038015d5152cd8b496,
-                    "Google Terrain" : tile_layer_2642fbe88bb306c33e0dfcbb90d0ab1d,
-                    "Google Street" : tile_layer_4338d12e561644e09a581175ca7d4bfa,
-                    "Light Gray Base" : tile_layer_2dc6e71c8015cefa8b1438909466ed7d,
+                    "Esri Satellite" : tile_layer_4e7608e40587fc0e0ff6866a652fd528,
+                    "Esri Street Map" : tile_layer_6f4647309dd4124a23ba6c607b85f8ec,
+                    "Esri NatGeo" : tile_layer_058ea283a202db850f2af7a0251b75d3,
+                    "Google Satellite" : tile_layer_55b6f95a2af5964ea6ba9c1b6d09e611,
+                    "Google Terrain" : tile_layer_ce2eaa06cf81a93d05014981e259ab12,
+                    "Google Street" : tile_layer_defc6669210883ed0a24171af482acaf,
+                    "Light Gray Base" : tile_layer_7aeb50a507f14e068939dc55e9e86b4f,
                 },
                 overlays :  {
-                    " Hydro" : geo_json_34ab634e0f423aec61f6d76e5a7db1fc,
-                    " SPS" : geo_json_7b7a2dc5f89014d3c762945fc3860bc7,
+                    " Hydro" : geo_json_efe99c35c7a0919142d2b80da89f6483,
+                    " SPS" : geo_json_e883fdda1ade7486df2f108c44b39aa5,
                 },
             };
-            let layer_control_0167ffe8b3b79ffa77b56a192344461a = L.control.layers(
-                layer_control_0167ffe8b3b79ffa77b56a192344461a_layers.base_layers,
-                layer_control_0167ffe8b3b79ffa77b56a192344461a_layers.overlays,
+            let layer_control_57f88db4816e98c4af5809cd5a8a67fc = L.control.layers(
+                layer_control_57f88db4816e98c4af5809cd5a8a67fc_layers.base_layers,
+                layer_control_57f88db4816e98c4af5809cd5a8a67fc_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_8ac14d5280fa1623eb6ac04abf9dfcba);
+            ).addTo(map_a07e34165c8fc7f42326ec2de3f750e8);
 
         
 </script>
