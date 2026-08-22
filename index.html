@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d726195dd7272531cab0bd3df7cc4f79 {
+                #map_ffbb2e2d6f2dd245bfe702e0b6abfaec {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_741a1f4e11cd33f51c868c9f02036143 {
+                    #float_image_c543c68c400c9ccdd13ea69048b84b56 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_d726195dd7272531cab0bd3df7cc4f79" ></div>
+            <div class="folium-map" id="map_ffbb2e2d6f2dd245bfe702e0b6abfaec" ></div>
         
     
-            <img id="float_image_741a1f4e11cd33f51c868c9f02036143" alt="float_image"
+            <img id="float_image_c543c68c400c9ccdd13ea69048b84b56" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 22, 2026<br>06:22 PM EDT
+        Updated: Aug 22, 2026<br>06:46 PM EDT
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_d726195dd7272531cab0bd3df7cc4f79 = L.map(
-                "map_d726195dd7272531cab0bd3df7cc4f79",
+            var map_ffbb2e2d6f2dd245bfe702e0b6abfaec = L.map(
+                "map_ffbb2e2d6f2dd245bfe702e0b6abfaec",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_7796687d9fb98112c551dc2b0f4a52af = L.tileLayer(
+            var tile_layer_4b2c5f95814822da4838a3cd19f392e1 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_108435122bd0da8d3d05d6107bd652d0 = L.tileLayer(
+            var tile_layer_7c7e2f4f992f17b9881d43fd2a920b04 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_5fc82d7831611d09b767cea73013b3fa = L.tileLayer(
+            var tile_layer_babce7bc045ddeabd2d1669747b25d76 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_5fc82d7831611d09b767cea73013b3fa.addTo(map_d726195dd7272531cab0bd3df7cc4f79);
+            tile_layer_babce7bc045ddeabd2d1669747b25d76.addTo(map_ffbb2e2d6f2dd245bfe702e0b6abfaec);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_d726195dd7272531cab0bd3df7cc4f79);
+            ).addTo(map_ffbb2e2d6f2dd245bfe702e0b6abfaec);
         
     
-            var tile_layer_32690858c31060c791a455fc8f1ad777 = L.tileLayer(
+            var tile_layer_8fedaab759430dec4d7e850093c5022a = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_66393a50a008844be0c752c961836959 = L.tileLayer(
+            var tile_layer_7ccfd4207b3ca66d34233675b85707d5 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_9a5918ec8cdffaefb378c9b1f252e756 = L.tileLayer(
+            var tile_layer_0c6fabd66f55d6616768a789f8cafe9d = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_adb3db15eb0c2fb605ee0e27809e2e05 = L.tileLayer(
+            var tile_layer_f6dc1e077e5338ae6d363cbd2e20d44e = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_2dcfb15deca9da7bf5803accc55005d9 = L.control.locate(
+            var locate_control_28bc319435f308fb9cc584b9bd1824aa = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_d726195dd7272531cab0bd3df7cc4f79);
+            ).addTo(map_ffbb2e2d6f2dd245bfe702e0b6abfaec);
             
         
     
-        function geo_json_06b79c39e4ec46ed30acd17c5e219317_styler(feature) {
+        function geo_json_9ec9c87d3e232dca9395d08722ed2fbc_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_06b79c39e4ec46ed30acd17c5e219317_onEachFeature(feature, layer) {
+        function geo_json_9ec9c87d3e232dca9395d08722ed2fbc_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_06b79c39e4ec46ed30acd17c5e219317 = L.geoJson(null, {
-                onEachFeature: geo_json_06b79c39e4ec46ed30acd17c5e219317_onEachFeature,
+        var geo_json_9ec9c87d3e232dca9395d08722ed2fbc = L.geoJson(null, {
+                onEachFeature: geo_json_9ec9c87d3e232dca9395d08722ed2fbc_onEachFeature,
             
-                style: geo_json_06b79c39e4ec46ed30acd17c5e219317_styler,
+                style: geo_json_9ec9c87d3e232dca9395d08722ed2fbc_styler,
             ...{
 }
         });
 
-        function geo_json_06b79c39e4ec46ed30acd17c5e219317_add (data) {
-            geo_json_06b79c39e4ec46ed30acd17c5e219317
+        function geo_json_9ec9c87d3e232dca9395d08722ed2fbc_add (data) {
+            geo_json_9ec9c87d3e232dca9395d08722ed2fbc
                 .addData(data);
         }
-            geo_json_06b79c39e4ec46ed30acd17c5e219317_add({"bbox": [-81.68, 35.72, -80.31, 36.53], "features": [{"bbox": [-80.8, 36.24, -80.31, 36.53], "geometry": {"coordinates": [[[-80.47, 36.26], [-80.52, 36.26], [-80.54, 36.27], [-80.54, 36.29], [-80.57, 36.28], [-80.8, 36.41], [-80.67, 36.53], [-80.31, 36.45], [-80.45, 36.26], [-80.45, 36.24], [-80.47, 36.26]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.69fc2f500e2bd97f764489ae13f727e1afe006d5.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ003", "https://api.weather.gov/zones/forecast/NCZ004"], "areaDesc": "Surry; Stokes", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 612 PM EDT, Doppler radar was tracking a cluster of strong\nthunderstorms over Ararat, or near Mount Airy, moving southeast at 25\nmph.\n\nHAZARD...Wind gusts up to 40 mph and half inch hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nMount Airy...\nFlat Rock...\nDobson...\nPilot Mountain...\nPilot Mountain State Park...\nToast...\nand Level Cross.", "effective": "2026-08-22T18:12:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T18:45:00-04:00", "geocode": {"SAME": ["037171", "037169"], "UGC": ["NCZ003", "NCZ004"]}, "headline": "Special Weather Statement issued August 22 at 6:12PM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.69fc2f500e2bd97f764489ae13f727e1afe006d5.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nLocally heavy rain will quickly reduce visibility and result in\nponding of water on roadways, standing water in low lying areas, and\nminor flooding of creeks, streams, and areas of poor drainage.\nDrivers are urged to slow down and use extra caution to avoid\nhydroplaning.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T18:12:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["STRONG THUNDERSTORMS WILL IMPACT EASTERN SURRY AND WEST CENTRAL STOKES COUNTIES THROUGH 645 PM EDT"], "WMOidentifier": ["WWUS81 KRNK 222212"], "eventMotionDescription": ["2026-08-22T22:12:00-00:00...storm...292DEG...20KT...36.41,-80.6"], "maxHailSize": ["0.50"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-08-22T18:12:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.68, 35.72, -81.33, 35.92], "geometry": {"coordinates": [[[-81.33, 35.89], [-81.34, 35.82], [-81.33, 35.8], [-81.35, 35.79], [-81.36, 35.78], [-81.35, 35.77], [-81.37, 35.76], [-81.4, 35.72], [-81.68, 35.79], [-81.64, 35.9], [-81.34, 35.92], [-81.33, 35.89]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.72f5051cef7f930a3ebad72adea7807bd4bfccc9.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ502", "https://api.weather.gov/zones/forecast/NCZ504"], "areaDesc": "Greater Caldwell; Greater Burke", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 609 PM EDT, Doppler radar was tracking a strong thunderstorm 4\nmiles south of Lenoir, or over Cajah\u0027s Mountain, moving east at 20\nmph.\n\nHAZARD...Wind gusts up to 40 mph and half inch hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nLenoir, Sawmills, Granite Falls, Gamewell, Hudson, Cajah\u0027s Mountain,\nConnelly Springs, Rhodhiss, Lake Rhodhiss, and Hickory Regional\nAirport.", "effective": "2026-08-22T18:10:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T18:45:00-04:00", "geocode": {"SAME": ["037027", "037023"], "UGC": ["NCZ502", "NCZ504"]}, "headline": "Special Weather Statement issued August 22 at 6:10PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.72f5051cef7f930a3ebad72adea7807bd4bfccc9.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nIf on or near Lake Rhodiss or Lake Hickory, get out of the water and\nmove indoors or inside a vehicle. Remember, lightning can strike out\nto 10 miles from the parent thunderstorm. If you can hear thunder,\nyou are close enough to be struck by lightning. Move to safe shelter\nnow! Do not be caught on the water in a thunderstorm.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T18:10:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN CALDWELL AND EAST CENTRAL BURKE COUNTIES THROUGH 645 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 222210"], "eventMotionDescription": ["2026-08-22T22:09:00-00:00...storm...277DEG...18KT...35.84,-81.55"], "maxHailSize": ["0.50"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-22T18:10:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_9ec9c87d3e232dca9395d08722ed2fbc_add({"bbox": [-81.58, 35.57, -80.78, 36.25], "features": [{"bbox": [-81.58, 35.57, -81.2, 35.84], "geometry": {"coordinates": [[[-81.58, 35.76], [-81.44, 35.84], [-81.2, 35.72], [-81.44, 35.57], [-81.58, 35.76]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5fb65dff0f3a3c2a9f4ebc3f0a3cf5efaa506330.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ056", "https://api.weather.gov/zones/forecast/NCZ502", "https://api.weather.gov/zones/forecast/NCZ504"], "areaDesc": "Catawba; Greater Caldwell; Greater Burke", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 642 PM EDT, Doppler radar was tracking a strong thunderstorm 7\nmiles west of Hickory, or near Rhodhiss, moving southeast at 20 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nHickory, Conover, Longview, Granite Falls, Valdese, Icard, Hildebran,\nConnelly Springs, Rutherford College, and Rhodhiss.", "effective": "2026-08-22T18:43:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T19:30:00-04:00", "geocode": {"SAME": ["037035", "037027", "037023"], "UGC": ["NCZ056", "NCZ502", "NCZ504"]}, "headline": "Special Weather Statement issued August 22 at 6:43PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.5fb65dff0f3a3c2a9f4ebc3f0a3cf5efaa506330.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nIf on or near Rhodiss Lake or Lake Hickory, get out of the water and\nmove indoors or inside a vehicle. Remember, lightning can strike out\nto 10 miles from the parent thunderstorm. If you can hear thunder,\nyou are close enough to be struck by lightning. Move to safe shelter\nnow! Do not be caught on the water in a thunderstorm.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T18:43:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT WESTERN CATAWBA...SOUTHEASTERN CALDWELL AND SOUTHEASTERN BURKE COUNTIES THROUGH 730 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 222243"], "eventMotionDescription": ["2026-08-22T22:42:00-00:00...storm...311DEG...15KT...35.76,-81.46"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-22T18:43:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-81.24, 36.03, -80.78, 36.25], "geometry": {"coordinates": [[[-81.1, 36.03], [-81.11, 36.04], [-81.14, 36.04], [-81.16, 36.03], [-81.24, 36.13], [-81.08, 36.25], [-80.78, 36.13], [-80.82, 36.05], [-80.98, 36.06], [-81.05, 36.04], [-81.06, 36.03], [-81.1, 36.03]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a500991bf93aa456cbffa469446eecc336b36417.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ019", "https://api.weather.gov/zones/forecast/NCZ020"], "areaDesc": "Wilkes; Yadkin", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 623 PM EDT, Doppler radar was tracking a cluster of strong\nthunderstorms near Moravian Falls, or near Wilkesboro, moving\nsoutheast at 15 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nNorth Wilkesboro...\nWilkesboro...\nWindy Gap...\nBuck Shoals...\nWilkes County Airport...\nClingman...\nand Moravian Falls.", "effective": "2026-08-22T18:23:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T19:00:00-04:00", "geocode": {"SAME": ["037193", "037197"], "UGC": ["NCZ019", "NCZ020"]}, "headline": "Special Weather Statement issued August 22 at 6:23PM EDT by NWS Blacksburg VA", "id": "urn:oid:2.49.0.1.840.0.a500991bf93aa456cbffa469446eecc336b36417.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nLocally heavy rain will quickly reduce visibility and result in\nponding of water on roadways, standing water in low lying areas, and\nminor flooding of creeks, streams, and areas of poor drainage.\nDrivers are urged to slow down and use extra caution to avoid\nhydroplaning.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T18:23:00-04:00", "parameters": {"AWIPSidentifier": ["SPSRNK"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["STRONG THUNDERSTORMS WILL IMPACT SOUTHEASTERN WILKES AND SOUTHWESTERN YADKIN COUNTIES THROUGH 700 PM EDT"], "WMOidentifier": ["WWUS81 KRNK 222223"], "eventMotionDescription": ["2026-08-22T22:23:00-00:00...storm...293DEG...13KT...36.1,-81.08"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Blacksburg VA", "sent": "2026-08-22T18:23:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_06b79c39e4ec46ed30acd17c5e219317.bindTooltip(
+    geo_json_9ec9c87d3e232dca9395d08722ed2fbc.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_06b79c39e4ec46ed30acd17c5e219317.bindPopup(
+    geo_json_9ec9c87d3e232dca9395d08722ed2fbc.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_06b79c39e4ec46ed30acd17c5e219317.addTo(map_d726195dd7272531cab0bd3df7cc4f79);
+            geo_json_9ec9c87d3e232dca9395d08722ed2fbc.addTo(map_ffbb2e2d6f2dd245bfe702e0b6abfaec);
         
     
-            var layer_control_4cbcf2e3a689a2520f4f737c84d207dc_layers = {
+            var layer_control_57f83060cdbedcab9ec24d51ac2182c1_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_7796687d9fb98112c551dc2b0f4a52af,
-                    "Esri Street Map" : tile_layer_108435122bd0da8d3d05d6107bd652d0,
-                    "Esri NatGeo" : tile_layer_5fc82d7831611d09b767cea73013b3fa,
-                    "Google Satellite" : tile_layer_32690858c31060c791a455fc8f1ad777,
-                    "Google Terrain" : tile_layer_66393a50a008844be0c752c961836959,
-                    "Google Street" : tile_layer_9a5918ec8cdffaefb378c9b1f252e756,
-                    "Light Gray Base" : tile_layer_adb3db15eb0c2fb605ee0e27809e2e05,
+                    "Esri Satellite" : tile_layer_4b2c5f95814822da4838a3cd19f392e1,
+                    "Esri Street Map" : tile_layer_7c7e2f4f992f17b9881d43fd2a920b04,
+                    "Esri NatGeo" : tile_layer_babce7bc045ddeabd2d1669747b25d76,
+                    "Google Satellite" : tile_layer_8fedaab759430dec4d7e850093c5022a,
+                    "Google Terrain" : tile_layer_7ccfd4207b3ca66d34233675b85707d5,
+                    "Google Street" : tile_layer_0c6fabd66f55d6616768a789f8cafe9d,
+                    "Light Gray Base" : tile_layer_f6dc1e077e5338ae6d363cbd2e20d44e,
                 },
                 overlays :  {
-                    " SPS" : geo_json_06b79c39e4ec46ed30acd17c5e219317,
+                    " SPS" : geo_json_9ec9c87d3e232dca9395d08722ed2fbc,
                 },
             };
-            let layer_control_4cbcf2e3a689a2520f4f737c84d207dc = L.control.layers(
-                layer_control_4cbcf2e3a689a2520f4f737c84d207dc_layers.base_layers,
-                layer_control_4cbcf2e3a689a2520f4f737c84d207dc_layers.overlays,
+            let layer_control_57f83060cdbedcab9ec24d51ac2182c1 = L.control.layers(
+                layer_control_57f83060cdbedcab9ec24d51ac2182c1_layers.base_layers,
+                layer_control_57f83060cdbedcab9ec24d51ac2182c1_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_d726195dd7272531cab0bd3df7cc4f79);
+            ).addTo(map_ffbb2e2d6f2dd245bfe702e0b6abfaec);
 
         
 </script>
