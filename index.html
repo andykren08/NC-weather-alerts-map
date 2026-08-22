@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9ea79d50c29a2bad261e4fe067a2cc52 {
+                #map_6446dd20ea4a242bd72a6bf35687273c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -87,40 +87,8 @@
                     </style>
             
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_6cc805eb92318492e52192f4b789d468 {
+                    #float_image_283223c4aeab6cf001f46f0f70c150ba {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -138,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_9ea79d50c29a2bad261e4fe067a2cc52" ></div>
+            <div class="folium-map" id="map_6446dd20ea4a242bd72a6bf35687273c" ></div>
         
     
-            <img id="float_image_6cc805eb92318492e52192f4b789d468" alt="float_image"
+            <img id="float_image_283223c4aeab6cf001f46f0f70c150ba" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -152,15 +120,10 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 22, 2026<br>05:32 PM EDT
+        Updated: Aug 22, 2026<br>05:53 PM EDT
     </div>
     <div class='legend-scale'>
        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#FFA500; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Severe Thunderstorm Warning</span>
-        </div>
-        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#FFE4B5; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Special Weather Statement</span>
@@ -176,8 +139,8 @@
 <script>
     
     
-            var map_9ea79d50c29a2bad261e4fe067a2cc52 = L.map(
-                "map_9ea79d50c29a2bad261e4fe067a2cc52",
+            var map_6446dd20ea4a242bd72a6bf35687273c = L.map(
+                "map_6446dd20ea4a242bd72a6bf35687273c",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -194,7 +157,7 @@
 
         
     
-            var tile_layer_d7a5e31e87bb7ecf106231f368691928 = L.tileLayer(
+            var tile_layer_7993eb4d3492238d5149836ad57fba11 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -211,7 +174,7 @@
             );
         
     
-            var tile_layer_502f19b7bd41a39bdf2630368ecd28a5 = L.tileLayer(
+            var tile_layer_d57c5378e41f8bf68f8bc569c96112d0 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -228,7 +191,7 @@
             );
         
     
-            var tile_layer_2cbaeb2e496dbba0ff0e07bdf4b6cf34 = L.tileLayer(
+            var tile_layer_434c59f9f440ea2d620cbc3ccc319931 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -245,7 +208,7 @@
             );
         
     
-            tile_layer_2cbaeb2e496dbba0ff0e07bdf4b6cf34.addTo(map_9ea79d50c29a2bad261e4fe067a2cc52);
+            tile_layer_434c59f9f440ea2d620cbc3ccc319931.addTo(map_6446dd20ea4a242bd72a6bf35687273c);
         
     
             L.control.fullscreen(
@@ -255,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_9ea79d50c29a2bad261e4fe067a2cc52);
+            ).addTo(map_6446dd20ea4a242bd72a6bf35687273c);
         
     
-            var tile_layer_353774602237d2ec1ac8e07b309969f4 = L.tileLayer(
+            var tile_layer_44540c2dd2d13c1f3bbcd1468e69d9c0 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -275,7 +238,7 @@
             );
         
     
-            var tile_layer_5c785c035f29d770def1c985e0187164 = L.tileLayer(
+            var tile_layer_4f601f7cc782d7721ab5cfea270bc5f2 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -292,7 +255,7 @@
             );
         
     
-            var tile_layer_1689ee5b145e57804440a0f763f2a279 = L.tileLayer(
+            var tile_layer_080620cfc84d5024122874b51cd58684 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -309,7 +272,7 @@
             );
         
     
-            var tile_layer_114a7316564b9dbc1df51a4afc65aaec = L.tileLayer(
+            var tile_layer_d3aa3e914dd80fe2ebe6ca18acfb95f9 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -326,41 +289,41 @@
             );
         
     
-            var locate_control_26351315975189f97b60b111f8791f21 = L.control.locate(
+            var locate_control_da5589a07e2c950de3e6405348df2e0c = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_9ea79d50c29a2bad261e4fe067a2cc52);
+            ).addTo(map_6446dd20ea4a242bd72a6bf35687273c);
             
         
     
-        function geo_json_5cec68b6fbc1e5382c0fd12228c20243_styler(feature) {
+        function geo_json_e631957a5719d737d93321812f327052_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_5cec68b6fbc1e5382c0fd12228c20243_onEachFeature(feature, layer) {
+        function geo_json_e631957a5719d737d93321812f327052_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_5cec68b6fbc1e5382c0fd12228c20243 = L.geoJson(null, {
-                onEachFeature: geo_json_5cec68b6fbc1e5382c0fd12228c20243_onEachFeature,
+        var geo_json_e631957a5719d737d93321812f327052 = L.geoJson(null, {
+                onEachFeature: geo_json_e631957a5719d737d93321812f327052_onEachFeature,
             
-                style: geo_json_5cec68b6fbc1e5382c0fd12228c20243_styler,
+                style: geo_json_e631957a5719d737d93321812f327052_styler,
             ...{
 }
         });
 
-        function geo_json_5cec68b6fbc1e5382c0fd12228c20243_add (data) {
-            geo_json_5cec68b6fbc1e5382c0fd12228c20243
+        function geo_json_e631957a5719d737d93321812f327052_add (data) {
+            geo_json_e631957a5719d737d93321812f327052
                 .addData(data);
         }
-            geo_json_5cec68b6fbc1e5382c0fd12228c20243_add({"bbox": [-82.42, 35.19, -81.99, 35.41], "features": [{"bbox": [-82.42, 35.19, -81.99, 35.41], "geometry": {"coordinates": [[[-82.11, 35.38], [-82.07, 35.34], [-82.05, 35.33], [-81.99, 35.27], [-82.2, 35.19], [-82.29, 35.2], [-82.34, 35.19], [-82.42, 35.33], [-82.37, 35.38], [-82.3, 35.37], [-82.2, 35.4], [-82.18, 35.4], [-82.17, 35.41], [-82.15, 35.41], [-82.11, 35.38]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.54b5db10a7b7a6009439eebc50346c82e28d9d11.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ065", "https://api.weather.gov/zones/forecast/NCZ509", "https://api.weather.gov/zones/forecast/NCZ510"], "areaDesc": "Henderson; Polk Mountains; Eastern Polk", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 522 PM EDT, Doppler radar was tracking a strong thunderstorm 6\nmiles northwest of Columbus, moving east at 20 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nColumbus, Tryon, Saluda, Dana, Mill Spring, and Lake Adger.", "effective": "2026-08-22T17:22:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T18:15:00-04:00", "geocode": {"SAME": ["037089", "037149"], "UGC": ["NCZ065", "NCZ509", "NCZ510"]}, "headline": "Special Weather Statement issued August 22 at 5:22PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.54b5db10a7b7a6009439eebc50346c82e28d9d11.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T17:22:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT EAST CENTRAL HENDERSON AND POLK COUNTIES THROUGH 615 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 222122"], "eventMotionDescription": ["2026-08-22T21:22:00-00:00...storm...291DEG...17KT...35.33,-82.28"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-22T17:22:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_e631957a5719d737d93321812f327052_add({"bbox": [-82.42, 33.83, -78.29, 35.41], "features": [{"bbox": [-78.71, 33.83, -78.29, 34.07], "geometry": {"coordinates": [[[-78.29, 33.94], [-78.37, 33.9], [-78.47, 33.88], [-78.55, 33.85], [-78.58, 33.85], [-78.63, 33.83], [-78.71, 33.92], [-78.66, 33.95], [-78.65, 33.95], [-78.64, 33.96], [-78.47, 34.07], [-78.29, 33.94]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3c64a880d97fd028b99f152fa9e0dfdea3502958.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ109", "https://api.weather.gov/zones/forecast/NCZ110", "https://api.weather.gov/zones/forecast/SCZ054", "https://api.weather.gov/zones/forecast/SCZ058"], "areaDesc": "Inland Brunswick; Coastal Brunswick; Coastal Horry; Central Horry", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 548 PM EDT, Doppler radar was tracking a strong thunderstorm over\nCarolina Shores, or near Little River, moving northeast at 15 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nNorth Myrtle Beach, Shallotte, Sunset Beach, Holden Beach, Ocean Isle\nBeach, Little River, Iredell, Carolina Shores, Calabash, Grissettown,\nLongwood, Seaside, Russtown, and Brooksville.", "effective": "2026-08-22T17:48:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T18:15:00-04:00", "geocode": {"SAME": ["037019", "045051"], "UGC": ["NCZ109", "NCZ110", "SCZ054", "SCZ058"]}, "headline": "Special Weather Statement issued August 22 at 5:48PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.3c64a880d97fd028b99f152fa9e0dfdea3502958.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T17:48:00-04:00", "parameters": {"AWIPSidentifier": ["SPSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHWESTERN BRUNSWICK AND EAST CENTRAL HORRY COUNTIES THROUGH 615 PM EDT"], "WMOidentifier": ["WWUS82 KILM 222148"], "eventMotionDescription": ["2026-08-22T21:48:00-00:00...storm...231DEG...13KT...33.91,-78.6"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-22T17:48:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-82.42, 35.19, -81.99, 35.41], "geometry": {"coordinates": [[[-82.11, 35.38], [-82.07, 35.34], [-82.05, 35.33], [-81.99, 35.27], [-82.2, 35.19], [-82.29, 35.2], [-82.34, 35.19], [-82.42, 35.33], [-82.37, 35.38], [-82.3, 35.37], [-82.2, 35.4], [-82.18, 35.4], [-82.17, 35.41], [-82.15, 35.41], [-82.11, 35.38]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.54b5db10a7b7a6009439eebc50346c82e28d9d11.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ065", "https://api.weather.gov/zones/forecast/NCZ509", "https://api.weather.gov/zones/forecast/NCZ510"], "areaDesc": "Henderson; Polk Mountains; Eastern Polk", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 522 PM EDT, Doppler radar was tracking a strong thunderstorm 6\nmiles northwest of Columbus, moving east at 20 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to outdoor objects is\npossible.\n\nLocations impacted include...\nColumbus, Tryon, Saluda, Dana, Mill Spring, and Lake Adger.", "effective": "2026-08-22T17:22:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-22T18:15:00-04:00", "geocode": {"SAME": ["037089", "037149"], "UGC": ["NCZ065", "NCZ509", "NCZ510"]}, "headline": "Special Weather Statement issued August 22 at 5:22PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.54b5db10a7b7a6009439eebc50346c82e28d9d11.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T17:22:00-04:00", "parameters": {"AWIPSidentifier": ["SPSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT EAST CENTRAL HENDERSON AND POLK COUNTIES THROUGH 615 PM EDT"], "WMOidentifier": ["WWUS82 KGSP 222122"], "eventMotionDescription": ["2026-08-22T21:22:00-00:00...storm...291DEG...17KT...35.33,-82.28"], "maxHailSize": ["0.25"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-22T17:22:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_5cec68b6fbc1e5382c0fd12228c20243.bindTooltip(
+    geo_json_e631957a5719d737d93321812f327052.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -395,7 +358,7 @@
 });
                      
     
-    geo_json_5cec68b6fbc1e5382c0fd12228c20243.bindPopup(
+    geo_json_e631957a5719d737d93321812f327052.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -430,134 +393,32 @@
 });
                      
     
-            geo_json_5cec68b6fbc1e5382c0fd12228c20243.addTo(map_9ea79d50c29a2bad261e4fe067a2cc52);
+            geo_json_e631957a5719d737d93321812f327052.addTo(map_6446dd20ea4a242bd72a6bf35687273c);
         
     
-        function geo_json_43ff35e339394b24228cc4066a4d496c_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_43ff35e339394b24228cc4066a4d496c_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_43ff35e339394b24228cc4066a4d496c = L.geoJson(null, {
-                onEachFeature: geo_json_43ff35e339394b24228cc4066a4d496c_onEachFeature,
-            
-                style: geo_json_43ff35e339394b24228cc4066a4d496c_styler,
-            ...{
-}
-        });
-
-        function geo_json_43ff35e339394b24228cc4066a4d496c_add (data) {
-            geo_json_43ff35e339394b24228cc4066a4d496c
-                .addData(data);
-        }
-            geo_json_43ff35e339394b24228cc4066a4d496c_add({"bbox": [-82.75, 34.95, -82.22, 35.32], "features": [{"bbox": [-82.75, 34.95, -82.22, 35.32], "geometry": {"coordinates": [[[-82.36, 35.24], [-82.36, 35.23], [-82.35, 35.23], [-82.35, 35.19], [-82.32, 35.19], [-82.29, 35.2], [-82.26, 35.2], [-82.22, 35.18], [-82.22, 35.12], [-82.58, 34.95], [-82.75, 35.23], [-82.55, 35.32], [-82.36, 35.24]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01d08f53392c7eb71010862ea0d4ac82bd01c32d.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC089", "https://api.weather.gov/zones/county/NCC175", "https://api.weather.gov/zones/county/SCC045", "https://api.weather.gov/zones/county/SCC077"], "areaDesc": "Henderson, NC; Transylvania, NC; Greenville, SC; Pickens, SC", "category": "Severe Weather", "certainty": "Observed", "code": "IPAWSv1.0", "description": "SVRGSP\n\nThe National Weather Service in Greenville-Spartanburg has issued a\n\n* Severe Thunderstorm Warning for...\nEast central Transylvania County in western North Carolina...\nSoutheastern Henderson County in western North Carolina...\nNorthern Greenville County in Upstate South Carolina...\nNortheastern Pickens County in Upstate South Carolina...\n\n* Until 600 PM EDT.\n\n* At 514 PM EDT, a severe thunderstorm was located 8 miles southwest\nof Hendersonville, or 4 miles northeast of Dupont State Forest,\nmoving east at 25 mph.\n\nHAZARD...60 mph wind gusts and nickel size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to trees and power lines.\n\n* Locations impacted include...\nBrevard, Flat Rock, Slater-Marietta, Tigerville, Pleasant Ridge\nState Park, Jones Gap State Park, Dupont State Forest, Caesars Head\nState Park, Tuxedo, and North Saluda Reservoir.", "effective": "2026-08-22T17:15:00-04:00", "ends": "2026-08-22T18:00:00-04:00", "event": "Severe Thunderstorm Warning", "eventCode": {"NationalWeatherService": ["SVW"], "SAME": ["SVR"]}, "expires": "2026-08-22T18:00:00-04:00", "geocode": {"SAME": ["037089", "037175", "045045", "045077"], "UGC": ["NCC089", "NCC175", "SCC045", "SCC077"]}, "headline": "Severe Thunderstorm Warning issued August 22 at 5:15PM EDT until August 22 at 6:00PM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.01d08f53392c7eb71010862ea0d4ac82bd01c32d.001.1", "instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nPlease report damaging winds, hail, or flooding to the National\nWeather Service by calling toll free, 1, 800, 2 6 7, 8 1 0 1, or by\nposting on our Facebook page, or post it to X using hashtag nwsgsp.\nYour message should describe the event and the specific location\nwhere it occurred.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T17:15:00-04:00", "parameters": {"AWIPSidentifier": ["SVRGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KGSP.SV.W.0280.260822T2115Z-260822T2200Z/"], "WMOidentifier": ["WUUS52 KGSP 222115"], "eventEndingTime": ["2026-08-22T18:00:00-04:00"], "eventMotionDescription": ["2026-08-22T21:14:00-00:00...storm...291DEG...23KT...35.23,-82.55"], "hailThreat": ["RADAR INDICATED"], "maxHailSize": ["0.88"], "maxWindGust": ["60 MPH"], "windThreat": ["RADAR INDICATED"]}, "references": [], "response": "Shelter", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-22T17:15:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_43ff35e339394b24228cc4066a4d496c.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_43ff35e339394b24228cc4066a4d496c.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_43ff35e339394b24228cc4066a4d496c.addTo(map_9ea79d50c29a2bad261e4fe067a2cc52);
-        
-    
-            var layer_control_ec9c3e6a2c1b5400072e01340a938285_layers = {
+            var layer_control_89f41b3b11ca85cd3704e68c6d269c5d_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_d7a5e31e87bb7ecf106231f368691928,
-                    "Esri Street Map" : tile_layer_502f19b7bd41a39bdf2630368ecd28a5,
-                    "Esri NatGeo" : tile_layer_2cbaeb2e496dbba0ff0e07bdf4b6cf34,
-                    "Google Satellite" : tile_layer_353774602237d2ec1ac8e07b309969f4,
-                    "Google Terrain" : tile_layer_5c785c035f29d770def1c985e0187164,
-                    "Google Street" : tile_layer_1689ee5b145e57804440a0f763f2a279,
-                    "Light Gray Base" : tile_layer_114a7316564b9dbc1df51a4afc65aaec,
+                    "Esri Satellite" : tile_layer_7993eb4d3492238d5149836ad57fba11,
+                    "Esri Street Map" : tile_layer_d57c5378e41f8bf68f8bc569c96112d0,
+                    "Esri NatGeo" : tile_layer_434c59f9f440ea2d620cbc3ccc319931,
+                    "Google Satellite" : tile_layer_44540c2dd2d13c1f3bbcd1468e69d9c0,
+                    "Google Terrain" : tile_layer_4f601f7cc782d7721ab5cfea270bc5f2,
+                    "Google Street" : tile_layer_080620cfc84d5024122874b51cd58684,
+                    "Light Gray Base" : tile_layer_d3aa3e914dd80fe2ebe6ca18acfb95f9,
                 },
                 overlays :  {
-                    " SPS" : geo_json_5cec68b6fbc1e5382c0fd12228c20243,
-                    " Severe Weather" : geo_json_43ff35e339394b24228cc4066a4d496c,
+                    " SPS" : geo_json_e631957a5719d737d93321812f327052,
                 },
             };
-            let layer_control_ec9c3e6a2c1b5400072e01340a938285 = L.control.layers(
-                layer_control_ec9c3e6a2c1b5400072e01340a938285_layers.base_layers,
-                layer_control_ec9c3e6a2c1b5400072e01340a938285_layers.overlays,
+            let layer_control_89f41b3b11ca85cd3704e68c6d269c5d = L.control.layers(
+                layer_control_89f41b3b11ca85cd3704e68c6d269c5d_layers.base_layers,
+                layer_control_89f41b3b11ca85cd3704e68c6d269c5d_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_9ea79d50c29a2bad261e4fe067a2cc52);
+            ).addTo(map_6446dd20ea4a242bd72a6bf35687273c);
 
         
 </script>
