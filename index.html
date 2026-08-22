@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f56140196ab03bf2365058526d081564 {
+                #map_4d51d9441656953293c132f0f0ac2dbc {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_e2293e78b201b24abfde29f85463cda4 {
+                    #float_image_57528f9253274142940b27027df024b9 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_f56140196ab03bf2365058526d081564" ></div>
+            <div class="folium-map" id="map_4d51d9441656953293c132f0f0ac2dbc" ></div>
         
     
-            <img id="float_image_e2293e78b201b24abfde29f85463cda4" alt="float_image"
+            <img id="float_image_57528f9253274142940b27027df024b9" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,7 +120,7 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 22, 2026<br>03:42 AM EDT
+        Updated: Aug 22, 2026<br>04:02 AM EDT
     </div>
     <div class='legend-scale'>
        
@@ -139,8 +139,8 @@
 <script>
     
     
-            var map_f56140196ab03bf2365058526d081564 = L.map(
-                "map_f56140196ab03bf2365058526d081564",
+            var map_4d51d9441656953293c132f0f0ac2dbc = L.map(
+                "map_4d51d9441656953293c132f0f0ac2dbc",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +157,7 @@
 
         
     
-            var tile_layer_821e888d5681553ab4e79f790d502916 = L.tileLayer(
+            var tile_layer_a4a7ddeb1cf89c557769fc939924f668 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +174,7 @@
             );
         
     
-            var tile_layer_0ae084927b9f5eb6ad0f2c2f2a6bedc1 = L.tileLayer(
+            var tile_layer_40423eb405219e8f63f27ce7014a786a = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +191,7 @@
             );
         
     
-            var tile_layer_379045e95d61cac41e1daff10bc53512 = L.tileLayer(
+            var tile_layer_ce86e3333226687178369db5e4aa4343 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +208,7 @@
             );
         
     
-            tile_layer_379045e95d61cac41e1daff10bc53512.addTo(map_f56140196ab03bf2365058526d081564);
+            tile_layer_ce86e3333226687178369db5e4aa4343.addTo(map_4d51d9441656953293c132f0f0ac2dbc);
         
     
             L.control.fullscreen(
@@ -218,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_f56140196ab03bf2365058526d081564);
+            ).addTo(map_4d51d9441656953293c132f0f0ac2dbc);
         
     
-            var tile_layer_1fecafc9bac65c93bccee854a40fab98 = L.tileLayer(
+            var tile_layer_ff1628c7cce644a0e7b1483dee2c7339 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +238,7 @@
             );
         
     
-            var tile_layer_9ca5541ad1b7a0c7414a0a8a262fdbaa = L.tileLayer(
+            var tile_layer_f3335cae636183957772d0d2e5df00fb = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +255,7 @@
             );
         
     
-            var tile_layer_afb08b6c10c9e05569362694a6855843 = L.tileLayer(
+            var tile_layer_0dac2d1b9bad2f2c8edd4bbeb3a900cb = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +272,7 @@
             );
         
     
-            var tile_layer_4cb6959360198af807b93ce53290241b = L.tileLayer(
+            var tile_layer_aa071128aa408edbc2d534a647cc3ae9 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,41 +289,41 @@
             );
         
     
-            var locate_control_26dc45f1a57f6ade51e620389b7ab78e = L.control.locate(
+            var locate_control_910e531855ec22ff76ceb7ebc4bf1999 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_f56140196ab03bf2365058526d081564);
+            ).addTo(map_4d51d9441656953293c132f0f0ac2dbc);
             
         
     
-        function geo_json_25baaaca1c3b2acacc6a91a03f4b2d34_styler(feature) {
+        function geo_json_9332aa2158e6008c5e141306c4e60a9d_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_25baaaca1c3b2acacc6a91a03f4b2d34_onEachFeature(feature, layer) {
+        function geo_json_9332aa2158e6008c5e141306c4e60a9d_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_25baaaca1c3b2acacc6a91a03f4b2d34 = L.geoJson(null, {
-                onEachFeature: geo_json_25baaaca1c3b2acacc6a91a03f4b2d34_onEachFeature,
+        var geo_json_9332aa2158e6008c5e141306c4e60a9d = L.geoJson(null, {
+                onEachFeature: geo_json_9332aa2158e6008c5e141306c4e60a9d_onEachFeature,
             
-                style: geo_json_25baaaca1c3b2acacc6a91a03f4b2d34_styler,
+                style: geo_json_9332aa2158e6008c5e141306c4e60a9d_styler,
             ...{
 }
         });
 
-        function geo_json_25baaaca1c3b2acacc6a91a03f4b2d34_add (data) {
-            geo_json_25baaaca1c3b2acacc6a91a03f4b2d34
+        function geo_json_9332aa2158e6008c5e141306c4e60a9d_add (data) {
+            geo_json_9332aa2158e6008c5e141306c4e60a9d
                 .addData(data);
         }
-            geo_json_25baaaca1c3b2acacc6a91a03f4b2d34_add({"bbox": [-75.82, 35.26, -75.43, 35.53], "features": [{"bbox": [-75.82, 35.26, -75.43, 35.53], "geometry": {"coordinates": [[[-75.82, 35.33], [-75.82, 35.47], [-75.43, 35.53], [-75.47, 35.26], [-75.82, 35.33]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.096259d0625088e9082df5c13864f8f9cc87edd0.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ135", "https://api.weather.gov/zones/forecast/AMZ152"], "areaDesc": "Pamlico Sound; S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nPamlico Sound...\nS of Oregon Inlet NC to Cape Hatteras NC out to 20 NM...\n\n* Until 530 AM EDT.\n\n* At 333 AM EDT, a strong thunderstorm was located over Pamlico\nSound, moving east at 5 knots.\n\nHAZARD...Wind gusts 34 knots or greater.\n\nSOURCE...Marine observation. This thunderstorm has a history of\nproducing wind gusts up to 35 knots over the middle of\nPamlico Sound.\n\nIMPACT...Small craft could be damaged in briefly higher winds and\nsuddenly higher waves.\n\n* Locations impacted include...\nPamlico Sound.", "effective": "2026-08-22T03:34:00-04:00", "ends": "2026-08-22T05:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-22T05:30:00-04:00", "geocode": {"SAME": ["075135", "075152"], "UGC": ["AMZ135", "AMZ152"]}, "headline": "Special Marine Warning issued August 22 at 3:34AM EDT until August 22 at 5:30AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.096259d0625088e9082df5c13864f8f9cc87edd0.001.1", "instruction": "Boaters should seek safe harbor immediately until this storm passes.\nWind gusts 34 knots or greater, high waves, dangerous lightning, and\nheavy rain are possible with this storm.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T03:34:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0325.260822T0734Z-260822T0930Z/"], "WMOidentifier": ["WHUS52 KMHX 220734"], "eventEndingTime": ["2026-08-22T05:30:00-04:00"], "eventMotionDescription": ["2026-08-22T07:33:00-00:00...storm...268DEG...6KT...35.39,-75.75"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-22T03:34:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_9332aa2158e6008c5e141306c4e60a9d_add({"bbox": [-75.82, 35.26, -75.43, 35.53], "features": [{"bbox": [-75.82, 35.26, -75.43, 35.53], "geometry": {"coordinates": [[[-75.82, 35.33], [-75.82, 35.47], [-75.43, 35.53], [-75.47, 35.26], [-75.82, 35.33]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.096259d0625088e9082df5c13864f8f9cc87edd0.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ135", "https://api.weather.gov/zones/forecast/AMZ152"], "areaDesc": "Pamlico Sound; S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nPamlico Sound...\nS of Oregon Inlet NC to Cape Hatteras NC out to 20 NM...\n\n* Until 530 AM EDT.\n\n* At 333 AM EDT, a strong thunderstorm was located over Pamlico\nSound, moving east at 5 knots.\n\nHAZARD...Wind gusts 34 knots or greater.\n\nSOURCE...Marine observation. This thunderstorm has a history of\nproducing wind gusts up to 35 knots over the middle of\nPamlico Sound.\n\nIMPACT...Small craft could be damaged in briefly higher winds and\nsuddenly higher waves.\n\n* Locations impacted include...\nPamlico Sound.", "effective": "2026-08-22T03:34:00-04:00", "ends": "2026-08-22T05:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-22T05:30:00-04:00", "geocode": {"SAME": ["075135", "075152"], "UGC": ["AMZ135", "AMZ152"]}, "headline": "Special Marine Warning issued August 22 at 3:34AM EDT until August 22 at 5:30AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.096259d0625088e9082df5c13864f8f9cc87edd0.001.1", "instruction": "Boaters should seek safe harbor immediately until this storm passes.\nWind gusts 34 knots or greater, high waves, dangerous lightning, and\nheavy rain are possible with this storm.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T03:34:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0325.260822T0734Z-260822T0930Z/"], "WMOidentifier": ["WHUS52 KMHX 220734"], "eventEndingTime": ["2026-08-22T05:30:00-04:00"], "eventMotionDescription": ["2026-08-22T07:33:00-00:00...storm...268DEG...6KT...35.39,-75.75"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-22T03:34:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_25baaaca1c3b2acacc6a91a03f4b2d34.bindTooltip(
+    geo_json_9332aa2158e6008c5e141306c4e60a9d.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -358,7 +358,7 @@
 });
                      
     
-    geo_json_25baaaca1c3b2acacc6a91a03f4b2d34.bindPopup(
+    geo_json_9332aa2158e6008c5e141306c4e60a9d.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -393,32 +393,32 @@
 });
                      
     
-            geo_json_25baaaca1c3b2acacc6a91a03f4b2d34.addTo(map_f56140196ab03bf2365058526d081564);
+            geo_json_9332aa2158e6008c5e141306c4e60a9d.addTo(map_4d51d9441656953293c132f0f0ac2dbc);
         
     
-            var layer_control_0a1f68d90803696031827a5be3414f3d_layers = {
+            var layer_control_68d99674b1e30f3f1b32dc4f2fcbe955_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_821e888d5681553ab4e79f790d502916,
-                    "Esri Street Map" : tile_layer_0ae084927b9f5eb6ad0f2c2f2a6bedc1,
-                    "Esri NatGeo" : tile_layer_379045e95d61cac41e1daff10bc53512,
-                    "Google Satellite" : tile_layer_1fecafc9bac65c93bccee854a40fab98,
-                    "Google Terrain" : tile_layer_9ca5541ad1b7a0c7414a0a8a262fdbaa,
-                    "Google Street" : tile_layer_afb08b6c10c9e05569362694a6855843,
-                    "Light Gray Base" : tile_layer_4cb6959360198af807b93ce53290241b,
+                    "Esri Satellite" : tile_layer_a4a7ddeb1cf89c557769fc939924f668,
+                    "Esri Street Map" : tile_layer_40423eb405219e8f63f27ce7014a786a,
+                    "Esri NatGeo" : tile_layer_ce86e3333226687178369db5e4aa4343,
+                    "Google Satellite" : tile_layer_ff1628c7cce644a0e7b1483dee2c7339,
+                    "Google Terrain" : tile_layer_f3335cae636183957772d0d2e5df00fb,
+                    "Google Street" : tile_layer_0dac2d1b9bad2f2c8edd4bbeb3a900cb,
+                    "Light Gray Base" : tile_layer_aa071128aa408edbc2d534a647cc3ae9,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_25baaaca1c3b2acacc6a91a03f4b2d34,
+                    " Marine/Beach" : geo_json_9332aa2158e6008c5e141306c4e60a9d,
                 },
             };
-            let layer_control_0a1f68d90803696031827a5be3414f3d = L.control.layers(
-                layer_control_0a1f68d90803696031827a5be3414f3d_layers.base_layers,
-                layer_control_0a1f68d90803696031827a5be3414f3d_layers.overlays,
+            let layer_control_68d99674b1e30f3f1b32dc4f2fcbe955 = L.control.layers(
+                layer_control_68d99674b1e30f3f1b32dc4f2fcbe955_layers.base_layers,
+                layer_control_68d99674b1e30f3f1b32dc4f2fcbe955_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_f56140196ab03bf2365058526d081564);
+            ).addTo(map_4d51d9441656953293c132f0f0ac2dbc);
 
         
 </script>
