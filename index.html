@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_290d447db35cc4507c95fe7ffc787325 {
+                #map_1bc86ff81436d153e4977a5d88d8bb0f {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -87,40 +87,8 @@
                     </style>
             
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_8614d2edf4ab4d8a6b048d19804a0e04 {
+                    #float_image_d18c91339fa708ba49c441f23a3f039e {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -138,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_290d447db35cc4507c95fe7ffc787325" ></div>
+            <div class="folium-map" id="map_1bc86ff81436d153e4977a5d88d8bb0f" ></div>
         
     
-            <img id="float_image_8614d2edf4ab4d8a6b048d19804a0e04" alt="float_image"
+            <img id="float_image_d18c91339fa708ba49c441f23a3f039e" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -152,18 +120,13 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 22, 2026<br>02:14 AM EDT
+        Updated: Aug 22, 2026<br>03:04 AM EDT
     </div>
     <div class='legend-scale'>
        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#00FF7F; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Flood Advisory</span>
-        </div>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#FFDAB9; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Marine Weather Statement</span>
         </div>
         
     </div>
@@ -176,8 +139,8 @@
 <script>
     
     
-            var map_290d447db35cc4507c95fe7ffc787325 = L.map(
-                "map_290d447db35cc4507c95fe7ffc787325",
+            var map_1bc86ff81436d153e4977a5d88d8bb0f = L.map(
+                "map_1bc86ff81436d153e4977a5d88d8bb0f",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -194,7 +157,7 @@
 
         
     
-            var tile_layer_0916416c9530370a40bba7f5eb32f7bb = L.tileLayer(
+            var tile_layer_bcffacd2bd61bea4fb21f24d7e06f950 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -211,7 +174,7 @@
             );
         
     
-            var tile_layer_9889f84c2b43f15aebf27a927b138675 = L.tileLayer(
+            var tile_layer_fb926612fa0aba531aace6e94e80f899 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -228,7 +191,7 @@
             );
         
     
-            var tile_layer_825df1ae8e4cfa5a918a3d124955aaa1 = L.tileLayer(
+            var tile_layer_0ae3b06ad52db337e38ef3fe3f528fba = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -245,7 +208,7 @@
             );
         
     
-            tile_layer_825df1ae8e4cfa5a918a3d124955aaa1.addTo(map_290d447db35cc4507c95fe7ffc787325);
+            tile_layer_0ae3b06ad52db337e38ef3fe3f528fba.addTo(map_1bc86ff81436d153e4977a5d88d8bb0f);
         
     
             L.control.fullscreen(
@@ -255,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_290d447db35cc4507c95fe7ffc787325);
+            ).addTo(map_1bc86ff81436d153e4977a5d88d8bb0f);
         
     
-            var tile_layer_027e1b7eed34b34fee63f03bebd18b3b = L.tileLayer(
+            var tile_layer_c5637f7331d42f8d5ae72a88fbde959a = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -275,7 +238,7 @@
             );
         
     
-            var tile_layer_b6dd5ff705b780a2abe5fead652c354e = L.tileLayer(
+            var tile_layer_03bd270c4d6033afbe5b5a76c7e8c35f = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -292,7 +255,7 @@
             );
         
     
-            var tile_layer_68746d20396dae2277c1486e7f49bc74 = L.tileLayer(
+            var tile_layer_c7e7116d5079a93ba61474e80452beb8 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -309,7 +272,7 @@
             );
         
     
-            var tile_layer_8648a53e9b5f3c52b56f1055eb1fe5b1 = L.tileLayer(
+            var tile_layer_1b7b35575728acdad6408b080c9cb3cc = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -326,41 +289,41 @@
             );
         
     
-            var locate_control_53cc1b39843424675a1172b4b5d550ee = L.control.locate(
+            var locate_control_c76cc2cae989c88ebe8456d66a3ea89d = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_290d447db35cc4507c95fe7ffc787325);
+            ).addTo(map_1bc86ff81436d153e4977a5d88d8bb0f);
             
         
     
-        function geo_json_b50dd82713b86028a49f66df853177cc_styler(feature) {
+        function geo_json_c53131767653fbc22dec5d8cad0aecfc_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#00FF7F", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_b50dd82713b86028a49f66df853177cc_onEachFeature(feature, layer) {
+        function geo_json_c53131767653fbc22dec5d8cad0aecfc_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_b50dd82713b86028a49f66df853177cc = L.geoJson(null, {
-                onEachFeature: geo_json_b50dd82713b86028a49f66df853177cc_onEachFeature,
+        var geo_json_c53131767653fbc22dec5d8cad0aecfc = L.geoJson(null, {
+                onEachFeature: geo_json_c53131767653fbc22dec5d8cad0aecfc_onEachFeature,
             
-                style: geo_json_b50dd82713b86028a49f66df853177cc_styler,
+                style: geo_json_c53131767653fbc22dec5d8cad0aecfc_styler,
             ...{
 }
         });
 
-        function geo_json_b50dd82713b86028a49f66df853177cc_add (data) {
-            geo_json_b50dd82713b86028a49f66df853177cc
+        function geo_json_c53131767653fbc22dec5d8cad0aecfc_add (data) {
+            geo_json_c53131767653fbc22dec5d8cad0aecfc
                 .addData(data);
         }
-            geo_json_b50dd82713b86028a49f66df853177cc_add({"bbox": [-82.19, 35.61, -82.01, 35.79], "features": [{"bbox": [-82.19, 35.61, -82.01, 35.79], "geometry": {"coordinates": [[[-82.12, 35.79], [-82.01, 35.78], [-82.03, 35.61], [-82.19, 35.63], [-82.16, 35.76], [-82.12, 35.79]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7b2ffc32276fc59f91af421a6659d488b8803c1f.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC111"], "areaDesc": "McDowell, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Central McDowell County in western North Carolina...\n\n* WHEN...Until 445 AM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1047 PM EDT, Doppler radar indicated heavy rain. Minor\nflooding is ongoing or expected to begin shortly in the advisory\narea. Between 1.5 and 3 inches of rain have fallen.\n- Some locations that will experience flooding include...\nMarion, Old Fort, Pleasant Gardens and Woodlawn.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-21T22:47:00-04:00", "ends": "2026-08-22T04:45:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-22T04:45:00-04:00", "geocode": {"SAME": ["037111"], "UGC": ["NCC111"]}, "headline": "Flood Advisory issued August 21 at 10:47PM EDT until August 22 at 4:45AM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.7b2ffc32276fc59f91af421a6659d488b8803c1f.001.1", "instruction": "Only when it is safe to do so, please report flooding or landslides\nthreatening roads or property to the National Weather Service\nGreenville-Spartanburg by calling 1...800...2 6 7...8 1 0 1, by\nposting on our Facebook page, or by posting on X using hashtag\nNWSGSP. Your message should describe the specific location, address,\nor intersection where impacts occurred and the depth of flooding\nobserved.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-21T22:47:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 445 AM EDT SATURDAY"], "VTEC": ["/O.NEW.KGSP.FA.Y.0097.260822T0247Z-260822T0845Z/"], "WMOidentifier": ["WGUS82 KGSP 220247"], "eventEndingTime": ["2026-08-22T04:45:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-21T22:47:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_c53131767653fbc22dec5d8cad0aecfc_add({"bbox": [-82.19, 35.61, -82.01, 35.79], "features": [{"bbox": [-82.19, 35.61, -82.01, 35.79], "geometry": {"coordinates": [[[-82.12, 35.79], [-82.01, 35.78], [-82.03, 35.61], [-82.19, 35.63], [-82.16, 35.76], [-82.12, 35.79]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7b2ffc32276fc59f91af421a6659d488b8803c1f.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC111"], "areaDesc": "McDowell, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Central McDowell County in western North Carolina...\n\n* WHEN...Until 445 AM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1047 PM EDT, Doppler radar indicated heavy rain. Minor\nflooding is ongoing or expected to begin shortly in the advisory\narea. Between 1.5 and 3 inches of rain have fallen.\n- Some locations that will experience flooding include...\nMarion, Old Fort, Pleasant Gardens and Woodlawn.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-21T22:47:00-04:00", "ends": "2026-08-22T04:45:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-22T04:45:00-04:00", "geocode": {"SAME": ["037111"], "UGC": ["NCC111"]}, "headline": "Flood Advisory issued August 21 at 10:47PM EDT until August 22 at 4:45AM EDT by NWS Greenville-Spartanburg SC", "id": "urn:oid:2.49.0.1.840.0.7b2ffc32276fc59f91af421a6659d488b8803c1f.001.1", "instruction": "Only when it is safe to do so, please report flooding or landslides\nthreatening roads or property to the National Weather Service\nGreenville-Spartanburg by calling 1...800...2 6 7...8 1 0 1, by\nposting on our Facebook page, or by posting on X using hashtag\nNWSGSP. Your message should describe the specific location, address,\nor intersection where impacts occurred and the depth of flooding\nobserved.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-21T22:47:00-04:00", "parameters": {"AWIPSidentifier": ["FLSGSP"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 445 AM EDT SATURDAY"], "VTEC": ["/O.NEW.KGSP.FA.Y.0097.260822T0247Z-260822T0845Z/"], "WMOidentifier": ["WGUS82 KGSP 220247"], "eventEndingTime": ["2026-08-22T04:45:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Greenville-Spartanburg SC", "sent": "2026-08-21T22:47:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_b50dd82713b86028a49f66df853177cc.bindTooltip(
+    geo_json_c53131767653fbc22dec5d8cad0aecfc.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -395,7 +358,7 @@
 });
                      
     
-    geo_json_b50dd82713b86028a49f66df853177cc.bindPopup(
+    geo_json_c53131767653fbc22dec5d8cad0aecfc.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -430,134 +393,32 @@
 });
                      
     
-            geo_json_b50dd82713b86028a49f66df853177cc.addTo(map_290d447db35cc4507c95fe7ffc787325);
+            geo_json_c53131767653fbc22dec5d8cad0aecfc.addTo(map_1bc86ff81436d153e4977a5d88d8bb0f);
         
     
-        function geo_json_2645ab92f463ba1837695c7ab0eb9f46_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "#FFDAB9", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_2645ab92f463ba1837695c7ab0eb9f46_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_2645ab92f463ba1837695c7ab0eb9f46 = L.geoJson(null, {
-                onEachFeature: geo_json_2645ab92f463ba1837695c7ab0eb9f46_onEachFeature,
-            
-                style: geo_json_2645ab92f463ba1837695c7ab0eb9f46_styler,
-            ...{
-}
-        });
-
-        function geo_json_2645ab92f463ba1837695c7ab0eb9f46_add (data) {
-            geo_json_2645ab92f463ba1837695c7ab0eb9f46
-                .addData(data);
-        }
-            geo_json_2645ab92f463ba1837695c7ab0eb9f46_add({"bbox": [-78.05, 33.4, -77.41, 34.13], "features": [{"bbox": [-78.05, 33.4, -77.41, 34.13], "geometry": {"coordinates": [[[-77.62, 34.13], [-77.41, 33.89], [-77.54, 33.6], [-77.98, 33.4], [-77.92, 33.57], [-78.05, 33.7], [-77.62, 34.13]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.211ef6c23fdfc62ec3312a1496faaa9fc77e596d.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ250", "https://api.weather.gov/zones/forecast/AMZ252", "https://api.weather.gov/zones/forecast/AMZ280"], "areaDesc": "Coastal waters from Surf City to Cape Fear NC out 20 nm; Coastal waters from Cape Fear NC to Little River Inlet SC out 20 NM; Waters from Surf City NC to Little River Inlet SC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Observed", "code": "IPAWSv1.0", "description": "The areas affected include...\nCoastal waters from Cape Fear NC to Little River Inlet SC out 20\nNM...\nCoastal waters from Surf City to Cape Fear NC out 20 nm...\nWaters from Surf City NC to Little River Inlet SC from 20 to 60\nNM...\n\nAt 118 AM EDT, Doppler radar indicated strong thunderstorms, capable\nof producing winds to around 30 knots. These thunderstorms were\nlocated along a line extending from 6 nm south of Bald Head Island to\nMount Dirfy\u0027s Wreck to near Raritan Wreck, moving northeast at 20\nknots.", "effective": "2026-08-22T01:18:00-04:00", "ends": null, "event": "Marine Weather Statement", "eventCode": {"NationalWeatherService": ["MWS"], "SAME": ["NWS"]}, "expires": "2026-08-22T02:15:00-04:00", "geocode": {"SAME": ["075250", "075252", "075280"], "UGC": ["AMZ250", "AMZ252", "AMZ280"]}, "headline": "Marine Weather Statement issued August 22 at 1:18AM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.211ef6c23fdfc62ec3312a1496faaa9fc77e596d.001.1", "instruction": "Mariners can expect gusty winds to around 30 knots, locally higher\nwaves, and lightning strikes. Boaters should seek safe harbor\nimmediately until these storms pass. If caught on the open water,\nprepare for deteriorating conditions. Make sure you and your crew are\nwearing properly fitted life jackets.\n\nThese storms may produce a waterspout. A Special Marine Warning may\nbe needed.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-22T01:18:00-04:00", "parameters": {"AWIPSidentifier": ["MWSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["STRONG THUNDERSTORMS OVER THE WATERS"], "WMOidentifier": ["FZUS72 KILM 220518"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-22T01:18:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_2645ab92f463ba1837695c7ab0eb9f46.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_2645ab92f463ba1837695c7ab0eb9f46.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_2645ab92f463ba1837695c7ab0eb9f46.addTo(map_290d447db35cc4507c95fe7ffc787325);
-        
-    
-            var layer_control_04f1eb7c66fbbd32e57a7e5b4a9c7456_layers = {
+            var layer_control_bada9ef32e6ae4897a546057884e8599_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_0916416c9530370a40bba7f5eb32f7bb,
-                    "Esri Street Map" : tile_layer_9889f84c2b43f15aebf27a927b138675,
-                    "Esri NatGeo" : tile_layer_825df1ae8e4cfa5a918a3d124955aaa1,
-                    "Google Satellite" : tile_layer_027e1b7eed34b34fee63f03bebd18b3b,
-                    "Google Terrain" : tile_layer_b6dd5ff705b780a2abe5fead652c354e,
-                    "Google Street" : tile_layer_68746d20396dae2277c1486e7f49bc74,
-                    "Light Gray Base" : tile_layer_8648a53e9b5f3c52b56f1055eb1fe5b1,
+                    "Esri Satellite" : tile_layer_bcffacd2bd61bea4fb21f24d7e06f950,
+                    "Esri Street Map" : tile_layer_fb926612fa0aba531aace6e94e80f899,
+                    "Esri NatGeo" : tile_layer_0ae3b06ad52db337e38ef3fe3f528fba,
+                    "Google Satellite" : tile_layer_c5637f7331d42f8d5ae72a88fbde959a,
+                    "Google Terrain" : tile_layer_03bd270c4d6033afbe5b5a76c7e8c35f,
+                    "Google Street" : tile_layer_c7e7116d5079a93ba61474e80452beb8,
+                    "Light Gray Base" : tile_layer_1b7b35575728acdad6408b080c9cb3cc,
                 },
                 overlays :  {
-                    " Hydro" : geo_json_b50dd82713b86028a49f66df853177cc,
-                    " Marine/Beach" : geo_json_2645ab92f463ba1837695c7ab0eb9f46,
+                    " Hydro" : geo_json_c53131767653fbc22dec5d8cad0aecfc,
                 },
             };
-            let layer_control_04f1eb7c66fbbd32e57a7e5b4a9c7456 = L.control.layers(
-                layer_control_04f1eb7c66fbbd32e57a7e5b4a9c7456_layers.base_layers,
-                layer_control_04f1eb7c66fbbd32e57a7e5b4a9c7456_layers.overlays,
+            let layer_control_bada9ef32e6ae4897a546057884e8599 = L.control.layers(
+                layer_control_bada9ef32e6ae4897a546057884e8599_layers.base_layers,
+                layer_control_bada9ef32e6ae4897a546057884e8599_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_290d447db35cc4507c95fe7ffc787325);
+            ).addTo(map_1bc86ff81436d153e4977a5d88d8bb0f);
 
         
 </script>
