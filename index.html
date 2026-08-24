@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_bf2ab307277c5e04fe5594580bf6583c {
+                #map_cb7cae38c11d9384dfc463bed956668d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,40 +55,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_3157ca8d812cf10e72693dcad9a13ebf {
+                    #float_image_27704c318d7c84eda46cab1aeee3b7d7 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +74,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_bf2ab307277c5e04fe5594580bf6583c" ></div>
+            <div class="folium-map" id="map_cb7cae38c11d9384dfc463bed956668d" ></div>
         
     
-            <img id="float_image_3157ca8d812cf10e72693dcad9a13ebf" alt="float_image"
+            <img id="float_image_27704c318d7c84eda46cab1aeee3b7d7" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,15 +88,10 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 24, 2026<br>02:26 AM EDT
+        Updated: Aug 24, 2026<br>03:39 AM EDT
     </div>
     <div class='legend-scale'>
-       
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#FFA500; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Special Marine Warning</span>
-        </div>
-        
+       <li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>
     </div>
 </div>
 <style type='text/css'>
@@ -139,8 +102,8 @@
 <script>
     
     
-            var map_bf2ab307277c5e04fe5594580bf6583c = L.map(
-                "map_bf2ab307277c5e04fe5594580bf6583c",
+            var map_cb7cae38c11d9384dfc463bed956668d = L.map(
+                "map_cb7cae38c11d9384dfc463bed956668d",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -157,7 +120,7 @@
 
         
     
-            var tile_layer_3d14fb252d8871c9fa7ab774e99475f3 = L.tileLayer(
+            var tile_layer_e47209975db0ddc75399ab962d30a3d1 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -174,7 +137,7 @@
             );
         
     
-            var tile_layer_13f41ac08d15fd653318ae088fbcdf43 = L.tileLayer(
+            var tile_layer_fd8a5465e2da5baad565312f27773b0b = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -191,7 +154,7 @@
             );
         
     
-            var tile_layer_e327a44469bc241c4482866c8e5e150a = L.tileLayer(
+            var tile_layer_5788d5411606c35da183ca620c1587e4 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -208,7 +171,7 @@
             );
         
     
-            tile_layer_e327a44469bc241c4482866c8e5e150a.addTo(map_bf2ab307277c5e04fe5594580bf6583c);
+            tile_layer_5788d5411606c35da183ca620c1587e4.addTo(map_cb7cae38c11d9384dfc463bed956668d);
         
     
             L.control.fullscreen(
@@ -218,10 +181,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_bf2ab307277c5e04fe5594580bf6583c);
+            ).addTo(map_cb7cae38c11d9384dfc463bed956668d);
         
     
-            var tile_layer_a5fc479b1f0d69a8f9917c5225edb94c = L.tileLayer(
+            var tile_layer_63ecad1bcc84780c3c52d6b509837ef9 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -238,7 +201,7 @@
             );
         
     
-            var tile_layer_080827de4cea402e033a7b1e86ea525f = L.tileLayer(
+            var tile_layer_d95db05dbc7c8a0146150ad49ec22505 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -255,7 +218,7 @@
             );
         
     
-            var tile_layer_a37813ca12da380524a2d6ade0cc38d6 = L.tileLayer(
+            var tile_layer_2e2a8498a05249363ae18630ab24c186 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -272,7 +235,7 @@
             );
         
     
-            var tile_layer_824c6e3219a73bb6540c439a68c03b4f = L.tileLayer(
+            var tile_layer_e2cc9221ee0163ac5d6f9fab7fff44d9 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -289,136 +252,34 @@
             );
         
     
-            var locate_control_6764f1d8f85cb7c381d549786f927951 = L.control.locate(
+            var locate_control_85cbf380f2514b67c074cd1d87543b10 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_bf2ab307277c5e04fe5594580bf6583c);
+            ).addTo(map_cb7cae38c11d9384dfc463bed956668d);
             
         
     
-        function geo_json_85642c102e67dcda32053d511fe4a37c_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_85642c102e67dcda32053d511fe4a37c_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_85642c102e67dcda32053d511fe4a37c = L.geoJson(null, {
-                onEachFeature: geo_json_85642c102e67dcda32053d511fe4a37c_onEachFeature,
-            
-                style: geo_json_85642c102e67dcda32053d511fe4a37c_styler,
-            ...{
-}
-        });
-
-        function geo_json_85642c102e67dcda32053d511fe4a37c_add (data) {
-            geo_json_85642c102e67dcda32053d511fe4a37c
-                .addData(data);
-        }
-            geo_json_85642c102e67dcda32053d511fe4a37c_add({"bbox": [-75.68, 34.67, -74.79, 35.35], "features": [{"bbox": [-75.68, 34.67, -74.79, 35.35], "geometry": {"coordinates": [[[-75.59, 34.67], [-75.68, 34.79], [-75.16, 35.35], [-74.8, 35.25], [-74.79, 34.91], [-75.59, 34.67]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6a73459f2b2708b12019a8ceed9ac1aa6f1a760c.002.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154", "https://api.weather.gov/zones/forecast/AMZ182", "https://api.weather.gov/zones/forecast/AMZ184", "https://api.weather.gov/zones/forecast/AMZ186"], "areaDesc": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM; Waters from Oregon Inlet to Cape Hatteras NC from 20 to 60 NM; Waters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM; Waters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "For the following areas...\nS of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM...\nS of Oregon Inlet NC to Cape Hatteras NC out to 20 NM...\nWaters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM...\nWaters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM...\nWaters from Oregon Inlet to Cape Hatteras NC from 20 to 60 NM...\n\nAt 208 AM EDT, a strong thunderstorm was located 16 nm south of\nMonitor Marine Sanctuary, moving northeast at 20 knots.\n\nHAZARD...Wind gusts to 40 knots.\n\nSOURCE...Radar indicated.\n\nIMPACT...Small craft could be damaged in briefly higher winds and\nsuddenly higher waves.\n\nThe strong thunderstorm will remain over mainly open waters.", "effective": "2026-08-24T02:08:00-04:00", "ends": "2026-08-24T02:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["NWS"]}, "expires": "2026-08-24T02:30:00-04:00", "geocode": {"SAME": ["075152", "075154", "075182", "075184", "075186"], "UGC": ["AMZ152", "AMZ154", "AMZ182", "AMZ184", "AMZ186"]}, "headline": "Special Marine Warning issued August 24 at 2:08AM EDT until August 24 at 2:30AM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.6a73459f2b2708b12019a8ceed9ac1aa6f1a760c.002.1", "instruction": "Move to safe harbor immediately as gusty winds and high waves are\nexpected.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-08-24T02:08:00-04:00", "parameters": {"AWIPSidentifier": ["MWSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["A SPECIAL MARINE WARNING REMAINS IN EFFECT UNTIL 230 AM EDT"], "VTEC": ["/O.CON.KMHX.MA.W.0346.000000T0000Z-260824T0630Z/"], "WMOidentifier": ["FZUS72 KMHX 240608"], "eventEndingTime": ["2026-08-24T02:30:00-04:00"], "eventMotionDescription": ["2026-08-24T06:08:00-00:00...storm...242DEG...20KT...34.81,-75.5"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.198ef57270276fa20a76e9d5190de7bee2682615.001.1", "identifier": "urn:oid:2.49.0.1.840.0.198ef57270276fa20a76e9d5190de7bee2682615.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-08-24T01:27:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T02:08:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_85642c102e67dcda32053d511fe4a37c.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_85642c102e67dcda32053d511fe4a37c.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_85642c102e67dcda32053d511fe4a37c.addTo(map_bf2ab307277c5e04fe5594580bf6583c);
-        
-    
-            var layer_control_a6a161d875bc46be48cb3655a8c4f3b7_layers = {
+            var layer_control_042fa56cb1ae62cab1c8ccd66cbd0e6f_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_3d14fb252d8871c9fa7ab774e99475f3,
-                    "Esri Street Map" : tile_layer_13f41ac08d15fd653318ae088fbcdf43,
-                    "Esri NatGeo" : tile_layer_e327a44469bc241c4482866c8e5e150a,
-                    "Google Satellite" : tile_layer_a5fc479b1f0d69a8f9917c5225edb94c,
-                    "Google Terrain" : tile_layer_080827de4cea402e033a7b1e86ea525f,
-                    "Google Street" : tile_layer_a37813ca12da380524a2d6ade0cc38d6,
-                    "Light Gray Base" : tile_layer_824c6e3219a73bb6540c439a68c03b4f,
+                    "Esri Satellite" : tile_layer_e47209975db0ddc75399ab962d30a3d1,
+                    "Esri Street Map" : tile_layer_fd8a5465e2da5baad565312f27773b0b,
+                    "Esri NatGeo" : tile_layer_5788d5411606c35da183ca620c1587e4,
+                    "Google Satellite" : tile_layer_63ecad1bcc84780c3c52d6b509837ef9,
+                    "Google Terrain" : tile_layer_d95db05dbc7c8a0146150ad49ec22505,
+                    "Google Street" : tile_layer_2e2a8498a05249363ae18630ab24c186,
+                    "Light Gray Base" : tile_layer_e2cc9221ee0163ac5d6f9fab7fff44d9,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_85642c102e67dcda32053d511fe4a37c,
                 },
             };
-            let layer_control_a6a161d875bc46be48cb3655a8c4f3b7 = L.control.layers(
-                layer_control_a6a161d875bc46be48cb3655a8c4f3b7_layers.base_layers,
-                layer_control_a6a161d875bc46be48cb3655a8c4f3b7_layers.overlays,
+            let layer_control_042fa56cb1ae62cab1c8ccd66cbd0e6f = L.control.layers(
+                layer_control_042fa56cb1ae62cab1c8ccd66cbd0e6f_layers.base_layers,
+                layer_control_042fa56cb1ae62cab1c8ccd66cbd0e6f_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_bf2ab307277c5e04fe5594580bf6583c);
+            ).addTo(map_cb7cae38c11d9384dfc463bed956668d);
 
         
 </script>
