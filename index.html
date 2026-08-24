@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_54bf170ea44ab3f770c3c523aabe3495 {
+                #map_2137786b92d65b005221374e43d2b13c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -119,8 +119,40 @@
                     </style>
             
     
+                    <style>
+                        .foliumtooltip {
+                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
                 <style>
-                    #float_image_5ebf80fc5bd49e9588172f765ae3a7a7 {
+                    #float_image_3ef984c5d1a5b0c8b5472d051190601f {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -138,10 +170,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_54bf170ea44ab3f770c3c523aabe3495" ></div>
+            <div class="folium-map" id="map_2137786b92d65b005221374e43d2b13c" ></div>
         
     
-            <img id="float_image_5ebf80fc5bd49e9588172f765ae3a7a7" alt="float_image"
+            <img id="float_image_3ef984c5d1a5b0c8b5472d051190601f" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -152,10 +184,20 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 24, 2026<br>04:00 PM EDT
+        Updated: Aug 24, 2026<br>04:42 PM EDT
     </div>
     <div class='legend-scale'>
        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#FF0000; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Tornado Warning</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#FFA500; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Severe Thunderstorm Warning</span>
+        </div>
+        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#FFA500; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Special Marine Warning</span>
@@ -164,11 +206,6 @@
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#FFE4B5; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Special Weather Statement</span>
-        </div>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#FFDAB9; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Marine Weather Statement</span>
         </div>
         
     </div>
@@ -181,8 +218,8 @@
 <script>
     
     
-            var map_54bf170ea44ab3f770c3c523aabe3495 = L.map(
-                "map_54bf170ea44ab3f770c3c523aabe3495",
+            var map_2137786b92d65b005221374e43d2b13c = L.map(
+                "map_2137786b92d65b005221374e43d2b13c",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -199,7 +236,7 @@
 
         
     
-            var tile_layer_ac6899e69aee420ca4268d136e5934dd = L.tileLayer(
+            var tile_layer_0e181236c910d7abf046c50fc14b5d0c = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -216,7 +253,7 @@
             );
         
     
-            var tile_layer_9777f1ee6b733effb4312965158749a5 = L.tileLayer(
+            var tile_layer_9e49cc7454997ac549fc94a1fa5676f9 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -233,7 +270,7 @@
             );
         
     
-            var tile_layer_5d581e6fd73a6d3d16897c2eb7938b55 = L.tileLayer(
+            var tile_layer_76e48937cd806e619f19be8c476b0381 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -250,7 +287,7 @@
             );
         
     
-            tile_layer_5d581e6fd73a6d3d16897c2eb7938b55.addTo(map_54bf170ea44ab3f770c3c523aabe3495);
+            tile_layer_76e48937cd806e619f19be8c476b0381.addTo(map_2137786b92d65b005221374e43d2b13c);
         
     
             L.control.fullscreen(
@@ -260,10 +297,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_54bf170ea44ab3f770c3c523aabe3495);
+            ).addTo(map_2137786b92d65b005221374e43d2b13c);
         
     
-            var tile_layer_b71334087a7a228b6a396ad2208e041c = L.tileLayer(
+            var tile_layer_adcf9c026893c79deab8c60e7a096496 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -280,7 +317,7 @@
             );
         
     
-            var tile_layer_72422f46e49d4f6a01d2b21dc728fc5b = L.tileLayer(
+            var tile_layer_01d05edecce0861985d0f5797950d3cc = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -297,7 +334,7 @@
             );
         
     
-            var tile_layer_1a2be3afe38d8d0f0df1d8b9d3bbb32d = L.tileLayer(
+            var tile_layer_8f1234f0c3ca11f09e88cc7c024cbe34 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -314,7 +351,7 @@
             );
         
     
-            var tile_layer_2c430b2fe55f9cd9669104b4c6c6ddd0 = L.tileLayer(
+            var tile_layer_c39ab6ca49f30d0100bb376ce90b8929 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -331,43 +368,41 @@
             );
         
     
-            var locate_control_50c38ddeef68f2a5789f01f6c5cab6ed = L.control.locate(
+            var locate_control_127d8eda8e77256b9c79065c17eddc1e = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_54bf170ea44ab3f770c3c523aabe3495);
+            ).addTo(map_2137786b92d65b005221374e43d2b13c);
             
         
     
-        function geo_json_b8f18f1e78aac3e99821baaf4b2199fb_styler(feature) {
+        function geo_json_1c8237a74dd056261e0ec59844fb3019_styler(feature) {
             switch(feature.id) {
-                case "0": 
-                    return {"color": "black", "fillColor": "#FFDAB9", "fillOpacity": 0.5, "weight": 1};
                 default:
                     return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_b8f18f1e78aac3e99821baaf4b2199fb_onEachFeature(feature, layer) {
+        function geo_json_1c8237a74dd056261e0ec59844fb3019_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_b8f18f1e78aac3e99821baaf4b2199fb = L.geoJson(null, {
-                onEachFeature: geo_json_b8f18f1e78aac3e99821baaf4b2199fb_onEachFeature,
+        var geo_json_1c8237a74dd056261e0ec59844fb3019 = L.geoJson(null, {
+                onEachFeature: geo_json_1c8237a74dd056261e0ec59844fb3019_onEachFeature,
             
-                style: geo_json_b8f18f1e78aac3e99821baaf4b2199fb_styler,
+                style: geo_json_1c8237a74dd056261e0ec59844fb3019_styler,
             ...{
 }
         });
 
-        function geo_json_b8f18f1e78aac3e99821baaf4b2199fb_add (data) {
-            geo_json_b8f18f1e78aac3e99821baaf4b2199fb
+        function geo_json_1c8237a74dd056261e0ec59844fb3019_add (data) {
+            geo_json_1c8237a74dd056261e0ec59844fb3019
                 .addData(data);
         }
-            geo_json_b8f18f1e78aac3e99821baaf4b2199fb_add({"bbox": [-77.85, 34.09, -75.65, 35.43], "features": [{"bbox": [-77.85, 34.09, -77.11, 34.44], "geometry": {"coordinates": [[[-77.11, 34.09], [-77.85, 34.11], [-77.74, 34.27], [-77.52, 34.44], [-77.11, 34.09]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe1ef4833861c1b9e038394a7e8d933d98c4c5ee.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ250", "https://api.weather.gov/zones/forecast/AMZ280"], "areaDesc": "Coastal waters from Surf City to Cape Fear NC out 20 nm; Waters from Surf City NC to Little River Inlet SC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Observed", "code": "IPAWSv1.0", "description": "The areas affected include...\nCoastal waters from Surf City to Cape Fear NC out 20 nm...\nWaters from Surf City NC to Little River Inlet SC from 20 to 60\nNM...\n\nAt 330 PM EDT, Doppler radar indicated strong thunderstorms, capable\nof producing winds to around 30 knots and small hail. These\nthunderstorms were located along a line extending from 6 nm west of\nSurf City to North Masonboro Island, moving east at 35 knots.", "effective": "2026-08-24T15:30:00-04:00", "ends": null, "event": "Marine Weather Statement", "eventCode": {"NationalWeatherService": ["MWS"], "SAME": ["NWS"]}, "expires": "2026-08-24T16:15:00-04:00", "geocode": {"SAME": ["075250", "075280"], "UGC": ["AMZ250", "AMZ280"]}, "headline": "Marine Weather Statement issued August 24 at 3:30PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.fe1ef4833861c1b9e038394a7e8d933d98c4c5ee.001.1", "instruction": "Mariners can expect gusty winds to around 30 knots, locally higher\nwaves, and lightning strikes. Boaters should seek safe harbor\nimmediately until these storms pass. If caught on the open water,\nprepare for deteriorating conditions. Make sure you and your crew are\nwearing properly fitted life jackets.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:30:00-04:00", "parameters": {"AWIPSidentifier": ["MWSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["STRONG THUNDERSTORMS APPROACHING THE WATERS"], "WMOidentifier": ["FZUS72 KILM 241930"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-24T15:30:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.71, 34.78, -75.96, 35.08], "geometry": {"coordinates": [[[-76.71, 34.87], [-76.64, 35.08], [-75.96, 35.05], [-75.98, 34.78], [-76.71, 34.87]]], "type": "Polygon"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91f82d6f197d9cba03802c9efd535a9b1448ab3f.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ135", "https://api.weather.gov/zones/forecast/AMZ137", "https://api.weather.gov/zones/forecast/AMZ154", "https://api.weather.gov/zones/forecast/AMZ156"], "areaDesc": "Pamlico Sound; Neuse and Bay Rivers; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM; S of Ocracoke Inlet NC to Cape Lookout NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nNeuse and Bay Rivers...\nPamlico Sound...\nS of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM...\nS of Ocracoke Inlet NC to Cape Lookout NC out to 20 NM...\n\n* Until 500 PM EDT.\n\n* At 358 PM EDT, a severe thunderstorm capable of producing\nwaterspouts was located near The Vicinity Of South River, or 7 nm\nsouth of The Mouth Of The Neuse River, moving east at 20 knots.\n\nHAZARD...Waterspouts, wind gusts to nearly 50 knots, and small\nhail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nThe Vicinity Of Atlantic, Drum Inlet, The Vicinity Of Adams Creek,\nAr275, The Vicinity Of South River, Cedar Island, and The Vicinity\nOf Cedar Island.", "effective": "2026-08-24T15:58:00-04:00", "ends": "2026-08-24T17:00:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T17:00:00-04:00", "geocode": {"SAME": ["075135", "075137", "075154", "075156"], "UGC": ["AMZ135", "AMZ137", "AMZ154", "AMZ156"]}, "headline": "Special Marine Warning issued August 24 at 3:58PM EDT until August 24 at 5:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.91f82d6f197d9cba03802c9efd535a9b1448ab3f.001.1", "instruction": "Move to safe harbor immediately as gusty winds and high waves are\nexpected.\n\nFrequent lightning is occurring with this storm. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:58:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0356.260824T1958Z-260824T2100Z/"], "WMOidentifier": ["WHUS52 KMHX 241958"], "eventEndingTime": ["2026-08-24T17:00:00-04:00"], "eventMotionDescription": ["2026-08-24T19:58:00-00:00...storm...272DEG...20KT...34.97,-76.49"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T15:58:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.3, 35.21, -75.65, 35.43], "geometry": {"coordinates": [[[-76.3, 35.23], [-76.29, 35.41], [-75.65, 35.43], [-75.67, 35.21], [-76.3, 35.23]]], "type": "Polygon"}, "id": "5", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd91457369ce98067af9a42de461be8143acf52b.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ135", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "Pamlico Sound; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nPamlico Sound...\nS of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM...\n\n* Until 430 PM EDT.\n\n* At 330 PM EDT, a severe thunderstorm capable of producing\nwaterspouts was located 7 nm southeast of Swanquarter, moving east\nat 20 knots.\n\nHAZARD...Waterspouts, wind gusts 34 knots or greater, and small\nhail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nPamlico Sound, Hatteras Village, and The Center Of The Pamlico\nSound.", "effective": "2026-08-24T15:30:00-04:00", "ends": "2026-08-24T16:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T16:30:00-04:00", "geocode": {"SAME": ["075135", "075154"], "UGC": ["AMZ135", "AMZ154"]}, "headline": "Special Marine Warning issued August 24 at 3:30PM EDT until August 24 at 4:30PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.bd91457369ce98067af9a42de461be8143acf52b.001.1", "instruction": "Thunderstorms can produce sudden waterspouts. Waterspouts can easily\noverturn boats and create locally hazardous seas. Seek safe harbor\nimmediately.\n\nFrequent lightning is occurring with this storm. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:30:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0354.260824T1930Z-260824T2030Z/"], "WMOidentifier": ["WHUS52 KMHX 241930"], "eventEndingTime": ["2026-08-24T16:30:00-04:00"], "eventMotionDescription": ["2026-08-24T19:30:00-00:00...storm...272DEG...21KT...35.33,-76.2"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T15:30:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.53, 34.25, -76.8, 34.7], "geometry": {"coordinates": [[[-77.5, 34.49], [-77.5, 34.48], [-77.46, 34.47], [-77.38, 34.51], [-77.37, 34.53], [-77.39, 34.53], [-77.36, 34.55], [-77.37, 34.56], [-77.42, 34.56], [-77.42, 34.57], [-77.34, 34.57], [-77.34, 34.6], [-77.05, 34.7], [-76.8, 34.34], [-76.91, 34.35], [-77.09, 34.29], [-77.3, 34.25], [-77.51, 34.45], [-77.49, 34.46], [-77.53, 34.46], [-77.5, 34.49]]], "type": "Polygon"}, "id": "6", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cc2864c32a0eacbdbc8bc2f17765caee1d913134.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ158"], "areaDesc": "S of Cape Lookout NC to Surf City NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nS of Cape Lookout NC to Surf City NC out to 20 NM...\n\n* Until 430 PM EDT.\n\n* At 325 PM EDT, a severe thunderstorm capable of producing\nwaterspouts was located near Surf City, moving east at 15 knots.\n\nHAZARD...Waterspouts, wind gusts to nearly 50 knots, and small\nhail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nNew River Inlet, Ar340, Ar342, Bogue Inlet, Ar355, The Vicinity Of\nEmerald Isle Bridge, Ar345, and Emerald Isle.", "effective": "2026-08-24T15:26:00-04:00", "ends": "2026-08-24T16:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T16:30:00-04:00", "geocode": {"SAME": ["075158"], "UGC": ["AMZ158"]}, "headline": "Special Marine Warning issued August 24 at 3:26PM EDT until August 24 at 4:30PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.cc2864c32a0eacbdbc8bc2f17765caee1d913134.001.1", "instruction": "Frequent lightning is occurring with this storm. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:26:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0353.260824T1926Z-260824T2030Z/"], "WMOidentifier": ["WHUS52 KMHX 241926"], "eventEndingTime": ["2026-08-24T16:30:00-04:00"], "eventMotionDescription": ["2026-08-24T19:25:00-00:00...storm...255DEG...14KT...34.45,-77.46"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T15:26:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_1c8237a74dd056261e0ec59844fb3019_add({"bbox": [-77.37, 34.22, -75.36, 35.34], "features": [{"bbox": [-76.05, 34.97, -75.36, 35.34], "geometry": {"coordinates": [[[-76.05, 35.17], [-75.98, 35.34], [-75.36, 35.33], [-75.44, 34.97], [-76.05, 35.17]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c2b4dd78a875a9f1081f0c9406c020ada5fef3ba.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ135", "https://api.weather.gov/zones/forecast/AMZ152", "https://api.weather.gov/zones/forecast/AMZ154"], "areaDesc": "Pamlico Sound; S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nPamlico Sound...\nS of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM...\nS of Oregon Inlet NC to Cape Hatteras NC out to 20 NM...\n\n* Until 530 PM EDT.\n\n* At 426 PM EDT, a strong thunderstorm was located over The Center Of\nThe Pamlico Sound, or 8 nm northwest of Hatteras Inlet, moving east\nat 20 knots.\n\nHAZARD...Wind gusts to nearly 50 knots and small hail.\n\nSOURCE...Radar.\n\nIMPACT...Small craft could be damaged in briefly higher winds and\nsuddenly higher waves.\n\n* Locations impacted include...\nCape Hatteras, Hatteras Village, Monitor Marine Sanctuary, Hatteras\nInlet, Ar230, Ar220, Ar225, and The Center Of The Pamlico Sound.", "effective": "2026-08-24T16:26:00-04:00", "ends": "2026-08-24T17:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T17:30:00-04:00", "geocode": {"SAME": ["075135", "075152", "075154"], "UGC": ["AMZ135", "AMZ152", "AMZ154"]}, "headline": "Special Marine Warning issued August 24 at 4:26PM EDT until August 24 at 5:30PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.c2b4dd78a875a9f1081f0c9406c020ada5fef3ba.001.1", "instruction": "Move to safe harbor immediately as gusty winds and high waves are\nexpected.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:26:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0358.260824T2026Z-260824T2130Z/"], "WMOidentifier": ["WHUS52 KMHX 242026 RRA"], "eventEndingTime": ["2026-08-24T17:30:00-04:00"], "eventMotionDescription": ["2026-08-24T20:26:00-00:00...storm...279DEG...20KT...35.25,-75.9"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:26:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.37, 34.22, -76.68, 34.58], "geometry": {"coordinates": [[[-77.35, 34.52], [-77.34, 34.53], [-76.68, 34.58], [-76.7, 34.22], [-77.29, 34.25], [-77.37, 34.31], [-77.35, 34.52]]], "type": "Polygon"}, "id": "4", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e863c31f271498376eb7f9038c909f3559fddb2.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ158", "https://api.weather.gov/zones/forecast/AMZ188"], "areaDesc": "S of Cape Lookout NC to Surf City NC out to 20 NM; Waters from Cape Lookout  to Surf City NC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nS of Cape Lookout NC to Surf City NC out to 20 NM...\nWaters from Cape Lookout  to Surf City NC from 20 to 60 NM...\n\n* Until 530 PM EDT.\n\n* At 425 PM EDT, a severe thunderstorm capable of producing\nwaterspouts was located near Ar355, or 10 nm south of New River\nInlet, moving east at 25 knots.\n\nHAZARD...Waterspouts, wind gusts to 40 knots, and small hail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nNew River Inlet, Ar355, Ar345, and Ar330.", "effective": "2026-08-24T16:26:00-04:00", "ends": "2026-08-24T17:30:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T17:30:00-04:00", "geocode": {"SAME": ["075158", "075188"], "UGC": ["AMZ158", "AMZ188"]}, "headline": "Special Marine Warning issued August 24 at 4:26PM EDT until August 24 at 5:30PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.9e863c31f271498376eb7f9038c909f3559fddb2.001.1", "instruction": "Thunderstorms can produce sudden waterspouts. Waterspouts can easily\noverturn boats and create locally hazardous seas. Seek safe harbor\nimmediately.\n\nFrequent lightning is occurring with this storm. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:26:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0357.260824T2026Z-260824T2130Z/"], "WMOidentifier": ["WHUS52 KMHX 242026"], "eventEndingTime": ["2026-08-24T17:30:00-04:00"], "eventMotionDescription": ["2026-08-24T20:25:00-00:00...storm...274DEG...23KT...34.37,-77.27"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:26:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.71, 34.78, -75.96, 35.08], "geometry": {"coordinates": [[[-76.71, 34.87], [-76.64, 35.08], [-75.96, 35.05], [-75.98, 34.78], [-76.71, 34.87]]], "type": "Polygon"}, "id": "5", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91f82d6f197d9cba03802c9efd535a9b1448ab3f.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ135", "https://api.weather.gov/zones/forecast/AMZ137", "https://api.weather.gov/zones/forecast/AMZ154", "https://api.weather.gov/zones/forecast/AMZ156"], "areaDesc": "Pamlico Sound; Neuse and Bay Rivers; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM; S of Ocracoke Inlet NC to Cape Lookout NC out to 20 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nNeuse and Bay Rivers...\nPamlico Sound...\nS of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM...\nS of Ocracoke Inlet NC to Cape Lookout NC out to 20 NM...\n\n* Until 500 PM EDT.\n\n* At 358 PM EDT, a severe thunderstorm capable of producing\nwaterspouts was located near The Vicinity Of South River, or 7 nm\nsouth of The Mouth Of The Neuse River, moving east at 20 knots.\n\nHAZARD...Waterspouts, wind gusts to nearly 50 knots, and small\nhail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nThe Vicinity Of Atlantic, Drum Inlet, The Vicinity Of Adams Creek,\nAr275, The Vicinity Of South River, Cedar Island, and The Vicinity\nOf Cedar Island.", "effective": "2026-08-24T15:58:00-04:00", "ends": "2026-08-24T17:00:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T17:00:00-04:00", "geocode": {"SAME": ["075135", "075137", "075154", "075156"], "UGC": ["AMZ135", "AMZ137", "AMZ154", "AMZ156"]}, "headline": "Special Marine Warning issued August 24 at 3:58PM EDT until August 24 at 5:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.91f82d6f197d9cba03802c9efd535a9b1448ab3f.001.1", "instruction": "Move to safe harbor immediately as gusty winds and high waves are\nexpected.\n\nFrequent lightning is occurring with this storm. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:58:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0356.260824T1958Z-260824T2100Z/"], "WMOidentifier": ["WHUS52 KMHX 241958"], "eventEndingTime": ["2026-08-24T17:00:00-04:00"], "eventMotionDescription": ["2026-08-24T19:58:00-00:00...storm...272DEG...20KT...34.97,-76.49"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T15:58:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_b8f18f1e78aac3e99821baaf4b2199fb.bindTooltip(
+    geo_json_1c8237a74dd056261e0ec59844fb3019.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -402,7 +437,7 @@
 });
                      
     
-    geo_json_b8f18f1e78aac3e99821baaf4b2199fb.bindPopup(
+    geo_json_1c8237a74dd056261e0ec59844fb3019.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -437,38 +472,38 @@
 });
                      
     
-            geo_json_b8f18f1e78aac3e99821baaf4b2199fb.addTo(map_54bf170ea44ab3f770c3c523aabe3495);
+            geo_json_1c8237a74dd056261e0ec59844fb3019.addTo(map_2137786b92d65b005221374e43d2b13c);
         
     
-        function geo_json_5746e81d7d61b5c0a28ff33931ff3ec6_styler(feature) {
+        function geo_json_21c682a1f176d4ba32ce34c4a37095ac_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_5746e81d7d61b5c0a28ff33931ff3ec6_onEachFeature(feature, layer) {
+        function geo_json_21c682a1f176d4ba32ce34c4a37095ac_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_5746e81d7d61b5c0a28ff33931ff3ec6 = L.geoJson(null, {
-                onEachFeature: geo_json_5746e81d7d61b5c0a28ff33931ff3ec6_onEachFeature,
+        var geo_json_21c682a1f176d4ba32ce34c4a37095ac = L.geoJson(null, {
+                onEachFeature: geo_json_21c682a1f176d4ba32ce34c4a37095ac_onEachFeature,
             
-                style: geo_json_5746e81d7d61b5c0a28ff33931ff3ec6_styler,
+                style: geo_json_21c682a1f176d4ba32ce34c4a37095ac_styler,
             ...{
 }
         });
 
-        function geo_json_5746e81d7d61b5c0a28ff33931ff3ec6_add (data) {
-            geo_json_5746e81d7d61b5c0a28ff33931ff3ec6
+        function geo_json_21c682a1f176d4ba32ce34c4a37095ac_add (data) {
+            geo_json_21c682a1f176d4ba32ce34c4a37095ac
                 .addData(data);
         }
-            geo_json_5746e81d7d61b5c0a28ff33931ff3ec6_add({"bbox": [-77.76, 34.34, -76.17, 35.07], "features": [{"bbox": [-77.59, 34.42, -77.14, 34.65], "geometry": {"coordinates": [[[-77.51, 34.42], [-77.53, 34.46], [-77.54, 34.47], [-77.59, 34.55], [-77.27, 34.65], [-77.14, 34.47], [-77.51, 34.42]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e4d37232eb5af861a2559b52f9a6c7c6315d023.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ198", "https://api.weather.gov/zones/forecast/NCZ199"], "areaDesc": "Inland Onslow; Coastal Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 400 PM EDT, Doppler radar was tracking a strong thunderstorm over\nNorth Topsail Beach, moving northeast at 15 mph.\n\nHAZARD...Wind gusts up to 50 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nNorth Topsail Beach, Folkstone, Onslow Beach, Sneads Ferry, and Sea\nView Pier.", "effective": "2026-08-24T16:00:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-24T16:45:00-04:00", "geocode": {"SAME": ["037133"], "UGC": ["NCZ198", "NCZ199"]}, "headline": "Special Weather Statement issued August 24 at 4:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5e4d37232eb5af861a2559b52f9a6c7c6315d023.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nThis storm may intensify, so be certain to monitor local radio\nstations and available television stations for additional information\nand possible warnings from the National Weather Service.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:00:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHWESTERN ONSLOW COUNTY THROUGH 445 PM EDT"], "WMOidentifier": ["WWUS82 KMHX 242000"], "eventMotionDescription": ["2026-08-24T20:00:00-00:00...storm...238DEG...15KT...34.48,-77.48"], "maxHailSize": ["0.25"], "maxWindGust": ["50 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:00:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.67, 34.82, -76.17, 35.07], "geometry": {"coordinates": [[[-76.67, 34.97], [-76.59, 35.07], [-76.17, 35.01], [-76.4, 34.82], [-76.67, 34.97]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf936be30388a734be736aeb42e0063d837a6b87.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ196"], "areaDesc": "East Carteret", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 348 PM EDT, Doppler radar was tracking a strong thunderstorm\ncapable of producing a landspout near South River, or 13 miles west\nof Cedar Island, moving southeast at 15 mph.\n\nHAZARD...Landspouts and wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Minor damage to outdoor objects is possible. Gusty winds\ncould knock down tree limbs and blow around unsecured\nobjects.\n\nLocations impacted include...\nCedar Island, South River, Sealevel, Atlantic, Stacy, and Cedar\nIsland Ferry Terminal.", "effective": "2026-08-24T15:49:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-24T16:30:00-04:00", "geocode": {"SAME": ["037031"], "UGC": ["NCZ196"]}, "headline": "Special Weather Statement issued August 24 at 3:49PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.cf936be30388a734be736aeb42e0063d837a6b87.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nThis storm may intensify, so be certain to monitor local radio\nstations and available television stations for additional information\nand possible warnings from the National Weather Service.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:49:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT NORTHEASTERN CARTERET COUNTY THROUGH 430 PM EDT"], "WMOidentifier": ["WWUS82 KMHX 241949"], "eventMotionDescription": ["2026-08-24T19:48:00-00:00...storm...294DEG...13KT...34.97,-76.55"], "maxHailSize": ["0.00"], "maxWindGust": ["50 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T15:49:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.76, 34.34, -77.52, 34.53], "geometry": {"coordinates": [[[-77.58, 34.4], [-77.65, 34.35], [-77.71, 34.34], [-77.76, 34.5], [-77.6, 34.53], [-77.59, 34.51], [-77.58, 34.48], [-77.57, 34.47], [-77.56, 34.47], [-77.54, 34.46], [-77.52, 34.44], [-77.58, 34.4]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bea96febd301848b00a92f43529dbafdf777f32b.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ105", "https://api.weather.gov/zones/forecast/NCZ106"], "areaDesc": "Inland Pender; Coastal Pender", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 344 PM EDT, Doppler radar was tracking a strong thunderstorm over\nWoodside, or near Surf City, moving east at 20 mph.\n\nHAZARD...Wind gusts up to 40 mph and penny size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nSurf City, Hampstead, Topsail Beach, Topsail, Woodside, and Edgecomb.", "effective": "2026-08-24T15:44:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-24T16:30:00-04:00", "geocode": {"SAME": ["037141"], "UGC": ["NCZ105", "NCZ106"]}, "headline": "Special Weather Statement issued August 24 at 3:44PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.bea96febd301848b00a92f43529dbafdf777f32b.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nTorrential rainfall is also occurring with this storm and may lead to\nlocalized flooding. Do not drive your vehicle through flooded\nroadways.\n\nFrequent cloud to ground lightning is occurring with this storm.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T15:44:00-04:00", "parameters": {"AWIPSidentifier": ["SPSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN PENDER COUNTY THROUGH 430 PM EDT"], "WMOidentifier": ["WWUS82 KILM 241944"], "eventMotionDescription": ["2026-08-24T19:44:00-00:00...storm...253DEG...19KT...34.45,-77.65"], "maxHailSize": ["0.75"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-24T15:44:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_21c682a1f176d4ba32ce34c4a37095ac_add({"bbox": [-77.73, 34.42, -75.48, 35.33], "features": [{"bbox": [-75.97, 35.12, -75.48, 35.33], "geometry": {"coordinates": [[[-75.97, 35.15], [-75.48, 35.33], [-75.52, 35.21], [-75.9, 35.12], [-75.97, 35.15]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e06b79e418829534d9899159057343a257e0ec07.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ204", "https://api.weather.gov/zones/forecast/NCZ205"], "areaDesc": "Ocracoke Island; Hatteras Island", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 430 PM EDT, Doppler radar was tracking a strong thunderstorm 10\nmiles west of Hatteras Ferry Terminal, or 13 miles west of Frisco,\nmoving east at 25 mph.\n\nHAZARD...Wind gusts up to 40 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nFrisco, Buxton, Hatteras Ferry Terminal, and Cape Hatteras\nLighthouse.", "effective": "2026-08-24T16:31:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-24T17:15:00-04:00", "geocode": {"SAME": ["037095", "037055"], "UGC": ["NCZ204", "NCZ205"]}, "headline": "Special Weather Statement issued August 24 at 4:31PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.e06b79e418829534d9899159057343a257e0ec07.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:31:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN HYDE AND SOUTHEASTERN DARE COUNTIES THROUGH 515 PM EDT"], "WMOidentifier": ["WWUS82 KMHX 242031"], "eventMotionDescription": ["2026-08-24T20:30:00-00:00...storm...279DEG...20KT...35.24,-75.87"], "maxHailSize": ["0.00"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:31:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.73, 34.57, -77.15, 34.92], "geometry": {"coordinates": [[[-77.64, 34.64], [-77.68, 34.72], [-77.73, 34.72], [-77.72, 34.91], [-77.15, 34.92], [-77.15, 34.79], [-77.17, 34.79], [-77.17, 34.78], [-77.15, 34.78], [-77.16, 34.57], [-77.64, 34.64]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b3732b6fab45f29852392ecc9ce354276bf19029.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ090", "https://api.weather.gov/zones/forecast/NCZ092", "https://api.weather.gov/zones/forecast/NCZ198", "https://api.weather.gov/zones/forecast/NCZ199"], "areaDesc": "Duplin; Jones; Inland Onslow; Coastal Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 405 PM EDT, Doppler radar was tracking a strong thunderstorm near\nCatherine Lake, or 9 miles southwest of Half Moon, moving east at 25\nmph.\n\nHAZARD...Wind gusts up to 40 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nJacksonville, New River Station, Half Moon, Pumpkin Center, Camp\nLejeune Center, Piney Green, Swansboro, Hubert, Richlands, Maysville,\nSilverdale, Kellum, Cypress Creek, Midway Park, Verona, Catherine\nLake, Belgrade, Albert J Ellis Airport, Richlands South, and Deppe.", "effective": "2026-08-24T16:05:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-24T16:45:00-04:00", "geocode": {"SAME": ["037061", "037103", "037133"], "UGC": ["NCZ090", "NCZ092", "NCZ198", "NCZ199"]}, "headline": "Special Weather Statement issued August 24 at 4:05PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.b3732b6fab45f29852392ecc9ce354276bf19029.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nFrequent cloud to ground lightning is occurring with this storm.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:05:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHEASTERN JONES...ONSLOW... SOUTHEASTERN DUPLIN AND WESTERN CARTERET COUNTIES THROUGH 445 PM EDT"], "WMOidentifier": ["WWUS82 KMHX 242005"], "eventMotionDescription": ["2026-08-24T20:05:00-00:00...storm...274DEG...23KT...34.77,-77.62"], "maxHailSize": ["0.00"], "maxWindGust": ["40 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:05:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.59, 34.42, -77.14, 34.65], "geometry": {"coordinates": [[[-77.51, 34.42], [-77.53, 34.46], [-77.54, 34.47], [-77.59, 34.55], [-77.27, 34.65], [-77.14, 34.47], [-77.51, 34.42]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e4d37232eb5af861a2559b52f9a6c7c6315d023.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ198", "https://api.weather.gov/zones/forecast/NCZ199"], "areaDesc": "Inland Onslow; Coastal Onslow", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 400 PM EDT, Doppler radar was tracking a strong thunderstorm over\nNorth Topsail Beach, moving northeast at 15 mph.\n\nHAZARD...Wind gusts up to 50 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nNorth Topsail Beach, Folkstone, Onslow Beach, Sneads Ferry, and Sea\nView Pier.", "effective": "2026-08-24T16:00:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-08-24T16:45:00-04:00", "geocode": {"SAME": ["037133"], "UGC": ["NCZ198", "NCZ199"]}, "headline": "Special Weather Statement issued August 24 at 4:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.5e4d37232eb5af861a2559b52f9a6c7c6315d023.001.1", "instruction": "If outdoors, consider seeking shelter inside a building.\n\nThis storm may intensify, so be certain to monitor local radio\nstations and available television stations for additional information\nand possible warnings from the National Weather Service.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:00:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTHWESTERN ONSLOW COUNTY THROUGH 445 PM EDT"], "WMOidentifier": ["WWUS82 KMHX 242000"], "eventMotionDescription": ["2026-08-24T20:00:00-00:00...storm...238DEG...15KT...34.48,-77.48"], "maxHailSize": ["0.25"], "maxWindGust": ["50 MPH"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:00:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_5746e81d7d61b5c0a28ff33931ff3ec6.bindTooltip(
+    geo_json_21c682a1f176d4ba32ce34c4a37095ac.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -503,7 +538,7 @@
 });
                      
     
-    geo_json_5746e81d7d61b5c0a28ff33931ff3ec6.bindPopup(
+    geo_json_21c682a1f176d4ba32ce34c4a37095ac.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -538,33 +573,137 @@
 });
                      
     
-            geo_json_5746e81d7d61b5c0a28ff33931ff3ec6.addTo(map_54bf170ea44ab3f770c3c523aabe3495);
+            geo_json_21c682a1f176d4ba32ce34c4a37095ac.addTo(map_2137786b92d65b005221374e43d2b13c);
         
     
-            var layer_control_3589aba67626ed28383f5309ba5f9b05_layers = {
+        function geo_json_7620c932ac1bd58f23cb6d5dc16a8723_styler(feature) {
+            switch(feature.id) {
+                case "6": 
+                    return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
+                default:
+                    return {"color": "black", "fillColor": "#FF0000", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_7620c932ac1bd58f23cb6d5dc16a8723_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7620c932ac1bd58f23cb6d5dc16a8723 = L.geoJson(null, {
+                onEachFeature: geo_json_7620c932ac1bd58f23cb6d5dc16a8723_onEachFeature,
+            
+                style: geo_json_7620c932ac1bd58f23cb6d5dc16a8723_styler,
+            ...{
+}
+        });
+
+        function geo_json_7620c932ac1bd58f23cb6d5dc16a8723_add (data) {
+            geo_json_7620c932ac1bd58f23cb6d5dc16a8723
+                .addData(data);
+        }
+            geo_json_7620c932ac1bd58f23cb6d5dc16a8723_add({"bbox": [-76.65, 34.73, -76.19, 35.04], "features": [{"bbox": [-76.65, 34.73, -76.19, 35.04], "geometry": {"coordinates": [[[-76.52, 34.75], [-76.65, 34.86], [-76.61, 35.02], [-76.55, 35.04], [-76.19, 34.99], [-76.47, 34.73], [-76.52, 34.75]]], "type": "Polygon"}, "id": "6", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7b2568a182af976d95a8519f216d8a487e935f7f.002.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC031"], "areaDesc": "Carteret, NC", "category": "Severe Weather", "certainty": "Observed", "code": "IPAWSv1.0", "description": "At 427 PM EDT, severe thunderstorms were located along a line\nextending from near Cedar Island to Open Grounds Farm, moving\nsoutheast at 15 mph.\n\nHAZARD...60 mph wind gusts and penny size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\nLocations impacted include...\nSouth River, Sealevel, Smyrna, Atlantic, Davis, Williston, Open\nGrounds Farm, and Stacy.", "effective": "2026-08-24T16:28:00-04:00", "ends": "2026-08-24T16:45:00-04:00", "event": "Severe Thunderstorm Warning", "eventCode": {"NationalWeatherService": ["SVW"], "SAME": ["SVS"]}, "expires": "2026-08-24T16:45:00-04:00", "geocode": {"SAME": ["037031"], "UGC": ["NCC031"]}, "headline": "Severe Thunderstorm Warning issued August 24 at 4:28PM EDT until August 24 at 4:45PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.7b2568a182af976d95a8519f216d8a487e935f7f.002.1", "instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nTo report severe weather contact your nearest law enforcement agency.\nThey will send your report to the National Weather Service office in\nNewport.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-08-24T16:28:00-04:00", "parameters": {"AWIPSidentifier": ["SVSMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 445 PM EDT FOR CENTRAL CARTERET COUNTY"], "VTEC": ["/O.CON.KMHX.SV.W.0099.000000T0000Z-260824T2045Z/"], "WMOidentifier": ["WWUS52 KMHX 242028"], "eventEndingTime": ["2026-08-24T16:45:00-04:00"], "eventMotionDescription": ["2026-08-24T20:27:00-00:00...storm...295DEG...15KT...34.97,-76.39 34.87,-76.53"], "hailThreat": ["RADAR INDICATED"], "maxHailSize": ["0.75"], "maxWindGust": ["60 MPH"], "windThreat": ["RADAR INDICATED"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d1a8b85384d05837c54bdddbca573c5414a77782.001.1", "identifier": "urn:oid:2.49.0.1.840.0.d1a8b85384d05837c54bdddbca573c5414a77782.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-08-24T16:07:00-04:00"}], "response": "Shelter", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:28:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-76.4, 34.89, -76.22, 35.02], "geometry": {"coordinates": [[[-76.4, 34.91], [-76.4, 34.97], [-76.24, 35.02], [-76.22, 34.89], [-76.4, 34.91]]], "type": "Polygon"}, "id": "7", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b406fa240effa6da474e14a97c9e7743f0ae25b7.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC031"], "areaDesc": "Carteret, NC", "category": "Severe Weather", "certainty": "Observed", "code": "IPAWSv1.0", "description": "TORMHX\n\nThe National Weather Service in Newport has issued a\n\n* Tornado Warning for...\nNortheastern Carteret County in eastern North Carolina...\n\n* Until 500 PM EDT.\n\n* At 434 PM EDT, a severe thunderstorm capable of producing a tornado\nwas located near Atlantic, or near Cedar Island, moving east at 15\nmph.\n\nHAZARD...Tornado.\n\nSOURCE...Radar indicated rotation.\n\nIMPACT...Flying debris will be dangerous to those caught without\nshelter. Mobile homes will be damaged or destroyed.\nDamage to roofs, windows, and vehicles will occur.  Tree\ndamage is likely.\n\n* This tornadic thunderstorm will remain over mainly rural areas of\nnortheastern Carteret County.", "effective": "2026-08-24T16:34:00-04:00", "ends": "2026-08-24T17:00:00-04:00", "event": "Tornado Warning", "eventCode": {"NationalWeatherService": ["TOW"], "SAME": ["TOR"]}, "expires": "2026-08-24T17:00:00-04:00", "geocode": {"SAME": ["037031"], "UGC": ["NCC031"]}, "headline": "Tornado Warning issued August 24 at 4:34PM EDT until August 24 at 5:00PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.b406fa240effa6da474e14a97c9e7743f0ae25b7.001.1", "instruction": "TAKE COVER NOW! Move to a basement or an interior room on the lowest\nfloor of a sturdy building. Avoid windows. If you are outdoors, in a\nmobile home, or in a vehicle, move to the closest substantial shelter\nand protect yourself from flying debris.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T16:34:00-04:00", "parameters": {"AWIPSidentifier": ["TORMHX"], "BLOCKCHANNEL": ["EAS", "NWEM"], "CMAMlongtext": ["National Weather Service: TORNADO WARNING in this area until 5:00 PM EDT. Take shelter now in a basement or an interior room on the lowest floor of a sturdy building. If you are outdoors, in a mobile home, or in a vehicle, move to the closest substantial shelter and protect yourself from flying debris. Check media."], "CMAMtext": ["NWS: TORNADO WARNING in this area til 5:00 PM EDT. Take shelter now. Check media."], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.TO.W.0005.260824T2034Z-260824T2100Z/"], "WEAHandling": ["Imminent Threat"], "WMOidentifier": ["WFUS52 KMHX 242034"], "eventEndingTime": ["2026-08-24T17:00:00-04:00"], "eventMotionDescription": ["2026-08-24T20:34:00-00:00...storm...267DEG...13KT...34.93,-76.36"], "maxHailSize": ["Up to .75"], "tornadoDetection": ["RADAR INDICATED"]}, "references": [], "response": "Shelter", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T16:34:00-04:00", "severity": "Extreme", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_7620c932ac1bd58f23cb6d5dc16a8723.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "headline"];
+    let aliases = ["Alert:", "Details:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_7620c932ac1bd58f23cb6d5dc16a8723.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "ends", "description"];
+    let aliases = ["Type:", "Expires:", "Full Text:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "localized": true,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_7620c932ac1bd58f23cb6d5dc16a8723.addTo(map_2137786b92d65b005221374e43d2b13c);
+        
+    
+            var layer_control_dd8324c69758d74c55617873d8d59500_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_ac6899e69aee420ca4268d136e5934dd,
-                    "Esri Street Map" : tile_layer_9777f1ee6b733effb4312965158749a5,
-                    "Esri NatGeo" : tile_layer_5d581e6fd73a6d3d16897c2eb7938b55,
-                    "Google Satellite" : tile_layer_b71334087a7a228b6a396ad2208e041c,
-                    "Google Terrain" : tile_layer_72422f46e49d4f6a01d2b21dc728fc5b,
-                    "Google Street" : tile_layer_1a2be3afe38d8d0f0df1d8b9d3bbb32d,
-                    "Light Gray Base" : tile_layer_2c430b2fe55f9cd9669104b4c6c6ddd0,
+                    "Esri Satellite" : tile_layer_0e181236c910d7abf046c50fc14b5d0c,
+                    "Esri Street Map" : tile_layer_9e49cc7454997ac549fc94a1fa5676f9,
+                    "Esri NatGeo" : tile_layer_76e48937cd806e619f19be8c476b0381,
+                    "Google Satellite" : tile_layer_adcf9c026893c79deab8c60e7a096496,
+                    "Google Terrain" : tile_layer_01d05edecce0861985d0f5797950d3cc,
+                    "Google Street" : tile_layer_8f1234f0c3ca11f09e88cc7c024cbe34,
+                    "Light Gray Base" : tile_layer_c39ab6ca49f30d0100bb376ce90b8929,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_b8f18f1e78aac3e99821baaf4b2199fb,
-                    " SPS" : geo_json_5746e81d7d61b5c0a28ff33931ff3ec6,
+                    " Marine/Beach" : geo_json_1c8237a74dd056261e0ec59844fb3019,
+                    " SPS" : geo_json_21c682a1f176d4ba32ce34c4a37095ac,
+                    " Severe Weather" : geo_json_7620c932ac1bd58f23cb6d5dc16a8723,
                 },
             };
-            let layer_control_3589aba67626ed28383f5309ba5f9b05 = L.control.layers(
-                layer_control_3589aba67626ed28383f5309ba5f9b05_layers.base_layers,
-                layer_control_3589aba67626ed28383f5309ba5f9b05_layers.overlays,
+            let layer_control_dd8324c69758d74c55617873d8d59500 = L.control.layers(
+                layer_control_dd8324c69758d74c55617873d8d59500_layers.base_layers,
+                layer_control_dd8324c69758d74c55617873d8d59500_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_54bf170ea44ab3f770c3c523aabe3495);
+            ).addTo(map_2137786b92d65b005221374e43d2b13c);
 
         
 </script>
