@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b5930d399721045c72b744db27ab0f0a {
+                #map_d523f9fbdbf0673619080b6d9876d28b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -88,7 +88,7 @@
             
     
                 <style>
-                    #float_image_700babd13675a8a73c2ab1baeb10ac05 {
+                    #float_image_9bed3688c578da52a283dc8e1d23e320 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +106,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_b5930d399721045c72b744db27ab0f0a" ></div>
+            <div class="folium-map" id="map_d523f9fbdbf0673619080b6d9876d28b" ></div>
         
     
-            <img id="float_image_700babd13675a8a73c2ab1baeb10ac05" alt="float_image"
+            <img id="float_image_9bed3688c578da52a283dc8e1d23e320" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,18 +120,13 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 24, 2026<br>07:57 PM EDT
+        Updated: Aug 24, 2026<br>09:45 PM EDT
     </div>
     <div class='legend-scale'>
        
         <div style="display: flex; align-items: center; margin-bottom: 5px;">
             <div style="background:#FFA500; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
             <span style="font-size:14px;">Special Marine Warning</span>
-        </div>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#FFDAB9; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Marine Weather Statement</span>
         </div>
         
     </div>
@@ -144,8 +139,8 @@
 <script>
     
     
-            var map_b5930d399721045c72b744db27ab0f0a = L.map(
-                "map_b5930d399721045c72b744db27ab0f0a",
+            var map_d523f9fbdbf0673619080b6d9876d28b = L.map(
+                "map_d523f9fbdbf0673619080b6d9876d28b",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -162,7 +157,7 @@
 
         
     
-            var tile_layer_4dfb4583ea94ac4de358b21ce8e2c38a = L.tileLayer(
+            var tile_layer_91e1a250bb1808dad56b3aa7677e9721 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -179,7 +174,7 @@
             );
         
     
-            var tile_layer_e4e3271d7a0a31ee55f6cba5f6f213c9 = L.tileLayer(
+            var tile_layer_8f82b2b453768338102bbbd30687df3e = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -196,7 +191,7 @@
             );
         
     
-            var tile_layer_456cd9d6dccf29dd08afc2ed6192896e = L.tileLayer(
+            var tile_layer_62b96d13ba76faeef0fe1993f7b18e12 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -213,7 +208,7 @@
             );
         
     
-            tile_layer_456cd9d6dccf29dd08afc2ed6192896e.addTo(map_b5930d399721045c72b744db27ab0f0a);
+            tile_layer_62b96d13ba76faeef0fe1993f7b18e12.addTo(map_d523f9fbdbf0673619080b6d9876d28b);
         
     
             L.control.fullscreen(
@@ -223,10 +218,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_b5930d399721045c72b744db27ab0f0a);
+            ).addTo(map_d523f9fbdbf0673619080b6d9876d28b);
         
     
-            var tile_layer_18de6a07dadd68cf3b1c66c1d371bb12 = L.tileLayer(
+            var tile_layer_463fa5f876770038bb196f10302f5b5a = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -243,7 +238,7 @@
             );
         
     
-            var tile_layer_102ff03de05b41a860f07f9f37769534 = L.tileLayer(
+            var tile_layer_3167e33fbd66940ee6abc0d637e014d9 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -260,7 +255,7 @@
             );
         
     
-            var tile_layer_d3fb156505fbb088405a7fc67789c914 = L.tileLayer(
+            var tile_layer_fa8e0e6037384959fb582140e91c695d = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -277,7 +272,7 @@
             );
         
     
-            var tile_layer_71d36b469a3f495a1cb9041203416533 = L.tileLayer(
+            var tile_layer_dd44f6fc38f03b64fb0d9216f3451094 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -294,43 +289,41 @@
             );
         
     
-            var locate_control_ba6208941c7cc588a99834a74326d2b5 = L.control.locate(
+            var locate_control_36503217151eb4d87c27a367b19f2f98 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_b5930d399721045c72b744db27ab0f0a);
+            ).addTo(map_d523f9fbdbf0673619080b6d9876d28b);
             
         
     
-        function geo_json_724bfef60cc89005671e8e8444cf62d1_styler(feature) {
+        function geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5_styler(feature) {
             switch(feature.id) {
-                case "0": 
-                    return {"color": "black", "fillColor": "#FFDAB9", "fillOpacity": 0.5, "weight": 1};
                 default:
                     return {"color": "black", "fillColor": "#FFA500", "fillOpacity": 0.5, "weight": 1};
             }
         }
 
-        function geo_json_724bfef60cc89005671e8e8444cf62d1_onEachFeature(feature, layer) {
+        function geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_724bfef60cc89005671e8e8444cf62d1 = L.geoJson(null, {
-                onEachFeature: geo_json_724bfef60cc89005671e8e8444cf62d1_onEachFeature,
+        var geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5 = L.geoJson(null, {
+                onEachFeature: geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5_onEachFeature,
             
-                style: geo_json_724bfef60cc89005671e8e8444cf62d1_styler,
+                style: geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5_styler,
             ...{
 }
         });
 
-        function geo_json_724bfef60cc89005671e8e8444cf62d1_add (data) {
-            geo_json_724bfef60cc89005671e8e8444cf62d1
+        function geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5_add (data) {
+            geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5
                 .addData(data);
         }
-            geo_json_724bfef60cc89005671e8e8444cf62d1_add({"bbox": [-77.67, 33.57, -74.38, 34.93], "features": [{"bbox": [-77.67, 33.57, -76.83, 34.33], "geometry": {"coordinates": [[[-76.83, 33.85], [-77.15, 33.57], [-77.67, 34.02], [-77.38, 34.33], [-76.83, 33.85]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.864aeb4ad760d8afdb996d57dae622282139e4a8.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ250", "https://api.weather.gov/zones/forecast/AMZ280"], "areaDesc": "Coastal waters from Surf City to Cape Fear NC out 20 nm; Waters from Surf City NC to Little River Inlet SC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Observed", "code": "IPAWSv1.0", "description": "The areas affected include...\nCoastal waters from Surf City to Cape Fear NC out 20 nm...\nWaters from Surf City NC to Little River Inlet SC from 20 to 60\nNM...\n\nAt 653 PM EDT, Doppler radar indicated a strong thunderstorm, capable\nof producing winds to around 30 knots and small hail. This\nthunderstorm was located 9 nm northeast of Wr2, moving east at 25\nknots.", "effective": "2026-08-24T18:53:00-04:00", "ends": null, "event": "Marine Weather Statement", "eventCode": {"NationalWeatherService": ["MWS"], "SAME": ["NWS"]}, "expires": "2026-08-24T20:00:00-04:00", "geocode": {"SAME": ["075250", "075280"], "UGC": ["AMZ250", "AMZ280"]}, "headline": "Marine Weather Statement issued August 24 at 6:53PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.864aeb4ad760d8afdb996d57dae622282139e4a8.001.1", "instruction": "Mariners can expect gusty winds to around 30 knots, locally higher\nwaves, and lightning strikes. Boaters should seek safe harbor\nimmediately until this storm passes. If caught on the open water,\nprepare for deteriorating conditions. Make sure you and your crew are\nwearing properly fitted life jackets.\n\nIntense lightning is occurring with this storm. If caught on the open\nwater, stay below deck if possible, and keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T18:53:00-04:00", "parameters": {"AWIPSidentifier": ["MWSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["A STRONG THUNDERSTORM OVER THE WATERS"], "WMOidentifier": ["FZUS72 KILM 242253"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-24T18:53:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-77.17, 33.61, -74.38, 34.93], "geometry": {"coordinates": [[[-76.59, 33.64], [-77.17, 34.14], [-76.35, 34.45], [-76.26, 34.39], [-76.13, 34.56], [-75.57, 34.89], [-75.37, 34.93], [-74.38, 34.89], [-74.48, 34.71], [-74.7, 34.49], [-74.97, 34.33], [-75.33, 34.23], [-75.77, 33.79], [-76.23, 33.61], [-76.59, 33.64]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.65565fae25eb0ebf6370428839ac590c942cf5de.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ158", "https://api.weather.gov/zones/forecast/AMZ184", "https://api.weather.gov/zones/forecast/AMZ186", "https://api.weather.gov/zones/forecast/AMZ188"], "areaDesc": "S of Cape Lookout NC to Surf City NC out to 20 NM; Waters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM; Waters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM; Waters from Cape Lookout  to Surf City NC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWMHX\n\nThe National Weather Service in Newport has issued a\n\n* Special Marine Warning for...\nS of Cape Lookout NC to Surf City NC out to 20 NM...\nWaters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM...\nWaters from Cape Lookout  to Surf City NC from 20 to 60 NM...\nWaters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM...\n\n* Until 945 PM EDT.\n\n* At 737 PM EDT, severe thunderstorms capable of producing\nwaterspouts were located along a line extending from 23 nm south of\nMonitor Marine Sanctuary to 15 nm east of 14 Buoy to 24 nm east of\nWr2, moving east at 25 knots.\n\nHAZARD...Waterspouts, wind gusts to nearly 50 knots, and small\nhail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\n14 Buoy.", "effective": "2026-08-24T19:38:00-04:00", "ends": "2026-08-24T21:45:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T21:45:00-04:00", "geocode": {"SAME": ["075158", "075184", "075186", "075188"], "UGC": ["AMZ158", "AMZ184", "AMZ186", "AMZ188"]}, "headline": "Special Marine Warning issued August 24 at 7:38PM EDT until August 24 at 9:45PM EDT by NWS Newport/Morehead City NC", "id": "urn:oid:2.49.0.1.840.0.65565fae25eb0ebf6370428839ac590c942cf5de.001.1", "instruction": "Thunderstorms can produce sudden waterspouts. Waterspouts can easily\noverturn boats and create locally hazardous seas. Seek safe harbor\nimmediately.\n\nFrequent lightning is occurring with these storms. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T19:38:00-04:00", "parameters": {"AWIPSidentifier": ["SMWMHX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KMHX.MA.W.0367.260824T2338Z-260825T0145Z/"], "WMOidentifier": ["WHUS52 KMHX 242338"], "eventEndingTime": ["2026-08-24T21:45:00-04:00"], "eventMotionDescription": ["2026-08-24T23:37:00-00:00...storm...291DEG...24KT...34.68,-75.44 34.3,-76.1 34.01,-76.99"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Newport/Morehead City NC", "sent": "2026-08-24T19:38:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5_add({"bbox": [-78.17, 33.06, -76.9, 33.77], "features": [{"bbox": [-78.17, 33.06, -76.9, 33.77], "geometry": {"coordinates": [[[-77.11, 33.19], [-77.3, 33.06], [-78.17, 33.56], [-77.28, 33.77], [-76.9, 33.5], [-77.11, 33.19]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.892782e75c76808b5342a5bffa0a2c5db8180a44.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/AMZ250", "https://api.weather.gov/zones/forecast/AMZ252", "https://api.weather.gov/zones/forecast/AMZ280"], "areaDesc": "Coastal waters from Surf City to Cape Fear NC out 20 nm; Coastal waters from Cape Fear NC to Little River Inlet SC out 20 NM; Waters from Surf City NC to Little River Inlet SC from 20 to 60 NM", "category": "Marine/Beach", "certainty": "Likely", "code": "IPAWSv1.0", "description": "SMWILM\n\nThe National Weather Service in Wilmington has issued a\n\n* Special Marine Warning for...\nCoastal waters from Cape Fear NC to Little River Inlet SC out 20\nNM...\nCoastal waters from Surf City to Cape Fear NC out 20 nm...\nWaters from Surf City NC to Little River Inlet SC from 20 to 60\nNM...\n\n* Until 1115 PM EDT.\n\n* At 917 PM EDT, severe thunderstorms capable of producing\nwaterspouts were located along a line extending from 8 nm east of\nWreck 33 to Mount Dirfy\u0027s Wreck, moving southeast at 15 knots.\n\nHAZARD...Waterspouts, wind gusts to 40 knots, and small hail.\n\nSOURCE...Radar.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Severe thunderstorms will be near...\nFrying Pan Shoals Light Tower and Wreck 33 around 925 PM EDT.\nFrying Pan Shoals Buoy around 945 PM EDT.\nCity Of Houston around 1000 PM EDT.", "effective": "2026-08-24T21:17:00-04:00", "ends": "2026-08-24T23:15:00-04:00", "event": "Special Marine Warning", "eventCode": {"NationalWeatherService": ["MAW"], "SAME": ["SMW"]}, "expires": "2026-08-24T23:15:00-04:00", "geocode": {"SAME": ["075250", "075252", "075280"], "UGC": ["AMZ250", "AMZ252", "AMZ280"]}, "headline": "Special Marine Warning issued August 24 at 9:17PM EDT until August 24 at 11:15PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.892782e75c76808b5342a5bffa0a2c5db8180a44.001.1", "instruction": "Boaters should seek safe harbor immediately until these storms pass.\nIf caught on the open water, prepare for deteriorating conditions.\nMake sure you and your crew are wearing properly fitted life jackets.\n\nBoaters should seek safe harbor immediately until these storms pass.\nWind gusts to 40 knots, small hail, high waves, dangerous lightning,\nand heavy rain are possible with these storms.\n\nThunderstorms can produce sudden waterspouts. Waterspouts can easily\noverturn boats and create locally hazardous seas. Seek safe harbor\nimmediately.\n\nFrequent lightning is occurring with these storms. If caught on the\nopen water stay below deck if possible, keep away from ungrounded\nmetal objects.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-24T21:17:00-04:00", "parameters": {"AWIPSidentifier": ["SMWILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KILM.MA.W.0078.260825T0117Z-260825T0315Z/"], "WMOidentifier": ["WHUS52 KILM 250117"], "eventEndingTime": ["2026-08-24T23:15:00-04:00"], "eventMotionDescription": ["2026-08-25T01:17:00-00:00...storm...309DEG...16KT...33.6,-77.31 33.6,-77.86"], "waterspoutDetection": ["POSSIBLE"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-24T21:17:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_724bfef60cc89005671e8e8444cf62d1.bindTooltip(
+    geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -365,7 +358,7 @@
 });
                      
     
-    geo_json_724bfef60cc89005671e8e8444cf62d1.bindPopup(
+    geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -400,32 +393,32 @@
 });
                      
     
-            geo_json_724bfef60cc89005671e8e8444cf62d1.addTo(map_b5930d399721045c72b744db27ab0f0a);
+            geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5.addTo(map_d523f9fbdbf0673619080b6d9876d28b);
         
     
-            var layer_control_23346eb3e75cf481f7b479d06bd4e720_layers = {
+            var layer_control_c5017064aff614e1bb88705e8250c871_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_4dfb4583ea94ac4de358b21ce8e2c38a,
-                    "Esri Street Map" : tile_layer_e4e3271d7a0a31ee55f6cba5f6f213c9,
-                    "Esri NatGeo" : tile_layer_456cd9d6dccf29dd08afc2ed6192896e,
-                    "Google Satellite" : tile_layer_18de6a07dadd68cf3b1c66c1d371bb12,
-                    "Google Terrain" : tile_layer_102ff03de05b41a860f07f9f37769534,
-                    "Google Street" : tile_layer_d3fb156505fbb088405a7fc67789c914,
-                    "Light Gray Base" : tile_layer_71d36b469a3f495a1cb9041203416533,
+                    "Esri Satellite" : tile_layer_91e1a250bb1808dad56b3aa7677e9721,
+                    "Esri Street Map" : tile_layer_8f82b2b453768338102bbbd30687df3e,
+                    "Esri NatGeo" : tile_layer_62b96d13ba76faeef0fe1993f7b18e12,
+                    "Google Satellite" : tile_layer_463fa5f876770038bb196f10302f5b5a,
+                    "Google Terrain" : tile_layer_3167e33fbd66940ee6abc0d637e014d9,
+                    "Google Street" : tile_layer_fa8e0e6037384959fb582140e91c695d,
+                    "Light Gray Base" : tile_layer_dd44f6fc38f03b64fb0d9216f3451094,
                 },
                 overlays :  {
-                    " Marine/Beach" : geo_json_724bfef60cc89005671e8e8444cf62d1,
+                    " Marine/Beach" : geo_json_8e92ca2c7e7401c6f9b996e9416eb0a5,
                 },
             };
-            let layer_control_23346eb3e75cf481f7b479d06bd4e720 = L.control.layers(
-                layer_control_23346eb3e75cf481f7b479d06bd4e720_layers.base_layers,
-                layer_control_23346eb3e75cf481f7b479d06bd4e720_layers.overlays,
+            let layer_control_c5017064aff614e1bb88705e8250c871 = L.control.layers(
+                layer_control_c5017064aff614e1bb88705e8250c871_layers.base_layers,
+                layer_control_c5017064aff614e1bb88705e8250c871_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_b5930d399721045c72b744db27ab0f0a);
+            ).addTo(map_d523f9fbdbf0673619080b6d9876d28b);
 
         
 </script>
