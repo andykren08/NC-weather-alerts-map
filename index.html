@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c21e57baeb324de634bb357afa2a205d {
+                #map_28c399d4290ed726d095da2568831fb7 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,40 +55,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     
-                    <style>
-                        .foliumtooltip {
-                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
                 <style>
-                    #float_image_05ca95d3ca1b99cf96371dd8beea5d9b {
+                    #float_image_3098d67912f0b67c0c3afd05a5afcabe {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -106,10 +74,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_c21e57baeb324de634bb357afa2a205d" ></div>
+            <div class="folium-map" id="map_28c399d4290ed726d095da2568831fb7" ></div>
         
     
-            <img id="float_image_05ca95d3ca1b99cf96371dd8beea5d9b" alt="float_image"
+            <img id="float_image_3098d67912f0b67c0c3afd05a5afcabe" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -120,20 +88,10 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Aug 27, 2026<br>09:05 PM EDT
+        Updated: Aug 28, 2026<br>08:45 AM EDT
     </div>
     <div class='legend-scale'>
-       
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#8B0000; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Flash Flood Warning</span>
-        </div>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-            <div style="background:#00FF7F; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
-            <span style="font-size:14px;">Flood Advisory</span>
-        </div>
-        
+       <li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>
     </div>
 </div>
 <style type='text/css'>
@@ -144,8 +102,8 @@
 <script>
     
     
-            var map_c21e57baeb324de634bb357afa2a205d = L.map(
-                "map_c21e57baeb324de634bb357afa2a205d",
+            var map_28c399d4290ed726d095da2568831fb7 = L.map(
+                "map_28c399d4290ed726d095da2568831fb7",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -162,7 +120,7 @@
 
         
     
-            var tile_layer_180b1c7b363e3044509e2d12ec28f0ab = L.tileLayer(
+            var tile_layer_7aa0c227ec22e7ded498be540c3ba319 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -179,7 +137,7 @@
             );
         
     
-            var tile_layer_fc0d64a1f208ffe3ffe3ed4e3002747a = L.tileLayer(
+            var tile_layer_5b21f843395bb88dc4a8d00e29f9b701 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -196,7 +154,7 @@
             );
         
     
-            var tile_layer_0c99fb1a4b30685dda72d622720cfc00 = L.tileLayer(
+            var tile_layer_9845f26f15c8556d087f35501e340c44 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -213,7 +171,7 @@
             );
         
     
-            tile_layer_0c99fb1a4b30685dda72d622720cfc00.addTo(map_c21e57baeb324de634bb357afa2a205d);
+            tile_layer_9845f26f15c8556d087f35501e340c44.addTo(map_28c399d4290ed726d095da2568831fb7);
         
     
             L.control.fullscreen(
@@ -223,10 +181,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_c21e57baeb324de634bb357afa2a205d);
+            ).addTo(map_28c399d4290ed726d095da2568831fb7);
         
     
-            var tile_layer_f9244dd5befea9f926eba7f9f4cede60 = L.tileLayer(
+            var tile_layer_7f540ff40b4f6590b58987c928cfb89f = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -243,7 +201,7 @@
             );
         
     
-            var tile_layer_c4dd196d3b950a67e4b7510431096f6e = L.tileLayer(
+            var tile_layer_6b1b0787d05ed174009f60455bc2f860 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -260,7 +218,7 @@
             );
         
     
-            var tile_layer_b1a60d207657739963f5e6397cb4e00c = L.tileLayer(
+            var tile_layer_8abe13012c20ce8b7f865d84f9e628db = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -277,7 +235,7 @@
             );
         
     
-            var tile_layer_d2dc69c2185f0667b7818542e323889f = L.tileLayer(
+            var tile_layer_13406ee032d54db17b7a97a16530a74b = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -294,138 +252,34 @@
             );
         
     
-            var locate_control_607f5642d9e96ea7c697378b64e7e53e = L.control.locate(
+            var locate_control_16348508db561f76051944398fd85620 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_c21e57baeb324de634bb357afa2a205d);
+            ).addTo(map_28c399d4290ed726d095da2568831fb7);
             
         
     
-        function geo_json_a4ddec40dbf744bf147a3f14cb8cedd8_styler(feature) {
-            switch(feature.id) {
-                case "0": case "1": case "2": 
-                    return {"color": "black", "fillColor": "#00FF7F", "fillOpacity": 0.5, "weight": 1};
-                default:
-                    return {"color": "black", "fillColor": "#8B0000", "fillOpacity": 0.5, "weight": 1};
-            }
-        }
-
-        function geo_json_a4ddec40dbf744bf147a3f14cb8cedd8_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_a4ddec40dbf744bf147a3f14cb8cedd8 = L.geoJson(null, {
-                onEachFeature: geo_json_a4ddec40dbf744bf147a3f14cb8cedd8_onEachFeature,
-            
-                style: geo_json_a4ddec40dbf744bf147a3f14cb8cedd8_styler,
-            ...{
-}
-        });
-
-        function geo_json_a4ddec40dbf744bf147a3f14cb8cedd8_add (data) {
-            geo_json_a4ddec40dbf744bf147a3f14cb8cedd8
-                .addData(data);
-        }
-            geo_json_a4ddec40dbf744bf147a3f14cb8cedd8_add({"bbox": [-79.79, 34.7, -78.15, 35.2], "features": [{"bbox": [-78.89, 34.74, -78.39, 34.86], "geometry": {"coordinates": [[[-78.85, 34.76], [-78.89, 34.84], [-78.84, 34.85], [-78.52, 34.85], [-78.5, 34.86], [-78.49, 34.84], [-78.47, 34.83], [-78.46, 34.81], [-78.45, 34.81], [-78.44, 34.78], [-78.42, 34.77], [-78.39, 34.75], [-78.39, 34.74], [-78.84, 34.74], [-78.85, 34.75], [-78.85, 34.76]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0fc7f6509074c1d4617c74bc93a6aacce1979e66.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC017"], "areaDesc": "Bladen, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Northern Bladen County in southeastern North Carolina...\n\n* WHEN...Until 1000 PM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 812 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 3 and 6 inches of rain have\nfallen.\n- Additional rainfall amounts up to 1 inch are expected over the\narea. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nWhite Oak, Ammon, Jerome, Duart and Tobermory.\n- weather.gov/safety/flood", "effective": "2026-08-27T20:12:00-04:00", "ends": "2026-08-27T22:00:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-27T22:00:00-04:00", "geocode": {"SAME": ["037017"], "UGC": ["NCC017"]}, "headline": "Flood Advisory issued August 27 at 8:12PM EDT until August 27 at 10:00PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.0fc7f6509074c1d4617c74bc93a6aacce1979e66.001.1", "instruction": "Be especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Update", "note": null, "onset": "2026-08-27T20:12:00-04:00", "parameters": {"AWIPSidentifier": ["FLSILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY REMAINS IN EFFECT UNTIL 10 PM EDT THIS EVENING"], "VTEC": ["/O.CON.KILM.FA.Y.0035.000000T0000Z-260828T0200Z/"], "WMOidentifier": ["WGUS82 KILM 280012"], "eventEndingTime": ["2026-08-27T22:00:00-04:00"]}, "references": [{"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6d4aac118d71f9cf70ec81686dee2ad30f78e943.001.1", "identifier": "urn:oid:2.49.0.1.840.0.6d4aac118d71f9cf70ec81686dee2ad30f78e943.001.1", "sender": "w-nws.webmaster@noaa.gov", "sent": "2026-08-27T18:52:00-04:00"}], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-08-27T20:12:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-78.49, 34.7, -78.15, 35.2], "geometry": {"coordinates": [[[-78.49, 34.84], [-78.45, 34.89], [-78.42, 35.04], [-78.42, 35.1], [-78.38, 35.15], [-78.3, 35.19], [-78.16, 35.2], [-78.17, 35.09], [-78.16, 35.08], [-78.15, 34.9], [-78.2, 34.74], [-78.24, 34.72], [-78.24, 34.71], [-78.27, 34.71], [-78.27, 34.7], [-78.37, 34.7], [-78.39, 34.73], [-78.39, 34.75], [-78.49, 34.84]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82bff8dfe8a84fd5e0a8e65ea7ff67a648db7931.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC163"], "areaDesc": "Sampson, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Central Sampson County in central North Carolina...\n\n* WHEN...Until 1045 PM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas. Some\nlow-water crossings may become impassable.\n\n* ADDITIONAL DETAILS...\n- At 739 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 2 and 3 inches of rain have\nfallen.\n- Additional rainfall amounts of 1 to 2 inches are expected over\nthe area. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nClinton, Harrells, Garland, Turkey and Hobbton.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-27T19:39:00-04:00", "ends": "2026-08-27T22:45:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-27T22:45:00-04:00", "geocode": {"SAME": ["037163"], "UGC": ["NCC163"]}, "headline": "Flood Advisory issued August 27 at 7:39PM EDT until August 27 at 10:45PM EDT by NWS Raleigh NC", "id": "urn:oid:2.49.0.1.840.0.82bff8dfe8a84fd5e0a8e65ea7ff67a648db7931.001.1", "instruction": "Turn around, don\u0027t drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-27T19:39:00-04:00", "parameters": {"AWIPSidentifier": ["FLSRAH"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 1045 PM EDT THIS EVENING"], "VTEC": ["/O.NEW.KRAH.FA.Y.0121.260827T2339Z-260828T0245Z/"], "WMOidentifier": ["WGUS82 KRAH 272339"], "eventEndingTime": ["2026-08-27T22:45:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Raleigh NC", "sent": "2026-08-27T19:39:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-79.79, 34.76, -79.24, 35.06], "geometry": {"coordinates": [[[-79.73, 34.85], [-79.78, 34.9], [-79.79, 34.95], [-79.73, 35.02], [-79.65, 35.05], [-79.65, 35.06], [-79.35, 35.04], [-79.31, 34.99], [-79.25, 34.95], [-79.24, 34.85], [-79.25, 34.85], [-79.25, 34.84], [-79.35, 34.84], [-79.36, 34.82], [-79.33, 34.77], [-79.35, 34.76], [-79.48, 34.77], [-79.48, 34.78], [-79.56, 34.81], [-79.6, 34.84], [-79.73, 34.85]]], "type": "Polygon"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90729bdf446f16b04bb08c14f0d032adb97560da.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC093", "https://api.weather.gov/zones/county/NCC153", "https://api.weather.gov/zones/county/NCC165"], "areaDesc": "Hoke, NC; Richmond, NC; Scotland, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Southwestern Hoke County in central North Carolina...\nSoutheastern Richmond County in central North Carolina...\nScotland County in central North Carolina...\n\n* WHEN...Until 1030 PM EDT.\n\n* IMPACTS...Water over roadways.\n\n* ADDITIONAL DETAILS...\n- At 729 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 2 and 3 inches of rain have\nfallen.\n- Additional rainfall amounts of 1 to 2 inches are expected over\nthe area. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nLaurinburg, Rockingham, Hamlet, Hoffman, Dobbins Heights, Wagram,\nEast Laurinburg, Camp Mackall, Sandhills Game Land, Bowmore and\nEast Rockingham.\n- http://www.weather.gov/safety/flood", "effective": "2026-08-27T19:29:00-04:00", "ends": "2026-08-27T22:30:00-04:00", "event": "Flood Advisory", "eventCode": {"NationalWeatherService": ["FAY"], "SAME": ["NWS"]}, "expires": "2026-08-27T22:30:00-04:00", "geocode": {"SAME": ["037093", "037153", "037165"], "UGC": ["NCC093", "NCC153", "NCC165"]}, "headline": "Flood Advisory issued August 27 at 7:29PM EDT until August 27 at 10:30PM EDT by NWS Raleigh NC", "id": "urn:oid:2.49.0.1.840.0.90729bdf446f16b04bb08c14f0d032adb97560da.001.1", "instruction": "Turn around, don\u0027t drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-27T19:29:00-04:00", "parameters": {"AWIPSidentifier": ["FLSRAH"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 1030 PM EDT THIS EVENING"], "VTEC": ["/O.NEW.KRAH.FA.Y.0120.260827T2329Z-260828T0230Z/"], "WMOidentifier": ["WGUS82 KRAH 272329"], "eventEndingTime": ["2026-08-27T22:30:00-04:00"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Raleigh NC", "sent": "2026-08-27T19:29:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-79.59, 34.77, -79.34, 34.94], "geometry": {"coordinates": [[[-79.54, 34.94], [-79.37, 34.94], [-79.36, 34.93], [-79.36, 34.89], [-79.35, 34.89], [-79.34, 34.85], [-79.36, 34.82], [-79.35, 34.8], [-79.38, 34.78], [-79.41, 34.78], [-79.41, 34.77], [-79.51, 34.77], [-79.54, 34.79], [-79.56, 34.79], [-79.57, 34.82], [-79.58, 34.82], [-79.59, 34.84], [-79.58, 34.88], [-79.57, 34.88], [-79.57, 34.9], [-79.54, 34.94]]], "type": "Polygon"}, "id": "3", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ad2371b21cc245102bbff8e92279a6eda7de1b13.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/county/NCC165"], "areaDesc": "Scotland, NC", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "FFWRAH\n\nThe National Weather Service in Raleigh has issued a\n\n* Flash Flood Warning for...\nCentral Scotland County in central North Carolina...\n\n* Until 1145 PM EDT.\n\n* At 838 PM EDT, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 2 and 4 inches of rain\nhave fallen. The expected rainfall rate is 2 inches in 1 hour.\nAdditional rainfall amounts of 1 to 2 inches are possible in the\nwarned area. Flash flooding is ongoing or expected to begin\nshortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nLaurinburg, Wagram, East Laurinburg and Laurel Hill.\n\nThis includes the following frequently flooded locations...\nGum Swamp Creek \u0026 Dam and Richmond Mill Lake Dam.", "effective": "2026-08-27T20:38:00-04:00", "ends": "2026-08-27T23:45:00-04:00", "event": "Flash Flood Warning", "eventCode": {"NationalWeatherService": ["FFW"], "SAME": ["FFW"]}, "expires": "2026-08-27T23:45:00-04:00", "geocode": {"SAME": ["037165"], "UGC": ["NCC165"]}, "headline": "Flash Flood Warning issued August 27 at 8:38PM EDT until August 27 at 11:45PM EDT by NWS Raleigh NC", "id": "urn:oid:2.49.0.1.840.0.ad2371b21cc245102bbff8e92279a6eda7de1b13.001.1", "instruction": "Turn around, don\u0027t drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-08-27T20:38:00-04:00", "parameters": {"AWIPSidentifier": ["FFWRAH"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "VTEC": ["/O.NEW.KRAH.FF.W.0036.260828T0038Z-260828T0345Z/"], "WMOidentifier": ["WGUS52 KRAH 280038"], "eventEndingTime": ["2026-08-27T23:45:00-04:00"], "flashFloodDetection": ["RADAR INDICATED"]}, "references": [], "response": "Avoid", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Raleigh NC", "sent": "2026-08-27T20:38:00-04:00", "severity": "Severe", "status": "Actual", "urgency": "Immediate", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_a4ddec40dbf744bf147a3f14cb8cedd8.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "headline"];
-    let aliases = ["Alert:", "Details:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_a4ddec40dbf744bf147a3f14cb8cedd8.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["event", "ends", "description"];
-    let aliases = ["Type:", "Expires:", "Full Text:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "localized": true,
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_a4ddec40dbf744bf147a3f14cb8cedd8.addTo(map_c21e57baeb324de634bb357afa2a205d);
-        
-    
-            var layer_control_e11d52c90c1b59ba7ac7015f3d3ebbed_layers = {
+            var layer_control_42d9916de1d955569bc63ce152163824_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_180b1c7b363e3044509e2d12ec28f0ab,
-                    "Esri Street Map" : tile_layer_fc0d64a1f208ffe3ffe3ed4e3002747a,
-                    "Esri NatGeo" : tile_layer_0c99fb1a4b30685dda72d622720cfc00,
-                    "Google Satellite" : tile_layer_f9244dd5befea9f926eba7f9f4cede60,
-                    "Google Terrain" : tile_layer_c4dd196d3b950a67e4b7510431096f6e,
-                    "Google Street" : tile_layer_b1a60d207657739963f5e6397cb4e00c,
-                    "Light Gray Base" : tile_layer_d2dc69c2185f0667b7818542e323889f,
+                    "Esri Satellite" : tile_layer_7aa0c227ec22e7ded498be540c3ba319,
+                    "Esri Street Map" : tile_layer_5b21f843395bb88dc4a8d00e29f9b701,
+                    "Esri NatGeo" : tile_layer_9845f26f15c8556d087f35501e340c44,
+                    "Google Satellite" : tile_layer_7f540ff40b4f6590b58987c928cfb89f,
+                    "Google Terrain" : tile_layer_6b1b0787d05ed174009f60455bc2f860,
+                    "Google Street" : tile_layer_8abe13012c20ce8b7f865d84f9e628db,
+                    "Light Gray Base" : tile_layer_13406ee032d54db17b7a97a16530a74b,
                 },
                 overlays :  {
-                    " Hydro" : geo_json_a4ddec40dbf744bf147a3f14cb8cedd8,
                 },
             };
-            let layer_control_e11d52c90c1b59ba7ac7015f3d3ebbed = L.control.layers(
-                layer_control_e11d52c90c1b59ba7ac7015f3d3ebbed_layers.base_layers,
-                layer_control_e11d52c90c1b59ba7ac7015f3d3ebbed_layers.overlays,
+            let layer_control_42d9916de1d955569bc63ce152163824 = L.control.layers(
+                layer_control_42d9916de1d955569bc63ce152163824_layers.base_layers,
+                layer_control_42d9916de1d955569bc63ce152163824_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_c21e57baeb324de634bb357afa2a205d);
+            ).addTo(map_28c399d4290ed726d095da2568831fb7);
 
         
 </script>
