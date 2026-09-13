@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0918ba0676198b5a600e917b5c3c8eaa {
+                #map_411718aa462d8deb4b8dee13da0bc760 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,8 +55,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     
+                    <style>
+                        .foliumtooltip {
+                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            font-size: 13px; padding: 10px; max-width: 400px; white-space: normal; word-wrap: break-word; color: black;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            font-family: Arial; font-size: 12px; min-width: 300px; max-width: 400px; max-height: 300px; overflow-y: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
                 <style>
-                    #float_image_d78dce916604a0da37a465dcc1b04a9a {
+                    #float_image_fd476c85d8693da262b3cdf61ee26465 {
                         position: absolute;
                         bottom: 5%;
                         left: 5%;
@@ -74,10 +138,10 @@
     }
 </style>
     
-            <div class="folium-map" id="map_0918ba0676198b5a600e917b5c3c8eaa" ></div>
+            <div class="folium-map" id="map_411718aa462d8deb4b8dee13da0bc760" ></div>
         
     
-            <img id="float_image_d78dce916604a0da37a465dcc1b04a9a" alt="float_image"
+            <img id="float_image_fd476c85d8693da262b3cdf61ee26465" alt="float_image"
                  src="nws.png"
                  style="z-index: 999999">
             </img>
@@ -88,10 +152,20 @@
      border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px; width: 220px; box-shadow: 0 0 15px rgba(0,0,0,0.2);'>
     <div class='legend-title' style="font-weight: bold; margin-bottom: 5px; font-size: 18px;">Latest North Carolina Weather Hazards</div>
     <div style="font-size: 13px; color: #555; margin-bottom: 10px;">
-        Updated: Sep 13, 2026<br>01:37 AM EDT
+        Updated: Sep 13, 2026<br>06:37 AM EDT
     </div>
     <div class='legend-scale'>
-       <li><span style='margin-left:10px;'>No Active North Carolina Hazards</span></li>
+       
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#7CFC00; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Coastal Flood Advisory</span>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div style="background:#FFE4B5; width: 15px; height: 15px; border: 1px solid black; margin-right: 8px; border-radius:3px;"></div>
+            <span style="font-size:14px;">Special Weather Statement</span>
+        </div>
+        
     </div>
 </div>
 <style type='text/css'>
@@ -102,8 +176,8 @@
 <script>
     
     
-            var map_0918ba0676198b5a600e917b5c3c8eaa = L.map(
-                "map_0918ba0676198b5a600e917b5c3c8eaa",
+            var map_411718aa462d8deb4b8dee13da0bc760 = L.map(
+                "map_411718aa462d8deb4b8dee13da0bc760",
                 {
                     center: [35.5, -79.5],
                     crs: L.CRS.EPSG3857,
@@ -120,7 +194,7 @@
 
         
     
-            var tile_layer_cf93c41109c08b1d9dbbb95e7b8d142a = L.tileLayer(
+            var tile_layer_04a3201a6afc605ed8d86d3d09805e94 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -137,7 +211,7 @@
             );
         
     
-            var tile_layer_7d18d1202bb12eac173727d0d4bf74d2 = L.tileLayer(
+            var tile_layer_c539f202af5c43d05d456c0ec6cea03d = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -154,7 +228,7 @@
             );
         
     
-            var tile_layer_9b93f9c9f6b1cc63481676c93b9919f9 = L.tileLayer(
+            var tile_layer_3c76be56ff7c71c8d347176e7c49137b = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -171,7 +245,7 @@
             );
         
     
-            tile_layer_9b93f9c9f6b1cc63481676c93b9919f9.addTo(map_0918ba0676198b5a600e917b5c3c8eaa);
+            tile_layer_3c76be56ff7c71c8d347176e7c49137b.addTo(map_411718aa462d8deb4b8dee13da0bc760);
         
     
             L.control.fullscreen(
@@ -181,10 +255,10 @@
   "titleCancel": "Exit me",
   "forceSeparateButton": true,
 }
-            ).addTo(map_0918ba0676198b5a600e917b5c3c8eaa);
+            ).addTo(map_411718aa462d8deb4b8dee13da0bc760);
         
     
-            var tile_layer_92674a560a9e77c3b8d62c01fa9403b5 = L.tileLayer(
+            var tile_layer_8e8a7fef26e94293d61821270ff8f58e = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -201,7 +275,7 @@
             );
         
     
-            var tile_layer_2b820cb149f9d00b753d6feabe8cb385 = L.tileLayer(
+            var tile_layer_55a2e2b1523086ab73f956bc6598e95f = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -218,7 +292,7 @@
             );
         
     
-            var tile_layer_75a575958c80f46fe6f2191f5f4b1966 = L.tileLayer(
+            var tile_layer_3659dfffae863b7b147e71ddacc1edb3 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -235,7 +309,7 @@
             );
         
     
-            var tile_layer_6ab57cfae14cf60c136fd07bb0aeb977 = L.tileLayer(
+            var tile_layer_eeb998f3a1a4c1cca6d90caf29ea4514 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -252,34 +326,238 @@
             );
         
     
-            var locate_control_995a30f08aa5d0f82be6a6e0c2ddd92e = L.control.locate(
+            var locate_control_fbe33ffae92e6e893d896f2b77a1c0f7 = L.control.locate(
                 {"flyTo": true}
-            ).addTo(map_0918ba0676198b5a600e917b5c3c8eaa);
+            ).addTo(map_411718aa462d8deb4b8dee13da0bc760);
             
         
     
-            var layer_control_99c43ef9fcbacf7d793d5ff760bb0371_layers = {
+        function geo_json_f0f45ad2fe5b908a840b9b0a16a9100c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#7CFC00", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_f0f45ad2fe5b908a840b9b0a16a9100c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f0f45ad2fe5b908a840b9b0a16a9100c = L.geoJson(null, {
+                onEachFeature: geo_json_f0f45ad2fe5b908a840b9b0a16a9100c_onEachFeature,
+            
+                style: geo_json_f0f45ad2fe5b908a840b9b0a16a9100c_styler,
+            ...{
+}
+        });
+
+        function geo_json_f0f45ad2fe5b908a840b9b0a16a9100c_add (data) {
+            geo_json_f0f45ad2fe5b908a840b9b0a16a9100c
+                .addData(data);
+        }
+            geo_json_f0f45ad2fe5b908a840b9b0a16a9100c_add({"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "features": [{"bbox": [-78.029922, 34.107243, -77.763375, 34.388794], "geometry": {"geometries": [{"coordinates": [[[-77.820427, 34.384926], [-77.814934, 34.38168], [-77.810799, 34.381714], [-77.805199, 34.377113], [-77.805, 34.374912], [-77.807732, 34.373512], [-77.809395, 34.370312], [-77.814934, 34.367176], [-77.811462, 34.357479], [-77.799973, 34.34409], [-77.763375, 34.313668], [-77.76989, 34.308247], [-77.887283, 34.166992], [-77.900215, 34.145679], [-77.927155, 34.116631], [-77.928185, 34.117962], [-77.925934, 34.121944], [-77.92524, 34.124371], [-77.925545, 34.124771], [-77.925072, 34.126347], [-77.925163, 34.12817], [-77.927963, 34.131451], [-77.928352, 34.132908], [-77.929901, 34.134476], [-77.93219, 34.135693], [-77.934464, 34.137516], [-77.936554, 34.138027], [-77.939423, 34.137436], [-77.942238, 34.140362], [-77.946175, 34.143021], [-77.945953, 34.144234], [-77.943115, 34.144508], [-77.94297, 34.144875], [-77.944122, 34.154221], [-77.9431, 34.15649], [-77.942207, 34.157871], [-77.942612, 34.16077], [-77.94751, 34.164371], [-77.952507, 34.177269], [-77.953651, 34.178452], [-77.953827, 34.178921], [-77.953186, 34.180878], [-77.954712, 34.188568], [-77.95388, 34.19339], [-77.954109, 34.196106], [-77.961678, 34.203331], [-77.9515, 34.232357], [-77.954681, 34.232334], [-77.954887, 34.234436], [-77.957809, 34.234428], [-77.961929, 34.239471], [-77.955421, 34.239647], [-77.957314, 34.241367], [-77.959808, 34.242771], [-77.968513, 34.242371], [-77.969513, 34.244068], [-77.965012, 34.249268], [-77.967812, 34.252171], [-77.970009, 34.251671], [-77.973114, 34.247269], [-77.975212, 34.249371], [-77.978813, 34.260071], [-77.980408, 34.260868], [-77.985611, 34.259068], [-77.987709, 34.260071], [-77.988914, 34.262268], [-77.987511, 34.268269], [-77.991013, 34.270668], [-78.000809, 34.271568], [-78.002014, 34.273067], [-77.999313, 34.276169], [-77.991409, 34.278069], [-77.990211, 34.28167], [-77.996513, 34.28437], [-78.004814, 34.280468], [-78.005913, 34.281769], [-78.004616, 34.28677], [-78.005913, 34.288868], [-78.007812, 34.290169], [-78.015915, 34.290268], [-78.017113, 34.29277], [-78.014214, 34.302567], [-78.014816, 34.307468], [-78.012993, 34.312569], [-78.007263, 34.315624], [-78.006241, 34.319511], [-78.008659, 34.322552], [-78.012718, 34.323177], [-78.022911, 34.318008], [-78.026031, 34.317993], [-78.027519, 34.320152], [-78.025917, 34.328522], [-78.029922, 34.331768], [-78.026291, 34.330914], [-78.022186, 34.332813], [-77.99411, 34.336971], [-77.996086, 34.340313], [-77.994286, 34.346413], [-77.987579, 34.353813], [-77.978912, 34.357372], [-77.980545, 34.360069], [-77.985985, 34.36161], [-77.988884, 34.364311], [-77.987587, 34.371811], [-77.97979, 34.373711], [-77.975403, 34.372875], [-77.970985, 34.378811], [-77.962486, 34.383209], [-77.959099, 34.382511], [-77.957695, 34.380314], [-77.960976, 34.373318], [-77.959808, 34.371292], [-77.951424, 34.364941], [-77.950081, 34.370811], [-77.947571, 34.372261], [-77.940399, 34.37001], [-77.939095, 34.366814], [-77.94072, 34.36343], [-77.935211, 34.35841], [-77.933853, 34.359676], [-77.935181, 34.36581], [-77.931694, 34.368008], [-77.929893, 34.365211], [-77.931549, 34.362041], [-77.930031, 34.361622], [-77.917183, 34.376011], [-77.906868, 34.376072], [-77.901489, 34.378609], [-77.898796, 34.376812], [-77.898811, 34.36639], [-77.891678, 34.364231], [-77.880295, 34.36684], [-77.870583, 34.374611], [-77.858597, 34.380444], [-77.844582, 34.381191], [-77.831284, 34.387112], [-77.82209, 34.388794], [-77.820427, 34.384926]]], "type": "Polygon"}, {"coordinates": [[[-77.943115, 34.144508], [-77.944748, 34.144524], [-77.945953, 34.144234], [-77.946304, 34.143883], [-77.946175, 34.143021], [-77.944641, 34.141273], [-77.939423, 34.137436], [-77.938332, 34.137115], [-77.936554, 34.138027], [-77.936127, 34.138027], [-77.934464, 34.137516], [-77.930656, 34.135017], [-77.929901, 34.134476], [-77.928352, 34.132908], [-77.925163, 34.12817], [-77.925934, 34.121944], [-77.928185, 34.117962], [-77.927155, 34.116631], [-77.930359, 34.113171], [-77.931953, 34.114254], [-77.932236, 34.111141], [-77.935852, 34.107243], [-77.93737, 34.124256], [-77.952209, 34.150349], [-77.958611, 34.173771], [-77.958412, 34.184669], [-77.954482, 34.193375], [-77.95388, 34.19339], [-77.954712, 34.188568], [-77.954521, 34.183861], [-77.953186, 34.180878], [-77.953827, 34.178921], [-77.952507, 34.177269], [-77.94751, 34.164371], [-77.942612, 34.16077], [-77.942207, 34.157871], [-77.944122, 34.154221], [-77.943115, 34.144508]], [[-77.931709, 34.123707], [-77.930443, 34.123615], [-77.929916, 34.125172], [-77.931015, 34.125172], [-77.931709, 34.123707]], [[-77.931518, 34.119701], [-77.930611, 34.12199], [-77.931572, 34.122791], [-77.931984, 34.122128], [-77.931518, 34.119701]], [[-77.931267, 34.116291], [-77.929619, 34.116886], [-77.930634, 34.118717], [-77.931793, 34.117573], [-77.931267, 34.116291]]], "type": "Polygon"}], "type": "GeometryCollection"}, "id": "2", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.37fed2618d0d2bd3a465d7f2e172f4c4da00891e.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ107"], "areaDesc": "Inland New Hanover", "category": "Hydro", "certainty": "Likely", "code": "IPAWSv1.0", "description": "* WHAT...Up to one half foot of inundation above ground level\nexpected in low-lying areas near shorelines and tidal\nwaterways.\n\n* WHERE...The lower Cape Fear River including downtown\nWilmington.\n\n* WHEN...From 10 AM this morning to 2 PM EDT this afternoon.\n\n* IMPACTS...Portions of Battleship Road and USS North Carolina\nRoad observe minor coastal flooding up to one half foot in\ndepth. In downtown Wilmington, a block of Water Street observes\nminor flooding up to one quarter foot in depth.", "effective": "2026-09-13T02:20:00-04:00", "ends": "2026-09-13T14:00:00-04:00", "event": "Coastal Flood Advisory", "eventCode": {"NationalWeatherService": ["CFY"], "SAME": ["NWS"]}, "expires": "2026-09-13T14:00:00-04:00", "geocode": {"SAME": ["037129"], "UGC": ["NCZ107"]}, "headline": "Coastal Flood Advisory issued September 13 at 2:20AM EDT until September 13 at 2:00PM EDT by NWS Wilmington NC", "id": "urn:oid:2.49.0.1.840.0.37fed2618d0d2bd3a465d7f2e172f4c4da00891e.001.1", "instruction": "Take the necessary actions to protect flood- prone property.", "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-09-13T10:00:00-04:00", "parameters": {"AWIPSidentifier": ["CFWILM"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "NWSheadline": ["COASTAL FLOOD ADVISORY IN EFFECT FROM 10 AM THIS MORNING TO 2 PM EDT THIS AFTERNOON"], "VTEC": ["/O.NEW.KILM.CF.Y.0047.260913T1400Z-260913T1800Z/"], "WMOidentifier": ["WHUS42 KILM 130620"], "eventEndingTime": ["2026-09-13T14:00:00-04:00"]}, "references": [], "response": "Monitor", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Wilmington NC", "sent": "2026-09-13T02:20:00-04:00", "severity": "Minor", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_f0f45ad2fe5b908a840b9b0a16a9100c.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "headline"];
+    let aliases = ["Alert:", "Details:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_f0f45ad2fe5b908a840b9b0a16a9100c.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "ends", "description"];
+    let aliases = ["Type:", "Expires:", "Full Text:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "localized": true,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_f0f45ad2fe5b908a840b9b0a16a9100c.addTo(map_411718aa462d8deb4b8dee13da0bc760);
+        
+    
+        function geo_json_9ad933cec9848160e19e09f2c567eb0d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#FFE4B5", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_9ad933cec9848160e19e09f2c567eb0d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_9ad933cec9848160e19e09f2c567eb0d = L.geoJson(null, {
+                onEachFeature: geo_json_9ad933cec9848160e19e09f2c567eb0d_onEachFeature,
+            
+                style: geo_json_9ad933cec9848160e19e09f2c567eb0d_styler,
+            ...{
+}
+        });
+
+        function geo_json_9ad933cec9848160e19e09f2c567eb0d_add (data) {
+            geo_json_9ad933cec9848160e19e09f2c567eb0d
+                .addData(data);
+        }
+            geo_json_9ad933cec9848160e19e09f2c567eb0d_add({"bbox": [-84.321098, 34.98661, -83.4842, 35.292011], "features": [{"bbox": [-84.321098, 34.987011, -83.690193, 35.292011], "geometry": {"coordinates": [[[-84.001595, 35.250912], [-84.005096, 35.241112], [-84.002197, 35.234013], [-83.984894, 35.230011], [-83.972298, 35.219612], [-83.958893, 35.217113], [-83.956993, 35.21981], [-83.944199, 35.219913], [-83.942497, 35.222111], [-83.936195, 35.222813], [-83.924599, 35.228413], [-83.919701, 35.228813], [-83.9039, 35.235111], [-83.901398, 35.237614], [-83.894096, 35.233913], [-83.887695, 35.235313], [-83.8815, 35.237911], [-83.873894, 35.243912], [-83.869797, 35.243713], [-83.859299, 35.248512], [-83.852493, 35.248913], [-83.844597, 35.255211], [-83.830894, 35.255611], [-83.825195, 35.251011], [-83.820999, 35.251114], [-83.813095, 35.254311], [-83.810799, 35.252811], [-83.805099, 35.253212], [-83.795296, 35.257214], [-83.782494, 35.252312], [-83.773796, 35.24641], [-83.7631, 35.248211], [-83.756393, 35.242813], [-83.732399, 35.246014], [-83.712395, 35.257614], [-83.708099, 35.256512], [-83.703995, 35.252213], [-83.7034, 35.249313], [-83.692993, 35.243011], [-83.690193, 35.237411], [-83.696693, 35.225613], [-83.709198, 35.219112], [-83.713898, 35.213112], [-83.722794, 35.208714], [-83.728195, 35.201214], [-83.724197, 35.197811], [-83.720497, 35.197311], [-83.716797, 35.199211], [-83.713799, 35.197613], [-83.711693, 35.195011], [-83.712196, 35.191513], [-83.713196, 35.188911], [-83.724594, 35.183712], [-83.730995, 35.178013], [-83.732498, 35.16851], [-83.738495, 35.156013], [-83.745895, 35.160511], [-83.752594, 35.160511], [-83.758995, 35.156811], [-83.770996, 35.156311], [-83.778595, 35.150112], [-83.784996, 35.147911], [-83.794296, 35.147911], [-83.799194, 35.144611], [-83.806999, 35.143414], [-83.8088, 35.141514], [-83.818001, 35.139214], [-83.840797, 35.143711], [-83.855797, 35.137711], [-83.863899, 35.130112], [-83.865097, 35.127213], [-83.863693, 35.12141], [-83.865997, 35.118713], [-83.874695, 35.113514], [-83.876099, 35.110611], [-83.882797, 35.10601], [-83.895996, 35.091812], [-83.903999, 35.087711], [-83.907997, 35.078114], [-83.921799, 35.074211], [-83.926094, 35.068913], [-83.933998, 35.068413], [-83.9347, 35.065613], [-83.944695, 35.055313], [-83.9515, 35.053612], [-83.9562, 35.054211], [-83.959, 35.05191], [-83.965195, 35.044113], [-83.958893, 35.039211], [-83.959396, 35.030113], [-83.956795, 35.026711], [-83.962494, 35.020313], [-83.972298, 35.014313], [-83.972298, 35.011711], [-83.979195, 35.00621], [-84.003998, 34.994312], [-84.0056, 34.988411], [-84.130699, 34.987011], [-84.321098, 34.988411], [-84.3069, 35.106514], [-84.289696, 35.225014], [-84.287399, 35.224812], [-84.275398, 35.234512], [-84.261696, 35.241314], [-84.2519, 35.250011], [-84.242996, 35.253113], [-84.226494, 35.268311], [-84.218697, 35.268112], [-84.2108, 35.265114], [-84.203293, 35.256012], [-84.199898, 35.244911], [-84.192596, 35.244011], [-84.189499, 35.240913], [-84.179199, 35.240612], [-84.1698, 35.246014], [-84.161194, 35.243713], [-84.155197, 35.24641], [-84.147095, 35.246811], [-84.139297, 35.246014], [-84.131996, 35.242111], [-84.126694, 35.241512], [-84.125595, 35.249012], [-84.119896, 35.251713], [-84.114494, 35.249512], [-84.105095, 35.250412], [-84.099197, 35.24781], [-84.094696, 35.248611], [-84.082794, 35.257214], [-84.081299, 35.260811], [-84.057297, 35.267811], [-84.049797, 35.273811], [-84.046494, 35.274612], [-84.040199, 35.280212], [-84.035095, 35.288914], [-84.0289, 35.292011], [-84.022499, 35.286713], [-84.014297, 35.275013], [-84.009796, 35.272511], [-84.010399, 35.256413], [-84.001595, 35.250912]]], "type": "Polygon"}, "id": "0", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.51145382f2468c3892271a2525b69cff1f163f99.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ060", "https://api.weather.gov/zones/forecast/NCZ061", "https://api.weather.gov/zones/forecast/TNZ016", "https://api.weather.gov/zones/forecast/TNZ017", "https://api.weather.gov/zones/forecast/TNZ018", "https://api.weather.gov/zones/forecast/TNZ042", "https://api.weather.gov/zones/forecast/TNZ044", "https://api.weather.gov/zones/forecast/TNZ045", "https://api.weather.gov/zones/forecast/TNZ046", "https://api.weather.gov/zones/forecast/TNZ047", "https://api.weather.gov/zones/forecast/TNZ081", "https://api.weather.gov/zones/forecast/TNZ082", "https://api.weather.gov/zones/forecast/TNZ098", "https://api.weather.gov/zones/forecast/TNZ099", "https://api.weather.gov/zones/forecast/VAZ002", "https://api.weather.gov/zones/forecast/VAZ005", "https://api.weather.gov/zones/forecast/VAZ006", "https://api.weather.gov/zones/forecast/VAZ008"], "areaDesc": "Cherokee; Clay; Hawkins; Sullivan; Johnson; Northwest Greene; Washington; Unicoi; Northwest Carter; Southeast Carter; Sequatchie; Bledsoe; Marion; Hamilton; Wise; Scott; Russell; Washington", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Patchy dense fog has developed this morning, especially in places\nthat saw notable rainfall yesterday. Visibilities have been down\nto one quarter of a mile or less in some spots. If traveling this\nmorning, allow for extra time to reach your destination. Fog\nshould lift by mid-morning.", "effective": "2026-09-13T04:22:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-09-13T09:00:00-04:00", "geocode": {"SAME": ["037039", "037043", "047073", "047163", "047091", "047059", "047179", "047171", "047019", "047153", "047007", "047115", "047065", "051195", "051720", "051169", "051167", "051191", "051520"], "UGC": ["NCZ060", "NCZ061", "TNZ016", "TNZ017", "TNZ018", "TNZ042", "TNZ044", "TNZ045", "TNZ046", "TNZ047", "TNZ081", "TNZ082", "TNZ098", "TNZ099", "VAZ002", "VAZ005", "VAZ006", "VAZ008"]}, "headline": "Special Weather Statement issued September 13 at 4:22AM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.51145382f2468c3892271a2525b69cff1f163f99.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-09-13T04:22:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Patchy Dense Fog This Morning"], "WMOidentifier": ["WWUS84 KMRX 130822"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-09-13T04:22:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}, {"bbox": [-84.0056, 34.98661, -83.4842, 35.160511], "geometry": {"coordinates": [[[-83.738495, 35.156013], [-83.726295, 35.145912], [-83.7164, 35.15451], [-83.7136, 35.155014], [-83.701897, 35.153111], [-83.692894, 35.155514], [-83.6875, 35.15451], [-83.684395, 35.157112], [-83.673599, 35.156612], [-83.667099, 35.150414], [-83.659798, 35.154312], [-83.6595, 35.158611], [-83.655899, 35.158112], [-83.647499, 35.151211], [-83.648697, 35.147713], [-83.645699, 35.144913], [-83.648994, 35.141113], [-83.656494, 35.139412], [-83.654594, 35.136013], [-83.650101, 35.135414], [-83.642799, 35.138111], [-83.639397, 35.137314], [-83.637695, 35.135113], [-83.638199, 35.132813], [-83.643196, 35.132111], [-83.640297, 35.130211], [-83.636597, 35.122414], [-83.634499, 35.121311], [-83.632896, 35.124611], [-83.624794, 35.125912], [-83.626297, 35.130314], [-83.619095, 35.128212], [-83.619598, 35.123013], [-83.615196, 35.113411], [-83.618195, 35.108612], [-83.617996, 35.10601], [-83.611198, 35.102211], [-83.603195, 35.100712], [-83.595299, 35.094414], [-83.587097, 35.091412], [-83.584396, 35.087414], [-83.584694, 35.082714], [-83.582497, 35.079311], [-83.575996, 35.072712], [-83.567299, 35.070713], [-83.567894, 35.067711], [-83.562599, 35.059711], [-83.566399, 35.051712], [-83.558197, 35.039413], [-83.547295, 35.03931], [-83.538399, 35.035713], [-83.5298, 35.025311], [-83.521393, 35.018112], [-83.521797, 35.014713], [-83.526199, 35.009312], [-83.522095, 35.003212], [-83.520699, 34.996914], [-83.517395, 34.998211], [-83.516701, 35.001213], [-83.5131, 35.004513], [-83.5093, 35.004414], [-83.503998, 35.000912], [-83.488197, 34.998814], [-83.4842, 34.994114], [-83.620193, 34.992111], [-83.619995, 34.98661], [-83.999496, 34.987312], [-84.0056, 34.988411], [-84.003998, 34.994312], [-83.979195, 35.00621], [-83.972298, 35.011711], [-83.972298, 35.014313], [-83.962494, 35.020313], [-83.956795, 35.026711], [-83.959396, 35.030113], [-83.958893, 35.039211], [-83.965195, 35.044113], [-83.959, 35.05191], [-83.9562, 35.054211], [-83.9515, 35.053612], [-83.944695, 35.055313], [-83.9347, 35.065613], [-83.933998, 35.068413], [-83.926094, 35.068913], [-83.921799, 35.074211], [-83.907997, 35.078114], [-83.903999, 35.087711], [-83.895996, 35.091812], [-83.882797, 35.10601], [-83.876099, 35.110611], [-83.874695, 35.113514], [-83.865997, 35.118713], [-83.863693, 35.12141], [-83.865097, 35.127213], [-83.863899, 35.130112], [-83.855797, 35.137711], [-83.840797, 35.143711], [-83.818001, 35.139214], [-83.8088, 35.141514], [-83.806999, 35.143414], [-83.799194, 35.144611], [-83.794296, 35.147911], [-83.784996, 35.147911], [-83.778595, 35.150112], [-83.770996, 35.156311], [-83.758995, 35.156811], [-83.752594, 35.160511], [-83.745895, 35.160511], [-83.738495, 35.156013]]], "type": "Polygon"}, "id": "1", "properties": {"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.51145382f2468c3892271a2525b69cff1f163f99.001.1", "@type": "wx:Alert", "affectedZones": ["https://api.weather.gov/zones/forecast/NCZ060", "https://api.weather.gov/zones/forecast/NCZ061", "https://api.weather.gov/zones/forecast/TNZ016", "https://api.weather.gov/zones/forecast/TNZ017", "https://api.weather.gov/zones/forecast/TNZ018", "https://api.weather.gov/zones/forecast/TNZ042", "https://api.weather.gov/zones/forecast/TNZ044", "https://api.weather.gov/zones/forecast/TNZ045", "https://api.weather.gov/zones/forecast/TNZ046", "https://api.weather.gov/zones/forecast/TNZ047", "https://api.weather.gov/zones/forecast/TNZ081", "https://api.weather.gov/zones/forecast/TNZ082", "https://api.weather.gov/zones/forecast/TNZ098", "https://api.weather.gov/zones/forecast/TNZ099", "https://api.weather.gov/zones/forecast/VAZ002", "https://api.weather.gov/zones/forecast/VAZ005", "https://api.weather.gov/zones/forecast/VAZ006", "https://api.weather.gov/zones/forecast/VAZ008"], "areaDesc": "Cherokee; Clay; Hawkins; Sullivan; Johnson; Northwest Greene; Washington; Unicoi; Northwest Carter; Southeast Carter; Sequatchie; Bledsoe; Marion; Hamilton; Wise; Scott; Russell; Washington", "category": "SPS", "certainty": "Observed", "code": "IPAWSv1.0", "description": "Patchy dense fog has developed this morning, especially in places\nthat saw notable rainfall yesterday. Visibilities have been down\nto one quarter of a mile or less in some spots. If traveling this\nmorning, allow for extra time to reach your destination. Fog\nshould lift by mid-morning.", "effective": "2026-09-13T04:22:00-04:00", "ends": null, "event": "Special Weather Statement", "eventCode": {"NationalWeatherService": ["SPS"], "SAME": ["SPS"]}, "expires": "2026-09-13T09:00:00-04:00", "geocode": {"SAME": ["037039", "037043", "047073", "047163", "047091", "047059", "047179", "047171", "047019", "047153", "047007", "047115", "047065", "051195", "051720", "051169", "051167", "051191", "051520"], "UGC": ["NCZ060", "NCZ061", "TNZ016", "TNZ017", "TNZ018", "TNZ042", "TNZ044", "TNZ045", "TNZ046", "TNZ047", "TNZ081", "TNZ082", "TNZ098", "TNZ099", "VAZ002", "VAZ005", "VAZ006", "VAZ008"]}, "headline": "Special Weather Statement issued September 13 at 4:22AM EDT by NWS Morristown TN", "id": "urn:oid:2.49.0.1.840.0.51145382f2468c3892271a2525b69cff1f163f99.001.1", "instruction": null, "language": "en-US", "messageType": "Alert", "note": null, "onset": "2026-09-13T04:22:00-04:00", "parameters": {"AWIPSidentifier": ["SPSMRX"], "BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"], "EAS-ORG": ["WXR"], "NWSheadline": ["Patchy Dense Fog This Morning"], "WMOidentifier": ["WWUS84 KMRX 130822"]}, "references": [], "response": "Execute", "scope": "Public", "sender": "w-nws.webmaster@noaa.gov", "senderName": "NWS Morristown TN", "sent": "2026-09-13T04:22:00-04:00", "severity": "Moderate", "status": "Actual", "urgency": "Expected", "web": "http://www.weather.gov"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_9ad933cec9848160e19e09f2c567eb0d.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "headline"];
+    let aliases = ["Alert:", "Details:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_9ad933cec9848160e19e09f2c567eb0d.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["event", "ends", "description"];
+    let aliases = ["Type:", "Expires:", "Full Text:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "localized": true,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_9ad933cec9848160e19e09f2c567eb0d.addTo(map_411718aa462d8deb4b8dee13da0bc760);
+        
+    
+            var layer_control_81483cb4c374bd3d1ac37a8cd6d257ae_layers = {
                 base_layers : {
-                    "Esri Satellite" : tile_layer_cf93c41109c08b1d9dbbb95e7b8d142a,
-                    "Esri Street Map" : tile_layer_7d18d1202bb12eac173727d0d4bf74d2,
-                    "Esri NatGeo" : tile_layer_9b93f9c9f6b1cc63481676c93b9919f9,
-                    "Google Satellite" : tile_layer_92674a560a9e77c3b8d62c01fa9403b5,
-                    "Google Terrain" : tile_layer_2b820cb149f9d00b753d6feabe8cb385,
-                    "Google Street" : tile_layer_75a575958c80f46fe6f2191f5f4b1966,
-                    "Light Gray Base" : tile_layer_6ab57cfae14cf60c136fd07bb0aeb977,
+                    "Esri Satellite" : tile_layer_04a3201a6afc605ed8d86d3d09805e94,
+                    "Esri Street Map" : tile_layer_c539f202af5c43d05d456c0ec6cea03d,
+                    "Esri NatGeo" : tile_layer_3c76be56ff7c71c8d347176e7c49137b,
+                    "Google Satellite" : tile_layer_8e8a7fef26e94293d61821270ff8f58e,
+                    "Google Terrain" : tile_layer_55a2e2b1523086ab73f956bc6598e95f,
+                    "Google Street" : tile_layer_3659dfffae863b7b147e71ddacc1edb3,
+                    "Light Gray Base" : tile_layer_eeb998f3a1a4c1cca6d90caf29ea4514,
                 },
                 overlays :  {
+                    " Hydro" : geo_json_f0f45ad2fe5b908a840b9b0a16a9100c,
+                    " SPS" : geo_json_9ad933cec9848160e19e09f2c567eb0d,
                 },
             };
-            let layer_control_99c43ef9fcbacf7d793d5ff760bb0371 = L.control.layers(
-                layer_control_99c43ef9fcbacf7d793d5ff760bb0371_layers.base_layers,
-                layer_control_99c43ef9fcbacf7d793d5ff760bb0371_layers.overlays,
+            let layer_control_81483cb4c374bd3d1ac37a8cd6d257ae = L.control.layers(
+                layer_control_81483cb4c374bd3d1ac37a8cd6d257ae_layers.base_layers,
+                layer_control_81483cb4c374bd3d1ac37a8cd6d257ae_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_0918ba0676198b5a600e917b5c3c8eaa);
+            ).addTo(map_411718aa462d8deb4b8dee13da0bc760);
 
         
 </script>
